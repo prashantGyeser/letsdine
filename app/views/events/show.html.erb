@@ -1,6 +1,15 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <b>Event image:</b>
+  <%= image_tag @event.event_image_url(:thumb).to_s %>
+</p>
+<p>
+  <b>Event image Original:</b>
+  <%= image_tag @event.event_image_url.to_s %>
+</p>
+
+<p>
   <b>Event name:</b>
   <%= @event.event_name %>
 </p>
