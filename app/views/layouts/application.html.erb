@@ -1,14 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Letsdine</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+	<title>LetsDine</title>
+	<title>Letsdine</title>
+	<%= stylesheet_link_tag    "application", :media => "all" %>
+	<%= stylesheet_link_tag    "bootstrap", :media => "all" %>
+	<%= stylesheet_link_tag    "bootstrap-responsive", :media => "all" %>
+	<%= stylesheet_link_tag    "style", :media => "all" %>
+
+	<%= javascript_include_tag "application" %>
+	<%= javascript_include_tag "jquery-1.9.1" %>
+	<%= javascript_include_tag "bootstrap" %>
+	<%= javascript_include_tag "jquery.slidingGallery-1.2.js" %>
+	<%= csrf_meta_tags %>
+	
+	<!-- Gallery Script -->
+	<script language="javascript" type="text/javascript">
+		$(document).ready(function(){
+			$('div.gallery img').slidingGallery({
+				
+				
+			});
+		});
+    </script>
+
 </head>
 <body>
 
-<%= yield %>
+	<div class="topBar">
+		<div class="navbar navbar-fixed-top">
+    		<div class="navbar-inner">
+        		<div class="container">
+        			<div class="row-fluid">
+        				<div class="span6 offset4"><img src="/assets/logo.png"></div>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+	</div>
+
+	<div class="jumbotron masthead">
+		<div class="container">
+			<div class="row-fluid">
+				<div class="span6 offset4">
+					<ul class="<%= @home_page ? 'homepage' : 'topNav'%>">
+						<li class="current">Home</li>
+						<li>Events</li>
+						<li>Contact Us</li>
+					</ul>
+				</div>
+			</div>			
+		</div>
+	</div>
+
+
+	<%= yield %>	
+
+	<div class="footer">
+		<div class="container">
+			<div class="row-fluid">
+				<div class="span12">
+					Test
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		$(document).ready(function(){
+			$('#jl').tooltip()
+		})
+	</script>
 
 </body>
 </html>
