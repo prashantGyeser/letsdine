@@ -29,7 +29,8 @@
   </div>
   <div class="field">
     <%= f.label :restaurant_id %><br />
-    <%= f.number_field :restaurant_id %>
+    <%= f.select :restaurant_id, Restaurant.all.collect {|x| [x.name, x.id]}, {}%>   
+     
   </div>
   <div class="field">
     <%= f.label :event_image %><br />

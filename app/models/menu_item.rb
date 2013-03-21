@@ -10,7 +10,7 @@
 #
 
 class MenuItem < ActiveRecord::Base
-  attr_accessible :name, :type, :restaurant_id
+  attr_accessible :name, :course_name, :restaurant_id
 
   belongs_to :restaurant
 end

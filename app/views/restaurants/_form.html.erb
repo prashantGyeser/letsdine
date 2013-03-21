@@ -32,7 +32,10 @@
       <%= builder.label :name, "Menu Item Name" %>
       <%= builder.text_field :name, :rows => 3 %>
     </div>
-    
+    <div class="field">
+      <%= builder.label :course_name, "Menu Item type" %>
+      <%= builder.text_field :course_name, :rows => 3 %>
+    </div>
   <% end %>
   <div class="actions">
     <%= f.submit %>

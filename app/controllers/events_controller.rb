@@ -25,6 +25,7 @@ class EventsController < ApplicationController
   # GET /events/new.json
   def new
     @event = Event.new
+    @restaurants = Restaurant.all
 
     respond_to do |format|
       format.html # new.html.erb
@@ -40,6 +41,7 @@ class EventsController < ApplicationController
   # POST /events
   # POST /events.json
   def create
+    logger.debug "The content in the event param is:#{params[:event]}"
     @event = Event.new(params[:event])
 
     respond_to do |format|
