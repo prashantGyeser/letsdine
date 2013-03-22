@@ -14,7 +14,11 @@ class EventsController < ApplicationController
   # GET /events/1.json
   def show
     @event = Event.find(params[:id])
-
+    @restaurant = Restaurant.find(@event.restaurant_id)
+    @menu_items = @restaurant.menu_items
+    @menu_items_categorized = @menu_items.group_by { |menu_item| menu_item.course_name}
+    logger.debug "the grouped menu items are:#{@menu_items_categorized}"
+    
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @event }

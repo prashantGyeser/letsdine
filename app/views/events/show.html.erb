@@ -1,3 +1,39 @@
+<div class="container">
+  <div class="row-fluid">
+    <div class="span6">
+      <div class="eventDetailsImage">
+        <%= image_tag @event.event_image_url.to_s %>
+        <div class="event_date_time">
+          <%= @event.event_date %>
+          <%= @event.event_time %>
+        </div>
+      </div>
+    </div>
+    <div class="span6">
+      <h1><%= @event.event_name %></h1>    
+      <p>
+        <%= @event.event_description %>      
+      </p>
+      <a href="" class="large red awesome">Join this event</a>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row-fluid">
+    <div class="span3">
+      <% @menu_items_categorized.each do |course_name, menu_items| %>
+  
+        <h3><%= course_name %></h3>
+        <% for menu_item in menu_items%>
+          <div><%= menu_item.name %></div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
 <p id="notice"><%= notice %></p>
 
 <p>

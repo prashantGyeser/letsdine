@@ -176,7 +176,17 @@
   .eventDetailsText
   {
   	margin-top: 10px;
+  	
   }
+
+.eventDetailsImage img
+{
+	position: relative;
+}
+.event_date_time
+{
+	position: absolute;
+}
 
   /* Buttons */
 .awesome, .awesome:visited {
@@ -213,4 +223,4 @@
 	.orange.awesome, .orange.awesome:visited		{ background-color: #ff5c00; }
 	.orange.awesome:hover							{ background-color: #d45500; }
 	.yellow.awesome, .yellow.awesome:visited		{ background-color: #ffb515; }
-	.yellow.awesome:hover			  
+
