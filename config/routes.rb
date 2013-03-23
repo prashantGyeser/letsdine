@@ -1,4 +1,6 @@
 Letsdine::Application.routes.draw do
+  devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}
+
   resources :menu_items
 
 
@@ -6,7 +8,8 @@ Letsdine::Application.routes.draw do
 
 
   resources :events
-
+  #match '/:id/join', :controller => 'events', :action => 'join'
+  get '/events/:id/join' => 'events#join'
 
   get "home/index"
 

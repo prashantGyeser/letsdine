@@ -12,28 +12,28 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :event_name %><br />
+    <%= f.label :event_name %>
     <%= f.text_field :event_name %>
   </div>
   <div class="field">
-    <%= f.label :event_description %><br />
+    <%= f.label :event_description %>
     <%= f.text_area :event_description %>
   </div>
   <div class="field">
-    <%= f.label :event_date %><br />
+    <%= f.label :event_date %>
     <%= f.date_select :event_date %>
   </div>
   <div class="field">
-    <%= f.label :event_time %><br />
+    <%= f.label :event_time %>
     <%= f.time_select :event_time %>
   </div>
   <div class="field">
-    <%= f.label :restaurant_id %><br />
+    <%= f.label :restaurant_id %>
     <%= f.select :restaurant_id, Restaurant.all.collect {|x| [x.name, x.id]}, {}%>   
      
   </div>
   <div class="field">
-    <%= f.label :event_image %><br />
+    <%= f.label :event_image %>
     <%= f.file_field :event_image %>  
   </div>
   <div class="actions">

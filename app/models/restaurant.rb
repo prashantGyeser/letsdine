@@ -15,5 +15,5 @@ class Restaurant < ActiveRecord::Base
   attr_accessible :address, :cusine, :name, :photo, :menu_items_attributes
 
   has_many :menu_items, :dependent => :destroy
-  accepts_nested_attributes_for :menu_items
+  accepts_nested_attributes_for :menu_items, :allow_destroy => true
 end

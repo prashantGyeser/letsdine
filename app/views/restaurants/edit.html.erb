@@ -1,6 +1,14 @@
-<h1>Editing restaurant</h1>
+<div class="container">
+	<div class="row-fluid">
+		<div class="span12">
+			<h1>Editing restaurant: <%= @restaurant.name %></h1>
 
-<%= render 'form' %>
+			<%= render 'form' %>
 
-<%= link_to 'Show', @restaurant %> |
-<%= link_to 'Back', restaurants_path %>
+			<%= link_to 'Show', @restaurant %> |
+			<%= link_to 'Back', restaurants_path %>
+			
+		</div>
+	</div>
+</div>
+

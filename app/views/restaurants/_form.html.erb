@@ -12,29 +12,33 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :address %><br />
+    <%= f.label :address %>
     <%= f.text_field :address %>
   </div>
   <div class="field">
-    <%= f.label :cusine %><br />
+    <%= f.label :cusine %>
     <%= f.text_field :cusine %>
   </div>
   <div class="field">
-    <%= f.label :photo %><br />
+    <%= f.label :photo %>
     <%= f.text_field :photo %>
   </div>
   <%= f.fields_for :menu_items do |builder|%>
     <div class="field">
       <%= builder.label :name, "Menu Item Name" %>
       <%= builder.text_field :name, :rows => 3 %>
+      <%= builder.hidden_field :_destroy %>
+      <%= link_to_function "remove", "remove_fields(this)" %>
     </div>
     <div class="field">
       <%= builder.label :course_name, "Menu Item type" %>
       <%= builder.text_field :course_name, :rows => 3 %>
+      <%= builder.hidden_field :_destroy %>
+      <%= link_to_function "remove", "remove_fields(this)" %>
     </div>
   <% end %>
   <div class="actions">

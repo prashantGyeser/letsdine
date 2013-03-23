@@ -1,4 +1,5 @@
 class EventsController < ApplicationController
+  before_filter :authenticate_user!, :except => [:show, :index]
   # GET /events
   # GET /events.json
   def index
@@ -28,6 +29,7 @@ class EventsController < ApplicationController
   # GET /events/new
   # GET /events/new.json
   def new
+    
     @event = Event.new
     @restaurants = Restaurant.all
 
@@ -86,4 +88,8 @@ class EventsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def join
+  end
+
 end
