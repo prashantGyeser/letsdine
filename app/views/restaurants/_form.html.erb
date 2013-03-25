@@ -30,7 +30,7 @@
   <%= f.fields_for :menu_items do |builder|%>
     <div class="field">
       <%= builder.label :name, "Menu Item Name" %>
-      <%= builder.text_field :name, :rows => 3 %>
+      <%= builder.text_area :name, :rows => 3 %>
       <%= builder.hidden_field :_destroy %>
       <%= link_to_function "remove", "remove_fields(this)" %>
     </div>
