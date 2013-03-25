@@ -1,14 +1,28 @@
 <div class="content">
     <div class="container">
         <div class="row-fluid">
-        	<h1>New event</h1>
+        	<div class="span6 offset2">
+        		<div class="event">
+        			<h1>New event</h1>
+		        	<div id="rootwizard">
+						<ul>
+						  	<li><a href="#tab1" data-toggle="tab"><span class="label">1</span> Event Details</a></li>
+							<li><a href="#tab2" data-toggle="tab"><span class="label">2</span> Restaurant </a></li>
+							<li><a href="#tab3" data-toggle="tab"><span class="label">3</span> Invite People </a></li>
+						</ul>
+						<%= render 'form' %>
 
-			<%= render 'form' %>
-
-			<%= link_to 'Back', events_path %>
-
+						<!--<%= link_to 'Back', events_path %>-->
+					</div>
+        		</div>
+			</div>
         </div>
     </div>
 </div>
 
+<script type="text/javascript">
+	$(document).ready(function() {
+  		$('#rootwizard').bootstrapWizard({'tabClass': 'bwizard-steps'});
+	});
+</script>
 

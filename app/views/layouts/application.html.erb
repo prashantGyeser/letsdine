@@ -7,11 +7,21 @@
 	<%= stylesheet_link_tag    "bootstrap", :media => "all" %>
 	<%= stylesheet_link_tag    "bootstrap-responsive", :media => "all" %>
 	<%= stylesheet_link_tag    "style", :media => "all" %>
+	<%= stylesheet_link_tag    "prettify", :media => "all" %>
+	<%= stylesheet_link_tag    "custom", :media => "all" %>
+	<%= stylesheet_link_tag    "datepicker", :media => "all" %>
+	<%= stylesheet_link_tag    "bootstrap-timepicker", :media => "all" %>
+
 
 	<%= javascript_include_tag "application" %>
 	<%= javascript_include_tag "jquery-1.9.1" %>
 	<%= javascript_include_tag "bootstrap" %>
 	<%= javascript_include_tag "jquery.slidingGallery-1.2.js" %>
+	<%= javascript_include_tag "jquery.bootstrap.wizard" %>
+	<%= javascript_include_tag "bootstrap-datepicker" %>
+	<%= javascript_include_tag "bootstrap-timepicker" %>
+	
+	
 	<%= csrf_meta_tags %>
 	
 	<!-- Gallery Script -->
@@ -56,15 +66,6 @@
 
 	<%= yield %>	
 
-	<div class="footer">
-		<div class="container">
-			<div class="row-fluid">
-				<div class="span12">
-					Test
-				</div>
-			</div>
-		</div>
-	</div>
 
 	<script>
 		$(document).ready(function(){

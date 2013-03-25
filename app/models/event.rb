@@ -11,6 +11,8 @@
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null
 #  event_image       :string(255)
+#  invitees          :text
+#  user_id           :integer
 #
 
 class Event < ActiveRecord::Base
