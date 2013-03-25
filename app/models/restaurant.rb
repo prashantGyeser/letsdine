@@ -16,4 +16,6 @@ class Restaurant < ActiveRecord::Base
 
   has_many :menu_items, :dependent => :destroy
   accepts_nested_attributes_for :menu_items, :allow_destroy => true
+
+  mount_uploader :photo, PhotoUploader
 end

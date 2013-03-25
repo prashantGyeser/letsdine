@@ -16,7 +16,7 @@
 #
 
 class Event < ActiveRecord::Base
-  attr_accessible :event_date, :event_description, :event_name, :event_time, :restaurant_id, :event_image
+  attr_accessible :event_date, :event_description, :event_name, :event_time, :restaurant_id, :event_image, :invitees
 
   mount_uploader :event_image, EventImageUploader
 

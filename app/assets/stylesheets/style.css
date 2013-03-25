@@ -192,6 +192,80 @@ textarea
 	position: absolute;
 }
 
+.restaurantList
+{
+	
+}
+.restaurantList ul
+{
+	list-style: none;
+	margin: 0;
+}
+.restaurantList ul li img
+{
+	float: left;
+	margin-right: 10px;
+}
+.restaurantDetailsCotaniner
+{
+	float: left;
+	padding: 10px;
+}
+.restaurantDetailsCotaniner:hover
+{
+	background: #cceaff;
+	cursor: pointer;
+}
+.selectedRestaurant
+{
+	background: #cceaff;
+	cursor: pointer;
+}
+.restaurantDetailsCotaniner img
+{
+	float: left;
+	margin-right: 10px;
+}
+.restaurantDetailsCotaniner div
+{
+	float: left;
+}
+.restaurantList ul li
+{
+	clear: both;
+	padding: 10px 0;
+	
+}
+.restaurantList ul li a
+{
+	padding: 10px;
+}
+.restaurantList ul h4
+{
+	margin-top: 0;
+}
+.restaurantMenu
+{
+	
+}
+.restaurantMenu ul
+{
+	list-style: none;
+	margin: 0;
+}
+.restaurantMenu ul li
+{
+	margin-bottom: 5px;
+}
+.restaurantMenu h3
+{
+	margin: 0;
+}
+.restaurantDetailsContainer
+{
+	margin-bottom: 10px;
+}
+
   /* Buttons */
 .awesome, .awesome:visited {
 	background: #222 url(alert-overlay.png) repeat-x; 

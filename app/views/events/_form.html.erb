@@ -47,26 +47,48 @@
     <div class="tab-pane" id="tab2">
       <div class="field">
         <%= f.label :restaurant_id %>
-        <%= f.select :restaurant_id, Restaurant.all.collect {|x| [x.name, x.id]}, {}%>        
+        <%# f.select :restaurant_id, Restaurant.all.collect {|x| [x.name, x.id]}, {}%>        
+        <%= f.hidden_field :restaurant_id %>
+
         <div class="row-fluid">
           <div class="span6">
-            test
+            <% @restaurants.each do |restaurant| %>
+              <div class="restaurantDetailsCotaniner" id="<%= restaurant.id %>"> 
+                <%= image_tag restaurant.photo_url(:thumb).to_s %>
+                <div class="restaurantDetails">
+                  <h4><%= restaurant.name %></h4>
+                  <a class="medium awesome blue">View menu</a>
+                </div>
+              </div>
+            <% end %>
           </div>
+
           <div class="span6">
-            hello
-          </div>
-        </div>
-        <% @restaurants.each do |restaurant| %>
-        
+            <div class="restaurantMenu">
+              <% @restaurants.each do |restaurant| %>
+                <div class="menuItems" id="restaurant<%= restaurant.id %>menu">
+                  <% menu_items_categorized = restaurant.menu_items.group_by { |menu_item| menu_item.course_name} %>
+                  <% menu_items_categorized.each do |course_name, menu_items| %>
+                    <h4><%= course_name %></h4>
+                    <ul>
+                      <% menu_items.each do |menu_item| %>
+                        <li><%= menu_item.name %></li>
+                      <% end %>
+                    </ul>
+                    
+                  <% end %>
+
+                </div>
+              <% end %>
+              </div> 
+            </div>
             
-          
-        <% end %>
-          
+          </div>
+
+        </div>
         
       </div>
-    </div>
-    
-    <div class="tab-pane" id="tab3">
+      <div class="tab-pane" id="tab3">
       <div class="field">
         <%= f.label :invitees %>
         <p>
@@ -79,16 +101,18 @@
           <%= f.submit :class => "large awesome green" %>
         </div>
       </div>
-      
     </div>
-
     <ul class="pager wizard">
       <li class="previous first" style="display:none;"><a href="#">First</a></li>
       <li class="previous"><a href="#">Previous</a></li>
       <li class="next last" style="display:none;"><a href="#">Last</a></li>
       <li class="next"><a href="#">Next</a></li>
-    </ul>
-  <div>
+    </ul> 
+  </div>
+    
+    
+
+    
 <% end %>  
 
 <script type="text/javascript">
