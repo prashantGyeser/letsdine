@@ -88,31 +88,23 @@
       <% end %>
     </div>
     <div class="span6">
+
+      <h3>People Attending</h3>
+
       <% @event.attendee.each do |personAttending| %>
-        <%= personAttending.user_id %>
+        <% user =  User.find(personAttending.user_id) %>
+        <%= image_tag "/assets/noProfilePic.png", "data-toggle" => "tooltip", :title => user.name, :class => "profilePic" %>
       <% end %>
     </div>
   </div>
 </div>
  
-<!-- Modal -->
-<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3 id="myModalLabel">Join Event</h3>
-  </div>
-  <div class="modal-body">
-    
+<script>
+  $(document).ready(function(){
 
-
-
-
-
-  </div>
-  <div class="modal-footer">
-    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-    <button class="btn btn-primary">Save changes</button>
-  </div>
-</div>
-
-
+    //$('.profilePic').tooltip('show')
+    $('.profilePic').hover(function(){
+      $(this).tooltip('show');
+    });
+  });
+</script>

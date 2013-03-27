@@ -378,3 +378,32 @@ textarea
 	.orange.awesome:hover							{ background-color: #d45500; }
 	.yellow.awesome, .yellow.awesome:visited		{ background-color: #ffb515; }
 
+.login {
+  width: 45%;
+  height: auto;
+  margin: 20px auto;
+  padding: 20px;
+  position: relative;
+  background: white;
+  border: 1px solid #cccccc;
+  border-radius: 3px; }
+
+.login::before,
+.login::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 2px;
+  right: 2px;
+  top: 0;
+  z-index: -1;
+  background: #fff;
+  border: 1px solid #cccccc; }
+
+.login::after {
+  left: 4px;
+  right: 4px;
+  bottom: -5px;
+  z-index: -2;
+  box-shadow: 0 8px 8px -5px rgba(0, 0, 0, 0.3); }
+

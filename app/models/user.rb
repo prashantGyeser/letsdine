@@ -17,6 +17,7 @@
 #  updated_at             :datetime         not null
 #  name                   :string(255)
 #  provider               :string(255)
+#  uid                    :string(255)
 #
 
 class User < ActiveRecord::Base
@@ -32,6 +33,10 @@ class User < ActiveRecord::Base
 
   def self.from_omniauth(auth)
   	where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
+      logger.debug "The auth thingy is:"
+      logger.debug auth.inspect
+      logger.debug "The user thingy is:"
+      logger.debug user.inspect
   		user.provider = auth.provider
   		user.uid = auth.uid
   		user.name = auth.info.name
@@ -50,6 +55,14 @@ class User < ActiveRecord::Base
     else
       super
     end
+  end
+
+  def password_required?
+    super && provider.blank?
+  end
+
+  def email_required?
+    super && provider.blank?
   end
 
 end
