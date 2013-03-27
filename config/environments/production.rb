@@ -47,7 +47,7 @@ Letsdine::Application.configure do
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # config.assets.precompile += %w( search.js )
-  config.assets.precompile += ['bootstrap.css','bootstrap-responsive.css','style.css','datepicker.css','custom.css','prettify.css','bootstrap-timepicker.css']
+  config.assets.precompile += ['bootstrap.css','bootstrap-responsive.css','style.css','datepicker.css','custom.css','prettify.css','bootstrap-timepicker.css', 'bootstrap.js','bootstrap-datepicker.js','bootstrap-timepicker.js','jquery.bootstrap.wizard.js','jquery.slidingGallery-1.2.js','jquery-1.9.1.js']
 
 
   # Disable delivery errors, bad email addresses will be ignored
