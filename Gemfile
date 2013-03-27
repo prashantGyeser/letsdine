@@ -11,6 +11,7 @@ gem 'fog'
 gem 'rmagick'
 gem 'devise'
 gem 'omniauth-facebook'
+gem 'simple-navigation'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

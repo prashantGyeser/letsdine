@@ -1,3 +1,5 @@
+<% restaurant = Restaurant.find(@event.restaurant_id) %>
+<input type="hidden" value=<%= @event.id %> id="event_id" >
 <div class="container">
   <div class="row-fluid">
     <div class="span12">
@@ -10,7 +12,12 @@
   <div class="row-fluid">
     <div class="span6">
       <div class="eventDetailsImage">
-        <%= image_tag @event.event_image_url.to_s %>
+        <% if @event.event_image.blank? %>
+            <%= image_tag restaurant.photo_url.to_s %>
+        <% else %>
+            <%= image_tag @event.event_image_url.to_s %>
+        <% end %>
+        
         <div class="event_date_time">
           <%= @event.event_date %>
           <%= @event.event_time %>
@@ -22,24 +29,47 @@
       <p>
         <%= @event.event_description %>      
       </p>
-      <a href="" class="large red awesome">Join this event</a>
+
+      <%# Join form %>
+      <%= form_for @attendee, :url => attendee_path, :html => {:method => :post} do |f|%>
+        <% if @attendee.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@attendee.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+            <ul>
+              <% @attendee.errors.full_message.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+        <div class="field">
+          <%= f.label :seats, "Number of people attending" %>
+          <%= f.number_field :seats %>
+        </div>
+        <%= f.hidden_field :event_id, :value => @event.id %>
+
+        <%= f.submit "Join this event", :class => "large red awesome"  %>
+
+      <% end %>
+      
     </div>
   </div>
 </div>
 
 <div class="container">
   <div class="row-fluid">
-    <div class="span8">
+    <div class="span6">
       <% course_count = 1 %>
 
       <% @menu_items_categorized.each do |course_name, menu_items| %>
-        
+
         <%# Todo: Clean up this if loop. Right now the if loop is used to correctly put the tags for the span classes %>
-        <% if course_count == 0 || course_count == 2 %>
+        <% if course_count%3 == 0 %>
           <div class="row-fluid">
             <div class="span6">
         <% else %>
-          <div class="span6">
+            <div class="span6">
         <% end %>
 
         <h3><%= course_name %></h3>
@@ -47,7 +77,7 @@
           <div><%= menu_item.name %></div>
         <% end %>
 
-        <% if course_count == 0 || course_count == 2 %>
+        <% if course_count%3 == 0 %>
             </div>
           </div>
           <% course_count = course_count + 1 %>
@@ -55,21 +85,34 @@
           </div>  
           <% course_count = course_count + 1 %>
         <% end %>
-
       <% end %>
+    </div>
+    <div class="span6">
+      <% @event.attendee.each do |personAttending| %>
+        <%= personAttending.user_id %>
+      <% end %>
+    </div>
+  </div>
+</div>
+ 
+<!-- Modal -->
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Join Event</h3>
+  </div>
+  <div class="modal-body">
+    
 
 
-    </div>
-    <div class="span4">
-      Hello
-    </div>
+
+
+
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button class="btn btn-primary">Save changes</button>
   </div>
 </div>
 
 
-
-
-
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>

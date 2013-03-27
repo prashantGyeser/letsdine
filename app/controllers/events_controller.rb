@@ -16,6 +16,8 @@ class EventsController < ApplicationController
   def show
     @event = Event.find(params[:id])
     @restaurant = Restaurant.find(@event.restaurant_id)
+    @attendee = Attendee.new
+
     @menu_items = @restaurant.menu_items
     @menu_items_categorized = @menu_items.group_by { |menu_item| menu_item.course_name}
     logger.debug "the grouped menu items are:#{@menu_items_categorized}"
@@ -29,7 +31,6 @@ class EventsController < ApplicationController
   # GET /events/new
   # GET /events/new.json
   def new
-    
     @event = Event.new
     @restaurants = Restaurant.all
 
@@ -49,9 +50,16 @@ class EventsController < ApplicationController
   def create
     logger.debug "The content in the event param is:#{params[:event]}"
     @event = Event.new(params[:event])
+    invitee_emails = params[:event][:invitees].split(",")
 
     respond_to do |format|
       if @event.save
+      
+        if invitee_emails.empty?
+        else
+          InviteMailer.invite(invitee_emails, current_user.name, @event).deliver  
+        end
+        
         format.html { redirect_to @event, notice: 'Event was successfully created.' }
         format.json { render json: @event, status: :created, location: @event }
       else
@@ -90,6 +98,8 @@ class EventsController < ApplicationController
   end
 
   def join
+    logger.debug "It is getting to the join controller action"
+    @event = Event.find(params[:id])
   end
 
 end

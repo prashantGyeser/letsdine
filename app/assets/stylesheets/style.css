@@ -15,7 +15,7 @@ textarea
 	margin-top: 60px;
 	background: url("/assets/headerBG.png");
 }
-.homepage
+.homepage 
 {
 	list-style: none;
 	color: #a1afaf;
@@ -25,17 +25,112 @@ textarea
 	font-size: 18px;
 	text-shadow: 0px 0px 1px #647575;
 }
-.homepage li
+.homepage li 
 {
 	display: inline;
 	margin-right: 20px;
 	font-weight: bold;
 }
-.homepage li.current
+.homepage li a
+{
+	color: #a1afaf;
+	font-size: 18px;
+	text-shadow: 0px 0px 1px #647575;
+	text-decoration: none;
+
+	/* First we need to help some browsers along for this to work.
+     Just because a vendor prefix is there, doesn't mean it will
+     work in a browser made by that vendor either, it's just for
+     future-proofing purposes I guess. */
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	/* ...and now for the proper property */
+	transition:.5s;
+
+}
+.homepage li a:visited
+{
+	color: #a1afaf;
+	font-size: 18px;
+	text-shadow: 0px 0px 1px #647575;
+}
+.homepage li a:visited
+{
+	color: #a1afaf;
+	font-size: 18px;
+	text-shadow: 0px 0px 1px #647575;
+}
+.homepage li a:hover
 {
 	color: #080809;	
 	text-shadow: 0px 1px 2px #404046;
 }
+
+.homepage li a.selected
+{
+	color: #080809;	
+	text-shadow: 0px 1px 2px #404046;
+}
+
+.topNav 
+{
+	list-style: none;
+	margin-top: 20px;
+	color: #a1afaf;
+	font-size: 18px;
+	text-shadow: 0px 0px 1px #647575;
+}
+.topNav li 
+{
+	display: inline;
+	margin-right: 20px;
+	font-weight: bold;
+}
+.topNav li a
+{
+	color: #a1afaf;
+	font-size: 18px;
+	text-shadow: 0px 0px 1px #647575;
+	text-decoration: none;
+
+	/* First we need to help some browsers along for this to work.
+     Just because a vendor prefix is there, doesn't mean it will
+     work in a browser made by that vendor either, it's just for
+     future-proofing purposes I guess. */
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	/* ...and now for the proper property */
+	transition:.5s;
+
+}
+.topNav li a:visited
+{
+	color: #a1afaf;
+	font-size: 18px;
+	text-shadow: 0px 0px 1px #647575;
+}
+.topNav li a:visited
+{
+	color: #a1afaf;
+	font-size: 18px;
+	text-shadow: 0px 0px 1px #647575;
+}
+.topNav li a:hover
+{
+	color: #080809;	
+	text-shadow: 0px 1px 2px #404046;
+}
+
+.topNav li a.selected
+{
+	color: #080809;	
+	text-shadow: 0px 1px 2px #404046;
+}
+
 .slider
 {
 	margin-top: -170px;
@@ -116,26 +211,7 @@ textarea
 	margin-top: 20px;
 }
 
-.topNav
-{
-	list-style: none;
-	color: #a1afaf;
-	margin-top: 20px;
-	margin-left: -20px;
-	font-size: 18px;
-	text-shadow: 0px 0px 1px #647575;
-}
-.topNav li
-{
-	display: inline;
-	margin-right: 20px;
-	font-weight: bold;
-}
-.topNav li.current
-{
-	color: #080809;	
-	text-shadow: 0px 1px 2px #404046;
-}
+
 .peopleAttending
 {
 	margin-top: 20px;

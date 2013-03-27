@@ -53,11 +53,7 @@
 		<div class="container">
 			<div class="row-fluid">
 				<div class="span6 offset4">
-					<ul class="<%= @home_page ? 'homepage' : 'topNav'%>">
-						<li class="current">Home</li>
-						<li>Events</li>
-						<li>Contact Us</li>
-					</ul>
+					<%= render_navigation :class => 'test' %>
 				</div>
 			</div>			
 		</div>

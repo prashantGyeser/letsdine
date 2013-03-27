@@ -21,4 +21,5 @@ class Event < ActiveRecord::Base
   mount_uploader :event_image, EventImageUploader
 
   has_one :restaurant
+  has_many :attendee, :dependent => :destroy
 end

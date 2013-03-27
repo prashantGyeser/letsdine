@@ -7,9 +7,17 @@ Letsdine::Application.routes.draw do
   resources :restaurants
 
 
-  resources :events
+  resources :events do
+    member do
+      put :join
+    end
+  end
+
+  match "/attendees/create" => "attendees#create", :as => :attendee
+  #map.connect '/events/:id/join', :controller => 'events_controller', :action => 'join'
   #match '/:id/join', :controller => 'events', :action => 'join'
-  get '/events/:id/join' => 'events#join'
+  
+
 
   get "home/index"
 

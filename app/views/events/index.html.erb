@@ -1,263 +1,59 @@
 <div class="content">
         <div class="container">
-            <div class="row-fluid">
+            <% eventCount = 0 %>
+            <% @events.each do |event| %>
+                <% restaurant = Restaurant.find(event.restaurant_id) %>
+                <%# Checking if a new row has to be created %>
+                <% if ( eventCount%4 ) == 0 %>
+                    <div class="row-fluid">        
+                <% end %>
+
                 <div class="span3">
                     <div class="event">
-                        <img src="img/eventImage.png">
-                        <h3>Event Name</h3>
+                        <% if event.event_image.blank? %>
+                            <%= image_tag restaurant.photo_url.to_s %>
+                        <% else %>
+                            <%= image_tag event.event_image_url.to_s %>
+                        <% end %>
+                        <h3><%= link_to event.event_name, event_path(event) %></h3>
                         <div class="eventDetails">
                             <div class="detail">
-                                <img src="img/locationIcon.png">
-                                Event Location
+                                <img src="/assets/locationIcon.png">
+                                <%= restaurant.address %>
                             </div>
                             <div class="detail">
-                                <img src="img/timeIcon.png">
-                                Event Time
+                                <img src="/assets/timeIcon.png">
+                                <%= event.event_time %>
                             </div>
                         </div>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget ante eros, eu vulputate metus. Vestibulum commodo dui sit amet ligula suscipit porta eu vulputate ligula... <a href="#">See event</a>
+                            <%= event.event_description %> <%= link_to "See event", event_path(event) %>
                         </p>
+                        <div class="peopleAttending">
+                        <% event.attendee.each do |personAttending| %> 
+                            <% if personAttending.blank? %>
+                                <%= image_tag "noProfilePic" %>
+                            <% else %>
+                            <% end %>
+                        <% end %>
+                        </div>
                         <div class="peopleAttending">
                             <a href="#" id="jl" data-toggle="tooltip" title="first tooltip"><img src="img/Jennifer-Lawrence-Thumbnail.jpg"></a>
                             <img src="img/hugh-jackman-thumbnail.jpg">
                             <img src="img/noProfilePic.png">
                             <img src="img/noProfilePic.png">
                             <img src="img/noProfilePic.png">
-                            <p><a href="#">5 Other People Attending</a></p>
-                        </div>
-
-                    </div>
-                    
-                </div>
-                <div class="span3">
-                    <div class="event">
-                        <img src="img/eventImage.png">
-                        <h3>Event Name</h3>
-                        <div class="eventDetails">
-                            <div class="detail">
-                                <img src="img/locationIcon.png">
-                                Event Location
-                            </div>
-                            <div class="detail">
-                                <img src="img/timeIcon.png">
-                                Event Time
-                            </div>
-                        </div>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget ante eros, eu vulputate metus. Vestibulum commodo dui sit amet ligula suscipit porta eu vulputate ligula... <a href="#">See event</a>
-                        </p>
-
-                        <div class="peopleAttending">
-                            <img src="img/Jennifer-Lawrence-Thumbnail.jpg"> 
-                            <img src="img/hugh-jackman-thumbnail.jpg">
-                            <img src="img/noProfilePic.png">
-                            <img src="img/noProfilePic.png">
-                            <img src="img/noProfilePic.png">
-                            <p><a href="#">5 Other People Attending</a></p>
+                            <p>
+                                <%= link_to "See All People Attending", event_path(event) %>
+                            </p>
                         </div>
                     </div>
+                </div>    
 
-
-                </div>
-                <div class="span3">
-                    <div class="event">
-                        <img src="img/eventImage.png">
-                        <h3>Event Name</h3>
-                        <div class="eventDetails">
-                            <div class="detail">
-                                <img src="img/locationIcon.png">
-                                Event Location
-                            </div>
-                            <div class="detail">
-                                <img src="img/timeIcon.png">
-                                Event Time
-                            </div>
-                        </div>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget ante eros, eu vulputate metus. Vestibulum commodo dui sit amet ligula suscipit porta eu vulputate ligula... <a href="#">See event</a>
-                        </p>
-                        <div class="peopleAttending">
-                            <img src="img/Jennifer-Lawrence-Thumbnail.jpg"> 
-                            <img src="img/hugh-jackman-thumbnail.jpg">
-                            <img src="img/noProfilePic.png">
-                            <img src="img/noProfilePic.png">
-                            <img src="img/noProfilePic.png">
-                            <p><a href="#">5 Other People Attending</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="span3">
-                    <div class="event">
-                        <img src="img/eventImage.png">
-                        <h3>Event Name</h3>
-                        <div class="eventDetails">
-                            <div class="detail">
-                                <img src="img/locationIcon.png">
-                                Event Location
-                            </div>
-                            <div class="detail">
-                                <img src="img/timeIcon.png">
-                                Event Time
-                            </div>
-                        </div>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget ante eros, eu vulputate metus. Vestibulum commodo dui sit amet ligula suscipit porta eu vulputate ligula... <a href="#">See event</a>
-                        </p>
-                        <div class="peopleAttending">
-                            <img src="img/Jennifer-Lawrence-Thumbnail.jpg"> 
-                            <img src="img/hugh-jackman-thumbnail.jpg">
-                            <img src="img/noProfilePic.png">
-                            <img src="img/noProfilePic.png">
-                            <img src="img/noProfilePic.png">
-                            <p><a href="#">5 Other People Attending</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row-fluid">
-                <div class="span3">
-                    <div class="event">
-                        <img src="img/eventImage.png">
-                        <h3>Event Name</h3>
-                        <div class="eventDetails">
-                            <div class="detail">
-                                <img src="img/locationIcon.png">
-                                Event Location
-                            </div>
-                            <div class="detail">
-                                <img src="img/timeIcon.png">
-                                Event Time
-                            </div>
-                        </div>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget ante eros, eu vulputate metus. Vestibulum commodo dui sit amet ligula suscipit porta eu vulputate ligula... <a href="#">See event</a>
-                        </p>
-                        <div class="peopleAttending">
-                            <img src="img/Jennifer-Lawrence-Thumbnail.jpg"> 
-                            <img src="img/hugh-jackman-thumbnail.jpg">
-                            <img src="img/noProfilePic.png">
-                            <img src="img/noProfilePic.png">
-                            <img src="img/noProfilePic.png">
-                            <p><a href="#">5 Other People Attending</a></p>
-                        </div>
-                    </div>
-                    
-                </div>
-                <div class="span3">
-                    <div class="event">
-                        <img src="img/eventImage.png">
-                        <h3>Event Name</h3>
-                        <div class="eventDetails">
-                            <div class="detail">
-                                <img src="img/locationIcon.png">
-                                Event Location
-                            </div>
-                            <div class="detail">
-                                <img src="img/timeIcon.png">
-                                Event Time
-                            </div>
-                        </div>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget ante eros, eu vulputate metus. Vestibulum commodo dui sit amet ligula suscipit porta eu vulputate ligula... <a href="#">See event</a>
-                        </p>
-                        <div class="peopleAttending">
-                            <a href="#"><img src="img/Jennifer-Lawrence-Thumbnail.jpg"></a>
-                            <img src="img/hugh-jackman-thumbnail.jpg">
-                            <img src="img/noProfilePic.png">
-                            <img src="img/noProfilePic.png">
-                            <img src="img/noProfilePic.png">
-                            <p><a href="#">5 Other People Attending</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="span3">
-                    <div class="event">
-                        <img src="img/eventImage.png">
-                        <h3>Event Name</h3>
-                        <div class="eventDetails">
-                            <div class="detail">
-                                <img src="img/locationIcon.png">
-                                Event Location
-                            </div>
-                            <div class="detail">
-                                <img src="img/timeIcon.png">
-                                Event Time
-                            </div>
-                        </div>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget ante eros, eu vulputate metus. Vestibulum commodo dui sit amet ligula suscipit porta eu vulputate ligula... <a href="#">See event</a>
-                        </p>
-                        <div class="peopleAttending">
-                            <img src="img/Jennifer-Lawrence-Thumbnail.jpg"> 
-                            <img src="img/hugh-jackman-thumbnail.jpg">
-                            <img src="img/noProfilePic.png">
-                            <img src="img/noProfilePic.png">
-                            <img src="img/noProfilePic.png">
-                            <p><a href="#">5 Other People Attending</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="span3">
-                    <div class="event">
-                        <img src="img/eventImage.png">
-                        <h3>Event Name</h3>
-                        <div class="eventDetails">
-                            <div class="detail">
-                                <img src="img/locationIcon.png">
-                                Event Location
-                            </div>
-                            <div class="detail">
-                                <img src="img/timeIcon.png">
-                                Event Time
-                            </div>
-                        </div>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget ante eros, eu vulputate metus. Vestibulum commodo dui sit amet ligula suscipit porta eu vulputate ligula... <a href="#">See event</a>
-                        </p>
-                        <div class="peopleAttending">
-                            <img src="img/Jennifer-Lawrence-Thumbnail.jpg"> 
-                            <img src="img/hugh-jackman-thumbnail.jpg">
-                            <img src="img/noProfilePic.png">
-                            <img src="img/noProfilePic.png">
-                            <img src="img/noProfilePic.png">
-                            <p><a href="#">5 Other People Attending</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-<h1>Listing events</h1>
-
-<table>
-  <tr>
-    <th>Event name</th>
-    <th>Event description</th>
-    <th>Event date</th>
-    <th>Event time</th>
-    <th>Restaurant</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @events.each do |event| %>
-  <tr>
-    <td><%= event.event_name %></td>
-    <td><%= event.event_description %></td>
-    <td><%= event.event_date %></td>
-    <td><%= event.event_time %></td>
-    <td><%= event.restaurant_id %></td>
-    <td><%= link_to 'Show', event %></td>
-    <td><%= link_to 'Edit', edit_event_path(event) %></td>
-    <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Event', new_event_path %>
+                <% if ( eventCount%3 ) == 0 && eventCount != 0%>
+                    </div>        
+                <% end %>                
+                <%# Closing tag for the new row div %>
+                <% eventCount = eventCount + 1 %>
+            <% end %>
+            

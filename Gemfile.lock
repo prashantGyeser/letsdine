@@ -187,6 +187,8 @@ GEM
       multi_json (~> 1.0)
       rubyzip
       websocket (~> 1.0.4)
+    simple-navigation (3.10.0)
+      activesupport (>= 2.3.2)
     slop (3.4.4)
     sprockets (2.2.2)
       hike (~> 1.2)
@@ -230,5 +232,6 @@ DEPENDENCIES
   rmagick
   rspec-rails
   sass-rails (~> 3.2.3)
+  simple-navigation
   turn
   uglifier (>= 1.0.3)
