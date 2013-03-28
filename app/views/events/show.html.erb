@@ -19,8 +19,10 @@
         <% end %>
         
         <div class="event_date_time">
-          <%= @event.event_date %>
-          <%= @event.event_time %>
+          <%= @event.event_date.strftime("%d %B %Y") %>
+          <%= @event.event_time.strftime("%I:%M%p") %>
+          <strong><%= restaurant.name %></strong>
+          <%= restaurant.address %>
         </div>
       </div>
     </div>

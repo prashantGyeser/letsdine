@@ -51,7 +51,9 @@ class EventsController < ApplicationController
     logger.debug "The content in the event param is:#{params[:event]}"
     @event = Event.new(params[:event])
     @restaurants = Restaurant.all
-    
+    logger.debug "The content in the events param is: #{params.inspect}"
+    logger.debug "The time now is: #{Time.now}"
+
     invitee_emails = params[:event][:invitees].split(",")
 
     respond_to do |format|
