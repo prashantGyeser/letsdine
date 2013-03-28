@@ -16,7 +16,9 @@
 #
 
 class Event < ActiveRecord::Base
-  attr_accessible :event_date, :event_description, :event_name, :event_time, :restaurant_id, :event_image, :invitees
+  attr_accessible :event_date, :event_description, :event_name, :event_time, :restaurant_id, :event_image, :invitees, :max_seats
+
+  validates :event_date, :event_description, :event_name, :event_time, :restaurant_id, :presence => true
 
   mount_uploader :event_image, EventImageUploader
 

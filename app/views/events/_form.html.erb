@@ -64,26 +64,28 @@
                   <a class="medium awesome blue">View menu</a>
                 </div>
               </div>
-            <% end %>
+            <% end %>  
+            
+            
           </div>
 
           <div class="span6">
             <div class="restaurantMenu">
-              <% @restaurants.each do |restaurant| %>
-                <div class="menuItems" id="restaurant<%= restaurant.id %>menu">
-                  <% menu_items_categorized = restaurant.menu_items.group_by { |menu_item| menu_item.course_name} %>
-                  <% menu_items_categorized.each do |course_name, menu_items| %>
-                    <h4><%= course_name %></h4>
-                    <ul>
-                      <% menu_items.each do |menu_item| %>
-                        <li><%= menu_item.name %></li>
-                      <% end %>
-                    </ul>
-                    
-                  <% end %>
+                <% @restaurants.each do |restaurant| %>
+                  <div class="menuItems" id="restaurant<%= restaurant.id %>menu">
+                    <% menu_items_categorized = restaurant.menu_items.group_by { |menu_item| menu_item.course_name} %>
+                    <% menu_items_categorized.each do |course_name, menu_items| %>
+                      <h4><%= course_name %></h4>
+                      <ul>
+                        <% menu_items.each do |menu_item| %>
+                          <li><%= menu_item.name %></li>
+                        <% end %>
+                      </ul>
+                    <% end %>
+                  </div>
+              <% end %>                
+              
 
-                </div>
-              <% end %>
               </div> 
             </div>
             

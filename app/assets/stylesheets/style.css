@@ -1,3 +1,17 @@
+#error_explanation
+{
+	color: #d10000;
+}
+.field_with_errors input
+{
+	border: 1px solid #d10000;	
+	background: #ffe2e2;
+}
+.field_with_errors textarea
+{
+	border: 1px solid #d10000;	
+	background: #ffe2e2;
+}
 .createEventBtn
 {
 	margin-top: 10px;

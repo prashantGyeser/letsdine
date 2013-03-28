@@ -50,6 +50,8 @@ class EventsController < ApplicationController
   def create
     logger.debug "The content in the event param is:#{params[:event]}"
     @event = Event.new(params[:event])
+    @restaurants = Restaurant.all
+    
     invitee_emails = params[:event][:invitees].split(",")
 
     respond_to do |format|
