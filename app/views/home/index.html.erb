@@ -1,14 +1,89 @@
-<div class="slider">
-        <div class="container">
-            <div class="row-fluid">
-                <div class="span12">
-                    <div class="gallery">
-                        <img src="/assets/sliderImage1.png" class="start">  
-                        <img src="/assets/sliderImage1.png">
-                        <img src="/assets/sliderImage1.png">    
-                    </div>
+<div class="container">
+    <div class="row-fluid">
+        <div class="span12">
+            <section id="dg-container" class="dg-container">
+                <div class="dg-wrapper">
+                    <% @events.each do |event| %>
+                        <%= link_to event_path(event) do %>
+                            <% if event.event_image.blank? %>
+                                <% restaurant = Restaurant.find(event.restaurant_id) %>
+                                <%= image_tag restaurant.photo_url.to_s %>
+                            <% else %>
+                                <%= image_tag event.event_image_url.to_s %>
+                            <% end %>
+                        <% end %>    
+                    <% end %>
                 </div>
-                
-            </div>
+            </section>
         </div>
     </div>
+</div>
+
+<div class="content">
+        <div class="container">
+            <% eventCount = 0 %>
+            <% @events.each do |event| %>
+                <% restaurant = Restaurant.find(event.restaurant_id) %>
+                <%# Checking if a new row has to be created %>
+                <% if ( eventCount%4 ) == 0 %>
+                    <div class="row-fluid">        
+                <% end %>
+
+                <div class="span3">
+                    <div class="event">
+                        <% if event.event_image.blank? %>
+                            <%= image_tag restaurant.photo_url.to_s %>
+                        <% else %>
+                            <%= image_tag event.event_image_url.to_s %>
+                        <% end %>
+                        <h3><%= link_to event.event_name, event_path(event) %></h3>
+                        <div class="eventDetails">
+                            <div class="detail">
+                                <img src="/assets/locationIcon.png">
+                                <%= restaurant.address %>
+                            </div>
+                            <div class="detail">
+                                <img src="/assets/timeIcon.png">
+                                <%= event.event_time %>
+                            </div>
+                        </div>
+                        <p>
+                            <%= event.event_description %> <%= link_to "See event", event_path(event) %>
+                        </p>
+                        <div class="peopleAttending">
+                        <% event.attendee.each do |personAttending| %> 
+                            <% if personAttending.blank? %>
+                                <%= image_tag "noProfilePic" %>
+                            <% else %>
+                            <% end %>
+                        <% end %>
+                        </div>
+                        <div class="peopleAttending">
+                            <% event.attendee.each do |personAttending| %>
+                                <% user =  User.find(personAttending.user_id) %>
+                                <%= image_tag "/assets/noProfilePic.png", "data-toggle" => "tooltip", :title => user.name, :class => "profilePic" %>
+                              <% end %>
+                        </div>
+                    </div>
+                </div>    
+
+                <% if ( eventCount%3 ) == 0 && eventCount != 0%>
+                    </div>        
+                <% end %>                
+                <%# Closing tag for the new row div %>
+                <% eventCount = eventCount + 1 %>
+            <% end %>
+        </div>
+    </div>   
+
+            
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(function() {
+            $('#dg-container').gallery({
+                autoplay    :   true
+            });
+        });
+    });
+    
+</script/>

@@ -431,3 +431,42 @@
   z-index: -2;
   box-shadow: 0 8px 8px -5px rgba(0, 0, 0, 0.3); }
 
+.dg-container{
+	width: 100%;
+	height: 290px;
+	margin-top: -180px;
+	position: relative;
+}
+.dg-wrapper{
+	width: 481px;
+	height: 316px;
+	margin: 0 auto;
+	position: relative;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-perspective: 1000px;
+	-moz-perspective: 1000px;
+	-o-perspective: 1000px;
+	-ms-perspective: 1000px;
+	perspective: 1000px;
+}
+.dg-wrapper a{
+	width: 400px;
+	height: 265px;
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: transparent url(../images/browser.png) no-repeat top left;
+	box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
+}
+.dg-wrapper a.dg-transition{
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
