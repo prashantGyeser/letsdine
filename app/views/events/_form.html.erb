@@ -21,6 +21,10 @@
         <%= f.text_area :event_description, :rows => 5 %>
       </div>
       <div class="field">
+        <%= f.label :max_seats %>
+        <%= f.number_field :max_seats %>
+      </div>
+      <div class="field">
         <%= f.label :event_date %>
         <%#f.date_select :event_date %>
         <div class="input-append date" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">

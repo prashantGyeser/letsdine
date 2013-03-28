@@ -2,6 +2,16 @@
 {
 	margin-top: 10px;
 }
+.loginDetails
+{
+	margin-top: 10px;
+	font-size: 16px;
+	color: #fff;
+}
+.loginDetails a
+{
+	color: #fff;
+}
 .navbar-inner
 {
 	background-color: #d3371a;
