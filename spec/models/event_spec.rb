@@ -13,6 +13,7 @@
 #  event_image       :string(255)
 #  invitees          :text
 #  user_id           :integer
+#  max_seats         :integer
 #
 
 require 'spec_helper'
