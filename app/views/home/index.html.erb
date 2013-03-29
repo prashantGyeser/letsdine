@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row-fluid">
         <div class="span12">
-            <section id="dg-container" class="dg-container">
+            <section id="dg-container-id" class="dg-container">
                 <div class="dg-wrapper">
                     <% @events.each do |event| %>
                         <%= link_to event_path(event) do %>
@@ -80,11 +80,11 @@
             
 <script type="text/javascript">
     $(document).ready(function(){
-        $(function() {
-            $('#dg-container').gallery({
-                autoplay    :   true
-            });
+        
+        $('#dg-container-id').gallery({
+            autoplay    :   true
         });
+        
     });
     
 </script/>
