@@ -19,11 +19,12 @@
                         <div class="eventDetails">
                             <div class="detail">
                                 <img src="/assets/locationIcon.png">
-                                <%= restaurant.address %>
+                                <%= restaurant.name %>
                             </div>
                             <div class="detail">
                                 <img src="/assets/timeIcon.png">
-                                <%= event.event_time %>
+                                <%= event.event_date.strftime("%d %B %Y") %>
+                                <%= event.event_time.strftime("%I:%M%p") %>
                             </div>
                         </div>
                         <p>
