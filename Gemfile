@@ -52,3 +52,6 @@ end
 
 # To use debugger
 # gem 'debugger'
+
+# Performance monitoring
+gem 'newrelic_rpm'
