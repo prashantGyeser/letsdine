@@ -39,8 +39,8 @@ timeIcon.png: timeIcon-030cbb9a35b95c008949e1e1af48b31f.png
 timeIcon/index.png: timeIcon-030cbb9a35b95c008949e1e1af48b31f.png
 topBarBG.png: topBarBG-78e160f5aac3985110e62277150ecf74.png
 topBarBG/index.png: topBarBG-78e160f5aac3985110e62277150ecf74.png
-application.js: application-953631c05d1ccd4aa1bc896de2468c9e.js
-application/index.js: application-953631c05d1ccd4aa1bc896de2468c9e.js
+application.js: application-24b65db1e5c9d62bb9af44517fc7ab2e.js
+application/index.js: application-24b65db1e5c9d62bb9af44517fc7ab2e.js
 bootstrap-datepicker.js: bootstrap-datepicker-74c36d29cb50e87871b6ae6db53cb833.js
 bootstrap-datepicker/index.js: bootstrap-datepicker-74c36d29cb50e87871b6ae6db53cb833.js
 bootstrap-timepicker.js: bootstrap-timepicker-0a8e7ed55fe8e0f216163c3b052455e4.js
@@ -54,8 +54,6 @@ jquery.bootstrap.wizard.js: jquery.bootstrap.wizard-d782aee0ec46f0cb09d3db478d99
 jquery/index.bootstrap.wizard.js: jquery.bootstrap.wizard-d782aee0ec46f0cb09d3db478d9974cf.js
 jquery.gallery.js: jquery.gallery-8f202acb5844b47bf689214a3512fa80.js
 jquery/index.gallery.js: jquery.gallery-8f202acb5844b47bf689214a3512fa80.js
-jquery.slidingGallery-1.2.js: jquery.slidingGallery-1.2-ecc0a4509d67d13f12e02a3fe15aea48.js
-jquery/index.slidingGallery-1.2.js: jquery.slidingGallery-1.2-ecc0a4509d67d13f12e02a3fe15aea48.js
 modernizr.custom.53451.js: modernizr.custom.53451-5c4eeccf659da2baacac538b70b48cd2.js
 modernizr/index.custom.53451.js: modernizr.custom.53451-5c4eeccf659da2baacac538b70b48cd2.js
 application.css: application-bb272fe4b8aae1a1b7ce35ac49edabb2.css
