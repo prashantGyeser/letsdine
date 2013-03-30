@@ -25,7 +25,7 @@ class RestaurantsController < ApplicationController
   # GET /restaurants/new.json
   def new
     @restaurant = Restaurant.new
-    3.times { @restaurant.menu_items.build }
+    20.times { @restaurant.menu_items.build }
 
     respond_to do |format|
       format.html # new.html.erb
