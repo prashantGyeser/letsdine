@@ -39,11 +39,10 @@
                         <% end %>
                         </div>
                         <div class="peopleAttending">
-                            <a href="#" id="jl" data-toggle="tooltip" title="first tooltip"><img src="img/Jennifer-Lawrence-Thumbnail.jpg"></a>
-                            <img src="img/hugh-jackman-thumbnail.jpg">
-                            <img src="img/noProfilePic.png">
-                            <img src="img/noProfilePic.png">
-                            <img src="img/noProfilePic.png">
+                            <% event.attendee.each do |personAttending| %>
+                                <% user =  User.find(personAttending.user_id) %>
+                                <%= image_tag "/assets/noProfilePic.png", "data-toggle" => "tooltip", :title => user.name, :class => "profilePic" %>
+                            <% end %>
                             <p>
                                 <%= link_to "See All People Attending", event_path(event) %>
                             </p>
