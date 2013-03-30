@@ -55,17 +55,13 @@
                             <%= event.event_description %> <%= link_to "See event", event_path(event) %>
                         </p>
                         <div class="peopleAttending">
-                        <% event.attendee.each do |personAttending| %> 
-                            <% if personAttending.blank? %>
-                                <%# image_tag "noProfilePic" %>
-                            <% else %>
-                            <% end %>
-                        <% end %>
-                        </div>
-                        <div class="peopleAttending">
                             <% event.attendee.each do |personAttending| %>
                                 <% user =  User.find(personAttending.user_id) %>
-                                <%= image_tag "/assets/noProfilePic.png", "data-toggle" => "tooltip", :title => user.name, :class => "profilePic" %>
+                                <% if user.image.blank? %>
+                                    <%= image_tag "/assets/noProfilePic.png", "data-toggle" => "tooltip", :title => user.name, :class => "profilePic" %>    
+                                <% else %>
+                                    <%= image_tag user.image.to_s, "data-toggle" => "tooltip", :title => user.name, :class => "profilePic" %>    
+                                <% end %>
                               <% end %>
                               <p>
                                 <%= link_to "See All People Attending", event_path(event) %>
