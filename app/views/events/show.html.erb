@@ -49,6 +49,10 @@
           <%= f.label :seats, "Number of people attending" %>
           <%= f.number_field :seats %>
         </div>
+        <div class="field">
+          <%= f.label :phone_number, "Your phone number" %>
+          <%= f.text_field :phone_number %>
+        </div>
         <%= f.hidden_field :event_id, :value => @event.id %>
 
         <%= f.submit "Join this event", :class => "large red awesome"  %>

@@ -11,7 +11,7 @@
 #
 
 class Attendee < ActiveRecord::Base
-  attr_accessible :event_id, :user_id, :seats
+  attr_accessible :event_id, :user_id, :seats, :phone_number
 
   belongs_to :event
 end
