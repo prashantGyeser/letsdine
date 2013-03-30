@@ -67,11 +67,15 @@
   <div class="row-fluid">
     <div class="span6">
       <% course_count = 1 %>
+      <% total_number_of_courses = 0 %>
 
       <% @menu_items_categorized.each do |course_name, menu_items| %>
+        <% total_number_of_courses = total_number_of_courses + 1 %>
+      <% end %>      
 
+      <% @menu_items_categorized.each do |course_name, menu_items| %>        
         <%# Todo: Clean up this if loop. Right now the if loop is used to correctly put the tags for the span classes %>
-        <% if course_count%3 == 0 %>
+        <% if course_count%3 == 0 || course_count == 1%>
           <div class="row-fluid">
             <div class="span6">
         <% else %>
@@ -83,7 +87,9 @@
           <div><%= menu_item.name %></div>
         <% end %>
 
-        <% if course_count%3 == 0 %>
+
+
+        <% if (course_count%2 == 0 && course_count != 0) || (course_count + 1) > total_number_of_courses %>
             </div>
           </div>
           <% course_count = course_count + 1 %>
