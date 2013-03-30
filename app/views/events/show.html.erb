@@ -34,24 +34,26 @@
 
       <%# Join form %>
       <%= form_for @attendee, :url => attendee_path, :html => {:method => :post} do |f|%>
+        <%# f.error_messages %>
+
         <% if @attendee.errors.any? %>
           <div id="error_explanation">
             <h2><%= pluralize(@attendee.errors.count, "error") %> prohibited this event from being saved:</h2>
 
             <ul>
-              <% @attendee.errors.full_message.each do |msg| %>
-                <li><%= msg %></li>
-              <% end %>
+            <% @attendee.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
             </ul>
-          </div>
+          </div>  
         <% end %>
         <div class="field">
           <%= f.label :seats, "Number of people attending" %>
-          <%= f.number_field :seats %>
+          <%= f.number_field :seats, :required => true %>
         </div>
         <div class="field">
-          <%= f.label :phone_number, "Your phone number" %>
-          <%= f.text_field :phone_number %>
+          <%= f.label :phone_number, "Your phone number"%>
+          <%= f.text_field :phone_number, :required => true %>
         </div>
         <%= f.hidden_field :event_id, :value => @event.id %>
 

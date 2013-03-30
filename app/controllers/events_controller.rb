@@ -18,9 +18,17 @@ class EventsController < ApplicationController
     @restaurant = Restaurant.find(@event.restaurant_id)
     @attendee = Attendee.new
 
+    if session[:attendee_errors]
+      logger.debug "It is getting to the session error thing"
+      logger.debug "Events controller session error is: #{session[:attendee_errors]}"
+      session[:attendee_errors].each {|error, error_message| @attendee.errors.add error, error_message}
+      session.delete :attendee_errors
+      logger.debug "Events controller attendee error is: #{@attendee.errors.inspect}"
+    end
+
     @menu_items = @restaurant.menu_items
     @menu_items_categorized = @menu_items.group_by { |menu_item| menu_item.course_name}
-    logger.debug "the grouped menu items are:#{@menu_items_categorized}"
+    
     
     respond_to do |format|
       format.html # show.html.erb
@@ -51,8 +59,8 @@ class EventsController < ApplicationController
     logger.debug "The content in the event param is:#{params[:event]}"
     @event = Event.new(params[:event])
     @restaurants = Restaurant.all
-    logger.debug "The content in the events param is: #{params.inspect}"
-    logger.debug "The time now is: #{Time.now}"
+    
+    logger.debug "The errors in the events thuingys is: #{@event.errors.inspect}"
 
     invitee_emails = params[:event][:invitees].split(",")
 
