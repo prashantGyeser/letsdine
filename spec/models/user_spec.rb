@@ -20,6 +20,7 @@
 #  uid                    :string(255)
 #  oauth_token            :string(255)
 #  oauth_expires_at       :string(255)
+#  image                  :string(255)
 #
 
 require 'spec_helper'
