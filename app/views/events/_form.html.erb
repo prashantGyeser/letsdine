@@ -103,6 +103,10 @@
         </p>
         <%= f.text_area :invitees, :rows => 5 %>
       </div>
+      <div class="field share_on_facebook">
+        <%= check_box_tag 'facebook_share', :true %>
+        Share on Facebook
+      </div>
       <div class="field">
         <div class="actions">
           <%= f.submit :class => "large awesome green" %>

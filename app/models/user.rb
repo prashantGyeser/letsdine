@@ -35,6 +35,7 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
 
   def self.from_omniauth(auth)
+    logger.debug "the content of the auth is: #{auth.inspect}"
   	where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
       logger.debug user.inspect
   		user.provider = auth.provider
@@ -59,12 +60,17 @@ class User < ActiveRecord::Base
     end
   end
 
+  # Methods to make the password and email fields not required when creating a user, using their facebook login
   def password_required?
     super && provider.blank?
   end
 
   def email_required?
     super && provider.blank?
+  end
+
+  def facebook
+    @facebook ||= Koala::Facebook::API.new(oauth_token)
   end
 
 end

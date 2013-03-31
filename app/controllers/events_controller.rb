@@ -56,10 +56,15 @@ class EventsController < ApplicationController
   # POST /events
   # POST /events.json
   def create
-    logger.debug "The content in the event param is:#{params[:event]}"
+    logger.debug "The content in the event param is:#{params.inspect}"
+    logger.debug "The content in the facebook thingy is is:#{params[:facebook_share]}"
     @event = Event.new(params[:event])
     @restaurants = Restaurant.all
     
+    logger.debug "the facebook share value is: #{params[:facebook_share]}"
+
+
+
     logger.debug "The errors in the events thuingys is: #{@event.errors.inspect}"
 
     invitee_emails = params[:event][:invitees].split(",")
@@ -67,11 +72,22 @@ class EventsController < ApplicationController
     respond_to do |format|
       if @event.save
       
+
         if invitee_emails.empty?
         else
           InviteMailer.invite(invitee_emails, current_user.name, @event).deliver  
         end
         
+        logger.debug 
+        if current_user.oauth_token.nil?
+        else
+          if params[:facebook_share] == "true"          
+            message_to_post_to_facebook = current_user.name + " is attending " + @event.event_name + ". You can joinyour friend by going to " + root_url + event_path(@event)
+            current_user.facebook.put_wall_post(message_to_post_to_facebook)
+          end
+        end
+        
+
         format.html { redirect_to @event, notice: 'Event was successfully created.' }
         format.json { render json: @event, status: :created, location: @event }
       else

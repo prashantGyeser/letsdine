@@ -15,6 +15,10 @@ gem 'simple-navigation'
 
 # Server for heroku
 gem 'unicorn'
+
+# Koala gem to interact with facebook and post to the users wall
+gem 'koala'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
