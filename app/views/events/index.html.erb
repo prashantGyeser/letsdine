@@ -1,10 +1,14 @@
+<% content_for :javascript do %>
+    <%= javascript_include_tag "closed-event-overlay" %>
+<% end %>
+
 <div class="content">
         <div class="container">
             <% eventCount = 0 %>
             <% @events.each do |event| %>
                 <% restaurant = Restaurant.find(event.restaurant_id) %>
                 <%# Checking if a new row has to be created %>
-                <% if ( eventCount%4 ) == 0 %>
+                <% if eventCount == 0 %>
                     <div class="row-fluid">        
                 <% end %>
 
@@ -14,6 +18,11 @@
                             <%= image_tag restaurant.photo_url.to_s %>
                         <% else %>
                             <%= image_tag event.event_image_url.to_s %>
+                        <% end %>
+                        <% if event.status == 'closed' %>
+                            <div class="closed">
+                                <h3>Closed</h3>
+                            </div>    
                         <% end %>
                         <h3><%= link_to event.event_name, event_path(event) %></h3>
                         <div class="eventDetails">
@@ -46,11 +55,14 @@
                     </div>
                 </div>    
 
-                <% if ( eventCount%7 ) == 0 && eventCount != 0%>
+                <% if ( eventCount% 3) == 0 && eventCount != 0%>
                     </div>        
+                    <% eventCount = 0 %>    
+                <% else %>
+                    <% eventCount = eventCount + 1 %>    
                 <% end %>                
                 <%# Closing tag for the new row div %>
-                <% eventCount = eventCount + 1 %>
+                
             <% end %>
         </div>
     </div>

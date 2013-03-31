@@ -1,0 +1,25 @@
+<%= form_for(@event_notify_email) do |f| %>
+  <% if @event_notify_email.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@event_notify_email.errors.count, "error") %> prohibited this event_notify_email from being saved:</h2>
+
+      <ul>
+      <% @event_notify_email.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>Enter your email address and we will notify you as soon as a similar event is opened</p>
+  <div class="field">
+    <%= f.label :email_address %>
+    <%= f.text_field :email_address %>
+  </div>
+  <div class="field">
+    <%= f.hidden_field :event_id, :value => event_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Notify me", :class => "large green awesome" %>
+  </div>
+<% end %>

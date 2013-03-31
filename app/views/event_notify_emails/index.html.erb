@@ -1,0 +1,25 @@
+<h1>Listing event_notify_emails</h1>
+
+<table>
+  <tr>
+    <th>Email address</th>
+    <th>Event</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @event_notify_emails.each do |event_notify_email| %>
+  <tr>
+    <td><%= event_notify_email.email_address %></td>
+    <td><%= event_notify_email.event_id %></td>
+    <td><%= link_to 'Show', event_notify_email %></td>
+    <td><%= link_to 'Edit', edit_event_notify_email_path(event_notify_email) %></td>
+    <td><%= link_to 'Destroy', event_notify_email, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Event notify email', new_event_notify_email_path %>

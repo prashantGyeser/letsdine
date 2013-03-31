@@ -17,6 +17,7 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     @restaurant = Restaurant.find(@event.restaurant_id)
     @attendee = Attendee.new
+    @event_notify_email = EventNotifyEmail.new
 
     if session[:attendee_errors]
       logger.debug "It is getting to the session error thing"

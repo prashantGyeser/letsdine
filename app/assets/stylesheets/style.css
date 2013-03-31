@@ -211,19 +211,36 @@
   z-index: -2;
   box-shadow: 0 8px 8px -5px rgba(0, 0, 0, 0.3); }
 
-
+.event img
+{
+	position: relative;
+}
+.closed 
+{
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	padding: 10px;
+	color: #fff;
+	font-weight: bold;
+	background: rgba(0,0,0,.8);
+}
+.closed h3
+{
+	vertical-align: middle;
+	text-align: center;
+	color: #fff;
+	padding-top: 20px;
+}
 .event h3
 {
-	color: #dd4124;
+	/*color: #dd4124;*/
 }
 .event p
 {
 	margin-top: 10px;
 }
-.eventDetails
-{
 
-}
 .detail
 {
 	color: #ccc;
@@ -455,3 +472,4 @@
 	margin-top: 10px;
 	color: #fff;
 }
+

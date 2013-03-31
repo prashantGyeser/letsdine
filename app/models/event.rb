@@ -17,7 +17,7 @@
 #
 
 class Event < ActiveRecord::Base
-  attr_accessible :event_date, :event_description, :event_name, :event_time, :restaurant_id, :event_image, :invitees, :max_seats
+  attr_accessible :event_date, :event_description, :event_name, :event_time, :restaurant_id, :event_image, :invitees, :max_seats, :status
 
   validates :event_date, :event_description, :event_name, :event_time, :restaurant_id, :presence => true
 
