@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".closed").each(function(e){var t=$(this);$(this).prev("img").load(function(){var e=$(this),n=e.width(),r=e.height();n-=20,r-=20,t.width(n).height(r)})})});
