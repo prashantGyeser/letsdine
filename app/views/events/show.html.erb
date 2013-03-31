@@ -21,14 +21,19 @@
         <div class="event_date_time">
           <%= @event.event_date.strftime("%d %B %Y") %>
           <%= @event.event_time.strftime("%I:%M%p") %>
-          <strong><%= restaurant.name %></strong>
-          <%= restaurant.address %>
         </div>
       </div>
     </div>
     <div class="span6">
       <h1><%= @event.event_name %></h1>    
       <h3>Price: Rs <%= restaurant.price %></h3>
+      <address>
+        <strong><%= restaurant.name %></strong>
+        <br>
+        <%= restaurant.address %>  
+      </address>
+      
+      
       <p>
         <%= @event.event_description %>      
       </p>
