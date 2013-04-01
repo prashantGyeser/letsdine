@@ -3,7 +3,7 @@ class HomeController < ApplicationController
   	@home_page = true
 
   	# Getting the last 6 event records 
-  	@events = Event.last(6)
+  	@events = Event.last(6).reverse
   	# Getting the last four events for the slider
   	@header_events = Event.last(4)
   end
