@@ -14,6 +14,7 @@
 #  invitees          :text
 #  user_id           :integer
 #  max_seats         :integer
+#  status            :string(255)
 #
 
 require 'spec_helper'

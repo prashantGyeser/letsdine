@@ -1,11 +1,17 @@
 class AttendeesController < ApplicationController
 	before_filter :authenticate_user!
 	def create
-		@attendee = Attendee.new
 
+		@attendee = Attendee.new
+		logger.debug "It is getting to the attendee controller"
 		@attendee.seats = params[:attendee][:seats]
 		@attendee.event_id = params[:attendee][:event_id]
+		@attendee.phone_number = params[:attendee][:phone_number]
 		@attendee.user_id = current_user.id
+
+		logger.debug "The seats are #{@attendee.seats}"
+		logger.debug "The seats are #{@attendee.event_id}"
+		logger.debug "The seats are #{@attendee.user_id}"
 
 		@event = Event.find(params[:attendee][:event_id])
 
@@ -16,7 +22,6 @@ class AttendeesController < ApplicationController
 			else
 				@event = Event.find(@event.id)
     			@restaurant = Restaurant.find(@event.restaurant_id)
-    			@attendee = Attendee.new
     			@menu_items = @restaurant.menu_items
     			@menu_items_categorized = @menu_items.group_by { |menu_item| menu_item.course_name}
 
