@@ -1,4 +1,7 @@
 Letsdine::Application.routes.draw do
+  resources :dashboards
+
+
   resources :event_notify_emails
 
 

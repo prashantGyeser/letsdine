@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="row-fluid">
+    <div class="span12">
+      <h1>Users</h1>
+      <table class="table table-striped">
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Type Of Account</th>
+        </tr>
+        <% @users.each do |user| %>
+          <tr>
+            <td><%= user.id %></td> 
+            <td><%= user.name %></td>
+            <td><%= user.email %></td>
+            <td>
+              <% if user.provider.blank? %>
+                Local
+              <% else %>
+                Facebook
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+      </table>  
+
+      <h1>Events</h1>
+      <table class="table table-striped">
+        <tr>
+          <th>Event Name</th>
+          <th>Attendees</th>
+          <th>Event Link</th>
+        </tr>
+        <% @events.each do |event| %>
+          <tr>
+            <td><%= event.event_name %></td>
+            <td>
+              <% event.attendee.each do |personAttending| %>
+                <% user = User.find(personAttending.user_id) %>
+                <%= user.name %>,
+              <% end %>
+            </td>
+            <td><%= link_to event_url(event) %> </td>
+          </tr>
+        <% end %>
+        
+      </table>
+
+
+    </div>
+  </div>
+</div>
+
+
