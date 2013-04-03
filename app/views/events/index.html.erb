@@ -47,9 +47,9 @@
                                 <% else %>
                                     <%= image_tag user.image.to_s, "data-toggle" => "tooltip", :title => user.name, :class => "profilePic" %>    
                                 <% end %>
-                              <% end %>
-                              <p>
-                                <%= link_to "See All People Attending", event_path(event) %>
+                            <% end %>
+                            <p>
+                              <%= link_to "See All People Attending", event_path(event) %>
                             </p>
                         </div>
                     </div>
