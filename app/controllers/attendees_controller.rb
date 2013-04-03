@@ -1,12 +1,7 @@
 class AttendeesController < ApplicationController
 	before_filter :authenticate_user!
 	def create
-		if !anyone_signed_in?
-      		deny_access
-	    else
-	      @service = Service.new
-	      @title = "Create New Service"
-	    end
+		
 		@attendee = Attendee.new
 		@attendee.seats = params[:attendee][:seats]
 		@attendee.event_id = params[:attendee][:event_id]
