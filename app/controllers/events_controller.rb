@@ -83,7 +83,7 @@ class EventsController < ApplicationController
         if current_user.oauth_token.nil?
         else
           if params[:facebook_share] == "true"          
-            message_to_post_to_facebook = current_user.name + " is attending " + @event.event_name + ". You can joinyour friend by going to " + root_url + event_path(@event)
+            message_to_post_to_facebook = current_user.name + " is attending " + @event.event_name + ". You can join your friend by going to " + root_url + event_path(@event)
             current_user.facebook.put_wall_post(message_to_post_to_facebook)
           end
         end

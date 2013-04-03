@@ -1,17 +1,17 @@
 class AttendeesController < ApplicationController
 	before_filter :authenticate_user!
 	def create
-
+		if !anyone_signed_in?
+      		deny_access
+	    else
+	      @service = Service.new
+	      @title = "Create New Service"
+	    end
 		@attendee = Attendee.new
-		logger.debug "It is getting to the attendee controller"
 		@attendee.seats = params[:attendee][:seats]
 		@attendee.event_id = params[:attendee][:event_id]
 		@attendee.phone_number = params[:attendee][:phone_number]
 		@attendee.user_id = current_user.id
-
-		logger.debug "The seats are #{@attendee.seats}"
-		logger.debug "The seats are #{@attendee.event_id}"
-		logger.debug "The seats are #{@attendee.user_id}"
 
 		@event = Event.find(params[:attendee][:event_id])
 
