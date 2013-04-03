@@ -19,6 +19,8 @@ class EventsController < ApplicationController
     @attendee = Attendee.new
     @event_notify_email = EventNotifyEmail.new
 
+    logger.debug "For some reason it is comeing into this controller again"
+    
     if session[:attendee_errors]
       logger.debug "It is getting to the session error thing"
       logger.debug "Events controller session error is: #{session[:attendee_errors]}"
