@@ -23,7 +23,6 @@ class ApplicationController < ActionController::Base
 			@attendee.user_id = current_user.id
 
 			@event = Event.find(attendee_param[:attendee][:event_id])
-
 			
 				if @attendee.save! 
 					session[:previous_url] = event_path(@event)
