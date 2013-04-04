@@ -14,9 +14,14 @@
         <% else %>
             <%= image_tag @event.event_image_url.to_s %>
         <% end %>
-        <% if @event.status == 'closed' %>
+        <% if @event.status == 'closed' || @event.status == 'full' %>
             <div class="closed">
+              <% if @event.status == 'full' %>
+                <h3>Full</h3>
+              <% else %>
                 <h3>Closed</h3>
+              <% end %>
+                
             </div>    
         <% end %>
 
@@ -40,7 +45,7 @@
         <%= @event.event_description %>      
       </p>
 
-      <% if @event.status == "closed" %>
+      <% if @event.status == "closed" || @event.status == "full" %>
           <%= render :partial => "event_notify_emails/form",
                       :locals => {:event_id => @event.id} %>
       <% else %>

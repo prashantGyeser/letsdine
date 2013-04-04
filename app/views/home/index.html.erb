@@ -46,9 +46,13 @@
                             <%= image_tag event.event_image_url.to_s %>
                         <% end %>
 
-                        <% if event.status == 'closed' %>
+                        <% if event.status == 'closed' || event.status == "full" %>
                             <div class="closed">
-                                <h3>Closed</h3>
+                                <% if event.status == "full" %>
+                                    <h3>Full</h3>
+                                <% else %>
+                                    <h3>Closed</h3>    
+                                <% end %>
                             </div>    
                         <% end %>
                         
