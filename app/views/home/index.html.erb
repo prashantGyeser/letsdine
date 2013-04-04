@@ -33,7 +33,8 @@
                 <% restaurant = Restaurant.find(event.restaurant_id) %>
                 <%# Checking if a new row has to be created %>
                 <% if ( eventCount%4 ) == 0 %>
-                    <div class="row-fluid">        
+                    <div class="row-fluid">  
+                          
                 <% end %>
 
                 <div class="span3">
@@ -84,9 +85,12 @@
 
                 <% if ( eventCount%3 ) == 0 && eventCount != 0%>
                     </div>        
+                    <% eventCount = 0 %>
+                <% else %>
+                    <% eventCount = eventCount + 1 %>
                 <% end %>                
                 <%# Closing tag for the new row div %>
-                <% eventCount = eventCount + 1 %>
+                
             <% end %>
         </div>
     </div>   
