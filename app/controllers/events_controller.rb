@@ -5,6 +5,19 @@ class EventsController < ApplicationController
   def index
     @events = Event.all.reverse
 
+    @events.each do |event| 
+      event_description = event.event_description
+      words = event_description.split(" ")
+      description_summary = "" 
+      words.each do |word|
+        description_summary += word if description_summary.size + word.size < 100
+      end
+
+      description_summary += "..."
+
+      event.event_description = description_summary
+    end
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @events }
