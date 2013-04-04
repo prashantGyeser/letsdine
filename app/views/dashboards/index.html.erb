@@ -31,6 +31,7 @@
           <th>Event Name</th>
           <th>Attendees</th>
           <th>Event Link</th>
+          <th>Email Invites</th>
         </tr>
         <% @events.each do |event| %>
           <tr>
@@ -38,8 +39,11 @@
             <td>
               <% event.attendee.each do |personAttending| %>
                 <% user = User.find(personAttending.user_id) %>
-                <%= user.name %>,
+                (<%= personAttending.seats %>)<%= user.name %>,
               <% end %>
+            </td>
+            <td>
+              <%= event.invitees %>
             </td>
             <td><%= link_to event_url(event) %> </td>
           </tr>
