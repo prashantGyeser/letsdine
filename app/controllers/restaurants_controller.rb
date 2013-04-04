@@ -45,6 +45,15 @@ class RestaurantsController < ApplicationController
 
     respond_to do |format|
       if @restaurant.save
+
+        menu_items = MenuItem.all
+
+        menu_items.each do |menu_item|
+          if menu_item.name.empty?
+            menu_item.destroy
+          end
+        end
+
         format.html { redirect_to @restaurant, notice: 'Restaurant was successfully created.' }
         format.json { render json: @restaurant, status: :created, location: @restaurant }
       else

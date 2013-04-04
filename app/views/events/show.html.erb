@@ -110,12 +110,10 @@
           <div><%= menu_item.name %></div>
         <% end %>
 
-
-
-        <% if (course_count%2 == 0 && course_count != 0) || (course_count + 1) > total_number_of_courses %>
+        <% if (course_count%2 == 0) %>
             </div>
           </div>
-          <% course_count = course_count + 1 %>
+          <% course_count = 1 %>
         <% else %>
           </div>  
           <% course_count = course_count + 1 %>
