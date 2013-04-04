@@ -9,21 +9,26 @@ class ApplicationController < ActionController::Base
 	end
 
 	def after_sign_in_path_for(resource)
+		logger.debug "The previous_url is:"
 		if session[:attendee]
-			#logger.debug "It is getting to the session attendee thing"
+			
 			@attendee = Attendee.new
 			attendee_param = session[:attendee]
-			session.delete :attendee
-			logger.debug "The sessions attendeee param is:#{session[:attendee]}"
-			logger.debug "The seats are session[:attendee]"
-			logger.debug "the attendee param is: #{attendee_param}"
-			@attendee.seats = attendee_param[:attendee][:seats]
-			@attendee.event_id = attendee_param[:attendee][:event_id]
-			@attendee.phone_number = attendee_param[:attendee][:phone_number]
-			@attendee.user_id = current_user.id
+			session.delete :attendee			
 
 			@event = Event.find(attendee_param[:attendee][:event_id])
-			
+
+			peopleAttending = Attendee.where(:user_id => current_user.id, :event_id => attendee_param[:attendee][:event_id])
+
+			logger.debug "The peopleAttending value is: #{peopleAttending}"
+
+			if peopleAttending.nil?
+				logger.debug "It is getting to right after the peopleAttending thingy"
+				@attendee.seats = attendee_param[:attendee][:seats]
+				@attendee.event_id = attendee_param[:attendee][:event_id]
+				@attendee.phone_number = attendee_param[:attendee][:phone_number]
+				@attendee.user_id = current_user.id
+
 				if @attendee.save! 
 					session[:previous_url] = event_path(@event)
 					session[:previous_url] || root_path				
@@ -37,14 +42,22 @@ class ApplicationController < ActionController::Base
 	    			session[:attendee_errors] = @attendee.errors
 	    			logger.debug "the attendee session errors are: #{session[:attendee_errors].inspect}"
 
+	    			@already_signed_up = true
+
 					session[:previous_url] = event_path(@event)
 					session[:previous_url] || root_path				
 				end
-			
+				
+			else
+				@already_signed_up = true
+				session[:previous_url] = event_path(@event)
+				session[:previous_url] || root_path				
+		    end
+
 		else
 			super
 		end
-		
+
 	end
 
 	def after_update_path_for(resource)

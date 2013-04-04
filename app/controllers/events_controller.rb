@@ -1,5 +1,7 @@
 class EventsController < ApplicationController
+  
   before_filter :authenticate_user!, :except => [:show, :index]
+
   # GET /events
   # GET /events.json
   def index
@@ -19,14 +21,22 @@ class EventsController < ApplicationController
     @attendee = Attendee.new
     @event_notify_email = EventNotifyEmail.new
 
-    logger.debug "For some reason it is comeing into this controller again"
+    @already_signed_up = false
+
+    if current_user.nil?
+
+    else
+      peopleAttending = Attendee.where(:user_id => current_user.id, :event_id => @event.id)
+      if peopleAttending.empty?
+        @already_signed_up = false
+      else
+        @already_signed_up = true  
+      end
+    end
     
     if session[:attendee_errors]
-      logger.debug "It is getting to the session error thing"
-      logger.debug "Events controller session error is: #{session[:attendee_errors]}"
       session[:attendee_errors].each {|error, error_message| @attendee.errors.add error, error_message}
       session.delete :attendee_errors
-      logger.debug "Events controller attendee error is: #{@attendee.errors.inspect}"
     end
 
     @menu_items = @restaurant.menu_items
@@ -37,6 +47,7 @@ class EventsController < ApplicationController
       format.html # show.html.erb
       format.json { render json: @event }
     end
+
   end
 
   # GET /events/new
@@ -59,22 +70,13 @@ class EventsController < ApplicationController
   # POST /events
   # POST /events.json
   def create
-    logger.debug "The content in the event param is:#{params.inspect}"
-    logger.debug "The content in the facebook thingy is is:#{params[:facebook_share]}"
     @event = Event.new(params[:event])
     @restaurants = Restaurant.all
-    
-    logger.debug "the facebook share value is: #{params[:facebook_share]}"
-
-
-
-    logger.debug "The errors in the events thuingys is: #{@event.errors.inspect}"
 
     invitee_emails = params[:event][:invitees].split(",")
 
     respond_to do |format|
       if @event.save
-      
 
         if invitee_emails.empty?
         else

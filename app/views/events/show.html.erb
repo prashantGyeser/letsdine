@@ -49,34 +49,39 @@
           <%= render :partial => "event_notify_emails/form",
                       :locals => {:event_id => @event.id} %>
       <% else %>
-        <%# Join form %>
-        <%= form_for @attendee, :url => attendee_path, :html => {:method => :post} do |f|%>
-          <%# f.error_messages %>
+        <% if @already_signed_up == true %>
+          <h4>You have already signed up for this event</h4>          
+          <p>If you want to increase the number of people that will be coming along with you, please drop us an email at hello@gyeser.com and we will get back to you regarding the changes. </p>
+        <% else %>
+          <%# Join form %>
+          <%= form_for @attendee, :url => attendee_path, :html => {:method => :post} do |f|%>
+            <%# f.error_messages %>
 
-          <% if @attendee.errors.any? %>
-            <div id="error_explanation">
-              <h2><%= pluralize(@attendee.errors.count, "error") %> prohibited this event from being saved:</h2>
+            <% if @attendee.errors.any? %>
+              <div id="error_explanation">
+                <h2><%= pluralize(@attendee.errors.count, "error") %> prohibited this event from being saved:</h2>
 
-              <ul>
-              <% @attendee.errors.full_messages.each do |msg| %>
-                <li><%= msg %></li>
-              <% end %>
-              </ul>
-            </div>  
-          <% end %>
-          <div class="field">
-            <%= f.label :seats, "Number of people attending" %>
-            <%= f.number_field :seats, :required => true %>
-          </div>
-          <div class="field">
-            <%= f.label :phone_number, "Your phone number"%>
-            <%= f.text_field :phone_number, :required => true %>
-          </div>
-          <%= f.hidden_field :event_id, :value => @event.id %>
+                <ul>
+                <% @attendee.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+                <% end %>
+                </ul>
+              </div>  
+            <% end %>
+            <div class="field">
+              <%= f.label :seats, "Number of people attending" %>
+              <%= f.number_field :seats, :required => true %>
+            </div>
+            <div class="field">
+              <%= f.label :phone_number, "Your phone number"%>
+              <%= f.text_field :phone_number, :required => true %>
+            </div>
+            <%= f.hidden_field :event_id, :value => @event.id %>
 
-          <%= f.submit "Join this event", :class => "large red awesome"  %>
+            <%= f.submit "Join this event", :class => "large red awesome"  %>
 
-        <% end %>  
+          <% end %>  
+        <% end %>
       <% end %>
       
       
