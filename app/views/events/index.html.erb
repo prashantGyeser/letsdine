@@ -37,7 +37,7 @@
                             </div>
                         </div>
                         <p>
-                            <%= event.event_description %> <%= link_to "See event", event_path(event) %>
+                            <%= truncate(event.event_description, :length => 100) %> <%= link_to "See event", event_path(event) %>
                         </p>
                         <div class="peopleAttending">
                             <% event.attendee.first(4).each do |personAttending| %>
