@@ -2,7 +2,6 @@ Todo
 
 - B: The user is not added to the event when they sign up for an account after they hit the join event button on the event show page
 - B: The people attending pictures are being pushed to the bottom of the page. Refer to letsdine.co/events/14
-- B: Rearrange the user accounts shown in the dashboard. It should be arranged based on the user id
 - F: Change the url. It should show the event name instead of the id for the event i.e. a friendly URL should be shown
 - F: Dynamic pricing. The event price should go up as the event gets nearer
 - F: Groups. Users should be able to interact online
