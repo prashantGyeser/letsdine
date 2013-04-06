@@ -70,7 +70,7 @@
             <% end %>
             <div class="field">
               <%= f.label :seats, "Number of people attending" %>
-              <%= f.number_field :seats, :required => true %>
+              <%= f.number_field :seats, :required => true, :min => 1 %>
             </div>
             <div class="field">
               <%= f.label :phone_number, "Your phone number"%>

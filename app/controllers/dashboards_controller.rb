@@ -2,7 +2,7 @@ class DashboardsController < ApplicationController
   # GET /dashboards
   # GET /dashboards.json
   def index
-    @users = User.all
+    @users = User.find(:all, :order => "id")
     @events = Event.all
     @attendees = Attendee.all
 
