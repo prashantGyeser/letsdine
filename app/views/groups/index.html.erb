@@ -1,51 +1,56 @@
+<% content_for :body_class do %>
+  class="group_body"
+<% end %>
 
-<div class="container">
-  <% @groups.each_with_index do |group, index| %>
-    <% if index%2 == 0 && index != 0 %>
-
-      </div>
-      <div class="row-fluid">
-        <div class="span6">
-          <%= group.name %>
-        </div>
-    <% elsif index == 0 %>
-      <div class="row-fluid">
-        <div class="span6">
-          <%= group.name %>
-        </div>
-    <% else %>      
-        <div class="span6">
-          <%= group.name %>
-        </div>
-    <% end %>
-  <% end %>
+<div class="container new_group_button_container">
+  <div class="row-fluid">
+    <div class="span10">
+      Talk to people that share similar interests. Why don't you create one and invite people. You can also plan out your events.
+    </div>
+    <div class="span2">
+      <%= link_to 'New Group', new_group_path, :class => "red awesome large" %>      
+    </div>
+  </div>
 </div>
 
 
-<h1>Listing groups</h1>
+<div class="container">
+  <div class="row-fluid">
+    <div class="span3 groups_filter">
+      <ul>
+        <li><%= link_to 'All Groups', groups_path %> </li> 
+        <li><a href="/groups?filter=Entrepreneurship">Entrepreneurship</a></li>
+        <li><a href="/groups?filter=Food">Food</a></li>
+        <li><a href="/groups?filter=Photography">Photography</a></li>
+        <li><a href="/groups?filter=Poets">Poets</a></li>
+        <li><a href="/groups?filter=Only Women">Only Women</a></li>
+        <li><a href="/groups?filter=Alumni">Alumni</a></li>
+        <li><a href="/groups?filter=Startups">Startups</a></li>
+      </ul>      
+    </div>
+    <div class="span9">
+      <% @groups.each_with_index do |group, index| %>
+        <% members = Member.where(:group_id => group.id) %>
+        <% if index%2 == 0 && index != 0 %>
+          </div>
+          <div class="row-fluid group-row">
+            <div class="span6">
+              <%= render 'event_index', :group => group, :member => members %>
+            </div>
+        <% elsif index == 0 %>
+          <div class="row-fluid group-row">
+            <div class="span6">
+              <%= render 'event_index', :group => group %>
+            </div>
+        <% else %>      
+            <div class="span6">
+              <%= render 'event_index', :group => group %>
+            </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+  
+</div>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>User</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
-<% @groups.each do |group| %>
-  <tr>
-    <td><%= group.name %></td>
-    <td><%= group.description %></td>
-    <td><%= group.user_id %></td>
-    <td><%= link_to 'Show', group %></td>
-    <td><%= link_to 'Edit', edit_group_path(group) %></td>
-    <td><%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Group', new_group_path %>

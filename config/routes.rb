@@ -1,4 +1,6 @@
 Letsdine::Application.routes.draw do
+  put "discussion/create"
+
   resources :groups
 
 
@@ -25,8 +27,8 @@ Letsdine::Application.routes.draw do
   end
 
   match "/attendees/create" => "attendees#create", :as => :attendee
-  #map.connect '/events/:id/join', :controller => 'events_controller', :action => 'join'
-  #match '/:id/join', :controller => 'events', :action => 'join'
+  
+  match "/discussion/create" => "discussion#create", :as => :discussion
   
 
 

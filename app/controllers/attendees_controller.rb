@@ -23,9 +23,7 @@ class AttendeesController < ApplicationController
 	    			@menu_items = @restaurant.menu_items
 	    			@menu_items_categorized = @menu_items.group_by { |menu_item| menu_item.course_name}
 
-	    			logger.debug "the attendee errors are: #{@attendee.errors.inspect}"
 	    			session[:attendee_errors] = @attendee.errors
-	    			logger.debug "the attendee session errors are: #{session[:attendee_errors].inspect}"
 
 					format.html { redirect_to event_path(@event)}
 		      		format.json { render json: @attendee.errors, status: :unprocessable_entity }

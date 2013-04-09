@@ -1,15 +1,17 @@
 # == Schema Information
 #
-# Table name: topics
+# Table name: discussions
 #
 #  id         :integer          not null, primary key
-#  name       :string(255)
-#  details    :text
+#  user_id    :integer
 #  group_id   :integer
+#  content    :text
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
-class Topic < ActiveRecord::Base
-  attr_accessible :details, :group_id, :name
+require 'spec_helper'
+
+describe Discussion do
+  pending "add some examples to (or delete) #{__FILE__}"
 end

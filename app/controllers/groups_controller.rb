@@ -5,6 +5,10 @@ class GroupsController < ApplicationController
   def index
     @groups = Group.all
 
+    if params.has_key?("filter")
+      @groups = Group.where(:category => params[:filter])
+    end
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @groups }
@@ -15,7 +19,9 @@ class GroupsController < ApplicationController
   # GET /groups/1.json
   def show
     @group = Group.find(params[:id])
-
+    @discussions = Discussion.where(:group_id => @group.id)
+    @new_discussion = Discussion.new
+    
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @group }
@@ -42,6 +48,8 @@ class GroupsController < ApplicationController
   # POST /groups.json
   def create
     @group = Group.new(params[:group])
+
+    @group.user_id = current_user.id
 
     respond_to do |format|
       if @group.save

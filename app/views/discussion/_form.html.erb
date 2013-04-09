@@ -1,0 +1,26 @@
+<%= form_for @new_discussion, :url => discussion_path, :html => {:method => :post} do |f| %>
+	
+	<% if @new_discussion.errors.any? %>
+		<div id="error_explanation">
+			<h2><%= pluralize(@new_discussion.errors.count, "error") %> prohibited this comment from being saved:</h2>
+
+	  		<ul>
+	  			<% @new_discussion.errors.full_messages.each do |msg| %>
+	    			<li><%= msg %></li>
+	  			<% end %>
+	  		</ul>
+		</div>
+	<% end %>
+
+
+	<div class="field">
+		<%= f.label :content, "Add a comment" %>
+		<%= f.text_area :content, :rows => 5 %>
+	</div>
+
+	<%= f.hidden_field :group_id, :value => group.id %>
+
+	<%= f.submit "Submit comment", :class => "large red awesome"  %>
+
+<% end %>
+

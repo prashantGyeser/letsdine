@@ -1,25 +1,106 @@
-<p id="notice"><%= notice %></p>
+<% content_for :body_class do %>
+  class="group_body"
+<% end %>
 
-<p>
-  <b>Name:</b>
-  <%= @group.name %>
-</p>
+<div class="container">
+	<div class="row-fluid">
+		<div class="span12">
+			<%= link_to 'Back', groups_path %>
+		</div>
+	</div>
+</div>
 
-<p>
-  <b>Description:</b>
-  <%= @group.description %>
-</p>
+<div class="container new_group">
+  <div class="row-fluid">
+    <div class="span10">
+      Talk to people that share similar interests. Why don't you create one and invite people. You can also plan out your events.
+    </div>
+    <div class="span2">
+      <%= link_to 'Join Group', new_group_path, :class => "red awesome large" %>      
+    </div>
+  </div>
+</div>
 
-<p>
-	<b>Image</b>
-	<%= image_tag @group.group_image %>
-</p>	
+<div class="container">
+	<div class="row-fluid">
+		<div class="span6">
+			<div class="event">
+				<%# image_tag @group.group_image %>
+			</div>
+		</div>
+		<div class="span6">
+			
+		</div>
+	</div>
+</div>
 
-<p>
-  <b>User:</b>
-  <%= @group.user_id %>
-</p>
+<div class="container">
+	<div class="row-fluid">
+		<div class="span12">
+			<ul class="group-sub-menu">
+				<li><%= link_to 'All Groups', groups_path %> </li> 
+        <li><a href="/groups?filter=Entrepreneurship">Entrepreneurship</a></li>
+        <li><a href="/groups?filter=Food">Food</a></li>
+        <li><a href="/groups?filter=Photography">Photography</a></li>
+        <li><a href="/groups?filter=Poets">Poets</a></li>
+        <li><a href="/groups?filter=Only Women">Only Women</a></li>
+        <li><a href="/groups?filter=Alumni">Alumni</a></li>
+        <li><a href="/groups?filter=Startups">Startups</a></li>
+				<li><a href="">Discussions</a></li>
+				<li>Events</li>
+				<li>Members</li>
+			</ul>
+		</div>
+	</div>
+</div>
 
+<div class="container">
+	<div class="row-fluid">
+		<div class="span12">
+			<div class="discussion-list">
+				<ul>
+					<% @discussions.each do |discussion| %>
+						<li>
+							<% user = User.find(discussion.user_id) %>
+							<% if user.image.blank? %>
+								<%= image_tag "noProfilePic.png" %>
+							<% else %>
+								<%= image_tag  user.image %>
+							<% end %>
+							
+							<div class="comment">
+								<%= simple_format discussion.content %>
+							</div>
+							
+						</li>
+					<% end %>
+				</ul>
+				<%= render :partial => 'discussion/form', :object => @new_discussion, :locals => {:group => @group} %>
+			</div>
 
-<%= link_to 'Edit', edit_group_path(@group) %> |
-<%= link_to 'Back', groups_path %>
+			
+		</div>
+	</div>
+</div>
+
+<div class="span12">
+			<p>
+			  <b>Name:</b>
+			  <%= @group.name %>
+			</p>
+
+			<p>
+			  <b>Description:</b>
+			  <%= @group.description %>
+			</p>
+
+			<p>
+				<b>Image</b>
+				<%# image_tag @group.group_image %>
+			</p>	
+
+			<p>
+			  <b>User:</b>
+			  <%= @group.user_id %>
+			</p>			
+		</div>
