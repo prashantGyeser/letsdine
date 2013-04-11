@@ -10,10 +10,9 @@
     <div class="span6">
       <div class="eventDetailsImage">
         <% if @event.event_image.blank? %>
-            <h1>Umncomment the image</h1>
-            <%# image_tag restaurant.photo_url.to_s %>
+            <%= image_tag restaurant.photo_url.to_s %>
         <% else %>
-            <%# image_tag @event.event_image_url.to_s %>
+            <%= image_tag @event.event_image_url.to_s %>
         <% end %>
         <% if @event.status == 'closed' || @event.status == 'full' %>
             <div class="closed">
