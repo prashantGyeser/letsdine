@@ -93,7 +93,6 @@
 <div class="container">
   <div class="row-fluid">
     <div class="span6">
-      <% course_count = 1 %>
       <% total_number_of_courses = 0 %>
 
       <% @menu_items_categorized.each do |course_name, menu_items| %>
@@ -110,7 +109,7 @@
 
               <h3><%= course_name %></h3>
               <% for menu_item in menu_items%>
-                <div><%= menu_item.name %></div>
+              <div><%= menu_item.name %></div>
               <% end %>
 
             </div>
@@ -120,21 +119,23 @@
 
               <h3><%= course_name %></h3>
               <% for menu_item in menu_items%>
-                <div><%= menu_item.name %></div>
+              <div><%= menu_item.name %></div>
               <% end %>
 
             </div>
         <% else %>
-          <div class="span6">
+            <div class="span6">
 
-            <h3><%= course_name %></h3>
-            <% for menu_item in menu_items%>
+              <h3><%= course_name %></h3>
+              <% for menu_item in menu_items%>
               <div><%= menu_item.name %></div>
-            <% end %>
+              <% end %>
 
-          </div>
+            </div>
         <% end %>
+
       <% end %>
+      </div>
     </div>
     <div class="span6">
 
