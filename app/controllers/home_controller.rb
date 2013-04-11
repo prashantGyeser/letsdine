@@ -3,9 +3,10 @@ class HomeController < ApplicationController
   	@home_page = true
 
   	# Getting the last 6 event records 
-  	@events = Event.last(8).reverse
+  	@events = Event.find(:all, :conditions => ["event_type != 'private'"], :limit => 8 ).reverse
+  	#@events = Event.last(8).reverse
 
   	# Getting the last four events for the slider
-  	@header_events = Event.last(4)
+  	@header_events = Event.find(:all, :conditions => ["event_type != 'private'"], :limit => 4 ).reverse
   end
 end

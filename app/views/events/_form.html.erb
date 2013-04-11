@@ -11,7 +11,18 @@
     </div>  
   <% end %>
   <div class="tab-content">
-    <div class="tab-pane" id="tab1">
+    <div class="tab-pane" id="tab1">    
+      <div class="field event_type_radio">
+        <%= f.radio_button :event_type, "private", :class => "event_radio", :id => "private_event_radio" %>
+        <%= label_tag(:event_name_private, "Private Event", :class => "event_radio_label") %>
+        <%= f.radio_button :event_type, "public", :class => "event_radio", :id => "public_event_radio" %>
+        <%= label_tag(:event_name_private, "Public Event", :class => "event_radio_label") %>
+      </div>
+
+      <div class="clearfix"></div>
+      <p id="private_event_description">A unique URL will be generated for you. You can share this URL with people that will attend. The URL will not be shown anywhere else on the site.</p>
+      <p id="public_event_description">Anyone can sign up for this event and will be accessible across the site</p>
+      <br/>
       <div class="field">
         <%= f.label :event_name %>
         <%= f.text_field :event_name %>

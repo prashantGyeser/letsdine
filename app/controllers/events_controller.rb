@@ -5,7 +5,9 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    @events = Event.all.reverse
+    #@events = Event.all.reverse
+
+    @events = Event.find(:all, :conditions => ["event_type != 'private'"] )
 
     respond_to do |format|
       format.html # index.html.erb
@@ -16,7 +18,20 @@ class EventsController < ApplicationController
   # GET /events/1
   # GET /events/1.json
   def show
-    @event = Event.find(params[:id])
+    event_with_token = Event.where(:token => params[:id])
+    if event_with_token.empty?
+      if @event.event_type == "public"
+        @event = Event.find(params[:id])
+      end
+    else
+      # The where clause returns an active recrod relationship and not the instance of the model. The first gets the model instance. 
+      # Refer to: http://stackoverflow.com/a/6004962
+      # Todo: Need to check if there are multiple records returned
+      events_retured_by_where = Event.where(:token => params[:id])
+      @event = events_retured_by_where.first
+      logger.debug "It is getting to the else statement"
+    end
+    
     @restaurant = Restaurant.find(@event.restaurant_id)
     @attendee = Attendee.new
     @event_notify_email = EventNotifyEmail.new
@@ -73,6 +88,8 @@ class EventsController < ApplicationController
     @event = Event.new(params[:event])
     @restaurants = Restaurant.all
 
+    logger.debug "the params for the event controller is: #{params.inspect}"
+
     invitee_emails = params[:event][:invitees].split(",")
 
     respond_to do |format|
@@ -83,7 +100,8 @@ class EventsController < ApplicationController
           InviteMailer.invite(invitee_emails, current_user.name, @event).deliver  
         end
         
-        logger.debug 
+        
+
         if current_user.oauth_token.nil?
         else
           if params[:facebook_share] == "true"          
@@ -92,9 +110,14 @@ class EventsController < ApplicationController
           end
         end
         
-
-        format.html { redirect_to @event, notice: 'Event was successfully created.' }
-        format.json { render json: @event, status: :created, location: @event }
+        if @event.event_type == 'private'
+          path_to_redirect_to = '/events/' + @event.token
+          format.html { redirect_to path_to_redirect_to, notice: 'Event was successfully created.' }
+        else
+          format.html { redirect_to @event, notice: 'Event was successfully created.' }
+          format.json { render json: @event, status: :created, location: @event }
+        end
+        
       else
         format.html { render action: "new" }
         format.json { render json: @event.errors, status: :unprocessable_entity }

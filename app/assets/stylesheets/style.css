@@ -472,4 +472,16 @@
 	margin-top: 10px;
 	color: #fff;
 }
-
+.event_type_radio
+{
+	margin-top: 10px;
+}
+.event_radio
+{
+	float: left;
+}
+.event_radio_label
+{
+	float: left;
+	margin: 0 10px 0 5px;
+}

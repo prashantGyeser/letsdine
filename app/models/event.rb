@@ -18,7 +18,7 @@
 #
 
 class Event < ActiveRecord::Base
-  attr_accessible :event_date, :event_description, :event_name, :event_time, :restaurant_id, :event_image, :invitees, :max_seats, :status
+  attr_accessible :event_date, :event_description, :event_name, :event_time, :restaurant_id, :event_image, :invitees, :max_seats, :status, :token, :event_type
 
   validates :event_date, :event_description, :event_name, :event_time, :restaurant_id, :presence => true
 
@@ -26,4 +26,25 @@ class Event < ActiveRecord::Base
 
   has_one :restaurant
   has_many :attendee, :dependent => :destroy
+
+  before_create :generate_token
+
+  protected
+
+  def generate_token
+
+  	logger.debug "The event type is:#{self.event_type}"
+  	logger.debug "The event type is fdjkhgkdf:#{event_type}"
+  	
+  	if self.event_type == "private"
+	  	self.token = loop do
+			
+				random_token = SecureRandom.urlsafe_base64
+				break random_token unless Event.where(token: random_token).exists?
+				  self.token = token	
+			
+	    end
+    end
+  end
+
 end

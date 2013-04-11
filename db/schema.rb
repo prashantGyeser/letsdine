@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130402155845) do
+ActiveRecord::Schema.define(:version => 20130409192904) do
 
   create_table "attendees", :force => true do |t|
     t.integer  "user_id"
@@ -23,6 +23,14 @@ ActiveRecord::Schema.define(:version => 20130402155845) do
   end
 
   create_table "dashboards", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "discussions", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "group_id"
+    t.text     "content"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -47,6 +55,25 @@ ActiveRecord::Schema.define(:version => 20130402155845) do
     t.integer  "user_id"
     t.integer  "max_seats"
     t.string   "status"
+    t.string   "token"
+    t.string   "event_type"
+  end
+
+  create_table "groups", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "user_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.string   "group_image"
+    t.string   "category"
+  end
+
+  create_table "members", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "group_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "menu_items", :force => true do |t|
@@ -65,6 +92,14 @@ ActiveRecord::Schema.define(:version => 20130402155845) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.integer  "price"
+  end
+
+  create_table "topics", :force => true do |t|
+    t.string   "name"
+    t.text     "details"
+    t.integer  "group_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|
