@@ -19,17 +19,21 @@ class EventsController < ApplicationController
   # GET /events/1.json
   def show
     event_with_token = Event.where(:token => params[:id])
+
+    logger.debug "The event_with_token is: #{event_with_token.inspect}"
+
     if event_with_token.empty?
-      if @event.event_type == "public"
-        @event = Event.find(params[:id])
+      logger.debug "The event_with_token is: #{event_with_token.inspect}"
+      @event = Event.find(params[:id])
+      if @event.event_type == "private"
+        @event = nil
       end
     else
-      # The where clause returns an active recrod relationship and not the instance of the model. The first gets the model instance. 
+      # The where clause returns an active record relationship and not the instance of the model. The first gets the model instance. 
       # Refer to: http://stackoverflow.com/a/6004962
       # Todo: Need to check if there are multiple records returned
       events_retured_by_where = Event.where(:token => params[:id])
       @event = events_retured_by_where.first
-      logger.debug "It is getting to the else statement"
     end
     
     @restaurant = Restaurant.find(@event.restaurant_id)

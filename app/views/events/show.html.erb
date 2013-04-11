@@ -10,9 +10,10 @@
     <div class="span6">
       <div class="eventDetailsImage">
         <% if @event.event_image.blank? %>
-            <%= image_tag restaurant.photo_url.to_s %>
+            <h1>Umncomment the image</h1>
+            <%# image_tag restaurant.photo_url.to_s %>
         <% else %>
-            <%= image_tag @event.event_image_url.to_s %>
+            <%# image_tag @event.event_image_url.to_s %>
         <% end %>
         <% if @event.status == 'closed' || @event.status == 'full' %>
             <div class="closed">
@@ -96,30 +97,42 @@
       <% total_number_of_courses = 0 %>
 
       <% @menu_items_categorized.each do |course_name, menu_items| %>
+        
         <% total_number_of_courses = total_number_of_courses + 1 %>
       <% end %>      
 
-      <% @menu_items_categorized.each do |course_name, menu_items| %>        
+      <% @menu_items_categorized.each_with_index do |(course_name, menu_items), index| %>        
         <%# Todo: Clean up this if loop. Right now the if loop is used to correctly put the tags for the span classes %>
-        <% if course_count%3 == 0 || course_count == 1%>
-          <div class="row-fluid">
-            <div class="span6">
-        <% else %>
-            <div class="span6">
-        <% end %>
-
-        <h3><%= course_name %></h3>
-        <% for menu_item in menu_items%>
-          <div><%= menu_item.name %></div>
-        <% end %>
-
-        <% if (course_count%2 == 0) %>
-            </div>
+        <% if index%2 == 0 && index != 0 %>
           </div>
-          <% course_count = 1 %>
+          <div class="row-fluid group-row">
+            <div class="span6">
+
+              <h3><%= course_name %></h3>
+              <% for menu_item in menu_items%>
+                <div><%= menu_item.name %></div>
+              <% end %>
+
+            </div>
+        <% elsif index == 0 %>
+          <div class="row-fluid group-row">
+            <div class="span6">
+
+              <h3><%= course_name %></h3>
+              <% for menu_item in menu_items%>
+                <div><%= menu_item.name %></div>
+              <% end %>
+
+            </div>
         <% else %>
-          </div>  
-          <% course_count = course_count + 1 %>
+          <div class="span6">
+
+            <h3><%= course_name %></h3>
+            <% for menu_item in menu_items%>
+              <div><%= menu_item.name %></div>
+            <% end %>
+
+          </div>
         <% end %>
       <% end %>
     </div>
