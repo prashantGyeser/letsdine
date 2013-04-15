@@ -7,7 +7,7 @@ class EventsController < ApplicationController
   def index
     #@events = Event.all.reverse
 
-    Event.find(:all, :conditions => ["event_type != 'private'"], :order => 'status ASC')
+    @events = Event.find(:all, :conditions => ["event_type != 'private'"], :order => 'status ASC')
 
     respond_to do |format|
       format.html # index.html.erb
