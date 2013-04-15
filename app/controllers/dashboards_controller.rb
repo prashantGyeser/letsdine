@@ -6,6 +6,18 @@ class DashboardsController < ApplicationController
     @events = Event.all
     @attendees = Attendee.all
 
+    @total_attendees_to_date = 0
+
+    @attendees.each do |attendee|
+      if attendee.seats.nil?
+        @total_attendees_to_date = @total_attendees_to_date + 1
+      else
+        @total_attendees_to_date = @total_attendees_to_date + attendee.seats
+      end
+      
+    end
+    
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @dashboards }

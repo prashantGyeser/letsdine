@@ -1,5 +1,14 @@
 <div class="container">
   <div class="row-fluid">
+    <div class="span12 total_attendees_highlight">
+      <h1>Total number of attendees to date: <%= @total_attendees_to_date %> </h1>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row-fluid">
     <div class="span12">
       <h1>Users</h1>
       <table class="table table-striped">
@@ -28,13 +37,27 @@
       <h1>Events</h1>
       <table class="table table-striped">
         <tr>
+          <th>Total Attendees</th>
           <th>Event Name</th>
           <th>Attendees</th>
-          <th>Event Link</th>
           <th>Email Invites</th>
+          <th>Event Link</th>
         </tr>
         <% @events.each do |event| %>
           <tr>
+            <td>
+              <% total_attendees_for_event = 0 %>
+              <% event.attendee.each do |personAttending| %>
+                <% if personAttending.seats.nil? %>
+                  <% total_attendees_for_event = total_attendees_for_event + 1 %>
+                <% else %>
+                  <% total_attendees_for_event = total_attendees_for_event + personAttending.seats %>
+                <% end %>          
+              <% end %>
+
+              <%= total_attendees_for_event %>
+      
+            </td>
             <td><%= event.event_name %></td>
             <td>
               <% event.attendee.each do |personAttending| %>

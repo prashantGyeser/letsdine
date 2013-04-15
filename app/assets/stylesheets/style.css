@@ -485,3 +485,15 @@
 	float: left;
 	margin: 0 10px 0 5px;
 }
+.total_attendees
+{
+	padding: 10px;
+	background: #ccc;	
+}
+.total_attendees_highlight
+{
+	background: #d3371a;
+	color: #fff;
+	border: 1px solid #972713;
+	padding: 20px;
+}
