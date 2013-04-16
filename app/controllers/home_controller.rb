@@ -9,6 +9,6 @@ class HomeController < ApplicationController
   	logger.debug "The events are: #{@events.inspect}"
 
   	# Getting the last four events for the slider
-  	@header_events = Event.find(:all, :conditions => ["event_type != 'private'"], :limit => 4 )
+  	@header_events = Event.find(:all, :conditions => ["event_type != 'private' AND status != 'closed'"], :limit => 4 )
   end
 end
