@@ -62,7 +62,7 @@
             <td>
               <% event.attendee.each do |personAttending| %>
                 <% user = User.find(personAttending.user_id) %>
-                (<%= personAttending.seats %>)<%= user.name %>,
+                (<%= personAttending.seats %>)(<%= personAttending.phone_number %>)<%= user.name %>,
               <% end %>
             </td>
             <td>
