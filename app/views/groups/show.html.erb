@@ -38,17 +38,9 @@
 	<div class="row-fluid">
 		<div class="span12">
 			<ul class="group-sub-menu">
-				<li><%= link_to 'All Groups', groups_path %> </li> 
-        <li><a href="/groups?filter=Entrepreneurship">Entrepreneurship</a></li>
-        <li><a href="/groups?filter=Food">Food</a></li>
-        <li><a href="/groups?filter=Photography">Photography</a></li>
-        <li><a href="/groups?filter=Poets">Poets</a></li>
-        <li><a href="/groups?filter=Only Women">Only Women</a></li>
-        <li><a href="/groups?filter=Alumni">Alumni</a></li>
-        <li><a href="/groups?filter=Startups">Startups</a></li>
-				<li><a href="">Discussions</a></li>
-				<li>Events</li>
-				<li>Members</li>
+				<li><a href="/groups/1?filter=Discussions">Discussions</a></li>
+				<li><a href="/groups/1?filter=Events">Events</a></li>
+				<li><a href="/groups/1?filter=Members">Members</a></li>
 			</ul>
 		</div>
 	</div>
@@ -69,6 +61,9 @@
 							<% end %>
 							
 							<div class="comment">
+								<p>
+									<strong><%= user.name %></strong> Posted a comment
+								</p>
 								<%= simple_format discussion.content %>
 							</div>
 							
@@ -82,25 +77,3 @@
 		</div>
 	</div>
 </div>
-
-<div class="span12">
-			<p>
-			  <b>Name:</b>
-			  <%= @group.name %>
-			</p>
-
-			<p>
-			  <b>Description:</b>
-			  <%= @group.description %>
-			</p>
-
-			<p>
-				<b>Image</b>
-				<%# image_tag @group.group_image %>
-			</p>	
-
-			<p>
-			  <b>User:</b>
-			  <%= @group.user_id %>
-			</p>			
-		</div>
