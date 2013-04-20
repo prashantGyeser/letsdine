@@ -59,3 +59,4 @@ end
 
 # Performance monitoring
 gem 'newrelic_rpm'
+gem 'statsmix'
