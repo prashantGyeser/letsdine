@@ -1,0 +1,596 @@
+2013-04-22T14:08:47.766806+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:552:in `process_client'
+2013-04-22T14:08:47.767611+00:00 heroku[router]: at=info method=GET path=/assets/alert-overlay.png host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=2ms service=166ms status=404 bytes=728
+2013-04-22T14:08:47.766806+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/bin/unicorn:126:in `<top (required)>'
+2013-04-22T14:08:47.766806+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/railtie/configurable.rb:30:in `method_missing'
+2013-04-22T14:08:47.766242+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+2013-04-22T14:08:47.766806+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/newrelic_rpm-3.6.0.78/lib/new_relic/agent/instrumentation/unicorn_instrumentation.rb:22:in `block (4 levels) in <top (required)>'
+2013-04-22T14:08:47.766575+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/engine.rb:479:in `call'
+2013-04-22T14:08:47.766806+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:632:in `worker_loop'
+2013-04-22T14:08:47.766806+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:500:in `spawn_missing_workers'
+2013-04-22T14:08:47.767041+00:00 app[web.1]: 
+2013-04-22T14:08:47.766242+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+2013-04-22T14:08:47.766575+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:136:in `forward'
+2013-04-22T14:08:47.766806+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/application.rb:223:in `call'
+2013-04-22T14:08:47.766806+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/newrelic_rpm-3.6.0.78/lib/new_relic/agent/instrumentation/unicorn_instrumentation.rb:22:in `call'
+2013-04-22T14:08:47.766806+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:142:in `start'
+2013-04-22T14:08:47.766806+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/bin/unicorn:19:in `load'
+2013-04-22T14:08:47.767041+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/bin/unicorn:19:in `<main>'
+2013-04-22T14:08:47.767041+00:00 app[web.1]: 
+2013-04-22T14:08:47.701998+00:00 heroku[router]: at=info method=GET path=/assets/topBarBG.png host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=2ms service=108ms status=200 bytes=83575
+2013-04-22T14:08:47.796391+00:00 heroku[router]: at=info method=GET path=/assets/headerBG.png host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=2ms service=202ms status=200 bytes=186683
+2013-04-22T14:09:10.911126+00:00 app[web.1]: Started GET "/" for 74.125.63.33 at 2013-04-22 14:09:10 +0000
+2013-04-22T14:09:11.365696+00:00 heroku[router]: at=info method=GET path=/ host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=2ms service=457ms status=200 bytes=15160
+2013-04-22T14:09:11.735566+00:00 heroku[router]: at=info method=GET path=/assets/timeIcon.png host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=2ms service=4ms status=200 bytes=1187
+2013-04-22T14:09:11.738901+00:00 heroku[router]: at=info method=GET path=/assets/locationIcon.png host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=2ms service=4ms status=200 bytes=1170
+2013-04-22T14:09:11.849503+00:00 heroku[router]: at=info method=GET path=/assets/alert-overlay.png host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=1ms service=8ms status=404 bytes=728
+2013-04-22T14:09:11.848132+00:00 app[web.1]: ActionController::RoutingError (No route matches [GET] "/assets/alert-overlay.png"):
+2013-04-22T14:09:11.848132+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+2013-04-22T14:09:11.844566+00:00 app[web.1]: Started GET "/assets/alert-overlay.png" for 74.125.63.33 at 2013-04-22 14:09:11 +0000
+2013-04-22T14:09:11.848132+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/logger.rb:32:in `call_app'
+2013-04-22T14:09:11.848132+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+2013-04-22T14:09:11.848132+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `block in call'
+2013-04-22T14:09:11.848132+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.12/lib/active_support/tagged_logging.rb:22:in `tagged'
+2013-04-22T14:09:11.848132+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+2013-04-22T14:09:11.848132+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `call'
+2013-04-22T14:09:11.848132+00:00 app[web.1]: 
+2013-04-22T14:09:11.848132+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+2013-04-22T14:09:11.848402+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+2013-04-22T14:09:11.848402+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.12/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+2013-04-22T14:09:11.848402+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'
+2013-04-22T14:09:11.848402+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:66:in `call!'
+2013-04-22T14:09:11.848402+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:51:in `call'
+2013-04-22T14:09:11.848402+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/static.rb:62:in `call'
+2013-04-22T14:09:11.848633+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/application.rb:223:in `call'
+2013-04-22T14:09:11.848402+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:136:in `forward'
+2013-04-22T14:09:11.848633+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/railtie/configurable.rb:30:in `method_missing'
+2013-04-22T14:09:11.848402+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/engine.rb:479:in `call'
+2013-04-22T14:09:11.848402+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:245:in `fetch'
+2013-04-22T14:09:11.848402+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:185:in `lookup'
+2013-04-22T14:09:11.848633+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:552:in `process_client'
+2013-04-22T14:09:11.848633+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:632:in `worker_loop'
+2013-04-22T14:09:11.848633+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/newrelic_rpm-3.6.0.78/lib/new_relic/agent/instrumentation/unicorn_instrumentation.rb:22:in `call'
+2013-04-22T14:09:11.848633+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/newrelic_rpm-3.6.0.78/lib/new_relic/agent/instrumentation/unicorn_instrumentation.rb:22:in `block (4 levels) in <top (required)>'
+2013-04-22T14:09:11.848633+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:500:in `spawn_missing_workers'
+2013-04-22T14:09:11.848633+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:511:in `maintain_worker_count'
+2013-04-22T14:09:11.848633+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/bin/unicorn:126:in `<top (required)>'
+2013-04-22T14:09:11.848869+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/bin/unicorn:19:in `load'
+2013-04-22T14:09:11.848869+00:00 app[web.1]: 
+2013-04-22T14:09:11.848869+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/bin/unicorn:19:in `<main>'
+2013-04-22T14:09:11.848869+00:00 app[web.1]: 
+2013-04-22T14:09:11.848633+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:277:in `join'
+2013-04-22T14:09:11.974558+00:00 heroku[router]: at=info method=GET path=/assets/img/arrow-right-black.png host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=1ms service=4ms status=200 bytes=1341
+2013-04-22T14:09:11.985221+00:00 heroku[router]: at=info method=GET path=/assets/img/preloader.gif host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=1ms service=6ms status=200 bytes=5364
+2013-04-22T14:09:11.978768+00:00 heroku[router]: at=info method=GET path=/assets/img/arrow-left-black.png host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=4ms service=4ms status=200 bytes=1322
+2013-04-22T14:09:21.053453+00:00 app[web.1]: Started GET "/events/16" for 74.125.63.33 at 2013-04-22 14:09:21 +0000
+2013-04-22T14:09:21.184834+00:00 heroku[router]: at=info method=GET path=/events/16 host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=1ms service=132ms status=200 bytes=10067
+2013-04-22T14:09:21.719910+00:00 app[web.1]: Started GET "/assets/alert-overlay.png" for 74.125.63.33 at 2013-04-22 14:09:21 +0000
+2013-04-22T14:09:21.758448+00:00 heroku[router]: at=info method=GET path=/assets/alert-overlay.png host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=2ms service=73ms status=404 bytes=728
+2013-04-22T14:09:21.754053+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.12/lib/active_support/tagged_logging.rb:22:in `tagged'
+2013-04-22T14:09:21.754394+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'
+2013-04-22T14:09:21.754053+00:00 app[web.1]: 
+2013-04-22T14:09:21.754053+00:00 app[web.1]: ActionController::RoutingError (No route matches [GET] "/assets/alert-overlay.png"):
+2013-04-22T14:09:21.754053+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/logger.rb:32:in `call_app'
+2013-04-22T14:09:21.754053+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+2013-04-22T14:09:21.754394+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.12/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+2013-04-22T14:09:21.754624+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:500:in `spawn_missing_workers'
+2013-04-22T14:09:21.754053+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+2013-04-22T14:09:21.754394+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:245:in `fetch'
+2013-04-22T14:09:21.754624+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/bin/unicorn:126:in `<top (required)>'
+2013-04-22T14:09:21.754053+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `call'
+2013-04-22T14:09:21.754394+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:136:in `forward'
+2013-04-22T14:09:21.754624+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/newrelic_rpm-3.6.0.78/lib/new_relic/agent/instrumentation/unicorn_instrumentation.rb:22:in `call'
+2013-04-22T14:09:21.754053+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+2013-04-22T14:09:21.754053+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+2013-04-22T14:09:21.754394+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/static.rb:62:in `call'
+2013-04-22T14:09:21.754053+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `block in call'
+2013-04-22T14:09:21.754394+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+2013-04-22T14:09:21.754624+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/application.rb:223:in `call'
+2013-04-22T14:09:21.754394+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:185:in `lookup'
+2013-04-22T14:09:21.754394+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/engine.rb:479:in `call'
+2013-04-22T14:09:21.754624+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/newrelic_rpm-3.6.0.78/lib/new_relic/agent/instrumentation/unicorn_instrumentation.rb:22:in `block (4 levels) in <top (required)>'
+2013-04-22T14:09:21.754861+00:00 app[web.1]: 
+2013-04-22T14:09:21.754624+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:552:in `process_client'
+2013-04-22T14:09:21.754861+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/bin/unicorn:19:in `<main>'
+2013-04-22T14:09:21.754861+00:00 app[web.1]: 
+2013-04-22T14:09:21.754624+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:277:in `join'
+2013-04-22T14:09:21.754861+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/bin/unicorn:19:in `load'
+2013-04-22T14:09:21.754624+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:511:in `maintain_worker_count'
+2013-04-22T14:09:21.754394+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:66:in `call!'
+2013-04-22T14:09:21.754624+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/railtie/configurable.rb:30:in `method_missing'
+2013-04-22T14:09:21.754624+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:632:in `worker_loop'
+2013-04-22T14:09:21.754394+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:51:in `call'
+2013-04-22T14:10:15.959157+00:00 app[web.1]: Started POST "/attendees/create" for 74.125.63.33 at 2013-04-22 14:10:15 +0000
+2013-04-22T14:10:15.967729+00:00 heroku[router]: at=info method=POST path=/attendees/create host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=1ms service=26ms status=302 bytes=102
+2013-04-22T14:10:16.281961+00:00 app[web.1]: Started GET "/users/sign_in" for 74.125.63.33 at 2013-04-22 14:10:16 +0000
+2013-04-22T14:10:16.309107+00:00 heroku[router]: at=info method=GET path=/users/sign_in host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=1ms service=28ms status=200 bytes=5848
+2013-04-22T14:10:16.627607+00:00 heroku[router]: at=info method=GET path=/assets/application-d1a5e25077e4a6be775da86436ea1dcb.css host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=8ms service=2ms status=304 bytes=0
+2013-04-22T14:10:16.638536+00:00 heroku[router]: at=info method=GET path=/assets/bootstrap-bc9f20f385f0989072c9aa56a7a10ae5.css host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=18ms service=3ms status=304 bytes=0
+2013-04-22T14:10:16.915899+00:00 heroku[router]: at=info method=GET path=/assets/prettify-1c0d6850ec95627c0ae574062b3865f2.css host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=2ms service=2ms status=304 bytes=0
+2013-04-22T14:10:16.916143+00:00 heroku[router]: at=info method=GET path=/assets/custom-bd7b102b73bc95fdabfbfb006141a033.css host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=6ms service=3ms status=304 bytes=0
+2013-04-22T14:10:16.924417+00:00 heroku[router]: at=info method=GET path=/assets/bootstrap-timepicker-507a15d551ef65cab721d901af6a8a7f.css host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=1ms service=2ms status=304 bytes=0
+2013-04-22T14:10:16.925923+00:00 heroku[router]: at=info method=GET path=/assets/datepicker-f030298a599c581d22476f8572d7386d.css host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=1ms service=10ms status=304 bytes=0
+2013-04-22T14:10:16.922244+00:00 heroku[router]: at=info method=GET path=/assets/bootstrap-responsive-3a0afd040e59f425bf14fee96ce2985e.css host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=13ms service=4ms status=304 bytes=0
+2013-04-22T14:10:16.917720+00:00 heroku[router]: at=info method=GET path=/assets/style-ce23465d5b81e761c452ef2d8dbda572.css host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=11ms service=2ms status=304 bytes=0
+2013-04-22T14:10:17.158384+00:00 heroku[router]: at=info method=GET path=/assets/zoomflow-74815dbce6c1135a83ee4f17cfc0e6ee.css host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=3ms service=3ms status=304 bytes=0
+2013-04-22T14:10:17.159071+00:00 heroku[router]: at=info method=GET path=/assets/bootstrap-c548b36591d6d4b5e206961092e41eb8.js host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=2ms service=3ms status=304 bytes=0
+2013-04-22T14:10:17.154922+00:00 heroku[router]: at=info method=GET path=/assets/jquery-1.9.1-186cad25611b3c790cb50517ee029d2a.js host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=1ms service=4ms status=304 bytes=0
+2013-04-22T14:10:17.164597+00:00 heroku[router]: at=info method=GET path=/assets/application-39c003e747478fc099e042f3fd045b5c.js host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=4ms service=5ms status=304 bytes=0
+2013-04-22T14:10:17.211605+00:00 heroku[router]: at=info method=GET path=/assets/bootstrap-timepicker-821328b7b6f5603a36ba112e7c3f8042.js host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=1ms service=4ms status=304 bytes=0
+2013-04-22T14:10:17.209011+00:00 heroku[router]: at=info method=GET path=/assets/jquery.bootstrap.wizard-fb0689402e3e80713289dd7962a864ab.js host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=2ms service=5ms status=304 bytes=0
+2013-04-22T14:10:17.213584+00:00 heroku[router]: at=info method=GET path=/assets/bootstrap-datepicker-ea267d0f4b58e4c693968c4210e25490.js host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=3ms service=4ms status=304 bytes=0
+2013-04-22T14:10:17.213559+00:00 heroku[router]: at=info method=GET path=/assets/zoomflow/zoomflow.dev-23dcf2a97da4ae698d066a41dccee462.js host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=3ms service=4ms status=304 bytes=0
+2013-04-22T14:10:17.560791+00:00 heroku[router]: at=info method=GET path=/assets/topBarBG.png host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=2ms service=4ms status=304 bytes=0
+2013-04-22T14:10:17.559416+00:00 app[web.1]: Started GET "/assets/alert-overlay.png" for 74.125.63.33 at 2013-04-22 14:10:17 +0000
+2013-04-22T14:10:17.564166+00:00 app[web.1]: 
+2013-04-22T14:10:17.564166+00:00 app[web.1]: ActionController::RoutingError (No route matches [GET] "/assets/alert-overlay.png"):
+2013-04-22T14:10:17.568826+00:00 heroku[router]: at=info method=GET path=/assets/alert-overlay.png host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=2ms service=9ms status=404 bytes=728
+2013-04-22T14:10:17.564166+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+2013-04-22T14:10:17.564166+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+2013-04-22T14:10:17.564166+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/logger.rb:32:in `call_app'
+2013-04-22T14:10:17.564166+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `block in call'
+2013-04-22T14:10:17.564166+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.12/lib/active_support/tagged_logging.rb:22:in `tagged'
+2013-04-22T14:10:17.555325+00:00 heroku[router]: at=info method=GET path=/assets/headerBG.png host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=1ms service=4ms status=304 bytes=0
+2013-04-22T14:10:17.564166+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `call'
+2013-04-22T14:10:17.564166+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+2013-04-22T14:10:17.564166+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+2013-04-22T14:10:17.564453+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+2013-04-22T14:10:17.564453+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.12/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+2013-04-22T14:10:17.564453+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'
+2013-04-22T14:10:17.564453+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/static.rb:62:in `call'
+2013-04-22T14:10:17.564453+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:136:in `forward'
+2013-04-22T14:10:17.564453+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:245:in `fetch'
+2013-04-22T14:10:17.564453+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:185:in `lookup'
+2013-04-22T14:10:17.564453+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:66:in `call!'
+2013-04-22T14:10:17.564453+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:51:in `call'
+2013-04-22T14:10:17.564453+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/engine.rb:479:in `call'
+2013-04-22T14:10:17.564688+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/application.rb:223:in `call'
+2013-04-22T14:10:17.564688+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/railtie/configurable.rb:30:in `method_missing'
+2013-04-22T14:10:17.564688+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:552:in `process_client'
+2013-04-22T14:10:17.564688+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:632:in `worker_loop'
+2013-04-22T14:10:17.564688+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/newrelic_rpm-3.6.0.78/lib/new_relic/agent/instrumentation/unicorn_instrumentation.rb:22:in `call'
+2013-04-22T14:10:17.564688+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/newrelic_rpm-3.6.0.78/lib/new_relic/agent/instrumentation/unicorn_instrumentation.rb:22:in `block (4 levels) in <top (required)>'
+2013-04-22T14:10:17.564688+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:500:in `spawn_missing_workers'
+2013-04-22T14:10:17.564688+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:142:in `start'
+2013-04-22T14:10:17.564688+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/bin/unicorn:126:in `<top (required)>'
+2013-04-22T14:10:17.564688+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/bin/unicorn:19:in `load'
+2013-04-22T14:10:17.564929+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/bin/unicorn:19:in `<main>'
+2013-04-22T14:10:17.564929+00:00 app[web.1]: 
+2013-04-22T14:10:17.564929+00:00 app[web.1]: 
+2013-04-22T14:10:17.560373+00:00 heroku[router]: at=info method=GET path=/assets/logo.png host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=2ms service=4ms status=304 bytes=0
+2013-04-22T14:10:21.693662+00:00 app[web.1]: Started GET "/assets/alert-overlay.png" for 74.125.63.33 at 2013-04-22 14:10:21 +0000
+2013-04-22T14:10:21.701762+00:00 app[web.1]: 
+2013-04-22T14:10:21.701762+00:00 app[web.1]: ActionController::RoutingError (No route matches [GET] "/assets/alert-overlay.png"):
+2013-04-22T14:10:21.701762+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+2013-04-22T14:10:21.701762+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+2013-04-22T14:10:21.701762+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/logger.rb:32:in `call_app'
+2013-04-22T14:10:21.701762+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `block in call'
+2013-04-22T14:10:21.701762+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.12/lib/active_support/tagged_logging.rb:22:in `tagged'
+2013-04-22T14:10:21.701762+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `call'
+2013-04-22T14:10:21.701762+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+2013-04-22T14:10:21.701762+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+2013-04-22T14:10:21.702124+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+2013-04-22T14:10:21.702124+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.12/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+2013-04-22T14:10:21.702124+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'
+2013-04-22T14:10:21.702124+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/static.rb:62:in `call'
+2013-04-22T14:10:21.702124+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:136:in `forward'
+2013-04-22T14:10:21.702124+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:245:in `fetch'
+2013-04-22T14:10:21.702124+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:185:in `lookup'
+2013-04-22T14:10:21.702124+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:66:in `call!'
+2013-04-22T14:10:21.702124+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:51:in `call'
+2013-04-22T14:10:21.702124+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/engine.rb:479:in `call'
+2013-04-22T14:10:21.702360+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/application.rb:223:in `call'
+2013-04-22T14:10:21.702360+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/railtie/configurable.rb:30:in `method_missing'
+2013-04-22T14:10:21.702360+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:552:in `process_client'
+2013-04-22T14:10:21.702360+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:632:in `worker_loop'
+2013-04-22T14:10:21.702360+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/newrelic_rpm-3.6.0.78/lib/new_relic/agent/instrumentation/unicorn_instrumentation.rb:22:in `call'
+2013-04-22T14:10:21.702360+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/newrelic_rpm-3.6.0.78/lib/new_relic/agent/instrumentation/unicorn_instrumentation.rb:22:in `block (4 levels) in <top (required)>'
+2013-04-22T14:10:21.702360+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:500:in `spawn_missing_workers'
+2013-04-22T14:10:21.702360+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:142:in `start'
+2013-04-22T14:10:21.702360+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/bin/unicorn:126:in `<top (required)>'
+2013-04-22T14:10:21.702360+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/bin/unicorn:19:in `load'
+2013-04-22T14:10:21.702600+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/bin/unicorn:19:in `<main>'
+2013-04-22T14:10:21.702600+00:00 app[web.1]: 
+2013-04-22T14:10:21.702600+00:00 app[web.1]: 
+2013-04-22T14:10:21.704138+00:00 heroku[router]: at=info method=GET path=/assets/alert-overlay.png host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=2ms service=13ms status=404 bytes=728
+2013-04-22T14:10:22.403774+00:00 app[web.1]: Started GET "/events" for 74.125.63.33 at 2013-04-22 14:10:22 +0000
+2013-04-22T14:10:22.581443+00:00 heroku[router]: at=info method=GET path=/events host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=2ms service=180ms status=200 bytes=33318
+2013-04-22T14:10:22.909479+00:00 heroku[router]: at=info method=GET path=/assets/closed-event-overlay-2704597afb0fa4de1aeaf8ab96d26e3f.js host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=2ms service=4ms status=304 bytes=0
+2013-04-22T14:10:23.207084+00:00 heroku[router]: at=info method=GET path=/assets/timeIcon.png host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=1ms service=4ms status=304 bytes=0
+2013-04-22T14:10:23.204631+00:00 heroku[router]: at=info method=GET path=/assets/locationIcon.png host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=3ms service=4ms status=304 bytes=0
+2013-04-22T14:10:23.293855+00:00 heroku[router]: at=info method=GET path=/assets/noProfilePic.png host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=2ms service=5ms status=304 bytes=0
+2013-04-22T14:10:23.330027+00:00 app[web.1]: Started GET "/assets/alert-overlay.png" for 74.125.63.33 at 2013-04-22 14:10:23 +0000
+2013-04-22T14:10:23.334053+00:00 app[web.1]: 
+2013-04-22T14:10:23.334053+00:00 app[web.1]: ActionController::RoutingError (No route matches [GET] "/assets/alert-overlay.png"):
+2013-04-22T14:10:23.334053+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+2013-04-22T14:10:23.334053+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+2013-04-22T14:10:23.334053+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/logger.rb:32:in `call_app'
+2013-04-22T14:10:23.334053+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `block in call'
+2013-04-22T14:10:23.334053+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.12/lib/active_support/tagged_logging.rb:22:in `tagged'
+2013-04-22T14:10:23.334053+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `call'
+2013-04-22T14:10:23.334053+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+2013-04-22T14:10:23.334053+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+2013-04-22T14:10:23.334353+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+2013-04-22T14:10:23.334353+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.12/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+2013-04-22T14:10:23.334353+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'
+2013-04-22T14:10:23.334353+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/static.rb:62:in `call'
+2013-04-22T14:10:23.334353+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:136:in `forward'
+2013-04-22T14:10:23.334353+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:245:in `fetch'
+2013-04-22T14:10:23.334353+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:185:in `lookup'
+2013-04-22T14:10:23.334353+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:66:in `call!'
+2013-04-22T14:10:23.334353+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:51:in `call'
+2013-04-22T14:10:23.334353+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/engine.rb:479:in `call'
+2013-04-22T14:10:23.334597+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/application.rb:223:in `call'
+2013-04-22T14:10:23.334597+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/railtie/configurable.rb:30:in `method_missing'
+2013-04-22T14:10:23.334597+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:552:in `process_client'
+2013-04-22T14:10:23.334597+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:632:in `worker_loop'
+2013-04-22T14:10:23.334597+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/newrelic_rpm-3.6.0.78/lib/new_relic/agent/instrumentation/unicorn_instrumentation.rb:22:in `call'
+2013-04-22T14:10:23.334597+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/newrelic_rpm-3.6.0.78/lib/new_relic/agent/instrumentation/unicorn_instrumentation.rb:22:in `block (4 levels) in <top (required)>'
+2013-04-22T14:10:23.334597+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:500:in `spawn_missing_workers'
+2013-04-22T14:10:23.334597+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:142:in `start'
+2013-04-22T14:10:23.334597+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/bin/unicorn:126:in `<top (required)>'
+2013-04-22T14:10:23.334597+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/bin/unicorn:19:in `load'
+2013-04-22T14:10:23.334853+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/bin/unicorn:19:in `<main>'
+2013-04-22T14:10:23.334853+00:00 app[web.1]: 
+2013-04-22T14:10:23.334853+00:00 app[web.1]: 
+2013-04-22T14:10:23.387914+00:00 heroku[router]: at=info method=GET path=/assets/alert-overlay.png host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=2ms service=61ms status=404 bytes=728
+2013-04-22T14:10:26.711729+00:00 app[web.1]: Started GET "/events/17" for 74.125.63.33 at 2013-04-22 14:10:26 +0000
+2013-04-22T14:10:26.818079+00:00 heroku[router]: at=info method=GET path=/events/17 host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=5ms service=109ms status=200 bytes=8234
+2013-04-22T14:10:27.294350+00:00 app[web.1]: Started GET "/assets/alert-overlay.png" for 74.125.63.33 at 2013-04-22 14:10:27 +0000
+2013-04-22T14:10:27.304967+00:00 app[web.1]: 
+2013-04-22T14:10:27.304967+00:00 app[web.1]: ActionController::RoutingError (No route matches [GET] "/assets/alert-overlay.png"):
+2013-04-22T14:10:27.304967+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+2013-04-22T14:10:27.304967+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+2013-04-22T14:10:27.304967+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/logger.rb:32:in `call_app'
+2013-04-22T14:10:27.304967+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `block in call'
+2013-04-22T14:10:27.304967+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.12/lib/active_support/tagged_logging.rb:22:in `tagged'
+2013-04-22T14:10:27.304967+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `call'
+2013-04-22T14:10:27.304967+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+2013-04-22T14:10:27.304967+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+2013-04-22T14:10:27.305294+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+2013-04-22T14:10:27.305294+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.12/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+2013-04-22T14:10:27.305294+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'
+2013-04-22T14:10:27.305294+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/static.rb:62:in `call'
+2013-04-22T14:10:27.305294+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:136:in `forward'
+2013-04-22T14:10:27.305294+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:245:in `fetch'
+2013-04-22T14:10:27.305294+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:185:in `lookup'
+2013-04-22T14:10:27.305294+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:66:in `call!'
+2013-04-22T14:10:27.305294+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:51:in `call'
+2013-04-22T14:10:27.305294+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/engine.rb:479:in `call'
+2013-04-22T14:10:27.305527+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/application.rb:223:in `call'
+2013-04-22T14:10:27.305527+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/railtie/configurable.rb:30:in `method_missing'
+2013-04-22T14:10:27.305527+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:552:in `process_client'
+2013-04-22T14:10:27.305527+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:632:in `worker_loop'
+2013-04-22T14:10:27.305527+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/newrelic_rpm-3.6.0.78/lib/new_relic/agent/instrumentation/unicorn_instrumentation.rb:22:in `call'
+2013-04-22T14:10:27.305527+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/newrelic_rpm-3.6.0.78/lib/new_relic/agent/instrumentation/unicorn_instrumentation.rb:22:in `block (4 levels) in <top (required)>'
+2013-04-22T14:10:27.305527+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:500:in `spawn_missing_workers'
+2013-04-22T14:10:27.305527+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:511:in `maintain_worker_count'
+2013-04-22T14:10:27.305527+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:277:in `join'
+2013-04-22T14:10:27.309391+00:00 heroku[router]: at=info method=GET path=/assets/alert-overlay.png host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=1ms service=18ms status=404 bytes=728
+2013-04-22T14:10:27.305527+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/bin/unicorn:126:in `<top (required)>'
+2013-04-22T14:10:27.305755+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/bin/unicorn:19:in `load'
+2013-04-22T14:10:27.305755+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/bin/unicorn:19:in `<main>'
+2013-04-22T14:10:27.305755+00:00 app[web.1]: 
+2013-04-22T14:10:27.305755+00:00 app[web.1]: 
+2013-04-22T14:10:33.602935+00:00 app[web.1]: Started GET "/assets/alert-overlay.png" for 74.125.63.33 at 2013-04-22 14:10:33 +0000
+2013-04-22T14:10:33.605830+00:00 app[web.1]: 
+2013-04-22T14:10:33.605830+00:00 app[web.1]: ActionController::RoutingError (No route matches [GET] "/assets/alert-overlay.png"):
+2013-04-22T14:10:33.605830+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+2013-04-22T14:10:33.605830+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+2013-04-22T14:10:33.605830+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/logger.rb:32:in `call_app'
+2013-04-22T14:10:33.605830+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `block in call'
+2013-04-22T14:10:33.605830+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.12/lib/active_support/tagged_logging.rb:22:in `tagged'
+2013-04-22T14:10:33.609095+00:00 heroku[router]: at=info method=GET path=/assets/alert-overlay.png host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=2ms service=8ms status=404 bytes=728
+2013-04-22T14:10:33.605830+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `call'
+2013-04-22T14:10:33.605830+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+2013-04-22T14:10:33.605830+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+2013-04-22T14:10:33.606129+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+2013-04-22T14:10:33.606129+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.12/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+2013-04-22T14:10:33.606129+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'
+2013-04-22T14:10:33.606129+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/static.rb:62:in `call'
+2013-04-22T14:10:33.606129+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:136:in `forward'
+2013-04-22T14:10:33.606129+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:245:in `fetch'
+2013-04-22T14:10:33.606129+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:185:in `lookup'
+2013-04-22T14:10:33.606129+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:66:in `call!'
+2013-04-22T14:10:33.606129+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:51:in `call'
+2013-04-22T14:10:33.606129+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/engine.rb:479:in `call'
+2013-04-22T14:10:33.606366+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/application.rb:223:in `call'
+2013-04-22T14:10:33.606366+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/railtie/configurable.rb:30:in `method_missing'
+2013-04-22T14:10:33.606366+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:552:in `process_client'
+2013-04-22T14:10:33.606366+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:632:in `worker_loop'
+2013-04-22T14:10:33.606366+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/newrelic_rpm-3.6.0.78/lib/new_relic/agent/instrumentation/unicorn_instrumentation.rb:22:in `call'
+2013-04-22T14:10:33.606366+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/newrelic_rpm-3.6.0.78/lib/new_relic/agent/instrumentation/unicorn_instrumentation.rb:22:in `block (4 levels) in <top (required)>'
+2013-04-22T14:10:33.606366+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:500:in `spawn_missing_workers'
+2013-04-22T14:10:33.606366+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:142:in `start'
+2013-04-22T14:10:33.606366+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/bin/unicorn:126:in `<top (required)>'
+2013-04-22T14:10:33.606366+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/bin/unicorn:19:in `load'
+2013-04-22T14:10:33.606605+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/bin/unicorn:19:in `<main>'
+2013-04-22T14:10:33.606605+00:00 app[web.1]: 
+2013-04-22T14:10:33.606605+00:00 app[web.1]: 
+2013-04-22T14:10:38.144736+00:00 app[web.1]: Started GET "/events/18" for 74.125.63.33 at 2013-04-22 14:10:38 +0000
+2013-04-22T14:10:38.234831+00:00 heroku[router]: at=info method=GET path=/events/18 host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=2ms service=94ms status=200 bytes=7846
+2013-04-22T14:10:38.731350+00:00 heroku[router]: at=info method=GET path=/assets/alert-overlay.png host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=2ms service=13ms status=404 bytes=728
+2013-04-22T14:10:38.722921+00:00 app[web.1]: Started GET "/assets/alert-overlay.png" for 74.125.63.33 at 2013-04-22 14:10:38 +0000
+2013-04-22T14:10:38.728873+00:00 app[web.1]: 
+2013-04-22T14:10:38.728873+00:00 app[web.1]: ActionController::RoutingError (No route matches [GET] "/assets/alert-overlay.png"):
+2013-04-22T14:10:38.728873+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+2013-04-22T14:10:38.728873+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+2013-04-22T14:10:38.728873+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/logger.rb:32:in `call_app'
+2013-04-22T14:10:38.728873+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `block in call'
+2013-04-22T14:10:38.728873+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.12/lib/active_support/tagged_logging.rb:22:in `tagged'
+2013-04-22T14:10:38.728873+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `call'
+2013-04-22T14:10:38.728873+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+2013-04-22T14:10:38.728873+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+2013-04-22T14:10:38.729201+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+2013-04-22T14:10:38.729201+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.12/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+2013-04-22T14:10:38.729201+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'
+2013-04-22T14:10:38.729201+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/static.rb:62:in `call'
+2013-04-22T14:10:38.729201+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:136:in `forward'
+2013-04-22T14:10:38.729201+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:245:in `fetch'
+2013-04-22T14:10:38.729201+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:185:in `lookup'
+2013-04-22T14:10:38.729201+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:66:in `call!'
+2013-04-22T14:10:38.729201+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:51:in `call'
+2013-04-22T14:10:38.729433+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/engine.rb:479:in `call'
+2013-04-22T14:10:38.729433+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/application.rb:223:in `call'
+2013-04-22T14:10:38.729433+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/railtie/configurable.rb:30:in `method_missing'
+2013-04-22T14:10:38.729433+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:552:in `process_client'
+2013-04-22T14:10:38.729433+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:632:in `worker_loop'
+2013-04-22T14:10:38.729433+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/newrelic_rpm-3.6.0.78/lib/new_relic/agent/instrumentation/unicorn_instrumentation.rb:22:in `call'
+2013-04-22T14:10:38.729433+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/newrelic_rpm-3.6.0.78/lib/new_relic/agent/instrumentation/unicorn_instrumentation.rb:22:in `block (4 levels) in <top (required)>'
+2013-04-22T14:10:38.729433+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:500:in `spawn_missing_workers'
+2013-04-22T14:10:38.729433+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:142:in `start'
+2013-04-22T14:10:38.729433+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/bin/unicorn:126:in `<top (required)>'
+2013-04-22T14:10:38.729667+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/bin/unicorn:19:in `load'
+2013-04-22T14:10:38.729667+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/bin/unicorn:19:in `<main>'
+2013-04-22T14:10:38.729667+00:00 app[web.1]: 
+2013-04-22T14:10:38.729667+00:00 app[web.1]: 
+2013-04-22T14:10:46.622512+00:00 heroku[router]: at=error code=H13 desc="Connection closed without response" method=POST path=/groups host=www.letsdine.co fwd="59.92.55.239" dyno=web.1 connect=2ms service=16392ms status=503 bytes=0
+2013-04-22T14:10:46.591356+00:00 app[web.1]: E, [2013-04-22T14:10:46.591090 #2] ERROR -- : worker=1 PID:75 timeout (16s > 15s), killing
+2013-04-22T14:10:46.701201+00:00 app[web.1]: E, [2013-04-22T14:10:46.700995 #2] ERROR -- : reaped #<Process::Status: pid 75 SIGKILL (signal 9)> worker=1
+2013-04-22T14:10:46.832753+00:00 app[web.1]: I, [2013-04-22T14:10:46.832464 #157]  INFO -- : worker=1 ready
+2013-04-22T14:11:10.377655+00:00 app[web.1]: Started GET "/users/sign_up" for 74.125.63.33 at 2013-04-22 14:11:10 +0000
+2013-04-22T14:11:10.414318+00:00 heroku[router]: at=info method=GET path=/users/sign_up host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=2ms service=40ms status=200 bytes=5969
+2013-04-22T14:11:10.941219+00:00 app[web.1]: Started GET "/assets/alert-overlay.png" for 74.125.63.33 at 2013-04-22 14:11:10 +0000
+2013-04-22T14:11:10.952775+00:00 app[web.1]: 
+2013-04-22T14:11:10.952775+00:00 app[web.1]: ActionController::RoutingError (No route matches [GET] "/assets/alert-overlay.png"):
+2013-04-22T14:11:10.952775+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+2013-04-22T14:11:10.952775+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+2013-04-22T14:11:10.952775+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/logger.rb:32:in `call_app'
+2013-04-22T14:11:10.952775+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `block in call'
+2013-04-22T14:11:10.952775+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.12/lib/active_support/tagged_logging.rb:22:in `tagged'
+2013-04-22T14:11:10.952775+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `call'
+2013-04-22T14:11:10.952775+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+2013-04-22T14:11:10.952775+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+2013-04-22T14:11:10.953104+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+2013-04-22T14:11:10.953104+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.12/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+2013-04-22T14:11:10.953104+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'
+2013-04-22T14:11:10.953104+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/static.rb:62:in `call'
+2013-04-22T14:11:10.953104+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:136:in `forward'
+2013-04-22T14:11:10.953104+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:245:in `fetch'
+2013-04-22T14:11:10.953104+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:185:in `lookup'
+2013-04-22T14:11:10.953104+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:66:in `call!'
+2013-04-22T14:11:10.953104+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:51:in `call'
+2013-04-22T14:11:10.953104+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/engine.rb:479:in `call'
+2013-04-22T14:11:10.953360+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/application.rb:223:in `call'
+2013-04-22T14:11:10.953360+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/railtie/configurable.rb:30:in `method_missing'
+2013-04-22T14:11:10.953360+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:552:in `process_client'
+2013-04-22T14:11:10.953360+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:632:in `worker_loop'
+2013-04-22T14:11:10.953360+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/newrelic_rpm-3.6.0.78/lib/new_relic/agent/instrumentation/unicorn_instrumentation.rb:22:in `call'
+2013-04-22T14:11:10.953360+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/newrelic_rpm-3.6.0.78/lib/new_relic/agent/instrumentation/unicorn_instrumentation.rb:22:in `block (4 levels) in <top (required)>'
+2013-04-22T14:11:10.953360+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:500:in `spawn_missing_workers'
+2013-04-22T14:11:10.953360+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:142:in `start'
+2013-04-22T14:11:10.953360+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/bin/unicorn:126:in `<top (required)>'
+2013-04-22T14:11:10.953360+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/bin/unicorn:19:in `load'
+2013-04-22T14:11:10.953620+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/bin/unicorn:19:in `<main>'
+2013-04-22T14:11:10.953620+00:00 app[web.1]: 
+2013-04-22T14:11:10.953620+00:00 app[web.1]: 
+2013-04-22T14:11:10.965267+00:00 heroku[router]: at=info method=GET path=/assets/alert-overlay.png host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=3ms service=27ms status=404 bytes=728
+2013-04-22T14:11:28.607440+00:00 app[web.1]: Started POST "/users" for 74.125.63.33 at 2013-04-22 14:11:28 +0000
+2013-04-22T14:11:33.548236+00:00 heroku[router]: at=info method=POST path=/users host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=4ms service=5607ms status=302 bytes=98
+2013-04-22T14:11:33.891986+00:00 app[web.1]: Started GET "/events/16" for 74.125.63.33 at 2013-04-22 14:11:33 +0000
+2013-04-22T14:11:35.080926+00:00 heroku[router]: at=info method=GET path=/events/16 host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=2ms service=1205ms status=200 bytes=10219
+2013-04-22T14:11:35.410441+00:00 heroku[router]: at=info method=GET path=/assets/application-d1a5e25077e4a6be775da86436ea1dcb.css host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=18ms service=5ms status=304 bytes=0
+2013-04-22T14:11:35.682138+00:00 heroku[router]: at=info method=GET path=/assets/custom-bd7b102b73bc95fdabfbfb006141a033.css host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=2ms service=4ms status=304 bytes=0
+2013-04-22T14:11:35.681821+00:00 heroku[router]: at=info method=GET path=/assets/bootstrap-responsive-3a0afd040e59f425bf14fee96ce2985e.css host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=1ms service=4ms status=304 bytes=0
+2013-04-22T14:11:35.678936+00:00 heroku[router]: at=info method=GET path=/assets/bootstrap-bc9f20f385f0989072c9aa56a7a10ae5.css host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=1ms service=5ms status=304 bytes=0
+2013-04-22T14:11:35.696882+00:00 heroku[router]: at=info method=GET path=/assets/style-ce23465d5b81e761c452ef2d8dbda572.css host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=7ms service=5ms status=304 bytes=0
+2013-04-22T14:11:35.682324+00:00 heroku[router]: at=info method=GET path=/assets/prettify-1c0d6850ec95627c0ae574062b3865f2.css host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=1ms service=6ms status=304 bytes=0
+2013-04-22T14:11:35.703803+00:00 heroku[router]: at=info method=GET path=/assets/datepicker-f030298a599c581d22476f8572d7386d.css host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=3ms service=5ms status=304 bytes=0
+2013-04-22T14:11:35.930457+00:00 heroku[router]: at=info method=GET path=/assets/bootstrap-timepicker-507a15d551ef65cab721d901af6a8a7f.css host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=2ms service=5ms status=304 bytes=0
+2013-04-22T14:11:35.939529+00:00 heroku[router]: at=info method=GET path=/assets/bootstrap-c548b36591d6d4b5e206961092e41eb8.js host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=1ms service=10ms status=304 bytes=0
+2013-04-22T14:11:35.936366+00:00 heroku[router]: at=info method=GET path=/assets/jquery-1.9.1-186cad25611b3c790cb50517ee029d2a.js host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=2ms service=9ms status=304 bytes=0
+2013-04-22T14:11:35.933308+00:00 heroku[router]: at=info method=GET path=/assets/application-39c003e747478fc099e042f3fd045b5c.js host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=2ms service=7ms status=304 bytes=0
+2013-04-22T14:11:35.976165+00:00 heroku[router]: at=info method=GET path=/assets/jquery.bootstrap.wizard-fb0689402e3e80713289dd7962a864ab.js host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=2ms service=7ms status=304 bytes=0
+2013-04-22T14:11:35.973296+00:00 heroku[router]: at=info method=GET path=/assets/bootstrap-datepicker-ea267d0f4b58e4c693968c4210e25490.js host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=2ms service=5ms status=304 bytes=0
+2013-04-22T14:11:35.976891+00:00 heroku[router]: at=info method=GET path=/assets/zoomflow/zoomflow.dev-23dcf2a97da4ae698d066a41dccee462.js host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=2ms service=5ms status=304 bytes=0
+2013-04-22T14:11:35.976938+00:00 heroku[router]: at=info method=GET path=/assets/bootstrap-timepicker-821328b7b6f5603a36ba112e7c3f8042.js host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=2ms service=7ms status=304 bytes=0
+2013-04-22T14:11:36.465008+00:00 heroku[router]: at=info method=GET path=/assets/logo.png host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=1ms service=4ms status=304 bytes=0
+2013-04-22T14:11:36.464967+00:00 heroku[router]: at=info method=GET path=/assets/noProfilePic.png host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=2ms service=4ms status=304 bytes=0
+2013-04-22T14:11:36.567736+00:00 heroku[router]: at=info method=GET path=/assets/topBarBG.png host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=1ms service=4ms status=304 bytes=0
+2013-04-22T14:11:36.571873+00:00 heroku[router]: at=info method=GET path=/assets/headerBG.png host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=1ms service=5ms status=304 bytes=0
+2013-04-22T14:11:36.572557+00:00 app[web.1]: Started GET "/assets/alert-overlay.png" for 74.125.63.33 at 2013-04-22 14:11:36 +0000
+2013-04-22T14:11:36.576032+00:00 app[web.1]: 
+2013-04-22T14:11:36.576032+00:00 app[web.1]: ActionController::RoutingError (No route matches [GET] "/assets/alert-overlay.png"):
+2013-04-22T14:11:36.576032+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+2013-04-22T14:11:36.576032+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+2013-04-22T14:11:36.576032+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/logger.rb:32:in `call_app'
+2013-04-22T14:11:36.576032+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `block in call'
+2013-04-22T14:11:36.576032+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.12/lib/active_support/tagged_logging.rb:22:in `tagged'
+2013-04-22T14:11:36.576032+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `call'
+2013-04-22T14:11:36.576032+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+2013-04-22T14:11:36.576032+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+2013-04-22T14:11:36.576360+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+2013-04-22T14:11:36.576360+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.12/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+2013-04-22T14:11:36.576360+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'
+2013-04-22T14:11:36.576360+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/static.rb:62:in `call'
+2013-04-22T14:11:36.576360+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:136:in `forward'
+2013-04-22T14:11:36.576360+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:245:in `fetch'
+2013-04-22T14:11:36.580599+00:00 heroku[router]: at=info method=GET path=/assets/alert-overlay.png host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=3ms service=11ms status=404 bytes=728
+2013-04-22T14:11:36.576360+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:185:in `lookup'
+2013-04-22T14:11:36.576360+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:66:in `call!'
+2013-04-22T14:11:36.576360+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:51:in `call'
+2013-04-22T14:11:36.576360+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/engine.rb:479:in `call'
+2013-04-22T14:11:36.576607+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/application.rb:223:in `call'
+2013-04-22T14:11:36.576607+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/railtie/configurable.rb:30:in `method_missing'
+2013-04-22T14:11:36.576607+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:552:in `process_client'
+2013-04-22T14:11:36.576607+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:632:in `worker_loop'
+2013-04-22T14:11:36.576607+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/newrelic_rpm-3.6.0.78/lib/new_relic/agent/instrumentation/unicorn_instrumentation.rb:22:in `call'
+2013-04-22T14:11:36.576607+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/newrelic_rpm-3.6.0.78/lib/new_relic/agent/instrumentation/unicorn_instrumentation.rb:22:in `block (4 levels) in <top (required)>'
+2013-04-22T14:11:36.576607+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:500:in `spawn_missing_workers'
+2013-04-22T14:11:36.576607+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:142:in `start'
+2013-04-22T14:11:36.576607+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/bin/unicorn:126:in `<top (required)>'
+2013-04-22T14:11:36.576607+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/bin/unicorn:19:in `load'
+2013-04-22T14:11:36.576860+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/bin/unicorn:19:in `<main>'
+2013-04-22T14:11:36.576860+00:00 app[web.1]: 
+2013-04-22T14:11:36.576860+00:00 app[web.1]: 
+2013-04-22T14:11:35.929471+00:00 heroku[router]: at=info method=GET path=/assets/zoomflow-74815dbce6c1135a83ee4f17cfc0e6ee.css host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=2ms service=4ms status=304 bytes=0
+2013-04-22T14:11:35.987454+00:00 heroku[router]: at=info method=GET path=/assets/closed-event-overlay-2704597afb0fa4de1aeaf8ab96d26e3f.js host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=2ms service=5ms status=304 bytes=0
+2013-04-22T14:11:42.776847+00:00 app[web.1]: Started GET "/" for 74.125.63.33 at 2013-04-22 14:11:42 +0000
+2013-04-22T14:11:43.022285+00:00 heroku[router]: at=info method=GET path=/ host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=2ms service=247ms status=200 bytes=15130
+2013-04-22T14:11:43.522120+00:00 heroku[router]: at=info method=GET path=/assets/locationIcon.png host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=8ms service=4ms status=304 bytes=0
+2013-04-22T14:11:43.521916+00:00 heroku[router]: at=info method=GET path=/assets/timeIcon.png host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=9ms service=4ms status=304 bytes=0
+2013-04-22T14:11:43.576441+00:00 app[web.1]: Started GET "/assets/alert-overlay.png" for 74.125.63.33 at 2013-04-22 14:11:43 +0000
+2013-04-22T14:11:43.579503+00:00 app[web.1]: 
+2013-04-22T14:11:43.579503+00:00 app[web.1]: ActionController::RoutingError (No route matches [GET] "/assets/alert-overlay.png"):
+2013-04-22T14:11:43.579503+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+2013-04-22T14:11:43.579503+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+2013-04-22T14:11:43.579503+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/logger.rb:32:in `call_app'
+2013-04-22T14:11:43.579503+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `block in call'
+2013-04-22T14:11:43.579503+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.12/lib/active_support/tagged_logging.rb:22:in `tagged'
+2013-04-22T14:11:43.586487+00:00 heroku[router]: at=info method=GET path=/assets/alert-overlay.png host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=23ms service=9ms status=404 bytes=728
+2013-04-22T14:11:43.579503+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `call'
+2013-04-22T14:11:43.579503+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+2013-04-22T14:11:43.579503+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+2013-04-22T14:11:43.580101+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+2013-04-22T14:11:43.580101+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.12/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+2013-04-22T14:11:43.580101+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'
+2013-04-22T14:11:43.580101+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/static.rb:62:in `call'
+2013-04-22T14:11:43.580101+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:136:in `forward'
+2013-04-22T14:11:43.580101+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:245:in `fetch'
+2013-04-22T14:11:43.580101+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:185:in `lookup'
+2013-04-22T14:11:43.580101+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:66:in `call!'
+2013-04-22T14:11:43.580101+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:51:in `call'
+2013-04-22T14:11:43.580101+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/engine.rb:479:in `call'
+2013-04-22T14:11:43.580333+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/application.rb:223:in `call'
+2013-04-22T14:11:43.580333+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/railtie/configurable.rb:30:in `method_missing'
+2013-04-22T14:11:43.580333+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:552:in `process_client'
+2013-04-22T14:11:43.580333+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:632:in `worker_loop'
+2013-04-22T14:11:43.580333+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/newrelic_rpm-3.6.0.78/lib/new_relic/agent/instrumentation/unicorn_instrumentation.rb:22:in `call'
+2013-04-22T14:11:43.580333+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/newrelic_rpm-3.6.0.78/lib/new_relic/agent/instrumentation/unicorn_instrumentation.rb:22:in `block (4 levels) in <top (required)>'
+2013-04-22T14:11:43.580333+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:500:in `spawn_missing_workers'
+2013-04-22T14:11:43.580333+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:142:in `start'
+2013-04-22T14:11:43.580333+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/bin/unicorn:126:in `<top (required)>'
+2013-04-22T14:11:43.580333+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/bin/unicorn:19:in `load'
+2013-04-22T14:11:43.580568+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/bin/unicorn:19:in `<main>'
+2013-04-22T14:11:43.580568+00:00 app[web.1]: 
+2013-04-22T14:11:43.580568+00:00 app[web.1]: 
+2013-04-22T14:11:43.753704+00:00 heroku[router]: at=info method=GET path=/assets/img/preloader.gif host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=2ms service=4ms status=304 bytes=0
+2013-04-22T14:11:43.761539+00:00 heroku[router]: at=info method=GET path=/assets/img/arrow-right-black.png host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=2ms service=13ms status=304 bytes=0
+2013-04-22T14:11:43.770909+00:00 heroku[router]: at=info method=GET path=/assets/img/arrow-left-black.png host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=2ms service=21ms status=304 bytes=0
+2013-04-22T14:11:49.440687+00:00 app[web.1]: Started GET "/events" for 74.125.63.33 at 2013-04-22 14:11:47 +0000
+2013-04-22T14:11:50.250675+00:00 app[web.1]: Started GET "/assets/alert-overlay.png" for 74.125.63.33 at 2013-04-22 14:11:50 +0000
+2013-04-22T14:11:50.255135+00:00 app[web.1]: 
+2013-04-22T14:11:50.255135+00:00 app[web.1]: ActionController::RoutingError (No route matches [GET] "/assets/alert-overlay.png"):
+2013-04-22T14:11:50.255135+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+2013-04-22T14:11:50.255135+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+2013-04-22T14:11:50.255135+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/logger.rb:32:in `call_app'
+2013-04-22T14:11:50.255135+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `block in call'
+2013-04-22T14:11:50.259590+00:00 heroku[router]: at=info method=GET path=/assets/alert-overlay.png host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=2ms service=12ms status=404 bytes=728
+2013-04-22T14:11:50.255135+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.12/lib/active_support/tagged_logging.rb:22:in `tagged'
+2013-04-22T14:11:50.255135+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `call'
+2013-04-22T14:11:50.255135+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+2013-04-22T14:11:50.255135+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+2013-04-22T14:11:50.255397+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+2013-04-22T14:11:50.255397+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.12/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+2013-04-22T14:11:50.255397+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'
+2013-04-22T14:11:50.255397+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/static.rb:62:in `call'
+2013-04-22T14:11:50.255397+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:136:in `forward'
+2013-04-22T14:11:50.255397+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:245:in `fetch'
+2013-04-22T14:11:50.255397+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:185:in `lookup'
+2013-04-22T14:11:50.255397+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:66:in `call!'
+2013-04-22T14:11:50.255397+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:51:in `call'
+2013-04-22T14:11:50.255397+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/engine.rb:479:in `call'
+2013-04-22T14:11:50.255644+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/application.rb:223:in `call'
+2013-04-22T14:11:50.255644+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/railtie/configurable.rb:30:in `method_missing'
+2013-04-22T14:11:50.255644+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:552:in `process_client'
+2013-04-22T14:11:50.255644+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:632:in `worker_loop'
+2013-04-22T14:11:50.255644+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/newrelic_rpm-3.6.0.78/lib/new_relic/agent/instrumentation/unicorn_instrumentation.rb:22:in `call'
+2013-04-22T14:11:50.255644+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/newrelic_rpm-3.6.0.78/lib/new_relic/agent/instrumentation/unicorn_instrumentation.rb:22:in `block (4 levels) in <top (required)>'
+2013-04-22T14:11:50.255644+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:500:in `spawn_missing_workers'
+2013-04-22T14:11:50.255644+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:511:in `maintain_worker_count'
+2013-04-22T14:11:50.255644+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:277:in `join'
+2013-04-22T14:11:50.255644+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/bin/unicorn:126:in `<top (required)>'
+2013-04-22T14:11:50.255873+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/bin/unicorn:19:in `load'
+2013-04-22T14:11:50.255873+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/bin/unicorn:19:in `<main>'
+2013-04-22T14:11:50.255873+00:00 app[web.1]: 
+2013-04-22T14:11:50.255873+00:00 app[web.1]: 
+2013-04-22T14:11:56.916497+00:00 app[web.1]: Started GET "/events/1" for 74.125.63.33 at 2013-04-22 14:11:56 +0000
+2013-04-22T14:11:56.965696+00:00 heroku[router]: at=info method=GET path=/events/1 host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=12ms service=59ms status=200 bytes=8845
+2013-04-22T14:11:57.710895+00:00 app[web.1]: Started GET "/assets/alert-overlay.png" for 74.125.63.33 at 2013-04-22 14:11:57 +0000
+2013-04-22T14:11:57.713874+00:00 app[web.1]: 
+2013-04-22T14:11:57.713874+00:00 app[web.1]: ActionController::RoutingError (No route matches [GET] "/assets/alert-overlay.png"):
+2013-04-22T14:11:57.713874+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+2013-04-22T14:11:57.713874+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+2013-04-22T14:11:57.713874+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/logger.rb:32:in `call_app'
+2013-04-22T14:11:57.713874+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `block in call'
+2013-04-22T14:11:57.713874+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.12/lib/active_support/tagged_logging.rb:22:in `tagged'
+2013-04-22T14:11:57.713874+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `call'
+2013-04-22T14:11:57.713874+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+2013-04-22T14:11:57.713874+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+2013-04-22T14:11:57.714159+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+2013-04-22T14:11:57.714159+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.12/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+2013-04-22T14:11:57.714159+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'
+2013-04-22T14:11:57.714159+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/static.rb:62:in `call'
+2013-04-22T14:11:57.714159+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:136:in `forward'
+2013-04-22T14:11:57.714159+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:245:in `fetch'
+2013-04-22T14:11:57.714159+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:185:in `lookup'
+2013-04-22T14:11:57.714159+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:66:in `call!'
+2013-04-22T14:11:57.714159+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:51:in `call'
+2013-04-22T14:11:57.714159+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/engine.rb:479:in `call'
+2013-04-22T14:11:57.714388+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/application.rb:223:in `call'
+2013-04-22T14:11:57.714388+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/railtie/configurable.rb:30:in `method_missing'
+2013-04-22T14:11:57.714388+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:552:in `process_client'
+2013-04-22T14:11:57.714388+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:632:in `worker_loop'
+2013-04-22T14:11:57.714388+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/newrelic_rpm-3.6.0.78/lib/new_relic/agent/instrumentation/unicorn_instrumentation.rb:22:in `call'
+2013-04-22T14:11:57.714388+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/newrelic_rpm-3.6.0.78/lib/new_relic/agent/instrumentation/unicorn_instrumentation.rb:22:in `block (4 levels) in <top (required)>'
+2013-04-22T14:11:57.714388+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:500:in `spawn_missing_workers'
+2013-04-22T14:11:57.714388+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:142:in `start'
+2013-04-22T14:11:57.714388+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/bin/unicorn:126:in `<top (required)>'
+2013-04-22T14:11:57.714388+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/bin/unicorn:19:in `load'
+2013-04-22T14:11:57.714622+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/bin/unicorn:19:in `<main>'
+2013-04-22T14:11:57.714622+00:00 app[web.1]: 
+2013-04-22T14:11:57.714622+00:00 app[web.1]: 
+2013-04-22T14:11:57.721758+00:00 heroku[router]: at=info method=GET path=/assets/alert-overlay.png host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=2ms service=15ms status=404 bytes=728
+2013-04-22T14:12:02.345989+00:00 app[web.1]: Started GET "/events/3" for 74.125.63.33 at 2013-04-22 14:11:59 +0000
+2013-04-22T14:12:02.385574+00:00 heroku[router]: at=info method=GET path=/events/3 host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=5ms service=2450ms status=200 bytes=8828
+2013-04-22T14:12:02.441224+00:00 heroku[router]: at=info method=GET path=/events/4 host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=2ms service=657ms status=200 bytes=8881
+2013-04-22T14:12:02.347606+00:00 app[web.1]: Started GET "/events/4" for 74.125.63.33 at 2013-04-22 14:12:01 +0000
+2013-04-22T14:12:03.292755+00:00 app[web.1]: Started GET "/assets/alert-overlay.png" for 74.125.63.33 at 2013-04-22 14:12:03 +0000
+2013-04-22T14:12:03.298346+00:00 app[web.1]: 
+2013-04-22T14:12:03.298346+00:00 app[web.1]: ActionController::RoutingError (No route matches [GET] "/assets/alert-overlay.png"):
+2013-04-22T14:12:03.298346+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+2013-04-22T14:12:03.298346+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+2013-04-22T14:12:03.298346+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/logger.rb:32:in `call_app'
+2013-04-22T14:12:03.298346+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `block in call'
+2013-04-22T14:12:03.298346+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.12/lib/active_support/tagged_logging.rb:22:in `tagged'
+2013-04-22T14:12:03.298346+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `call'
+2013-04-22T14:12:03.298346+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+2013-04-22T14:12:03.298346+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+2013-04-22T14:12:03.298646+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+2013-04-22T14:12:03.303445+00:00 heroku[router]: at=info method=GET path=/assets/alert-overlay.png host=www.letsdine.co fwd="74.125.63.33" dyno=web.1 connect=3ms service=14ms status=404 bytes=728
+2013-04-22T14:12:03.298646+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.12/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+2013-04-22T14:12:03.298646+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'
+2013-04-22T14:12:03.298646+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/static.rb:62:in `call'
+2013-04-22T14:12:03.298646+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:136:in `forward'
+2013-04-22T14:12:03.298646+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:245:in `fetch'
+2013-04-22T14:12:03.298646+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:185:in `lookup'
+2013-04-22T14:12:03.298646+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:66:in `call!'
+2013-04-22T14:12:03.298646+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:51:in `call'
+2013-04-22T14:12:03.298646+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/engine.rb:479:in `call'
+2013-04-22T14:12:03.298875+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/application.rb:223:in `call'
+2013-04-22T14:12:03.298875+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.12/lib/rails/railtie/configurable.rb:30:in `method_missing'
+2013-04-22T14:12:03.298875+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:552:in `process_client'
+2013-04-22T14:12:03.298875+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:632:in `worker_loop'
+2013-04-22T14:12:03.298875+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/newrelic_rpm-3.6.0.78/lib/new_relic/agent/instrumentation/unicorn_instrumentation.rb:22:in `call'
+2013-04-22T14:12:03.298875+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/newrelic_rpm-3.6.0.78/lib/new_relic/agent/instrumentation/unicorn_instrumentation.rb:22:in `block (4 levels) in <top (required)>'
+2013-04-22T14:12:03.298875+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:500:in `spawn_missing_workers'
+2013-04-22T14:12:03.298875+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:142:in `start'

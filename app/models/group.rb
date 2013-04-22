@@ -13,7 +13,7 @@
 #
 
 class Group < ActiveRecord::Base
-  attr_accessible :description, :name, :user_id, :group_image
+  attr_accessible :description, :name, :user_id, :group_image, :category
 
   validates :name, :user_id, :presence => true
 

@@ -15,6 +15,8 @@
 #  user_id           :integer
 #  max_seats         :integer
 #  status            :string(255)
+#  token             :string(255)
+#  event_type        :string(255)
 #
 
 class Event < ActiveRecord::Base
