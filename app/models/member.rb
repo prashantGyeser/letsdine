@@ -1,14 +1,16 @@
 # == Schema Information
 #
-# Table name: dashboards
+# Table name: members
 #
 #  id         :integer          not null, primary key
+#  user_id    :integer
+#  group_id   :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
-require 'spec_helper'
+class Member < ActiveRecord::Base
+  attr_accessible :group_id, :user_id
 
-describe Dashboard do
-  pending "add some examples to (or delete) #{__FILE__}"
+  belongs_to :group
 end

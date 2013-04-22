@@ -13,6 +13,7 @@ gem 'devise'
 gem 'omniauth-facebook'
 gem 'simple-navigation'
 
+
 # Server for heroku
 gem 'unicorn'
 

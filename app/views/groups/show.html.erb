@@ -1,0 +1,79 @@
+<% content_for :body_class do %>
+  class="group_body"
+<% end %>
+
+<div class="container">
+	<div class="row-fluid">
+		<div class="span12">
+			<%= link_to 'Back', groups_path %>
+		</div>
+	</div>
+</div>
+
+<div class="container new_group">
+  <div class="row-fluid">
+    <div class="span10">
+      Talk to people that share similar interests. Why don't you create one and invite people. You can also plan out your events.
+    </div>
+    <div class="span2">
+      <%= link_to 'Join Group', new_group_path, :class => "red awesome large" %>      
+    </div>
+  </div>
+</div>
+
+<div class="container">
+	<div class="row-fluid">
+		<div class="span6">
+			<div class="event">
+				<%# image_tag @group.group_image %>
+			</div>
+		</div>
+		<div class="span6">
+			
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row-fluid">
+		<div class="span12">
+			<ul class="group-sub-menu">
+				<li><a href="/groups/1?filter=Discussions">Discussions</a></li>
+				<li><a href="/groups/1?filter=Events">Events</a></li>
+				<li><a href="/groups/1?filter=Members">Members</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row-fluid">
+		<div class="span12">
+			<div class="discussion-list">
+				<ul>
+					<% @discussions.each do |discussion| %>
+						<li>
+							<% user = User.find(discussion.user_id) %>
+							<% if user.image.blank? %>
+								<%= image_tag "noProfilePic.png" %>
+							<% else %>
+								<%= image_tag  user.image %>
+							<% end %>
+							
+							<div class="comment">
+								<p>
+									<strong><%= user.name %></strong> Posted a comment
+								</p>
+								<%= simple_format discussion.content %>
+							</div>
+							
+						</li>
+					<% end %>
+				</ul>
+				<%= render :partial => 'discussion/form', :object => @new_discussion, :locals => {:group => @group} %>
+			</div>
+
+			
+		</div>
+	</div>
+</div>

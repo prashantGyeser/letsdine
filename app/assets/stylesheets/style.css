@@ -497,3 +497,123 @@
 	border: 1px solid #972713;
 	padding: 20px;
 }
+/********************************************************************************/
+/* Group Styling */
+/********************************************************************************/
+.new_group_button_container
+{
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	padding: 10px 0;
+	margin-bottom: 20px;
+}
+.group_body
+{
+	background: url('/assets/groupsBG.png');
+}
+.group-row
+{
+	margin-bottom: 10px;
+}
+.group
+{
+	background: #fff;
+}
+.group .image
+{
+	position: relative;
+	width: 100%
+}
+.group .image h4
+{
+	position: absolute; 
+	top: 10px; 
+	left: 10px; 
+	padding: 10px;
+	background: rgba(0,0,0,.6);
+	color: #fff;
+
+	text-shadow:0px 2px 2px #333333
+}
+.group .image h4.group_category
+{
+	position: absolute; 
+	top: 80%; 
+	left: 10px; 
+	padding: 10px;
+	background: rgba(0,0,0,.6);
+	color: #fff;
+
+	text-shadow:0px 2px 2px #333333
+} 
+.groups_filter ul
+{
+	list-style: none;
+	margin: 0;
+}
+.groups_filter ul li
+{
+	margin-bottom: 10px;
+	padding: 10px;
+}
+.groups_filter ul li:hover
+{
+	background: url("/assets/headerBG.png");
+	color: #fff;
+	cursor: pointer;
+
+}
+.groups_filter ul li a:hover
+{
+	text-decoration: none;
+}
+.group_details
+{
+	padding: 10px;
+}
+.group-sub-menu
+{
+	margin: 0;
+	padding: 10px;
+	background: #fff;
+	list-style: none;
+	
+}
+.group-sub-menu li
+{
+	display: inline;
+	margin-right: 20px;
+	padding: 12px;
+}
+.group-sub-menu li:hover
+{
+	background: url("/assets/headerBG.png");
+	color: #fff;
+	cursor: pointer;
+}
+.discussion-list
+{
+	background: #fff;
+	padding: 10px;
+	margin-top: 20px;
+}
+.discussion-list ul
+{
+	list-style: none;
+	margin: 0 0 30px 0;
+}
+.discussion-list ul li
+{
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 10px;
+	padding-top: 20px;
+}
+.discussion-list img
+{
+	float: left;
+	
+}
+.discussion-list .comment
+{
+	margin-left: 50px;
+}
