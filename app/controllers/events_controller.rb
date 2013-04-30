@@ -92,7 +92,7 @@ class EventsController < ApplicationController
     @event = Event.new(params[:event])
     @restaurants = Restaurant.all
 
-    logger.debug "the params for the event controller is: #{params.inspect}"
+    @event.status = "open"
 
     invitee_emails = params[:event][:invitees].split(",")
 
