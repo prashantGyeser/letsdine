@@ -41,6 +41,29 @@ group :test, :development do
 	gem 'rb-inotify', '~> 0.9'
 	gem 'guard-rspec'
 	gem 'minitest'
+	
+
+	# Gem list taken from: http://www.codebeerstartups.com/2013/04/must-have-gems-for-development-machine-in-ruby-on-rails/
+	gem "better_errors"
+    gem "binding_of_caller"
+	gem 'bullet'
+	gem 'debugger'
+	gem 'flay'
+	gem 'hirb'
+	gem 'localtunnel'
+	gem 'lol_dba'
+	gem 'mailcatcher'
+	gem 'meta_request','0.2.1'
+	gem 'pry'
+	gem 'pry-doc'
+	gem 'quiet_assets'
+	gem 'rack-mini-profiler'
+	gem 'railroady'
+	gem 'rails-footnotes', '>= 3.7.9'
+	gem 'rails_best_practices'
+	gem 'reek'
+	gem 'request-log-analyzer'
+	gem 'smusher'
 end
 
 # To use ActiveModel has_secure_password
