@@ -15,6 +15,7 @@ class AttendeesController < ApplicationController
 
 			respond_to do |format|
 				if @attendee.save 
+					session[:joined] = true
 					format.html { redirect_to event_path(@event), notice: 'You have successfully joined the event'}
 					format.json { render json: @event, status: :created, location: @event }
 				else

@@ -19,11 +19,14 @@ class EventsController < ApplicationController
   # GET /events/1.json
   def show
     event_with_token = Event.where(:token => params[:id])
-
-    logger.debug "The event_with_token is: #{event_with_token.inspect}"
+    @user_invite = UserInvite.new
+    
+    if session[:joined]
+      @just_joined = true
+      session.delete :joined
+    end
 
     if event_with_token.empty?
-      logger.debug "The event_with_token is: #{event_with_token.inspect}"
       @event = Event.find(params[:id])
       if @event.event_type == "private"
         @event = nil

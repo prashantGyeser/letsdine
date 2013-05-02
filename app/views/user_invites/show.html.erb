@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @user_invite.user_id %>
+</p>
+
+<p>
+  <b>Email invites:</b>
+  <%= @user_invite.email_invites %>
+</p>
+
+<p>
+  <b>Facebook share:</b>
+  <%= @user_invite.facebook_share %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_invite_path(@user_invite) %> |
+<%= link_to 'Back', user_invites_path %>

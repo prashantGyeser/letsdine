@@ -1,0 +1,30 @@
+
+<%= form_for(@user_invite) do |f| %>
+  <% if @user_invite.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user_invite.errors.count, "error") %> prohibited this user_invite from being saved:</h2>
+
+      <ul>
+      <% @user_invite.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.hidden_field :user_id, :value => user_id %>
+  <div class="field">
+    <%= f.label :email_invites %>
+    <p>Enter the email of all the people you want to invite. Seperate the address using a comma(,)</p>
+    <%= f.text_area :email_invites, :rows => 3 %>
+  </div>
+  <div class="field">
+    <label class="checkbox">
+      <%= check_box_tag 'facebook_share', :true %> 
+      Share on Facebook
+    </label>
+    <%# f.label :facebook_share %>
+    <%# f.text_field :facebook_share %>
+  </div>
+  <%= f.hidden_field :event_id, :value => event_id %>
+<% end %>

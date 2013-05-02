@@ -1,0 +1,11 @@
+Hi there,
+
+<%= @sender %> invited you to join the event <%= @event.event_name %>.
+
+You can join the event by going to the following url
+
+<%= event_url(@event, :host => "letsdine.co") %>
+
+Hoping you have a great time,
+
+The letsdine team

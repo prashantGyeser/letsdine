@@ -11,16 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-
-ActiveRecord::Schema.define(:version => 20130408180033) do
+ActiveRecord::Schema.define(:version => 20130502210117) do
 
   create_table "attendees", :force => true do |t|
     t.integer  "user_id"
     t.integer  "event_id"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
     t.integer  "seats"
     t.string   "phone_number"
+    t.integer  "special_event_id"
   end
 
   create_table "dashboards", :force => true do |t|
@@ -34,6 +34,14 @@ ActiveRecord::Schema.define(:version => 20130408180033) do
     t.text     "content"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "dynamic_pricings", :force => true do |t|
+    t.integer  "special_event_id"
+    t.integer  "price"
+    t.integer  "days"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
   create_table "event_notify_emails", :force => true do |t|
@@ -77,23 +85,6 @@ ActiveRecord::Schema.define(:version => 20130408180033) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "groups", :force => true do |t|
-    t.string   "name"
-    t.text     "description"
-    t.integer  "user_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-    t.string   "group_image"
-    t.string   "category"
-  end
-
-  create_table "members", :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "group_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "menu_items", :force => true do |t|
     t.text     "name"
     t.string   "course_name"
@@ -112,12 +103,50 @@ ActiveRecord::Schema.define(:version => 20130408180033) do
     t.integer  "price"
   end
 
+  create_table "special_events", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "special_restaurant_id"
+    t.date     "date"
+    t.time     "time"
+    t.string   "special_event_image"
+    t.string   "status"
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
+  end
+
+  create_table "special_menu_items", :force => true do |t|
+    t.text     "name"
+    t.string   "category"
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
+    t.integer  "special_restaurant_id"
+  end
+
+  create_table "special_restaurants", :force => true do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "special_restaurant_photo"
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
+    t.integer  "price"
+  end
+
   create_table "topics", :force => true do |t|
     t.string   "name"
     t.text     "details"
     t.integer  "group_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "user_invites", :force => true do |t|
+    t.integer  "user_id"
+    t.text     "email_invites"
+    t.string   "facebook_share"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+    t.integer  "event_id"
   end
 
   create_table "users", :force => true do |t|

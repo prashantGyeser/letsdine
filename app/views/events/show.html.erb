@@ -2,6 +2,7 @@
     <%= javascript_include_tag "closed-event-overlay" %>
 <% end %>
 
+
 <% restaurant = Restaurant.find(@event.restaurant_id) %>
 <input type="hidden" value=<%= @event.id %> id="event_id" >
 
@@ -152,6 +153,45 @@
   </div>
 </div>
  
+
+<div id="communication" class="modal hide fade">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h3>Invite your friends</h3>
+  </div>
+  <div class="modal-body">
+    <%= render :partial => "user_invites/form",
+                      :locals => {:user_id => current_user.id, :event_id => @event.id} %>
+  </div>
+  <div class="modal-footer">
+    <a href="#" class="large awesome green" id="friends_invite">Invite friends</a>
+  </div>
+</div>
+
+<% if @just_joined == true %>
+  
+<script>
+  $(document).ready(function(){
+    $('#communication').modal('show');
+    $('#friends_invite').click(function() {
+      var valuesToSubmit = $('#new_user_invite').serialize();
+      console.log(valuesToSubmit);
+      $.ajax({
+        url: $('#new_user_invite').attr('action'),
+        data: valuesToSubmit,
+        type: "POST",
+        dataType: "JSON"
+      }).success(function(json){
+        $('#communication').modal('hide');
+      });
+      
+      return false;
+    });
+  });
+</script>  
+  
+<% end %>
+
 <script>
   $(document).ready(function(){
 

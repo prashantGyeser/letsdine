@@ -1,4 +1,7 @@
 Letsdine::Application.routes.draw do
+  resources :user_invites
+
+
   put "discussion/create"
 
   resources :groups

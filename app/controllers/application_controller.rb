@@ -29,7 +29,8 @@ class ApplicationController < ActionController::Base
 				@attendee.phone_number = attendee_param[:attendee][:phone_number]
 				@attendee.user_id = current_user.id
 
-				if @attendee.save! 
+				if @attendee.save!
+					session[:joined] = true 
 					session[:previous_url] = event_path(@event)
 					session[:previous_url] || root_path				
 				else
