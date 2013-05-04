@@ -48,7 +48,7 @@ class UserInvitesController < ApplicationController
     respond_to do |format|
       if @user_invite.save
 
-        if invitee_emails.nil?
+        if invitee_emails.empty?
         else
           UserInviteMailer.invite(invitee_emails, current_user.name, @event).deliver  
         end
