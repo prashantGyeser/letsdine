@@ -45,15 +45,17 @@ class UserInvitesController < ApplicationController
 
     invitee_emails = params[:user_invite][:email_invites].split(",")
     @event = Event.find(params[:user_invite][:event_id])
+    @user_invite.facebook_share = params[:facebook_share]
     respond_to do |format|
       if @user_invite.save
-
+        logger.debug "The params is dfhjksdfhklsdhkfsd:#{params[:facebook_share]}"
         if invitee_emails.empty?
         else
           UserInviteMailer.invite(invitee_emails, current_user.name, @event).deliver  
         end
-
-        if params[:user_invite][:facebook_share] == true 
+        
+        if params[:facebook_share] == "true" 
+          
           if current_user.oauth_token.nil?
           else
             message_to_post_to_facebook = current_user.name + " is attending " + @event.event_name + ". You can join your friend by going to " + root_url + event_path(@event)

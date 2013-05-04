@@ -160,9 +160,10 @@
     <h3>Invite your friends</h3>
   </div>
   <div class="modal-body">
+
     <% if @just_joined == true %>
       <%= render :partial => "user_invites/form",
-                      :locals => {:user_id => current_user.id, :event_id => @event.id} %>
+                      :locals => {:user_id => current_user.id, :event_id => @event.id} %>  
     <% end %>
     
   </div>
@@ -171,27 +172,28 @@
   </div>
 </div>
 
+
 <% if @just_joined == true %>
   
-<script>
-  $(document).ready(function(){
-    $('#communication').modal('show');
-    $('#friends_invite').click(function() {
-      var valuesToSubmit = $('#new_user_invite').serialize();
-      console.log(valuesToSubmit);
-      $.ajax({
-        url: $('#new_user_invite').attr('action'),
-        data: valuesToSubmit,
-        type: "POST",
-        dataType: "JSON"
-      }).success(function(json){
-        $('#communication').modal('hide');
+  <script>
+    $(document).ready(function(){
+      $('#communication').modal('show');
+      $('#friends_invite').click(function() {
+        var valuesToSubmit = $('#new_user_invite').serialize();
+        console.log(valuesToSubmit);
+        $.ajax({
+          url: $('#new_user_invite').attr('action'),
+          data: valuesToSubmit,
+          type: "POST",
+          dataType: "JSON"
+        }).success(function(json){
+          $('#communication').modal('hide');
+        });
+        
+        return false;
       });
-      
-      return false;
     });
-  });
-</script>  
+  </script>  
   
 <% end %>
 
