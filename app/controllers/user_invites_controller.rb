@@ -52,7 +52,7 @@ class UserInvitesController < ApplicationController
           UserInviteMailer.invite(invitee_emails, current_user.name, @event).deliver  
         end
 
-        if @user_invite.facebook_share == true && current_user.oauth_token
+        if params[:user_invite][:facebook_share] == true && current_user.oauth_token
           message_to_post_to_facebook = current_user.name + " is attending " + @event.event_name + ". You can join your friend by going to " + root_url + event_path(@event)
           current_user.facebook.put_wall_post(message_to_post_to_facebook)
         end
