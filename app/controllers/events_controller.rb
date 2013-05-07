@@ -107,8 +107,6 @@ class EventsController < ApplicationController
           InviteMailer.invite(invitee_emails, current_user.name, @event).deliver  
         end
         
-        
-
         if current_user.oauth_token.nil?
         else
           if params[:facebook_share] == "true"          

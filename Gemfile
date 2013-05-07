@@ -84,3 +84,6 @@ end
 # Performance monitoring
 gem 'newrelic_rpm'
 gem 'statsmix'
+
+# Email 
+gem "mandrill-api", "~> 1.0.27"

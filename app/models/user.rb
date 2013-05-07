@@ -34,6 +34,15 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me, :name
   # attr_accessible :title, :body
 
+  # Sending out a welcome email after a person registers
+  after_create :welcome_email
+
+  def welcome_email
+    logger.debug "It is getting to the welcome email part"
+    logger.debug "The email is: #{email}"
+    WelcomeMailer.welcome(email, name).deliver  
+  end
+
   def self.from_omniauth(auth)
     logger.debug "the content of the auth is: #{auth.inspect}"
   	where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|

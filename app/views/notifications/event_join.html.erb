@@ -1,0 +1,14 @@
+<table style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;	margin: 0 auto;	width: 600px; border: 1px solid #ddd;">
+	<tr style="margin-bottom: 10px;">
+		<td>
+			<h1>Thanks for joining <%= @event.event_name %> </h1>
+		</td>
+	</tr>
+	<tr style="margin-bottom: 10px;">
+		<td>
+			<h4>Event Location: <%= @restaurant.address %> </h4>
+			<h4>Event Date: <%= @event.event_date %> </h4>
+			<h4>Event URL: <a href="<%= event_url(@event, :host => "letsdine.co") %>">See the event</a></h4>
+		</td>
+	</tr>
+</table>
