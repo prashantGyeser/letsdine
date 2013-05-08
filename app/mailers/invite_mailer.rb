@@ -1,5 +1,5 @@
 class InviteMailer < ActionMailer::Base
-	default :from => "notifications@gyeser.com"
+	default :from => "LetsDine <notifications@letsdine.co>"
 	def invite(email_addresses, sender_name, event)
 		@event = event
 		@sender = sender_name

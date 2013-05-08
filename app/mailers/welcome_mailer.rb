@@ -1,5 +1,5 @@
 class WelcomeMailer < ActionMailer::Base
-  default :from => "LetsDine <notifications@letsdine.com>"
+  default :from => "LetsDine <notifications@letsdine.co>"
 	def welcome(email_address, name)
 		email_subject = "Welcome to LetsDine!"
 		@name = name

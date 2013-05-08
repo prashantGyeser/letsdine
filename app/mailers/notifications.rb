@@ -1,5 +1,5 @@
 class Notifications < ActionMailer::Base
-  default :from => "LetsDine <notifications@letsdine.com>"
+  default :from => "LetsDine <notifications@letsdine.co>"
 	
 	def event_join(email_address, event, restaurant)
 		@event = event
