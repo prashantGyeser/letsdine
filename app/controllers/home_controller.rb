@@ -42,7 +42,7 @@ class HomeController < ApplicationController
 
   	if @header_events.empty?
 		@no_events_in_city = true  			
-		@header_events = @events.limit(4)
+		@header_events = @events.last(4)
   	end
   end
 end
