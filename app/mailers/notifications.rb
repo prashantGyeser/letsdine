@@ -10,6 +10,12 @@ class Notifications < ActionMailer::Base
 		mail(:to => email_address, :subject => email_subject)	
 	end
 
+	def event_created(email_address,event,restaurant)
+		@event = event
+		@restaurant = restaurant
 
-
+		email_subject = "Created #{@event.event_name}"
+		
+		mail(:to => email_address, :subject => email_subject)	
+	end
 end
