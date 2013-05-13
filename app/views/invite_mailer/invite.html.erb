@@ -1,0 +1,17 @@
+<p>Hi there,</p>
+
+<p><%= @sender %> invited you to join the event <%= @event.event_name %>.</p>
+
+<p>You can join the event by going to the following url</p>
+
+<strong>
+<% if @event.event_type == 'private' %>
+	<a href="letsdine.co/events/<%= @event.token %>">See the event</a>
+<% else %>
+	<%= event_url(@event, :host => "letsdine.co") %>
+<% end %>
+</strong>
+
+<p>Hoping you have a great time,</p>
+
+<h4>The letsdine team</h4>

@@ -154,7 +154,10 @@
 	color: #080809;	
 	text-shadow: 0px 1px 2px #404046;
 }
-
+.locationpicker
+{
+	margin-top: 10px;
+}
 .slider
 {
 	margin-top: -170px;

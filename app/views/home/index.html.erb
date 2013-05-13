@@ -99,6 +99,43 @@
         </div>
     </div>   
 
+<div id="communication" class="modal hide fade">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h3>No events in your city</h3>
+  </div>
+  <div class="modal-body">
+
+    <p>There are no events in your city right now. Leave your email address and we will get back to you once we start conducting events in your city</p>
+    
+  </div>
+  <div class="modal-footer">
+    <a href="#" class="large awesome green" id="friends_invite">Invite friends</a>
+  </div>
+</div>
+
+
+<% if @no_events_in_city = true %>
+    <script>
+    $(document).ready(function(){
+      $('#communication').modal('show');
+      $('#friends_invite').click(function() {
+        var valuesToSubmit = $('#new_user_invite').serialize();
+        console.log(valuesToSubmit);
+        $.ajax({
+          url: $('#new_user_invite').attr('action'),
+          data: valuesToSubmit,
+          type: "POST",
+          dataType: "JSON"
+        }).success(function(json){
+          $('#communication').modal('hide');
+        });
+        
+        return false;
+      });
+    });
+  </script>  
+<% end %>
             
 <script>
     jQuery(document).ready(function($){

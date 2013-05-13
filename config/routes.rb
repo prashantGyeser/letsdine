@@ -1,4 +1,10 @@
 Letsdine::Application.routes.draw do
+  resources :events 
+  resources :cities do 
+    resources :events 
+  end
+
+
   resources :user_invites
 
 
@@ -23,11 +29,12 @@ Letsdine::Application.routes.draw do
   resources :restaurants
 
 
-  resources :events do
-    member do
-      put :join
-    end
-  end
+  
+  
+
+  get ':city' => 'home#index'
+  get ':city/events' => 'events#index'
+  get ':city/events/:id' => 'events#show'
 
   match "/attendees/create" => "attendees#create", :as => :attendee
   

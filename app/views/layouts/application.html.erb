@@ -32,7 +32,14 @@
     		<div class="navbar-inner">
         		<div class="container">
         			<div class="row-fluid">
-        				<div class="span6 offset3"><img src="/assets/logo.png"></div>
+        				<div class="span3">
+        					<select name="city-selector" class="locationpicker" id="city-select">
+							    <option>Hyderabad</option>
+							    <option>Mumbai</option>
+							    <option>Ahmedabad</option>
+							  </select>
+        				</div>
+        				<div class="span6"><img src="/assets/logo.png"></div>
         				<div class="span3 loginDetails">
         					<% if user_signed_in? %>
         						<%= current_user.name %> | <%= link_to "Sign out", destroy_user_session_path %>
@@ -77,6 +84,37 @@
 
 	<%= yield %>	
 
+
+	<script>
+		$(document).ready(function(){
+			$('#city-select').change(function() {
+				var selected_city = $('#city-select :selected').val();
+				var url = window.location.pathname
+				var url_controller = url.substring(url.lastIndexOf('/')+1);
+				
+				if (url_controller == "events")
+				{
+					var url_to_submit_to = '/'+selected_city+'/events';
+					window.location = url_to_submit_to;
+				}
+				if (url == "/")
+				{
+					var url_to_submit_to = '/'+selected_city;
+					window.location = url_to_submit_to;
+				}
+				
+				
+				//$.ajax({
+				//	type: 'GET',
+				//	url: url_to_submit_to,
+				//	error: function(){  },
+				//	success: function(data){ alert(data) },
+				//	complete: function (){   }
+				//});
+				//return false;
+			})
+		})
+	</script>
 
 	<script>
 		$(document).ready(function(){

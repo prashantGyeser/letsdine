@@ -6,6 +6,17 @@ class EventsController < ApplicationController
   # GET /events.json
   def index
     #@events = Event.all.reverse
+    if session[:city].nil?
+      if params[:city]
+        @user_city = params[:city]
+        session[:city] = params[:city]
+      else
+        @user_city = request.location.city
+        session[:city] = request.location.city
+      end
+    elsif params[:city]
+      session[:city] = params[:city]
+    end
 
     @events = Event.find(:all, :conditions => ["event_type != 'private'"], :order => 'status DESC')
 
@@ -18,9 +29,13 @@ class EventsController < ApplicationController
   # GET /events/1
   # GET /events/1.json
   def show
+    logger.debug "the params in the event show is: #{params.inspect}"
+    logger.debug "the id in the event show is: #{params[:id]}"
     event_with_token = Event.where(:token => params[:id])
     @user_invite = UserInvite.new
-    
+    logger.debug "The ip is:#{request.ip}"    
+    logger.debug "The city is:#{request.location.city}"    
+    logger.debug "The country is:#{request.location.country}"    
     if session[:joined]
       @just_joined = true
       session.delete :joined
