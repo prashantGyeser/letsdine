@@ -122,6 +122,8 @@ class EventsController < ApplicationController
           InviteMailer.invite(invitee_emails, current_user.name, @event).deliver  
         end
         
+        Notifications.event_created(current_user.email, @event, Restaurant.find(@event.restaurant_id)).deliver
+
         if current_user.oauth_token.nil?
         else
           if params[:facebook_share] == "true"          
