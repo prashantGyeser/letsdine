@@ -1,8 +1,8 @@
 Letsdine::Application.routes.draw do
   resources :events 
-  resources :cities do 
-    resources :events 
-  end
+  #resources :cities do 
+    #resources :events 
+  #end
 
 
   resources :user_invites

@@ -21,9 +21,9 @@
 #
 
 class Event < ActiveRecord::Base
-  attr_accessible :event_date, :event_description, :event_name, :event_time, :restaurant_id, :event_image, :invitees, :max_seats, :status, :token, :event_type
+  attr_accessible :event_date, :event_description, :event_name, :event_time, :restaurant_id, :event_image, :invitees, :max_seats, :status, :token, :event_type, :city
 
-  belongs_to :city
+  #belongs_to :city
 
   validates :event_date, :event_description, :event_name, :event_time, :restaurant_id, :event_type, :presence => true
 
