@@ -14,11 +14,11 @@ class EventsController < ApplicationController
         @user_city = request.location.city
         session[:city] = request.location.city
       end
-    elsif session[:city]
-      @user_city = session[:city]
     elsif params[:city]
       @user_city = params[:city]
       session[:city] = params[:city]
+    elsif session[:city]
+      @user_city = session[:city]
     end
 
     # @events = Event.find(:all, :conditions => ["event_type != 'private'"], :order => 'status DESC')
