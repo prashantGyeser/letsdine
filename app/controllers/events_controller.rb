@@ -14,11 +14,23 @@ class EventsController < ApplicationController
         @user_city = request.location.city
         session[:city] = request.location.city
       end
+    elsif session[:city]
+      @user_city = session[:city]
     elsif params[:city]
+      @user_city = params[:city]
       session[:city] = params[:city]
     end
 
-    @events = Event.find(:all, :conditions => ["event_type != 'private'"], :order => 'status DESC')
+    # @events = Event.find(:all, :conditions => ["event_type != 'private'"], :order => 'status DESC')
+    if session[:city].nil?
+    else
+      @events = Event.limit(8)
+      @events = @events.where('event_type != ?', 'private')
+      @events = @events.where('status != ?', 'closed')
+      #@events = Event.find(:all, :conditions => ["event_type != 'private' AND status != 'closed'"], :limit => 8 )
+      # Taken from http://stackoverflow.com/questions/9970300/how-to-chain-where-query-in-rails-3-active-record
+      @events = @events.where('city = ?', session[:city])
+    end
 
     respond_to do |format|
       format.html # index.html.erb
