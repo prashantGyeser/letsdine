@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
+    logger.debug "The params is:{params.inspect}"
     if session[:city].nil?
       if params[:city]
         @user_city = params[:city]
