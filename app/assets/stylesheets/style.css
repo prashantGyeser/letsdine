@@ -620,3 +620,16 @@
 {
 	margin-left: 50px;
 }
+.seats_left_container
+{
+	margin: 30px 0;
+}
+.seats_left
+{
+	background: #dd4124;
+	display: inline;
+	padding: 20px;
+	font-size: 21px;
+	color: #fff;
+	font-weight: bold;
+}

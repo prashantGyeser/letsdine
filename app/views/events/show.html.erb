@@ -33,7 +33,20 @@
       </div>
     </div>
     <div class="span6">
-      <h1><%= @event.event_name %></h1>    
+      <h1><%= @event.event_name %></h1>   
+      <div class="seats_left_container">
+        <div class="seats_left">
+          <% if @seats_left <= 0 %>
+            Event Full
+          <% else %>
+            <%= @seats_left %>
+            Seats Left
+          <% end %>
+          
+
+        </div> 
+      </div>
+      
       <h3>Price: Rs <%= restaurant.price %></h3>
       <address>
         <strong><%= restaurant.name %></strong>

@@ -69,7 +69,12 @@ class EventsController < ApplicationController
     @restaurant = Restaurant.find(@event.restaurant_id)
     @attendee = Attendee.new
     @event_notify_email = EventNotifyEmail.new
-
+    @seats_left = @event.max_seats - Attendee.where(:event_id => @event.id).count
+    
+    if @seats_left <= 0
+      @event.status = "full"
+      @event.save
+    end
     @already_signed_up = false
 
     if current_user.nil?

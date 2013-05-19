@@ -3,7 +3,7 @@ class DashboardsController < ApplicationController
   # GET /dashboards.json
   def index
     @users = User.find(:all, :order => "id")
-    @events = Event.all
+    @events = Event.find(:all, :order => "status").reverse
     @attendees = Attendee.all
 
     @total_attendees_to_date = 0
