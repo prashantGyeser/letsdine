@@ -108,29 +108,40 @@
 
     <p>There are no events in your city right now. Leave your email address and we will get back to you once we start conducting events in your city</p>
     
+    <%= form_for(@new_city_notification, :remote => true) do |f| %>
+        <div class="field">
+            <%= f.hidden_field :city, :value => request.location.city %>
+        </div>
+        <div class="field">
+            <%= f.label :email %>
+            <%= f.text_field :email, :placeholder => "Enter your email address" %>
+        </div>    
+    
+      
+
   </div>
   <div class="modal-footer">
-    <a href="#" class="large awesome green" id="friends_invite">Invite friends</a>
+    <%= f.submit "Keep me informed", :class => "large awesome green", :id => "keep_me_informed"  %>
   </div>
+  <% end %>
 </div>
 
+<h1><%= @no_events_in_city %></h1>
 
-<% if @no_events_in_city = true %>
+<% if @no_events_in_city == false %>
     <script>
     $(document).ready(function(){
       $('#communication').modal('show');
-      $('#friends_invite').click(function() {
-        var valuesToSubmit = $('#new_user_invite').serialize();
-        console.log(valuesToSubmit);
+      $('#keep_me_informed').click(function(event) {
+        var valuesToSubmit = $('#new_new_city_notification').serialize();
         $.ajax({
-          url: $('#new_user_invite').attr('action'),
+          url: $('#new_new_city_notification').attr('action'),
           data: valuesToSubmit,
           type: "POST",
           dataType: "JSON"
         }).success(function(json){
-          $('#communication').modal('hide');
+            $('#communication').modal('hide');
         });
-        
         return false;
       });
     });

@@ -1,0 +1,25 @@
+<h1>Listing new_city_notifications</h1>
+
+<table>
+  <tr>
+    <th>City</th>
+    <th>Email</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @new_city_notifications.each do |new_city_notification| %>
+  <tr>
+    <td><%= new_city_notification.city %></td>
+    <td><%= new_city_notification.email %></td>
+    <td><%= link_to 'Show', new_city_notification %></td>
+    <td><%= link_to 'Edit', edit_new_city_notification_path(new_city_notification) %></td>
+    <td><%= link_to 'Destroy', new_city_notification, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New New city notification', new_new_city_notification_path %>

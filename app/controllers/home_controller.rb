@@ -18,7 +18,7 @@ class HomeController < ApplicationController
     
   	@no_events_in_city = false  			
   	@home_page = true
-
+    @new_city_notification = NewCityNotification.new
   	# Getting the last 6 event records 
   	if @user_city.nil?
   	else

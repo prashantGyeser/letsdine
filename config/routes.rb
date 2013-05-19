@@ -1,9 +1,12 @@
 Letsdine::Application.routes.draw do
+
+  resources :new_city_notifications
+
+
   resources :events 
   #resources :cities do 
     #resources :events 
   #end
-
 
   resources :user_invites
 
