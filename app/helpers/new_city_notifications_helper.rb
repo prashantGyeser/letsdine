@@ -1,0 +1,2 @@
+module NewCityNotificationsHelper
+end
