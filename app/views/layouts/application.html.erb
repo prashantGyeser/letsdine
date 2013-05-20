@@ -97,11 +97,17 @@
 					var url_to_submit_to = '/'+selected_city+'/events';
 					window.location = url_to_submit_to;
 				}
-				if (url == "/")
+				else if (url == "/")
 				{
 					var url_to_submit_to = '/'+selected_city;
 					window.location = url_to_submit_to;
 				}
+				else
+				{
+					var url_to_submit_to = '/' + selected_city;
+					window.location = url_to_submit_to;
+				}
+
 				
 				//$.ajax({
 				//	type: 'GET',
