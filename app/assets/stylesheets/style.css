@@ -317,7 +317,7 @@
 .eventDetailsImage {
   width: 90%;
   height: auto;
-  margin: 10px auto 10px -5px;
+  margin: 20px auto 10px -5px;
   padding: 20px;
   position: relative;
   background: white;
@@ -677,5 +677,17 @@
 	padding: 20px;
 	font-size: 21px;
 	color: #fff;
+	font-weight: bold;
+}
+.eventDetails
+{
+	margin-top: 20px;
+}
+.seats_left_event_page
+{
+	background: #dd4124;
+	display: inline;
+	color: #fff;
+	padding: 10px;
 	font-weight: bold;
 }
