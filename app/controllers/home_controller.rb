@@ -40,7 +40,6 @@ class HomeController < ApplicationController
   	if @events.empty?
       logger.debug "It is getting to the no events in city part"
 		@no_events_in_city = true  			
-		@events = Event.find(:all, :conditions => ["event_type != 'private' AND status != 'closed'"], :limit => 8 )
 	end
   	
   end
