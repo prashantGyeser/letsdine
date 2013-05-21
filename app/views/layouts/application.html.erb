@@ -32,7 +32,7 @@
     		<div class="navbar-inner">
         		<div class="container">
         			<div class="row-fluid">
-        				<div class="span3">
+        				<div class="span4">
         					<select name="city-selector" class="locationpicker" id="city-select">
         						<option>Select your city</option>
 							    <option value="Hyderabad">Hyderabad</option>
@@ -40,19 +40,28 @@
 							    <option value="Ahmedabad">Ahmedabad</option>
 							  </select>
         				</div>
-        				<div class="span6"><img src="/assets/logo.png"></div>
+        				<div class="span5"><img src="/assets/logo.png"></div>
         				<div class="span3 loginDetails">
-        					<% if user_signed_in? %>
-        						<%= current_user.name %> | <%= link_to "Sign out", destroy_user_session_path %>
-        					<% else %>
-        						<%= link_to "Sign up", new_user_registration_path  %> or <%= link_to "Sign in", new_user_session_path %>
-        					<% end %>
+        					<div class="loginOptions">
+        						<% if user_signed_in? %>
+	        						<%= current_user.name %> | <%= link_to "Sign out", destroy_user_session_path %>
+	        					<% else %>
+	        						<%= link_to "LOGIN", new_user_session_path, :class => "login_link" %> 
+	        						<span id="sign_up_link">
+	        							<%= link_to new_user_registration_path, :class => "large awesome blue" do %>
+										  <%= image_tag("signup_image.png", :alt => "Sign up") %>
+										  <span>Sign up</span>
+										<% end %>
+	        						</span> 
+	        						
+	        					<% end %>
+        					</div>
         				</div>
         			</div>
         		</div>
         		<div class="container tagline-container">
         			<div class="row-fluid">
-        				<div class="span6 offset3 tagline">
+        				<div class="span5 offset4 tagline">
         					<h4>Meet great people over great food</h4>
         				</div>
         			</div>
@@ -68,7 +77,9 @@
 					<%= render_navigation :class => 'test' %>
 				</div>
 				<div class="span2">
-					<%= link_to "Create Event", :new_event, :class => "large green awesome createEventBtn" %>
+					<div class="createEventButtonContainer">
+						<%= link_to "Create Event", :new_event, :class => "large green awesome createEventBtn" %>
+					</div>
 				</div>
 			</div>			
 		</div>

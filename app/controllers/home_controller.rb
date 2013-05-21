@@ -19,8 +19,12 @@ class HomeController < ApplicationController
   	@no_events_in_city = false  			
   	@home_page = true
     @new_city_notification = NewCityNotification.new
+    @events = []
+    @header_events = []
+
   	# Getting the last 6 event records 
   	if @user_city.nil?
+      logger.debug "It is getting to the user city part"
   	else
       @events = Event.limit(8)
       @events = @events.where('event_type != ?', 'private')
@@ -29,24 +33,15 @@ class HomeController < ApplicationController
       # Taken from http://stackoverflow.com/questions/9970300/how-to-chain-where-query-in-rails-3-active-record
       @events = @events.where('city = ?', session[:city])
   	end
-  	if @events.nil?
+
+    logger.debug "The event nil check is:#{@events.nil?}"
+    logger.debug "The event empty check is:#{@events.empty?}"
+
+  	if @events.empty?
+      logger.debug "It is getting to the no events in city part"
 		@no_events_in_city = true  			
 		@events = Event.find(:all, :conditions => ["event_type != 'private' AND status != 'closed'"], :limit => 8 )
 	end
   	
-  	#@events = Event.last(8).reverse
-
-  	logger.debug "The events are: #{@events.inspect}"
-
-  	# Getting the last four events for the slider
-  	if @user_city.nil?
-  	else
-  		@header_events = @events.last(4)
-  	end
-
-  	if @header_events.nil?
-		@no_events_in_city = true  			
-		@header_events = @events.last(4)
-  	end
   end
 end

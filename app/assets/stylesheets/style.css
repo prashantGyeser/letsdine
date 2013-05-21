@@ -21,10 +21,28 @@
 	margin-top: 10px;
 	font-size: 16px;
 	color: #fff;
+
+}
+.loginOptions
+{
+	float: right;
 }
 .loginDetails a
 {
 	color: #fff;
+}
+.login_link
+{
+	font-weight: bold;
+	margin-right: 10px;
+}
+#sign_up_link a
+{
+	margin-top: 5px;
+}
+#sign_up_link a:hover
+{
+	text-decoration: none;
 }
 .navbar-inner
 {
@@ -37,7 +55,11 @@
 .masthead
 {
 	margin-top: 120px;
-	
+	background: url("/assets/headerBG.png");
+}
+.createEventButtonContainer
+{
+	float: right;
 }
 .homepage 
 {
@@ -45,7 +67,7 @@
 	color: #a1afaf;
 	margin-top: 20px;
 	margin-left: -20px;
-	margin-bottom: 200px;
+	margin-bottom: 10px;
 	font-size: 18px;
 	text-shadow: 0px 0px 1px #647575;
 }
