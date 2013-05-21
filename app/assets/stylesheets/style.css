@@ -691,3 +691,7 @@
 	padding: 10px;
 	font-weight: bold;
 }
+.restaurant_hidden
+{
+	display: none;
+}

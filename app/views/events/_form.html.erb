@@ -25,7 +25,7 @@
       <br/>
       <div class="field">
         <%= f.label :city %>
-        <%= f.text_field :city %>
+        <%= select_tag(:city, options_for_select([['Select a city',''],['Hyderabad','Hyderabad'], ['Mumbai','Mumbai'], ['Ahmedabad', 'Ahmedabad']])) %>
       </div>
       <div class="field">
         <%= f.label :event_name %>
@@ -72,7 +72,7 @@
         <div class="row-fluid">
           <div class="span6">
             <% @restaurants.each do |restaurant| %>
-              <div class="restaurantDetailsCotaniner" id="<%= restaurant.id %>"> 
+              <div class="restaurantDetailsCotaniner restaurant_hidden <%= restaurant.city %>" id="<%= restaurant.id %>"> 
                 <%= image_tag restaurant.photo_url(:thumb).to_s %>
                 <div class="restaurantDetails">
                   <h4><%= restaurant.name %></h4>

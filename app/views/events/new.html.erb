@@ -26,3 +26,12 @@
 	});
 </script>
 
+<script>
+	$(document).ready(function(){
+		$('#city').change(function(){
+			var selected_city = $('#city :selected').val();
+			class_to_find = '.'+selected_city;
+			$(class_to_find).removeClass('restaurant_hidden');
+		});
+	});
+</script>
