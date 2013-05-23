@@ -131,6 +131,8 @@ class EventsController < ApplicationController
 
     invitee_emails = params[:event][:invitees].split(",")
 
+    @event.city = params[:city]
+
     respond_to do |format|
       if @event.save
 
