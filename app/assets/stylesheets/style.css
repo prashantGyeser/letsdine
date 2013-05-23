@@ -61,6 +61,14 @@
 	margin-top: 160px;
 	background: url("/assets/headerBG.png");
 }
+.logo
+{
+	color: #fff;
+}
+.logo h4
+{
+	margin-top: 15px;
+}
 .createEventButtonContainer
 {
 	float: right;
