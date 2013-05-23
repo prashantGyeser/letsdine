@@ -39,6 +39,12 @@
 							    <option value="Mumbai">Mumbai</option>
 							    <option value="Ahmedabad">Ahmedabad</option>
 							  </select>
+							  <% if session[:city].nil? %>
+							  	<h4 class="selected_city">Select a City</h4>
+							  <% else %>
+							  	<h4 class="selected_city">Current City: <%= session[:city] %> </h4>
+							  <% end %>
+							  
         				</div>
         				<div class="span5"><img src="/assets/logo.png"></div>
         				<div class="span3 loginDetails">
