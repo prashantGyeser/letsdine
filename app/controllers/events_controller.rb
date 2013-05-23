@@ -66,7 +66,7 @@ class EventsController < ApplicationController
     @restaurant = Restaurant.find(@event.restaurant_id)
     @attendee = Attendee.new
     @event_notify_email = EventNotifyEmail.new
-    @seats_left = @event.max_seats - Attendee.where(:event_id => event.id).pluck(:seats).sum
+    @seats_left = @event.max_seats - Attendee.where(:event_id => @event.id).pluck(:seats).sum
     
     if @seats_left <= 0
       @event.status = "full"
