@@ -30,7 +30,7 @@
                         <% end %>
                         <h3><%= link_to event.event_name, event_path(event) %></h3>
                         <div class="seats_left_event_page">
-                            <% seats_left = event.max_seats - Attendee.where(:event_id => event.id).count %>
+                            <% seats_left = event.max_seats - Attendee.where(:event_id => event.id).pluck(:seats).sum %>
                             <%= seats_left %> Seats left
                         </div>
                         <div class="eventDetails">

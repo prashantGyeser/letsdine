@@ -41,13 +41,10 @@ class EventsController < ApplicationController
   # GET /events/1
   # GET /events/1.json
   def show
-    logger.debug "the params in the event show is: #{params.inspect}"
-    logger.debug "the id in the event show is: #{params[:id]}"
+    
     event_with_token = Event.where(:token => params[:id])
     @user_invite = UserInvite.new
-    logger.debug "The ip is:#{request.ip}"    
-    logger.debug "The city is:#{request.location.city}"    
-    logger.debug "The country is:#{request.location.country}"    
+    
     if session[:joined]
       @just_joined = true
       session.delete :joined
@@ -69,7 +66,7 @@ class EventsController < ApplicationController
     @restaurant = Restaurant.find(@event.restaurant_id)
     @attendee = Attendee.new
     @event_notify_email = EventNotifyEmail.new
-    @seats_left = @event.max_seats - Attendee.where(:event_id => @event.id).count
+    @seats_left = @event.max_seats - Attendee.where(:event_id => event.id).pluck(:seats).sum
     
     if @seats_left <= 0
       @event.status = "full"
