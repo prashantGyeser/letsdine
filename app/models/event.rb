@@ -25,7 +25,7 @@ class Event < ActiveRecord::Base
 
   #belongs_to :city
 
-  validates :event_date, :event_description, :event_name, :event_time, :restaurant_id, :event_type, :presence => true
+  validates :event_date, :event_description, :event_name, :event_time, :restaurant_id, :event_type, :city, :presence => true
 
   mount_uploader :event_image, EventImageUploader
 
