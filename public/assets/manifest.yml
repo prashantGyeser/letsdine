@@ -61,8 +61,12 @@ timeIcon.png: timeIcon-030cbb9a35b95c008949e1e1af48b31f.png
 timeIcon/index.png: timeIcon-030cbb9a35b95c008949e1e1af48b31f.png
 topBarBG.png: topBarBG-78e160f5aac3985110e62277150ecf74.png
 topBarBG/index.png: topBarBG-78e160f5aac3985110e62277150ecf74.png
-application.js: application-d13468f717466b28267ebe78791759ee.js
-application/index.js: application-d13468f717466b28267ebe78791759ee.js
+admin/application.js: admin/application-1b13569e9620782f423d4cd3ce931750.js
+admin/application/index.js: admin/application-1b13569e9620782f423d4cd3ce931750.js
+admin/highcharts.js: admin/highcharts-8b90df74ca79c5e04628c3f5e8cfeaf2.js
+admin/highcharts/index.js: admin/highcharts-8b90df74ca79c5e04628c3f5e8cfeaf2.js
+application.js: application-ce791bf976dd508d38a93f67c4512202.js
+application/index.js: application-ce791bf976dd508d38a93f67c4512202.js
 bootstrap-datepicker.js: bootstrap-datepicker-ea267d0f4b58e4c693968c4210e25490.js
 bootstrap-datepicker/index.js: bootstrap-datepicker-ea267d0f4b58e4c693968c4210e25490.js
 bootstrap-timepicker.js: bootstrap-timepicker-821328b7b6f5603a36ba112e7c3f8042.js
@@ -80,6 +84,10 @@ jquery.gallery.js: jquery.gallery-2182d6d54cc1b5c5feb2ef78fbde7d0d.js
 jquery/index.gallery.js: jquery.gallery-2182d6d54cc1b5c5feb2ef78fbde7d0d.js
 zoomflow/zoomflow.dev.js: zoomflow/zoomflow.dev-23dcf2a97da4ae698d066a41dccee462.js
 zoomflow/zoomflow/index.dev.js: zoomflow/zoomflow.dev-23dcf2a97da4ae698d066a41dccee462.js
+admin/admin.css: admin/admin-bfb4ec033b1059df4bb49f657c476bd8.css
+admin/admin/index.css: admin/admin-bfb4ec033b1059df4bb49f657c476bd8.css
+admin/application.css: admin/application-bfb4ec033b1059df4bb49f657c476bd8.css
+admin/application/index.css: admin/application-bfb4ec033b1059df4bb49f657c476bd8.css
 application.css: application-7f5f2cf7a631dc2b840c897a5c48e19a.css
 application/index.css: application-7f5f2cf7a631dc2b840c897a5c48e19a.css
 bootstrap-responsive.css: bootstrap-responsive-3a0afd040e59f425bf14fee96ce2985e.css

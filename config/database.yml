@@ -8,7 +8,7 @@ development:
   database: letsdine_development
   pool: 5
   timeout: 5000
-  username: prashant
+  username: postgres
   password: password@123
   host:     localhost
 
@@ -20,7 +20,7 @@ test:
   database: letsdine_test
   pool: 5
   timeout: 5000
-  username: prashant
+  username: postgres
   password: password@123
   host:     localhost
 
@@ -29,6 +29,6 @@ production:
   database: letsdine_production
   pool: 5
   timeout: 5000
-  username: prashant
+  username: postgres
   password: password@123
   host:     localhost
