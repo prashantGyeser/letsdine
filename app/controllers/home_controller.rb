@@ -29,6 +29,7 @@ class HomeController < ApplicationController
       @events = Event.limit(12)
       @events = @events.where('event_type != ?', 'private')
       @events = @events.where('status != ?', 'closed')
+      
   		#@events = Event.find(:all, :conditions => ["event_type != 'private' AND status != 'closed'"], :limit => 8 )
       # Taken from http://stackoverflow.com/questions/9970300/how-to-chain-where-query-in-rails-3-active-record
       @events = @events.where('city = ?', session[:city])

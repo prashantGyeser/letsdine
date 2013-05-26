@@ -1,7 +1,16 @@
 Letsdine::Application.routes.draw do
 
-  resources :new_city_notifications
 
+  
+
+  # Routing for the admin interface. 
+  namespace :admin do 
+    root to: "dashboard#index"
+    get "dashboard/index"
+    get "event/index" => "event#index"
+  end
+
+  resources :new_city_notifications
 
   resources :events 
   #resources :cities do 
@@ -31,8 +40,6 @@ Letsdine::Application.routes.draw do
 
   resources :restaurants
 
-
-  
   
 
   get ':city' => 'home#index'
@@ -104,4 +111,7 @@ Letsdine::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
+
+
+
 end

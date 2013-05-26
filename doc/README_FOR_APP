@@ -1,2 +1,4 @@
-Use this README file to introduce your application and point to useful places in the API for learning more.
-Run "rake doc:app" to generate API documentation for your models, controllers, helpers, and libraries.
+Resources taken from:
+Admin dashboard: http://iain.nl/backends-in-rails-3-1 
+Asset Pipeline organization: http://stackoverflow.com/questions/7134034/using-rails-3-1-assets-pipeline-to-conditionally-use-certain-css/7273333#7273333
+Different layouts for different views: http://stackoverflow.com/questions/8078379/defining-separate-views-and-assets-for-admin-interface-in-a-rails-app

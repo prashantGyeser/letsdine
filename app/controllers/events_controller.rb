@@ -75,6 +75,7 @@ class EventsController < ApplicationController
         @event.save  
       end
       
+
     end
     @already_signed_up = false
 
