@@ -26,7 +26,7 @@ class HomeController < ApplicationController
   	if @user_city.nil?
       logger.debug "It is getting to the user city part"
   	else
-      @events = Event.limit(8)
+      @events = Event.limit(12)
       @events = @events.where('event_type != ?', 'private')
       @events = @events.where('status != ?', 'closed')
   		#@events = Event.find(:all, :conditions => ["event_type != 'private' AND status != 'closed'"], :limit => 8 )
