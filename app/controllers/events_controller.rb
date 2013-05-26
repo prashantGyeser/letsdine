@@ -69,8 +69,11 @@ class EventsController < ApplicationController
     @seats_left = @event.max_seats - Attendee.where(:event_id => @event.id).pluck(:seats).sum
     
     if @seats_left <= 0
-      @event.status = "full"
-      @event.save
+      if @event.status == "closed"
+      else
+        @event.status = "full"
+        @event.save
+      end
     end
     @already_signed_up = false
 

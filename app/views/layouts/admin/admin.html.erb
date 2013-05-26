@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>LetsDine</title>
+
+	
+	<%= stylesheet_link_tag    "admin/application", :media => "all" %>
+	<%= stylesheet_link_tag    "bootstrap", :media => "all" %>
+	<%= stylesheet_link_tag    "bootstrap-responsive", :media => "all" %>
+	<%= stylesheet_link_tag    "admin/admin", :media => "all" %>
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+	
+	<%= javascript_include_tag "admin/application" %>
+	<%= javascript_include_tag "jquery-1.9.1" %>
+	<%= javascript_include_tag "bootstrap" %>
+	<%= javascript_include_tag "admin/highcharts" %>
+	
+	
+
+	<%= csrf_meta_tags %>
+
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="row-fluid">
+				<div class="span8">
+					<ul>
+						<li><a href="#">Dashboard</a></li>
+						<li><a href="#">Users</a></li>
+						<li><a href="#">Events</a></li>
+					</ul>
+				</div>
+				<div class="span4 user_info">
+					<a href="#">Sign out</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<%= yield %>	
+</body>
+
+</html>
