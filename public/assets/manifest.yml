@@ -75,6 +75,8 @@ bootstrap.js: bootstrap-c548b36591d6d4b5e206961092e41eb8.js
 bootstrap/index.js: bootstrap-c548b36591d6d4b5e206961092e41eb8.js
 closed-event-overlay.js: closed-event-overlay-2704597afb0fa4de1aeaf8ab96d26e3f.js
 closed-event-overlay/index.js: closed-event-overlay-2704597afb0fa4de1aeaf8ab96d26e3f.js
+events.js: events-cff7de0dcc014ec7641f9fe5c1ce3a88.js
+events/index.js: events-cff7de0dcc014ec7641f9fe5c1ce3a88.js
 index.html: index-dc4e7e08d4bfba4dbf19714fe6628101.html
 jquery-1.9.1.js: jquery-1.9.1-186cad25611b3c790cb50517ee029d2a.js
 jquery-1/index.9.1.js: jquery-1.9.1-186cad25611b3c790cb50517ee029d2a.js
@@ -82,6 +84,8 @@ jquery.bootstrap.wizard.js: jquery.bootstrap.wizard-fb0689402e3e80713289dd7962a8
 jquery/index.bootstrap.wizard.js: jquery.bootstrap.wizard-fb0689402e3e80713289dd7962a864ab.js
 jquery.gallery.js: jquery.gallery-2182d6d54cc1b5c5feb2ef78fbde7d0d.js
 jquery/index.gallery.js: jquery.gallery-2182d6d54cc1b5c5feb2ef78fbde7d0d.js
+restaurant_picker.js: restaurant_picker-cc0b03132dcc9bd3f1a289dea5964a09.js
+restaurant_picker/index.js: restaurant_picker-cc0b03132dcc9bd3f1a289dea5964a09.js
 zoomflow/zoomflow.dev.js: zoomflow/zoomflow.dev-23dcf2a97da4ae698d066a41dccee462.js
 zoomflow/zoomflow/index.dev.js: zoomflow/zoomflow.dev-23dcf2a97da4ae698d066a41dccee462.js
 admin/admin.css: admin/admin-bfb4ec033b1059df4bb49f657c476bd8.css

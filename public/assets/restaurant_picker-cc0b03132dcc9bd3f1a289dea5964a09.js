@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".menuItems").hide(),$(".restaurantDetailsCotaniner").click(function(){$(".menuItems").hide(),$("div").removeClass("selectedRestaurant");var e=this.id;$("#event_restaurant_id").val(this.id),$(this).addClass("selectedRestaurant"),menuToShow="#restaurant"+e+"menu",$(menuToShow).show("fast")})});
