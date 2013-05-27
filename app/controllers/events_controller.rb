@@ -24,7 +24,7 @@ class EventsController < ApplicationController
     # @events = Event.find(:all, :conditions => ["event_type != 'private'"], :order => 'status DESC')
     if session[:city].nil?
     else
-      @events = Event.limit(100)
+      @events = Event.limit(31)
       @events = @events.where('event_type != ?', 'private')
       #@events = @events.where('status != ?', 'closed')
       #@events = Event.find(:all, :conditions => ["event_type != 'private' AND status != 'closed'"], :limit => 8 )
