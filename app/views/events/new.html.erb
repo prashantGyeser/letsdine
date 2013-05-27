@@ -30,8 +30,11 @@
 	$(document).ready(function(){
 		$('#city').change(function(){
 			var selected_city = $('#city :selected').val();
+			$('.restaurantDetailsCotaniner').addClass('restaurant_hidden');
+			$('.menuItems').hide();
 			class_to_find = '.'+selected_city;
 			$(class_to_find).removeClass('restaurant_hidden');
+			//$('.restaurantMenu').show();
 		});
 	});
 </script>
