@@ -165,7 +165,74 @@
     </div>
   </div>
 </div>
+
+<div class="container">
+  <div class="row-fluid">
+    <div class="span12">
+      <h1>Other events in your city</h1>
+      <p><%= link_to "See all events in your city", events_path%> </p>
+    </div>
+  </div>
+</div>
  
+<div class="container">
+  <div class="row-fluid">
+    <% @other_events.each do |other_event|%>
+      <div class="span3">
+        <div class="event">
+          
+          <% if other_event.event_image.blank? %>
+              <%= image_tag restaurant.photo_url.to_s %>
+          <% else %>
+              <%= image_tag other_event.event_image_url.to_s %>
+          <% end %>
+
+          <h3><%= link_to other_event.event_name, event_path(other_event) %></h3>
+
+          <div class="seats_left_event_page">
+              <% if Attendee.where(:event_id => other_event.id).nil?%>
+                  <% seats_left = other_event.max_seats %>    
+              <% else %>
+                  <% seats_left = other_event.max_seats - Attendee.where(:event_id => other_event.id).pluck(:seats).sum %>
+              <% end %>
+              <%= seats_left %> Seats left
+          </div>
+          <div class="eventDetails">
+              <div class="detail">
+                  <img src="/assets/locationIcon.png">
+                  <%= restaurant.name %>
+              </div>
+              <div class="detail">
+                  <img src="/assets/timeIcon.png">
+                  <%= other_event.event_date.strftime("%d %B %Y") %>
+                  <%= other_event.event_time.strftime("%I:%M%p") %>
+              </div>
+          </div>
+
+          <p>
+              <%= truncate(other_event.event_description, :length => 100) %> <%= link_to "See event", event_path(other_event) %>
+          </p>
+          <div class="peopleAttending">
+              <% other_event.attendee.first(4).each do |personAttending| %>
+                  <% user =  User.find(personAttending.user_id) %>
+                  <% if user.image.blank? %>
+                      <%= image_tag "/assets/noProfilePic.png", "data-toggle" => "tooltip", :title => user.name, :class => "profilePic" %>    
+                  <% else %>
+                      <%= image_tag user.image.to_s, "data-toggle" => "tooltip", :title => user.name, :class => "profilePic" %>    
+                  <% end %>
+              <% end %>
+              <p>
+                <%= link_to "See All People Attending", event_path(other_event) %>
+              </p>
+          </div>
+
+        </div>
+      </div>
+    <% end %>
+    
+  </div>
+</div>
+
 
 <div id="communication" class="modal hide fade">
   <div class="modal-header">

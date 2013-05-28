@@ -46,6 +46,8 @@ class EventsController < ApplicationController
     
     event_with_token = Event.where(:token => params[:id])
     @user_invite = UserInvite.new
+
+    @other_events = Event.last(4)
     
     if session[:joined]
       @just_joined = true
