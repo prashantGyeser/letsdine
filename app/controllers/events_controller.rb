@@ -47,7 +47,15 @@ class EventsController < ApplicationController
     event_with_token = Event.where(:token => params[:id])
     @user_invite = UserInvite.new
 
-    @other_events = Event.last(4)
+    @other_events = Event.limit(4)
+    @other_events = @other_events.where('event_type != ?', 'private')
+    @other_events = @other_events.where('status != ?', 'closed')
+    
+    #@events = Event.find(:all, :conditions => ["event_type != 'private' AND status != 'closed'"], :limit => 8 )
+    # Taken from http://stackoverflow.com/questions/9970300/how-to-chain-where-query-in-rails-3-active-record
+    @other_events = @other_events.where('city = ?', session[:city])
+
+    
     
     if session[:joined]
       @just_joined = true
