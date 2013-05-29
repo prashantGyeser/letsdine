@@ -91,5 +91,10 @@ gem "mandrill-api", "~> 1.0.27"
 # IP based city detection
 gem 'geocoder'
 
+
 # Authorization
 gem "cancan"
+
+# Intercom 
+gem 'intercom-rails'
+

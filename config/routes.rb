@@ -3,6 +3,8 @@ Letsdine::Application.routes.draw do
 
   
 
+  get "all_event/index"
+
   # Routing for the admin interface. 
   namespace :admin do 
     root to: "dashboard#index"
