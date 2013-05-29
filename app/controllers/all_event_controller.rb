@@ -1,5 +1,5 @@
 class AllEventController < ApplicationController
   def index
-  	@events = Event.limit(1000)
+  	@events = Event.all
   end
 end
