@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130519095944) do
+ActiveRecord::Schema.define(:version => 20130529112912) do
 
   create_table "attendees", :force => true do |t|
     t.integer  "user_id"
@@ -141,6 +141,7 @@ ActiveRecord::Schema.define(:version => 20130519095944) do
     t.string   "oauth_expires_at"
     t.string   "image"
     t.string   "city"
+    t.string   "role"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
