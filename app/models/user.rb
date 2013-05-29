@@ -82,4 +82,8 @@ class User < ActiveRecord::Base
     @facebook ||= Koala::Facebook::API.new(oauth_token)
   end
 
+  def self.total_signups_on(date)
+    where("date(created_at) = ?", date).count
+  end
+
 end
