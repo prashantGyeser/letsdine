@@ -135,7 +135,7 @@ $(function () {
 
                         <div class="event-details-list">
                             <% total_people_attending = 0%>
-                            <% total_people_attending =  Attendee.where(:event_id => e.id).pluck(:seats).sum %>
+                            <% total_people_attending =  Attendee.where(:event_id => event.id).pluck(:seats).sum %>
                             <span><%= total_people_attending %> People Attending</span>
                             <span>Rs. <%= total_people_attending * Restaurant.find(event.restaurant_id).price%> Expected Earning</span>
                         </div>
