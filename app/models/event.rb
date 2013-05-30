@@ -52,4 +52,10 @@ class Event < ActiveRecord::Base
     end
   end
 
+  def self.total_events_this_month
+    where("event_date > ? and event_date < ?", Time.now.beginning_of_month.to_date, Time.now.end_of_month.to_date).count
+  end
+
+  
+
 end

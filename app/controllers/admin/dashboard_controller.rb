@@ -2,7 +2,7 @@ class Admin::DashboardController < Admin::ApplicationController
 	def index
 
 		@users = User.find(:all, :order => "id")
-	    @events = Event.find(:all, :order => "status").reverse
+	    @events = Event.find(:all, :conditions => ["status != ?", "closed"])
 	    @attendees = Attendee.all
 
 	    @total_attendees_to_date = 0

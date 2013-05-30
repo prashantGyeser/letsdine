@@ -86,4 +86,8 @@ class User < ActiveRecord::Base
     where("date(created_at) = ?", date).count
   end
 
+  def self.total_signups_this_month
+    where("created_at > ? and created_at < ?", Time.now.beginning_of_month.to_date, Time.now.end_of_month.to_date).count
+  end
+
 end

@@ -77,13 +77,13 @@ $(function () {
 <div class="container">
     <div class="row-fluid">
         <div class="span3 key_stat green">
-            Users This month
+            <%= User.total_signups_this_month %> Sign ups this month
         </div>
         <div class="span3 key_stat red">
-            Attendees this month
+            <%= Attendee.total_attendees_this_month %> attendees this month
         </div>
         <div class="span3 key_stat red">
-            Events this month
+            <%= Event.total_events_this_month%> events this month
         </div>
         <div class="span3 key_stat green">
             Revenue this month
@@ -104,67 +104,43 @@ $(function () {
     <div class="row-fluid">
         <div class="span12">
             <ul class="event_list">
-                <li>
-                    <div class="list-item-container">
-                        <div class="notification_status grey ">
-                            <i class="icon-envelope-alt"></i>
-                        </div>
-                        <div class="eventDetails">
-                            <a href="#">Event Name</a>
-                            <span class="green">Public</span>
-                        </div>
-                        <a href="#" class="btn btn-large float-right">Send Notifications</a>
-                    </div>
-                    <div class="event-details-list">
-                        <div>
-                            <a href="#">25 People Attending</a>
-                            <a href="#">Add Actual Attendees</a>
-                            <span>Rs. 10,000 Expected Earnings</span>
-                            <a href="#">Add Actual Earnings</a>
-                        </div>
-                    </div>
-                    
-                </li>
+                <% @events.each do |event| %>
+                    <li>
+                        <div class="list-item-container">
 
-                <li>
-                    <div class="list-item-container">
-                        <div class="notification_status green">
-                            <i class="icon-ok"></i>
-                        </div>
-                        <div class="eventDetails">
-                            <a href="#">Event Name</a>
-                            <span class="green">Public</span>
-                        </div>
-                    </div>
-                    
-                </li>
+                            <% if event.reminder == "sent" %>
+                                <div class="notification_status green">
+                                <i class="icon-ok"></i>    
+                            <% else %>
+                                <div class="notification_status grey">
+                                <i class="icon-envelope-alt"></i>        
+                            <% end %>
+                                </div>
 
-                <li>
-                    <div class="list-item-container">
-                        <div class="notification_status green">
-                            <i class="icon-ok"></i>
-                        </div>
-                        <div class="eventDetails">
-                            <a href="#">Event Name</a>
-                            <span class="red">Private</span>
-                        </div>
-                    </div>
-                    
-                </li>
+                            <div class="eventDetails">
+                                <%= link_to event.event_name, event_path(event) %>
+                                <% if event.event_type == 'private' %>
+                                    <span class="red">Private</span>        
+                                <% else %>
+                                    <span class="green">Public</span>    
+                                <% end %>
+                            </div> 
 
-                <li>
-                    <div class="list-item-container">
-                        <div class="notification_status grey">
-                            <i class="icon-envelope-alt"></i>
+                            <% if event.reminder == "sent"%>
+                            <% else %>
+                                <a href="#" class="btn btn-large float-right">Send Notifications</a>
+                            <% end %>
+
+                        </div>  
+
+                        <div class="event-details-list">
+                            <% total_people_attending = 0%>
+                            <% total_people_attending = event.attendee.all.count %>
+                            <span><%= total_people_attending %> People Attending</span>
+                            <span>Rs. <%= total_people_attending * Restaurant.find(event.restaurant_id).price%> Expected Earning</span>
                         </div>
-                        <div class="eventDetails">
-                            <a href="#">Event Name</a>
-                            <span class="red">Private</span>
-                        </div>
-                        <a href="#" class="btn btn-large float-right">Send Notifications</a>
-                    </div>
-                    
-                </li>
+                    </li>                    
+                <% end %>
 
             </ul>
         </div>
