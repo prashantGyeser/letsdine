@@ -1,0 +1,22 @@
+<table style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;	margin: 0 auto;	width: 600px; border: 1px solid #ddd;">
+	<tr style="margin-bottom: 10px;">
+		<td>
+			<h1><%= @event.event_name %> created</h1>
+		</td>
+	</tr>
+	<tr style="margin-bottom: 10px;">
+		<td>
+			<h2>The details of the event are as follows</h2>
+			<h4>Event Type: <%= @event.event_type %> </h4>
+			<h4>Event Location: <%= @restaurant.address %> </h4>
+			<h4>Event Date: <%= @event.event_date %> </h4>
+			<h4>Event URL: 
+			<% if @event.event_type == 'private' %>
+				<a href="letsdine.co/events/<%= @event.token %>">See the event</a>
+			<% else %>
+				<%= event_url(@event, :host => "letsdine.co") %>
+			<% end %>
+			</h4>
+		</td>
+	</tr>
+</table>

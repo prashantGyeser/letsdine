@@ -18,4 +18,20 @@ class Notifications < ActionMailer::Base
 		
 		mail(:to => email_address, :subject => email_subject)	
 	end
+
+	def admin_private_event_created(event,restaurant)
+		@event = event
+		@restaurant = restaurant
+		email_address = "akhilesh@letsdine.co"
+
+		if @event.event_type == 'private'
+			email_subject = "[Private] event created: #{@event.event_name}"	
+		else
+			email_subject = "[Public] event created: #{@event.event_name}"
+		end
+
+		
+		mail(:to => email_address, :subject => email_subject)	
+
+	end
 end
