@@ -98,6 +98,4 @@ gem "cancan"
 # Intercom 
 gem 'intercom-rails'
 
-# Social 
-gem 'social_stream'
 

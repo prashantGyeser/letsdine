@@ -3,3 +3,4 @@ Admin dashboard: http://iain.nl/backends-in-rails-3-1
 Asset Pipeline organization: http://stackoverflow.com/questions/7134034/using-rails-3-1-assets-pipeline-to-conditionally-use-certain-css/7273333#7273333
 Different layouts for different views: http://stackoverflow.com/questions/8078379/defining-separate-views-and-assets-for-admin-interface-in-a-rails-app
 Records created in this month: http://stackoverflow.com/questions/2919720/how-to-get-record-created-today-by-rails-activerecord
+Uninstalling all the installed gems: http://jamespmcgrath.com/how-to-uninstall-all-ruby-gems-in-one-line/cd 
