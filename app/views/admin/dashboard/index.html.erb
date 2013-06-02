@@ -128,7 +128,12 @@ $(function () {
 
                             <% if event.reminder == "sent"%>
                             <% else %>
-                                <a href="#" class="btn btn-large float-right">Send Notifications</a>
+                                <a href="<%= event.id %>" class="btn btn-large float-right send_notification">
+                                    <%= image_tag "loader.gif"%>
+                                    Send Notifications
+                                </a>
+                                
+
                             <% end %>
 
                         </div>  
@@ -138,6 +143,7 @@ $(function () {
                             <% total_people_attending = event.attendee.all.count %>
                             <span><%= total_people_attending %> People Attending</span>
                             <span>Rs. <%= total_people_attending * Restaurant.find(event.restaurant_id).price%> Expected Earning</span>
+                            <a href="#" class="btn btn-primary btn-small">View Attendees</a>
                         </div>
                     </li>                    
                 <% end %>
@@ -149,3 +155,31 @@ $(function () {
 
 
 
+<script>
+    $(document).ready(function(){
+        $('.send_notification').click(function(event){
+            event.preventDefault();
+
+            var host = window.location.host;
+            var url_to_submit_to = host + "/admin/event/send_notification";
+
+            var event_id = $(this).attr('href');
+            var data_to_send = "event_id=" + event_id;
+
+            $.ajax({
+              url: "/admin/event/send_notification",
+              type: 'PUT',
+              data: data_to_send,
+              success: function(data) {
+                alert(data);
+              },
+              error: function(data) {
+                alert("Somethuing went wrong");
+              }
+
+            });
+
+
+        });
+    })
+</script>

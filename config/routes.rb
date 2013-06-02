@@ -10,7 +10,7 @@ Letsdine::Application.routes.draw do
     root to: "dashboard#index"
     get "dashboard/index"
     get "event/index" => "event#index"
-    
+    put "event/send_notification" => "event#send_notification"
   end
 
   resources :new_city_notifications

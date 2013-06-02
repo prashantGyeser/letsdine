@@ -12,4 +12,6 @@ class Admin::DashboardController < Admin::ApplicationController
 	    	format.json { render json: @dashboard }
 	    end
 	end
+
+
 end
