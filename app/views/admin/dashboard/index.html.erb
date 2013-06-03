@@ -128,7 +128,9 @@ $(function () {
 
                             <% if event.reminder == "sent"%>
                             <% else %>
-                                <a href="#" class="btn btn-large float-right">Send Notifications</a>
+                                <a href="<%= event.id %>" class="btn btn-large float-right send_notification">
+                                    Send Notifications
+                                </a>
                             <% end %>
 
                         </div>  
@@ -138,6 +140,9 @@ $(function () {
                             <% total_people_attending =  Attendee.where(:event_id => event.id).pluck(:seats).sum %>
                             <span><%= total_people_attending %> People Attending</span>
                             <span>Rs. <%= total_people_attending * Restaurant.find(event.restaurant_id).price%> Expected Earning</span>
+                            
+                            <!--<a href="#" class="btn btn-primary btn-small" >View Attendees</a>-->
+                            
                         </div>
                     </li>                    
                 <% end %>
@@ -149,3 +154,40 @@ $(function () {
 
 
 
+<script>
+    $(document).ready(function(){
+        $('.send_notification').click(function(event){
+            //event.preventDefault();
+
+            // Setting up the disabled state of the button
+            //$(this).addClass('disabled');
+            //$(this).text('Sending Reminders... ');
+            //$(this).append('<img src="/assets/loader.gif" alt="Loader">');
+
+            var host = window.location.host;
+            var url_to_submit_to = host + "/admin/event/send_notification";
+
+            var event_id = $(this).attr('href');
+            var data_to_send = "event_id=" + event_id;
+
+            $.ajax({
+              context: $(this),
+              url: "/admin/event/send_notification",
+              type: 'PUT',
+              data: data_to_send,
+              success: function(data){
+                //$(this).hide();
+                //$(this).prev('.notification_status');
+                //  $(this).prev('div.notification_status').html();
+                $(this).prev().prev().remove();
+                $(this).prev().before('<div class="notification_status green"><i class="icon-ok" style="padding-right:5px;"></i></div>');
+              },
+              error: function(data) {
+                alert("Something went wrong. Please contact Prashant.");
+              }
+            });
+
+            return false;
+        });
+    })
+</script>

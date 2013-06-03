@@ -97,5 +97,3 @@ gem "cancan"
 
 # Intercom 
 gem 'intercom-rails'
-
-

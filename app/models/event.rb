@@ -18,6 +18,7 @@
 #  token             :string(255)
 #  event_type        :string(255)
 #  city              :string(255)
+#  reminder          :string(255)
 #
 
 class Event < ActiveRecord::Base
