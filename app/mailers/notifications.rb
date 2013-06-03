@@ -19,7 +19,6 @@ class Notifications < ActionMailer::Base
 		mail(:to => email_address, :subject => email_subject)	
 	end
 
-<<<<<<< HEAD
 	def admin_private_event_created(event,restaurant)
 		@event = event
 		@restaurant = restaurant
@@ -30,11 +29,10 @@ class Notifications < ActionMailer::Base
 		else
 			email_subject = "[Public] event created: #{@event.event_name}"
 		end
-
 		
 		mail(:to => email_address, :subject => email_subject)	
+	end
 
-=======
 	def attendee_event_coming_up(users, event)
 		@event = event
 		@restaurant = Restaurant.find(@event.restaurant_id)
@@ -46,6 +44,6 @@ class Notifications < ActionMailer::Base
 			logger.debug "The email address is as follows: #{@user.email}"
 			mail(:to => @user.email, :subject => email_subject)	
 		end
->>>>>>> admin
 	end
+	
 end
