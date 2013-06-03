@@ -21,6 +21,8 @@
 #  oauth_token            :string(255)
 #  oauth_expires_at       :string(255)
 #  image                  :string(255)
+#  city                   :string(255)
+#  role                   :string(255)
 #
 
 require 'spec_helper'

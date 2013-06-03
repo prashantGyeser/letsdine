@@ -98,3 +98,5 @@ gem "cancan"
 # Intercom 
 gem 'intercom-rails'
 
+# SMS Integration - Twilio
+gem 'twilio-ruby'
