@@ -707,3 +707,54 @@
 {
 	display: none;
 }
+
+/**********************************************************************/
+/* Profile style */
+/**********************************************************************/
+.profile_header_image
+{
+	border: 15px solid #fff;
+	margin-bottom: 20px;
+
+	/* Box shadow*/
+	box-shadow: 0 0 8px #888888;
+	-moz-box-shadow: 0 0 8px #888888;
+	-webkit-box-shadow: 0 0 8px #888888;
+}
+.profile_picture
+{
+	margin-top: -130px;
+	margin-left: 20px;
+	border: 9px solid #fff;
+
+
+	/* Making the image circular */
+	width: 100%px;
+	height: 100%px;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+
+	/* Box shadow*/
+	box-shadow: 0 0 8px #888888;
+	-moz-box-shadow: 0 0 8px #888888;
+	-webkit-box-shadow: 0 0 8px #888888;	
+
+}
+.event_attending
+{
+	border: 1px solid #ccc;
+	margin-bottom: 10px;
+}
+.event_attending h4
+{
+	padding: 10px;
+}
+.other_people_attending
+{
+
+	border-top: 1px solid #ccc;
+	background: #eee;
+	padding: 10px;
+}
+/**********************************************************************/

@@ -3,6 +3,9 @@ Letsdine::Application.routes.draw do
 
   
 
+  resources :profiles
+
+
   get "all_event/index"
 
   # Routing for the admin interface. 
