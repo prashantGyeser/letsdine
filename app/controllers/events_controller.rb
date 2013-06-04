@@ -142,7 +142,8 @@ class EventsController < ApplicationController
     @restaurants = Restaurant.all
 
     @event.status = "open"
-
+    @event.user_id = current_user.id
+    
     invitee_emails = params[:event][:invitees].split(",")
 
     @event.city = params[:city]
