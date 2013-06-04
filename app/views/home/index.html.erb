@@ -66,7 +66,13 @@
 
                 <div class="span3">
                     
-                    <div class="event">                    
+                    <%# Todo: Right now I have setup the special field in the event table as a string value. This needs to be changed to a boolean. Right now using a boolean value seems to ruby interpret the values incorrectly when they are coming in the params. Need to figure out why this is happening and fix it. %>
+                    <% if event.special == "true" %>
+                        <div class="event_special">
+                    <% else %>
+                        <div class="event white_background">    
+                    <% end %>
+
                         <% if event.event_image.blank? %>
                             <%= image_tag restaurant.photo_url.to_s %>
                         <% else %>

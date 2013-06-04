@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130603102622) do
+ActiveRecord::Schema.define(:version => 20130604143239) do
 
   create_table "attendees", :force => true do |t|
     t.integer  "user_id"
@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(:version => 20130603102622) do
     t.string   "event_type"
     t.string   "city"
     t.string   "reminder"
+    t.string   "special"
   end
 
   create_table "groups", :force => true do |t|
