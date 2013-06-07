@@ -13,8 +13,7 @@ class Admin::EventController < Admin::ApplicationController
 		end
 		users = User.find(users_to_find)
 
-		# Todo: Uncomment this to send out emails to people that are attending an event
-		# result = Notifications.attendee_event_coming_up(users,@event).deliver
+		result = Notifications.attendee_event_coming_up(users,@event).deliver
 
 		@event.reminder = "sent"
 

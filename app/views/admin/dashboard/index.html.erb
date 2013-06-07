@@ -160,9 +160,9 @@ $(function () {
             //event.preventDefault();
 
             // Setting up the disabled state of the button
-            //$(this).addClass('disabled');
-            //$(this).text('Sending Reminders... ');
-            //$(this).append('<img src="/assets/loader.gif" alt="Loader">');
+            $(this).addClass('disabled');
+            $(this).text('Sending Reminders... ');
+            $(this).append('<img src="/assets/loader.gif" alt="Loader">');
 
             var host = window.location.host;
             var url_to_submit_to = host + "/admin/event/send_notification";
