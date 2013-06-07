@@ -58,6 +58,10 @@
 {
 	text-decoration: none;
 }
+.navbar
+{
+	margin-bottom: 0;
+}
 .navbar-inner
 {
 	background-color: #d3371a;
@@ -572,15 +576,7 @@
 {
 	margin-bottom: 10px;
 }
-.tagline-container
-{
 
-}
-.tagline
-{
-	margin-top: 10px;
-	color: #fff;
-}
 .event_type_radio
 {
 	margin-top: 10px;
