@@ -8,6 +8,7 @@
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
 #  restaurant_id :integer
+#  experience_id :integer
 #
 
 require 'spec_helper'

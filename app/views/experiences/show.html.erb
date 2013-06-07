@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @experience.name %>
+</p>
+
+<p>
+  <b>About:</b>
+  <%= @experience.about %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @experience.address %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @experience.city %>
+</p>
+
+<p>
+  <b>Cost:</b>
+  <%= @experience.cost %>
+</p>
+
+<p>
+  <b>Min pax:</b>
+  <%= @experience.min_pax %>
+</p>
+
+<p>
+  <b>Experience picture:</b>
+  <%= image_tag @experience.experience_picture_url(:thumb) if @experience.experience_picture? %>
+</p>
+
+
+<%= link_to 'Edit', edit_experience_path(@experience) %> |
+<%= link_to 'Back', experiences_path %>

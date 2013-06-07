@@ -73,7 +73,6 @@
       <div class="tab-content">
         <div class="tab-pane active" id="restaurants">
           <div class="field">
-            <%= f.label :restaurant_id %>
             <%# f.select :restaurant_id, Restaurant.all.collect {|x| [x.name, x.id]}, {}%>        
             <%= f.hidden_field :restaurant_id %>
 
@@ -117,7 +116,55 @@
 
             </div>    
         </div>
-        <div class="tab-pane" id="experiences">Dining Experiences</div>
+
+        <div class="tab-pane" id="experiences">
+          <div class="field">
+            <%# f.select :restaurant_id, Restaurant.all.collect {|x| [x.name, x.id]}, {}%>        
+            <%# f.hidden_field :experience_id %>
+
+            <div class="row-fluid">
+              <div class="span6">
+                <% @experiences.each do |experience| %>
+                  <div class="restaurantDetailsCotaniner restaurant_hidden <%= experience.city %>" id="<%= experience.id %>"> 
+                    <%= image_tag experience.experience_picture_url(:thumb).to_s %>
+                    <div class="restaurantDetails">
+                      <h4><%= experience.name %></h4>
+                      <p>
+                        <%= experience.about %>
+                      </p>
+                      <h4>Price: <%= experience.cost %> </h4>
+                      <a class="medium awesome blue">View menu</a>
+                    </div>
+                  </div>
+                <% end %>  
+                
+                
+              </div>
+
+              <div class="span6">
+                <div class="restaurantMenu">
+                    <% @experiences.each do |experience| %>
+                      <div class="menuItems" id="restaurant<%= experience.id %>menu">
+                        <% menu_items_categorized = experience.menu_items.group_by { |menu_item| menu_item.course_name} %>
+                        <% menu_items_categorized.each do |course_name, menu_items| %>
+                          <h4><%= course_name %></h4>
+                          <ul>
+                            <% menu_items.each do |menu_item| %>
+                              <li><%= menu_item.name %></li>
+                            <% end %>
+                          </ul>
+                        <% end %>
+                      </div>
+                  <% end %>                
+                  
+
+                  </div> 
+                </div>
+                
+              </div>
+
+            </div>  
+        </div>
       </div>
 
       

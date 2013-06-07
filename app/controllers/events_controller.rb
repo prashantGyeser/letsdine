@@ -117,7 +117,8 @@ class EventsController < ApplicationController
   def new
     @event = Event.new
     @restaurants = Restaurant.all
-
+    @experiences = Experience.all
+    
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @event }
@@ -134,6 +135,9 @@ class EventsController < ApplicationController
   def create
     @event = Event.new(params[:event])
     @restaurants = Restaurant.all
+    @experiences = Experience.all
+
+    logger.debug "The experiences are: #{@experiences.inspect}"
 
     @event.status = "open"
     @event.user_id = current_user.id

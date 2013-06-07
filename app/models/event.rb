@@ -19,6 +19,7 @@
 #  event_type        :string(255)
 #  city              :string(255)
 #  reminder          :string(255)
+#  special           :string(255)
 #
 
 class Event < ActiveRecord::Base
@@ -31,6 +32,7 @@ class Event < ActiveRecord::Base
   mount_uploader :event_image, EventImageUploader
 
   has_one :restaurant
+  has_one :experience
   has_many :attendee, :dependent => :destroy
 
   before_create :generate_token
