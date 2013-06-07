@@ -138,8 +138,19 @@ $(function () {
                         <div class="event-details-list">
                             <% total_people_attending = 0%>
                             <% total_people_attending = event.attendee.all.count %>
+                            <span>City: <%= event.city %></span>
+                            <span>Event date: <%= event.event_date.strftime("%d/%m/%Y") %> </span>
                             <span><%= total_people_attending %> People Attending</span>
                             <span>Rs. <%= total_people_attending * Restaurant.find(event.restaurant_id).price%> Expected Earning</span>
+                            <span>Max seats: <%= event.max_seats %> </span>
+                            <% if event.user_id.nil? %>
+                                <% event_creator = "Akhilesh" %>
+                            <% else %>
+                                <% event_creator = User.find(event.user_id).name %>    
+                            <% end %>
+                            
+                            <span>Created by: <%= event_creator %> </span>
+
                             
                             <!--<a href="#" class="btn btn-primary btn-small" >View Attendees</a>-->
                             
