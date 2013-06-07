@@ -14,13 +14,13 @@
 			<%= image_tag "Jennifer-Lawrence.jpg", :class => "profile_picture" %>
 		</div>
 		<div class="span5 offset1">
-			<h4>Jennifer Lawrence</h4>
+			<h4><%= @user.name %></h4>
 			<p>
-				For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.
+				<%= @profile.about %>
 			</p>
 		</div>
 		<div class="span4">
-			<a href="#" class="awesome large blue">Follow</a>
+			<a href="#" class="awesome large blue">Edit profile</a>
 		</div>
 	</div>
 </div>

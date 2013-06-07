@@ -8,7 +8,10 @@ class DashboardsController < ApplicationController
 
     @total_attendees_to_date = 0
 
+    
+
     @attendees.each do |attendee|
+
       if attendee.seats.nil?
         @total_attendees_to_date = @total_attendees_to_date + 1
       else
