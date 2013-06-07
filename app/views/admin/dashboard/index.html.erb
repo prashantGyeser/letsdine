@@ -176,11 +176,9 @@ $(function () {
               type: 'PUT',
               data: data_to_send,
               success: function(data){
-                //$(this).hide();
-                //$(this).prev('.notification_status');
-                //  $(this).prev('div.notification_status').html();
                 $(this).prev().prev().remove();
                 $(this).prev().before('<div class="notification_status green"><i class="icon-ok" style="padding-right:5px;"></i></div>');
+                $(this).hide();
               },
               error: function(data) {
                 alert("Something went wrong. Please contact Prashant.");
