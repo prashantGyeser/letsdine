@@ -209,9 +209,18 @@ a:hover
 			margin-right: 10px;
 		}
 	}
-	.user_info a
-	{
-		float: right;
+	.user_info 
+	{	
+
+		a
+		{
+			float: right;	
+			margin-left: 5px;
+		}
+		span
+		{
+			float: right;
+		}
 	}
 }
 /******************************************************************************/
