@@ -57,11 +57,10 @@
         <div class="container">
             <% eventCount = 0 %>
             <% @events.each do |event| %>
-                <% restaurant = Restaurant.find(event.restaurant_id) %>
-                <%# Checking if a new row has to be created %>
+                <% restaurant = event.restaurant %>
+
                 <% if ( eventCount%4 ) == 0 %>
                     <div class="row-fluid">  
-
                 <% end %>
 
                 <div class="span3">
@@ -91,7 +90,7 @@
                         
                         <h3><%= link_to event.event_name, event_path(event) %></h3>
                         <div class="seats_left_event_page">
-                            <% seats_left = event.max_seats - Attendee.where(:event_id => event.id).pluck(:seats).sum %>
+                            <% seats_left = event.max_seats - event.attendee.pluck(:seats).sum %>
                             <%= seats_left %> Seats left
                         </div>
                         <div class="eventDetails">
@@ -110,15 +109,15 @@
                             <%= truncate(event.event_description, :length => 100) %> <%= link_to "See event", event_path(event) %>
                         </p>
                         <div class="peopleAttending">
-                            <% event.attendee.first(4).each do |personAttending| %>
-                                <% user =  User.find(personAttending.user_id) %>
-                                <% if user.image.blank? %>
-                                    <%= image_tag "/assets/noProfilePic.png", "data-toggle" => "tooltip", :title => user.name, :class => "profilePic" %>    
+                            <% event.attendee.first(4).each do |attendee| %>
+                                <% if attendee.user.image.blank? %>
+                                    <%= image_tag "/assets/noProfilePic.png", "data-toggle" => "tooltip", :title => attendee.user.name, :class => "profilePic" %>    
                                 <% else %>
-                                    <%= image_tag user.image.to_s, "data-toggle" => "tooltip", :title => user.name, :class => "profilePic" %>    
+                                    <%= image_tag attendee.user.image.to_s, "data-toggle" => "tooltip", :title => attendee.user.name, :class => "profilePic" %>    
                                 <% end %>
-                              <% end %>
-                              <p>
+
+                            <% end %>
+                            <p>
                                 <%= link_to "See All People Attending", event_path(event) %>
                             </p>
                         </div>
