@@ -32,7 +32,9 @@
 					</ul>
 				</div>
 				<div class="span4 user_info">
-					<a href="#">Sign out</a>
+					<% if user_signed_in? %>
+						<%= link_to " Sign out", destroy_user_session_path %><span><%= current_user.name %> |</span>
+					<% end %>
 				</div>
 			</div>
 		</div>

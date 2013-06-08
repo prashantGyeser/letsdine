@@ -8,6 +8,12 @@ class Admin::ApplicationController < ApplicationController
 	private
 	def verify_admin
 		logger.debug "The current user is: #{current_user}"
-	  #redirect_to root_url unless current_user.try(:admin?)
+		user_trying_to_access = current_user
+		if user_trying_to_access.nil?
+			redirect_to root_url
+		else
+			redirect_to root_url unless current_user.role == "admin"
+		end
+		
 	end
 end
