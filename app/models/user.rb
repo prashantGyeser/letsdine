@@ -39,6 +39,8 @@ class User < ActiveRecord::Base
   # Sending out a welcome email after a person registers
   after_create :welcome_email
 
+  has_many :attendees
+
   def welcome_email
     logger.debug "It is getting to the welcome email part"
     logger.debug "The email is: #{email}"

@@ -97,3 +97,6 @@ gem "cancan"
 
 # Intercom 
 gem 'intercom-rails'
+
+# Updated json gem
+gem 'json', '~> 1.7.7'

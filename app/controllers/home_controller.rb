@@ -20,28 +20,19 @@ class HomeController < ApplicationController
   	@home_page = true
     @new_city_notification = NewCityNotification.new
     @events = []
-    @header_events = []
 
   	# Getting the last 6 event records 
   	if @user_city.nil?
       logger.debug "It is getting to the user city part"
   	else
-      @events = Event.limit(12)
-      @events = @events.where('event_type != ?', 'private')
-      @events = @events.where('status != ?', 'closed')
-      
-  		#@events = Event.find(:all, :conditions => ["event_type != 'private' AND status != 'closed'"], :limit => 8 )
       # Taken from http://stackoverflow.com/questions/9970300/how-to-chain-where-query-in-rails-3-active-record
-      @events = @events.where('city = ?', session[:city])
+      @events = Event.includes(:attendee => :user).where('event_type != ?', 'private').where('status != ?', 'closed').where('city = ?', session[:city]).limit(12)
   	end
-
-    logger.debug "The event nil check is:#{@events.nil?}"
-    logger.debug "The event empty check is:#{@events.empty?}"
 
   	if @events.empty?
       logger.debug "It is getting to the no events in city part"
-		@no_events_in_city = true  			
-	end
+		  @no_events_in_city = true  			
+    end
   	
   end
 end

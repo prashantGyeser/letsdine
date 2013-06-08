@@ -15,6 +15,7 @@ class Attendee < ActiveRecord::Base
   attr_accessible :event_id, :user_id, :seats, :phone_number
 
   belongs_to :event
+  belongs_to :user
 
   validates :phone_number, :presence => true
 
