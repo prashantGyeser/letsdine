@@ -5,15 +5,23 @@
 			<h2><%= city %></h2>
 				<table class="table table-striped">
 					<tr>
+						<th>Type</th>
 						<th>Name</th>
 						<th>Date</th>
+						<th>Restaurant</th>
 						<th>Seats Filled</th>
 						<th>Max Seats</th>
 					</tr>
 					<% events.each do |event| %>
+						<% restaurant = Restaurant.find(event.restaurant_id) %>
 					  	<tr>
+					  		<td><%= event.event_type %></td>
 					  		<td><%= event.event_name %></td>
 					  		<td><%= event.event_date %></td>
+					  		<td><%= restaurant.name %> </td>
+					  		<% total_attendees = Attendee.where("event_id = ?", event.id).pluck(:seats).sum %>
+					  		<td><%= total_attendees %> </td>
+					  		<td><%= event.max_seats %> </td>
 					  	</tr>
 				  	<% end %>
 				</table>

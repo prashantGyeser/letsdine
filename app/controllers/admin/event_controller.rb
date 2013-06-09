@@ -1,6 +1,8 @@
 class Admin::EventController < Admin::ApplicationController
 	def index
-		@event_list = Event.all.group_by(&:city)
+		#@event_list = Event.all.group_by(&:city)
+		@event_list = Event.find(:all, :order => "status").reverse
+		@event_list = @event_list.group_by(&:city)
 	end
 
 	def send_notification
