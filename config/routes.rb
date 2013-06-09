@@ -3,14 +3,17 @@ Letsdine::Application.routes.draw do
 
   
 
+  get "user/index"
+
   get "all_event/index"
 
   # Routing for the admin interface. 
   namespace :admin do 
     root to: "dashboard#index"
     get "dashboard/index"
-    get "event/index" => "event#index"
+    get "events" => "event#index"
     put "event/send_notification" => "event#send_notification"
+    get "users" => "user#index"
   end
 
   resources :new_city_notifications

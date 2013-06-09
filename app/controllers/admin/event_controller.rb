@@ -1,5 +1,6 @@
 class Admin::EventController < Admin::ApplicationController
 	def index
+		@event_list = Event.all.group_by(&:city)
 	end
 
 	def send_notification
