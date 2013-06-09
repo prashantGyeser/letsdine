@@ -2,8 +2,11 @@
     <%= javascript_include_tag "closed-event-overlay" %>
 <% end %>
 
+<% content_for :title, "#{@event.event_name} | LetsDine" %>
 
-<% restaurant = Restaurant.find(@event.restaurant_id) %>
+
+<%# restaurant = Restaurant.find(@event.restaurant_id) %>
+<% restaurant = @event.restaurant %>
 <input type="hidden" value=<%= @event.id %> id="event_id" >
 
 <div class="container">
@@ -42,11 +45,9 @@
             <%= @seats_left %>
             Seats Left
           <% end %>
-          
-
         </div> 
       </div>
-      
+
       <h3>Price: Rs <%= restaurant.price %></h3>
       <address>
         <strong><%= restaurant.name %></strong>
@@ -155,7 +156,7 @@
       <h3>People Attending</h3>
 
       <% @event.attendee.each do |personAttending| %>
-        <% user =  User.find(personAttending.user_id) %>
+        <% user = personAttending.user %>
         <% if user.image.blank? %>
             <%= image_tag "/assets/noProfilePic.png", "data-toggle" => "tooltip", :title => user.name, :class => "profilePic" %>    
         <% else %>
@@ -190,10 +191,10 @@
           <h3><%= link_to other_event.event_name, event_path(other_event) %></h3>
 
           <div class="seats_left_event_page">
-              <% if Attendee.where(:event_id => other_event.id).nil?%>
+              <% if @event.attendee.nil?%>
                   <% seats_left = other_event.max_seats %>    
               <% else %>
-                  <% seats_left = other_event.max_seats - Attendee.where(:event_id => other_event.id).pluck(:seats).sum %>
+                  <% seats_left = other_event.max_seats - @event.attendee.pluck(:seats).sum %>
               <% end %>
               <%= seats_left %> Seats left
           </div>

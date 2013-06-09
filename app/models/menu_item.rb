@@ -8,10 +8,12 @@
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
 #  restaurant_id :integer
+#  experience_id :integer
 #
 
 class MenuItem < ActiveRecord::Base
-  attr_accessible :name, :course_name, :restaurant_id
+  attr_accessible :name, :course_name, :restaurant_id, :experience_id
 
   belongs_to :restaurant
+  belongs_to :experience
 end

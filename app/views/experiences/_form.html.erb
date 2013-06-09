@@ -1,0 +1,61 @@
+
+<%= form_for(@experience, :html => {:multipart => true}) do |f| %>
+  <% if @experience.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@experience.errors.count, "error") %> prohibited this experience from being saved:</h2>
+
+      <ul>
+      <% @experience.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :about %><br />
+    <%= f.text_area :about, :rows => 5 %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :cost %><br />
+    <%= f.number_field :cost %>
+  </div>
+  <div class="field">
+    <%= f.label :min_pax %><br />
+    <%= f.number_field :min_pax %>
+  </div>
+  <div class="field">
+    <%= f.label :experience_picture %><br />
+    <%= f.file_field :experience_picture %>
+  </div>
+  <%= f.fields_for :menu_items do |builder|%>
+    <div class="field">
+      <%= builder.label :name, "Menu Item Name" %>
+      <%= builder.text_area :name, :rows => 3 %>
+      <%= builder.hidden_field :_destroy %>
+      <%= link_to_function "remove", "remove_fields(this)" %>
+    </div>
+    <div class="field">
+      <%= builder.label :course_name, "Menu Item type" %>
+      <%= builder.text_field :course_name, :rows => 3 %>
+      <%= builder.hidden_field :_destroy %>
+      <%= link_to_function "remove", "remove_fields(this)" %>
+    </div>
+  <% end %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>

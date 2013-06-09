@@ -98,5 +98,5 @@ gem "cancan"
 # Intercom 
 gem 'intercom-rails'
 
-# SMS Integration - Twilio
-gem 'twilio-ruby'
+# Updated json gem
+gem 'json', '~> 1.7.7'

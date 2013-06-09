@@ -1,3 +1,6 @@
+/**********************************************************************/
+/* Common styles */
+/**********************************************************************/
 #error_explanation
 {
 	color: #d10000;
@@ -16,6 +19,17 @@
 {
 	margin-top: 10px;
 }
+.special
+{
+	background-color: #292929;
+}
+.white_background
+{
+	background: #fff;
+}
+/**********************************************************************/
+/* Login style */
+/**********************************************************************/
 .loginDetails
 {
 	margin-top: 10px;
@@ -44,6 +58,10 @@
 {
 	text-decoration: none;
 }
+.navbar
+{
+	margin-bottom: 0;
+}
 .navbar-inner
 {
 	background-color: #d3371a;
@@ -58,7 +76,6 @@
 }
 .masthead
 {
-	margin-top: 150px;
 	background: url("/assets/headerBG.png");
 }
 .logo
@@ -242,7 +259,9 @@
 {
 	
 }
-
+/**********************************************************************/
+/* Event box styles */
+/**********************************************************************/
 .event {
   width: 90%;
   height: auto;
@@ -301,7 +320,40 @@
 {
 	margin-top: 10px;
 }
+/* Special event box styling */
+.event_special {
+  width: 90%;
+  height: auto;
+  margin: 20px auto;
+  padding: 20px;
+  position: relative;
+  background: #292929;
+  border: 1px solid #181818;
+  border-radius: 3px; }
 
+.event_special::before,
+.event_special::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 2px;
+  right: 2px;
+  top: 0;
+  z-index: -1;
+  background: #292929;
+  border: 1px solid #181818; }
+
+.event_special::after {
+  left: 4px;
+  right: 4px;
+  bottom: -5px;
+  z-index: -2;
+  box-shadow: 0 8px 8px -5px rgba(0, 0, 0, 0.3); }
+.event_special p 
+{
+	color: #fff;
+}
+/**********************************************************************/
 .detail
 {
 	color: #ccc;
@@ -524,15 +576,7 @@
 {
 	margin-bottom: 10px;
 }
-.tagline-container
-{
 
-}
-.tagline
-{
-	margin-top: 10px;
-	color: #fff;
-}
 .event_type_radio
 {
 	margin-top: 10px;
@@ -707,3 +751,54 @@
 {
 	display: none;
 }
+
+/**********************************************************************/
+/* Profile style */
+/**********************************************************************/
+.profile_header_image
+{
+	border: 15px solid #fff;
+	margin-bottom: 20px;
+
+	/* Box shadow*/
+	box-shadow: 0 0 8px #888888;
+	-moz-box-shadow: 0 0 8px #888888;
+	-webkit-box-shadow: 0 0 8px #888888;
+}
+.profile_picture
+{
+	margin-top: -130px;
+	margin-left: 20px;
+	border: 9px solid #fff;
+
+
+	/* Making the image circular */
+	width: 100%px;
+	height: 100%px;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+
+	/* Box shadow*/
+	box-shadow: 0 0 8px #888888;
+	-moz-box-shadow: 0 0 8px #888888;
+	-webkit-box-shadow: 0 0 8px #888888;	
+
+}
+.event_attending
+{
+	border: 1px solid #ccc;
+	margin-bottom: 10px;
+}
+.event_attending h4
+{
+	padding: 10px;
+}
+.other_people_attending
+{
+
+	border-top: 1px solid #ccc;
+	background: #eee;
+	padding: 10px;
+}
+/**********************************************************************/

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130530045216) do
+ActiveRecord::Schema.define(:version => 20130607165622) do
 
   create_table "attendees", :force => true do |t|
     t.integer  "user_id"
@@ -60,6 +60,19 @@ ActiveRecord::Schema.define(:version => 20130530045216) do
     t.string   "event_type"
     t.string   "city"
     t.string   "reminder"
+    t.string   "special"
+  end
+
+  create_table "experiences", :force => true do |t|
+    t.string   "name"
+    t.text     "about"
+    t.string   "address"
+    t.string   "city"
+    t.integer  "cost"
+    t.integer  "min_pax"
+    t.string   "experience_picture"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
   end
 
   create_table "groups", :force => true do |t|
@@ -85,11 +98,20 @@ ActiveRecord::Schema.define(:version => 20130530045216) do
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
     t.integer  "restaurant_id"
+    t.integer  "experience_id"
   end
 
   create_table "new_city_notifications", :force => true do |t|
     t.string   "city"
     t.string   "email"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "profiles", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "picture"
+    t.text     "about"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

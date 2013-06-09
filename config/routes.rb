@@ -1,9 +1,7 @@
 Letsdine::Application.routes.draw do
-
-
   
-
-  get "user/index"
+  resources :experiences
+  resources :profiles
 
   get "all_event/index"
 
