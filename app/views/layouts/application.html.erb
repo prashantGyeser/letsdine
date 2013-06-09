@@ -1,7 +1,17 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-	<title>LetsDine</title>
+	
+	<% if (yield :title).empty?%>
+		<% if session[:city].empty? %>
+			<title>Things to do and people to meetup up with</title>	
+		<% else %>
+			<title>Things to do in <%= session[:city] %></title>
+		<% end %>	
+	<% else %>
+		<title><%= yield :title %></title>		
+	<% end %>
+	
 
 	<%= stylesheet_link_tag    "application", :media => "all" %>
 	<%= stylesheet_link_tag    "bootstrap", :media => "all" %>
@@ -11,15 +21,10 @@
 	<%= stylesheet_link_tag    "custom", :media => "all" %>
 	<%= stylesheet_link_tag    "datepicker", :media => "all" %>
 	<%= stylesheet_link_tag    "bootstrap-timepicker", :media => "all" %>
-	<%= stylesheet_link_tag    "zoomflow", :media => "all" %>
 
 	<%= javascript_include_tag "application" %>
 	<%= javascript_include_tag "jquery-1.9.1" %>
 	<%= javascript_include_tag "bootstrap" %>
-	<%= javascript_include_tag "jquery.bootstrap.wizard" %>
-	<%= javascript_include_tag "bootstrap-datepicker" %>
-	<%= javascript_include_tag "bootstrap-timepicker" %>
-	<%= javascript_include_tag "zoomflow/zoomflow.dev" %>
 	<%= javascript_include_tag "closed-event-overlay" %>
 	<%= yield :javascript %>	
 	

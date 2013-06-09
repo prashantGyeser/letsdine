@@ -2,6 +2,9 @@
     <%= javascript_include_tag "closed-event-overlay" %>
 <% end %>
 
+<% content_for :title, "#{@event.event_name} | LetsDine" %>
+
+
 <%# restaurant = Restaurant.find(@event.restaurant_id) %>
 <% restaurant = @event.restaurant %>
 <input type="hidden" value=<%= @event.id %> id="event_id" >
