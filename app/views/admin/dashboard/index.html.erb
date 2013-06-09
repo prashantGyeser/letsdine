@@ -103,62 +103,65 @@ $(function () {
 <div class="container">
     <div class="row-fluid">
         <div class="span12">
-            <ul class="event_list">
-                <% @events.each do |event| %>
-                    <li>
-                        <div class="list-item-container">
+            <% @event_list.each do |city,events| %>
+                <h3><%= city %></h3>
+                <ul class="event_list">
+                    <% events.each do |event| %>
+                        <li>
+                            <div class="list-item-container">
 
-                            <% if event.reminder == "sent" %>
-                                <div class="notification_status green">
-                                <i class="icon-ok"></i>    
-                            <% else %>
-                                <div class="notification_status grey">
-                                <i class="icon-envelope-alt"></i>        
-                            <% end %>
-                                </div>
-
-                            <div class="eventDetails">
-                                <%= link_to event.event_name, event_path(event) %>
-                                <% if event.event_type == 'private' %>
-                                    <span class="red">Private</span>        
+                                <% if event.reminder == "sent" %>
+                                    <div class="notification_status green">
+                                    <i class="icon-ok"></i>    
                                 <% else %>
-                                    <span class="green">Public</span>    
+                                    <div class="notification_status grey">
+                                    <i class="icon-envelope-alt"></i>        
                                 <% end %>
-                            </div> 
+                                    </div>
 
-                            <% if event.reminder == "sent"%>
-                            <% else %>
-                                <a href="<%= event.id %>" class="btn btn-large float-right send_notification">
-                                    Send Notifications
-                                </a>
-                            <% end %>
+                                <div class="eventDetails">
+                                    <%= link_to event.event_name, event_path(event) %>
+                                    <% if event.event_type == 'private' %>
+                                        <span class="red">Private</span>        
+                                    <% else %>
+                                        <span class="green">Public</span>    
+                                    <% end %>
+                                </div> 
 
-                        </div>  
+                                <% if event.reminder == "sent"%>
+                                <% else %>
+                                    <a href="<%= event.id %>" class="btn btn-large float-right send_notification">
+                                        Send Notifications
+                                    </a>
+                                <% end %>
 
-                        <div class="event-details-list">
-                            <% total_people_attending = 0%>
-                            <% total_people_attending =  Attendee.where(:event_id => event.id).pluck(:seats).sum %>
-                            <% if event.user_id.nil? %>
-                                <% event_creator = "Akhilesh" %>
-                            <% else %>
-                                <% event_creator = User.find(event.user_id).name %>    
-                            <% end %>
-                            
-                            <span>City: <%= event.city %></span>
-                            <span>Event date: <%= event.event_date.strftime("%d/%m/%Y") %> </span>
-                            <span><%= total_people_attending %> People Attending</span>
-                            <span>Rs. <%= total_people_attending * Restaurant.find(event.restaurant_id).price%> Expected Earning</span>
-                            <span>Max seats: <%= event.max_seats %> </span>
-                            <span>Created by: <%= event_creator %> </span>
+                            </div>  
 
-                            
-                            <!--<a href="#" class="btn btn-primary btn-small" >View Attendees</a>-->
-                            
-                        </div>
-                    </li>                    
-                <% end %>
+                            <div class="event-details-list">
+                                <% total_people_attending = 0%>
+                                <% total_people_attending =  Attendee.where(:event_id => event.id).pluck(:seats).sum %>
+                                <% if event.user_id.nil? %>
+                                    <% event_creator = "Akhilesh" %>
+                                <% else %>
+                                    <% event_creator = User.find(event.user_id).name %>    
+                                <% end %>
+                                
+                                <span>City: <%= event.city %></span>
+                                <span>Event date: <%= event.event_date.strftime("%d/%m/%Y") %> </span>
+                                <span><%= total_people_attending %> People Attending</span>
+                                <span>Rs. <%= total_people_attending * Restaurant.find(event.restaurant_id).price%> Expected Earning</span>
+                                <span>Max seats: <%= event.max_seats %> </span>
+                                <span>Created by: <%= event_creator %> </span>
 
-            </ul>
+                                
+                                <!--<a href="#" class="btn btn-primary btn-small" >View Attendees</a>-->
+                                
+                            </div>
+                        </li>                    
+                    <% end %>
+
+                </ul>
+            <% end %>
         </div>
     </div>
 </div>
