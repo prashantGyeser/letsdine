@@ -117,16 +117,17 @@ $(function () {
                                     <div class="notification_status grey">
                                     <i class="icon-envelope-alt"></i>
                                 <% end %>
-                                    </div>
+                                    </div> 
 
                                 <div class="eventDetails">
                                     <%= link_to event.event_name, event_path(event) %>
-                                    <% if event.event_type == 'private' %>
-                                        <span class="red">Private</span>        
+                                    <% if event.event_type = "public" %>
+                                        <span class="green">Public</span> 
                                     <% else %>
-                                        <span class="green">Public</span>    
+                                        <span class="red">Private</span> 
                                     <% end %>
-                                </div> 
+                                    
+                                </div>
 
                                 <% if event.reminder == "sent"%>
                                 <% else %>
@@ -137,30 +138,51 @@ $(function () {
 
                             </div>  
 
-                            <div class="event-details-list">
-                                <% total_people_attending = 0%>
-                                <% total_people_attending =  Attendee.where(:event_id => event.id).pluck(:seats).sum %>
-                                <% if event.user_id.nil? %>
-                                    <% event_creator = "Akhilesh" %>
-                                <% else %>
-                                    <% event_creator = User.find(event.user_id).name %>    
-                                <% end %>
-                                
-                                <span>City: <%= event.city %></span>
-                                <span>Event date: <%= event.event_date.strftime("%d/%m/%Y") %> </span>
-                                <span><%= total_people_attending %> People Attending</span>
-                                <span>Rs. <%= total_people_attending * Restaurant.find(event.restaurant_id).price%> Expected Earning</span>
-                                <span>Max seats: <%= event.max_seats %> </span>
-                                <span>Created by: <%= event_creator %> </span>
+                        <div class="event-details-list">
+                            <% total_people_attending = 0%>
+                            <% total_people_attending =  Attendee.where(:event_id => event.id).pluck(:seats).sum %>
+                            <% if event.user_id.nil? %>
+                                <% event_creator = "Akhilesh" %>
+                            <% else %>
+                                <% event_creator = User.find(event.user_id).name %>    
+                            <% end %>
+                            
+                            <span><a href="#attendeeModal<%= event.id%>" class="btn" data-toggle="modal">View Attendees</a></span>
+                            <span>Event date: <%= event.event_date.strftime("%d/%m/%Y") %> </span>
+                            <span><%= total_people_attending %> People Attending</span>
+                            <span>Rs. <%= total_people_attending * Restaurant.find(event.restaurant_id).price%> Expected Earning</span>
+                            <span>Max seats: <%= event.max_seats %> </span>
+                            <span>Created by: <%= event_creator %> </span>
 
-                                
-                                <!--<a href="#" class="btn btn-primary btn-small" >View Attendees</a>-->
-                                
+                            <!-- Modal -->
+                            <div id="attendeeModal<%= event.id%>" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="<%= event.event_name%> Attendees" aria-hidden="true">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h3 id="myModalLabel"><%= event.event_name %> Attendees</h3>
+                              </div>
+                              <div class="modal-body">
+                                <% attendees = Attendee.where("event_id = ?", event.id) %>
+                                <ul>
+                                    <% attendees.each do |attedee| %>
+                                        <% user = User.find(attedee.user_id) %>
+                                        <li>
+                                            <%= user.name %> - <%= attedee.phone_number %>
+                                        </li>
+                                    <% end %>
+                                    
+                                </ul>
+                              </div>
+                              <div class="modal-footer">
+                                <button class="btn btn-large" data-dismiss="modal" aria-hidden="true">Close</button>
+                              </div>
                             </div>
-                        </li>                    
-                    <% end %>
+                            <!--<a href="#" class="btn btn-primary btn-small" >View Attendees</a>-->
+                            
+                        </div>
+                    </li>                    
+                <% end %>
 
-                </ul>
+            </ul>
             <% end %>
         </div>
     </div>
