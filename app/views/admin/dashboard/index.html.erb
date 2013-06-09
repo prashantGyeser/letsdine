@@ -144,14 +144,35 @@ $(function () {
                                 <% event_creator = User.find(event.user_id).name %>    
                             <% end %>
                             
-                            <span>City: <%= event.city %></span>
+                            <span><a href="#attendeeModal<%= event.id%>" class="btn" data-toggle="modal">View Attendees</a></span>
                             <span>Event date: <%= event.event_date.strftime("%d/%m/%Y") %> </span>
                             <span><%= total_people_attending %> People Attending</span>
                             <span>Rs. <%= total_people_attending * Restaurant.find(event.restaurant_id).price%> Expected Earning</span>
                             <span>Max seats: <%= event.max_seats %> </span>
                             <span>Created by: <%= event_creator %> </span>
 
-                            
+                            <!-- Modal -->
+                            <div id="attendeeModal<%= event.id%>" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="<%= event.event_name%> Attendees" aria-hidden="true">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h3 id="myModalLabel"><%= event.event_name %> Attendees</h3>
+                              </div>
+                              <div class="modal-body">
+                                <% attendees = Attendee.where("event_id = ?", event.id) %>
+                                <ul>
+                                    <% attendees.each do |attedee| %>
+                                        <% user = User.find(attedee.user_id) %>
+                                        <li>
+                                            <%= user.name %> - <%= attedee.phone_number %>
+                                        </li>
+                                    <% end %>
+                                    
+                                </ul>
+                              </div>
+                              <div class="modal-footer">
+                                <button class="btn btn-large" data-dismiss="modal" aria-hidden="true">Close</button>
+                              </div>
+                            </div>
                             <!--<a href="#" class="btn btn-primary btn-small" >View Attendees</a>-->
                             
                         </div>
