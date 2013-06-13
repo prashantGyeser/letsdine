@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
 	
-	<% if (yield :title).blank? %>
+	<% if session[:city].nil? %>
+		<% session[:city] = "" %>
+	<% end %>
+
+	<% if (yield :title).empty? %>
 		<% if session[:city].empty? %>
 			<title>Things to do and people to meetup up with</title>	
 		<% else %>
