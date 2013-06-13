@@ -5,8 +5,14 @@ class HomeController < ApplicationController
         @user_city = params[:city]
         session[:city] = params[:city]
       else
-        @user_city = request.location.city
-        session[:city] = request.location.city
+        
+        if request.location.city.nil?
+          
+        else
+          @user_city = request.location.city  
+          session[:city] = request.location.city
+        end
+        
       end
     elsif params[:city]
       @user_city = params[:city]
