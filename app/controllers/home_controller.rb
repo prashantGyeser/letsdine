@@ -6,7 +6,7 @@ class HomeController < ApplicationController
         session[:city] = params[:city]
       else
         
-        if request.location.city.nil?
+        if request.location.nil?
           
         else
           @user_city = request.location.city  
@@ -28,7 +28,7 @@ class HomeController < ApplicationController
 
   	# Getting the last 6 event records 
   	if @user_city.nil?
-      logger.debug "It is getting to the user city part"
+      
   	else
       # Taken from http://stackoverflow.com/questions/9970300/how-to-chain-where-query-in-rails-3-active-record
       @events = Event.includes(:restaurant).includes(:attendee => :user).where('event_type != ?', 'private').where('status != ?', 'closed').where('city = ?', session[:city]).limit(12)
