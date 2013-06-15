@@ -242,10 +242,10 @@
   </div>
   <div class="modal-body">
     <p>Inivite a friend and get a discount on <a href="www.flatpebble.com/">flatpebble</a> for personal photo prints and photobooks</p>
-    <%# if @just_joined == true %>
+    <% if @just_joined == true %>
       <%= render :partial => "user_invites/form",
                       :locals => {:user_id => current_user.id, :event_id => @event.id} %>  
-    <%# end %>
+    <% end %>
     <div id="offer">
       Use the following coupon code on the flatpebble site to redeem this offer.
       <h4>FP15</h4>
@@ -257,7 +257,7 @@
 </div>
 
 
-<%# if @just_joined == true %>
+<% if @just_joined == true %>
   
   <script>
     $(document).ready(function(){
@@ -282,7 +282,7 @@
     });
   </script>  
   
-<%# end %>
+<% end %>
 
 <script>
   $(document).ready(function(){
