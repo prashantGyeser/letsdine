@@ -241,12 +241,15 @@
     <h3>Invite your friends</h3>
   </div>
   <div class="modal-body">
-
-    <% if @just_joined == true %>
+    <p>Inivite a friend and get a discount on <a href="www.flatpebble.com/">flatpebble</a> for personal photo prints and photobooks</p>
+    <%# if @just_joined == true %>
       <%= render :partial => "user_invites/form",
                       :locals => {:user_id => current_user.id, :event_id => @event.id} %>  
-    <% end %>
-    
+    <%# end %>
+    <div id="offer">
+      Use the following coupon code on the flatpebble site to redeem this offer.
+      <h4>FP15</h4>
+    </div>
   </div>
   <div class="modal-footer">
     <a href="#" class="large awesome green" id="friends_invite">Invite friends</a>
@@ -254,10 +257,11 @@
 </div>
 
 
-<% if @just_joined == true %>
+<%# if @just_joined == true %>
   
   <script>
     $(document).ready(function(){
+      $('#offer').hide();
       $('#communication').modal('show');
       $('#friends_invite').click(function() {
         var valuesToSubmit = $('#new_user_invite').serialize();
@@ -268,7 +272,9 @@
           type: "POST",
           dataType: "JSON"
         }).success(function(json){
-          $('#communication').modal('hide');
+          $('#communication').find('form').hide();
+          $('#offer').show();
+          //$('#communication').modal('hide');
         });
         
         return false;
@@ -276,7 +282,7 @@
     });
   </script>  
   
-<% end %>
+<%# end %>
 
 <script>
   $(document).ready(function(){
