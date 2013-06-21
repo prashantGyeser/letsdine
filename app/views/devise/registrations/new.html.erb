@@ -33,15 +33,10 @@
 				  	<%= f.label :interests %>
 				  	<%# Todo: Fix the issue where there is an empty {} in the select option below  %>
 				  	<%= f.fields_for :interests do |builder| %>
-					  <%# builder.collection_select :user, :interest, :id, :name, multiple: true%>
-					  <%# builder.select("user", "interests", [["Foodie","Foodie"],["Entrepreneurship","Entrepreneurship"],["Photography","Photography"],["Technology","Technology"]],{:multiple=>"multiple", :size=>5}) %>
 					  <% optionsHash = { "Foodie" => "Foodie","Entrepreneurship" => "Entrepreneurship","Photography" => "Photography", "Technology" => "Technology"} %>
 					  <%= builder.select(:name, optionsHash,{},{:multiple=>"multiple", :size=>5}) %>
-					  <%# select_tag(:name, options_for_select([["Foodie","Foodie"],["Entrepreneurship","Entrepreneurship"],["Photography","Photography"],["Technology","Technology"]])) %>
 					<% end %>
 
-			  		<%# select("user", "interests", [["Foodie","Foodie"],["Entrepreneurship","Entrepreneurship"],["Photography","Photography"],["Technology","Technology"]],{},{:multiple=>"multiple", :size=>5}) %>
-				  	
 				  </div>
 
 				  <div><%= f.label :email %>
