@@ -37,12 +37,12 @@ class Event < ActiveRecord::Base
 
   before_create :generate_token
 
+  extend FriendlyId
+  friendly_id :event_name, use: [:slugged, :history]
+
   protected
 
   def generate_token
-
-  	logger.debug "The event type is:#{self.event_type}"
-  	logger.debug "The event type is fdjkhgkdf:#{event_type}"
   	
   	if self.event_type == "private"
 	  	self.token = loop do
