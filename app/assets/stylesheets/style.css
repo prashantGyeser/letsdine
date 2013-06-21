@@ -567,7 +567,10 @@
   bottom: -5px;
   z-index: -2;
   box-shadow: 0 8px 8px -5px rgba(0, 0, 0, 0.3); }
-
+#interests_select
+{
+	margin-bottom: 10px;
+}
 .zoomflow
 {
 	margin-top: -200px;

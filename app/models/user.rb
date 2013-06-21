@@ -33,22 +33,22 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :city
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :name,  :interests_attributes, :city
   # attr_accessible :title, :body
 
   # Sending out a welcome email after a person registers
-  after_create :welcome_email
+  #after_create :welcome_email
 
   has_many :attendees
+  has_many :interests, :dependent => :destroy
+  
+  accepts_nested_attributes_for :interests, :allow_destroy => true
 
   def welcome_email
-    logger.debug "It is getting to the welcome email part"
-    logger.debug "The email is: #{email}"
     WelcomeMailer.welcome(email, name).deliver  
   end
 
   def self.from_omniauth(auth)
-    logger.debug "the content of the auth is: #{auth.inspect}"
   	where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
       logger.debug user.inspect
   		user.provider = auth.provider
@@ -61,6 +61,7 @@ class User < ActiveRecord::Base
   		user.save!
   	end
   end
+
 
   def self.new_with_session(params, session)
     if session["devise.user_attributes"]
