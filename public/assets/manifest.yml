@@ -75,6 +75,8 @@ application.js: application-750c0028d42ce9aaa76173e6f40e942a.js
 application/index.js: application-750c0028d42ce9aaa76173e6f40e942a.js
 bootstrap-datepicker.js: bootstrap-datepicker-ea267d0f4b58e4c693968c4210e25490.js
 bootstrap-datepicker/index.js: bootstrap-datepicker-ea267d0f4b58e4c693968c4210e25490.js
+bootstrap-multiselect.js: bootstrap-multiselect-1343b2f9849c0ea8afd0c2ef933c132e.js
+bootstrap-multiselect/index.js: bootstrap-multiselect-1343b2f9849c0ea8afd0c2ef933c132e.js
 bootstrap-timepicker.js: bootstrap-timepicker-821328b7b6f5603a36ba112e7c3f8042.js
 bootstrap-timepicker/index.js: bootstrap-timepicker-821328b7b6f5603a36ba112e7c3f8042.js
 bootstrap.js: bootstrap-c548b36591d6d4b5e206961092e41eb8.js
