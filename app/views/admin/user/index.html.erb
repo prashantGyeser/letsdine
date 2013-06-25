@@ -4,10 +4,16 @@
 			<% @user_list.each do |city,users| %>
 			<h2><%= city %></h2>
 				<table class="table table-striped">
+					<tr>
+						<th>Name</th>
+						<th>Email</th>
+						<th>Events Attended</th>
+					</tr>
 					<% users.each do |user| %>
 					  	<tr>
 					  		<td><%= user.name %></td>
 					  		<td><%= user.email %></td>
+					  		<td><%= user.attendees.count %></td>
 					  	</tr>
 				  	<% end %>
 				</table>
