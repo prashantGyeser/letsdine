@@ -33,7 +33,7 @@
 				  	<%= f.label :interests %>
 				  	<%# Todo: Fix the issue where there is an empty {} in the select option below  %>
 				  	<%= f.fields_for :interests do |builder| %>
-					  <% optionsHash = { "Foodie" => "Foodie","Entrepreneurship" => "Entrepreneurship","Photography" => "Photography", "Technology" => "Technology"} %>
+					  <% optionsHash = { "ArtAndCulture" => "Art & Culture","EducationAndLearning" => "Education & Learning","HealthAndFitness" => "Health & Fitness", "FoodAndDrink" => "Food & Drink","HobbiesAndCrafts" => "Hobbies & Crafts","MusicAndMovies" => "Music & Movies","EducationAndLearning" => "Education & Learning","OutdoorAndAdventure" => "Outdoor & Adventure","Photography" => "Photography","SportsAndRecreation" => "Sports & Recreation","EntrepreneursAndBusinessNetworking" => "Entrepreneurs & Business Networking","Technology" => "Technology"} %>
 					  <%= builder.select(:name, optionsHash,{},{:multiple=>"multiple", :size=>5}) %>
 					<% end %>
 
