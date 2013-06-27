@@ -28,10 +28,6 @@ Letsdine::Application.routes.draw do
 
   resources :groups
 
-
-  resources :dashboards
-
-
   resources :event_notify_emails
 
 

@@ -166,7 +166,7 @@ $(function () {
                                     <% attendees.each do |attedee| %>
                                         <% user = User.find(attedee.user_id) %>
                                         <li>
-                                            <%= user.name %> - <%= attedee.phone_number %>
+                                            <%= user.name %> - Phone number: <%= attedee.phone_number %> - Seats: <%= attedee.seats %> 
                                         </li>
                                     <% end %>
                                     
