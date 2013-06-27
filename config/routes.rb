@@ -1,5 +1,7 @@
 Letsdine::Application.routes.draw do
   
+  get "restaurants/index"
+
   resources :experiences
   resources :profiles
 
@@ -10,6 +12,7 @@ Letsdine::Application.routes.draw do
     root to: "dashboard#index"
     get "dashboard/index"
     get "events" => "event#index"
+    get "restaurants" => "restaurants#index"
     put "event/send_notification" => "event#send_notification"
     get "users" => "user#index"
   end

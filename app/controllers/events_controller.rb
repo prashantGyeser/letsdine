@@ -106,7 +106,7 @@ class EventsController < ApplicationController
   # GET /events/new.json
   def new
     @event = Event.new
-    @restaurants = Restaurant.all
+    @restaurants = Restaurant.where("status != ?", 'hidden').all
     @experiences = Experience.all
     
     respond_to do |format|
