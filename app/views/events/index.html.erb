@@ -15,9 +15,9 @@
                 <div class="span3">
                     <div class="event">
                         <% if event.event_image.blank? %>
-                            <%= image_tag restaurant.photo_url.to_s %>
+                            <%= image_tag restaurant.photo_url(:large_scaled).to_s %>
                         <% else %>
-                            <%= image_tag event.event_image_url(:list).to_s %>
+                            <%= image_tag event.event_image_url(:large_scaled).to_s %>
                         <% end %>
                         <% if event.status == 'closed' || event.status == "full" %>
                             <div class="closed">
