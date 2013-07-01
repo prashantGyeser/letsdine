@@ -312,9 +312,9 @@
 	color: #fff;
 	padding-top: 20px;
 }
-.event h3
+.event h4
 {
-	/*color: #dd4124;*/
+	margin-bottom: 20px;
 }
 .event p
 {
@@ -749,6 +749,7 @@
 	color: #fff;
 	padding: 10px;
 	font-weight: bold;
+	margin-top: 20px;
 }
 .restaurant_hidden
 {
