@@ -28,7 +28,7 @@
                                 <% end %>
                             </div>    
                         <% end %>
-                        <h3><%= link_to event.event_name, event_path(event) %></h3>
+                        <h4><%= link_to event.event_name, event_path(event) %></h4>
                         <div class="seats_left_event_page">
                             <% if event.attendee.nil? %>
                                 <% seats_left = event.max_seats %>    
