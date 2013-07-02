@@ -1,5 +1,7 @@
 Letsdine::Application.routes.draw do
   
+  get "invites/index"
+
   get "restaurants/index"
 
   resources :experiences
@@ -15,6 +17,7 @@ Letsdine::Application.routes.draw do
     get "restaurants" => "restaurants#index"
     put "event/send_notification" => "event#send_notification"
     get "users" => "user#index"
+    get "invites" => "invites#index"
   end
 
   resources :new_city_notifications
