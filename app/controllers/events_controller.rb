@@ -144,8 +144,8 @@ class EventsController < ApplicationController
           InviteMailer.invite(invitee_emails, current_user.name, @event).deliver  
         end
         
-        Notifications.event_created(current_user.email, @event, Restaurant.find(@event.restaurant_id)).deliver
-        Notifications.admin_private_event_created(@event, Restaurant.find(@event.restaurant_id)).deliver
+        #Notifications.event_created(current_user.email, @event, Restaurant.find(@event.restaurant_id)).deliver
+        #Notifications.admin_private_event_created(@event, Restaurant.find(@event.restaurant_id)).deliver
 
         if current_user.oauth_token.nil?
         else
