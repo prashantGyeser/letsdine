@@ -57,7 +57,7 @@
       
       
       <p>
-        <%= @event.event_description %>      
+        <%= simple_format(@event.event_description) %>      
       </p>
 
       <% if @event.status == "closed" || @event.status == "full" %>
