@@ -9,6 +9,7 @@ gem 'pg'
 gem 'carrierwave'
 gem 'fog'
 gem 'rmagick'
+#gem "mini_magick"
 gem 'devise'
 gem 'omniauth-facebook'
 gem 'simple-navigation'
