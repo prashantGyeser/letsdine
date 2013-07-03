@@ -8,8 +8,8 @@ gem 'rails', '3.2.13'
 gem 'pg'
 gem 'carrierwave'
 gem 'fog'
-#gem 'rmagick'
-gem "mini_magick"
+gem 'rmagick'
+#gem "mini_magick"
 gem 'devise'
 gem 'omniauth-facebook'
 gem 'simple-navigation'
