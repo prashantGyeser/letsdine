@@ -9,12 +9,13 @@
 	<%= stylesheet_link_tag    "bootstrap-responsive", :media => "all" %>
 	<%= stylesheet_link_tag    "admin/admin", :media => "all" %>
 	<link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
-	
+	<%= yield :stylesheet %>	
+
 	<%= javascript_include_tag "admin/application" %>
 	<%= javascript_include_tag "jquery-1.9.1" %>
 	<%= javascript_include_tag "bootstrap" %>
 	<%= javascript_include_tag "admin/highcharts" %>
-	
+	<%= yield :javascript %>	
 	
 
 	<%= csrf_meta_tags %>

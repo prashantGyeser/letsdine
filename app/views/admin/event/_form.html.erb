@@ -1,0 +1,215 @@
+<%= form_for(@event, :html => {:multipart => true}) do |f| %>
+  <% if @event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+      <ul>
+      <% @event.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>  
+  <% end %>
+  <div class="tab-content">
+    <div class="tab-pane" id="tab1">    
+      <div class="field event_type_radio">
+        <%= f.radio_button :event_type, "private", :class => "event_radio", :id => "private_event_radio" %>
+        <%= label_tag(:event_name_private, "Private Event", :class => "event_radio_label") %>
+        <%= f.radio_button :event_type, "public", :class => "event_radio", :id => "public_event_radio" %>
+        <%= label_tag(:event_name_private, "Public Event", :class => "event_radio_label") %>
+      </div>
+
+      <div class="clearfix"></div>
+      <p id="private_event_description">A unique URL will be generated for you. You can share this URL with people that will attend. The URL will not be shown anywhere else on the site.</p>
+      <p id="public_event_description">Anyone can sign up for this event and will be accessible across the site</p>
+      <br/>
+      <div class="field">
+        <%= f.label :city %>
+        <%= select_tag(:city, options_for_select([['Select a city',''],['Hyderabad','Hyderabad'], ['Mumbai','Mumbai'], ['Ahmedabad', 'Ahmedabad'], ['Bangalore', 'Bangalore']])) %>
+      </div>
+      <div class="field">
+        <%= f.label :event_name %>
+        <%= f.text_field :event_name %>
+      </div>
+      <div class="field">
+        <%= f.label :event_description %>
+        <%= f.text_area :event_description, :rows => 5 %>
+      </div>
+      <div class="field">
+        <%= f.label :max_seats %>
+        <%= f.number_field :max_seats %>
+      </div>
+      <div class="field">
+        <%= f.label :event_date %>
+        <%#f.date_select :event_date %>
+        <div class="input-append date" id="dp3" data-date="<%= Time.now.strftime("%d/%m/%Y") %>" data-date-format="dd-mm-yyyy">
+          <%= f.text_field :event_date %>
+          <span class="add-on"><i class="icon-calendar"></i></span>
+          <!--<input size="16" type="text" value="12-02-2012" readonly>-->
+          
+        </div>
+
+      </div>
+      <div class="field">
+        <%= f.label :event_time %>
+        <div class="input-append bootstrap-timepicker">
+          <%= f.text_field :event_time, 'data-minute-step' => "30" %>
+          <span class="add-on"><i class="icon-time"></i></span>
+        </div>
+      </div>
+      <div class="field">
+        <%= f.label :event_image %>
+        <%= f.file_field :event_image %>  
+      </div>
+    </div>
+    
+    <div class="tab-pane" id="tab2">
+
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#restaurants" data-toggle="tab">Restaurants</a></li>
+        <!--<li><a href="#experiences" data-toggle="tab">Dining Experiences</a></li>-->
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="restaurants">
+          <div class="field">
+            <%# f.select :restaurant_id, Restaurant.all.collect {|x| [x.name, x.id]}, {}%>        
+            <%= f.hidden_field :restaurant_id %>
+
+            <div class="row-fluid">
+              <div class="span6">
+                <% @restaurants.each do |restaurant| %>
+                  <div class="restaurantDetailsCotaniner restaurant_hidden <%= restaurant.city %>" id="<%= restaurant.id %>"> 
+                    <%= image_tag restaurant.photo_url(:thumb).to_s %>
+                    <div class="restaurantDetails">
+                      <h4><%= restaurant.name %></h4>
+                      <h4>Price: <%= restaurant.price %> </h4>
+                      <a class="medium awesome blue">View menu</a>
+                    </div>
+                  </div>
+                <% end %>  
+                
+                
+              </div>
+
+              <div class="span6">
+                <div class="restaurantMenu">
+                    <% @restaurants.each do |restaurant| %>
+                      <div class="menuItems" id="restaurant<%= restaurant.id %>menu">
+                        <% menu_items_categorized = restaurant.menu_items.group_by { |menu_item| menu_item.course_name} %>
+                        <% menu_items_categorized.each do |course_name, menu_items| %>
+                          <h4><%= course_name %></h4>
+                          <ul>
+                            <% menu_items.each do |menu_item| %>
+                              <li><%= menu_item.name %></li>
+                            <% end %>
+                          </ul>
+                        <% end %>
+                      </div>
+                  <% end %>                
+                  
+
+                  </div> 
+                </div>
+                
+              </div>
+
+            </div>    
+        </div>
+
+        <!--
+        Dining experiences. 
+        <div class="tab-pane" id="experiences">
+          <div class="field">
+            <%# f.select :restaurant_id, Restaurant.all.collect {|x| [x.name, x.id]}, {}%>        
+            <%# f.hidden_field :experience_id %>
+
+            <div class="row-fluid">
+              <div class="span6">
+                <% @experiences.each do |experience| %>
+                  <div class="restaurantDetailsCotaniner restaurant_hidden <%= experience.city %>" id="<%= experience.id %>"> 
+                    <%= image_tag experience.experience_picture_url(:thumb).to_s %>
+                    <div class="restaurantDetails">
+                      <h4><%= experience.name %></h4>
+                      <p>
+                        <%= experience.about %>
+                      </p>
+                      <h4>Price: <%= experience.cost %> </h4>
+                      <a class="medium awesome blue">View menu</a>
+                    </div>
+                  </div>
+                <% end %>  
+                
+                
+              </div>
+
+              <div class="span6">
+                <div class="restaurantMenu">
+                    <% @experiences.each do |experience| %>
+                      <div class="menuItems" id="restaurant<%= experience.id %>menu">
+                        <% menu_items_categorized = experience.menu_items.group_by { |menu_item| menu_item.course_name} %>
+                        <% menu_items_categorized.each do |course_name, menu_items| %>
+                          <h4><%= course_name %></h4>
+                          <ul>
+                            <% menu_items.each do |menu_item| %>
+                              <li><%= menu_item.name %></li>
+                            <% end %>
+                          </ul>
+                        <% end %>
+                      </div>
+                  <% end %>                
+                  
+
+                  </div> 
+                </div>
+                
+              </div>
+
+            </div>  
+        </div>
+        -->
+      </div>
+
+      
+        
+      </div>
+      <div class="tab-pane" id="tab3">
+      <div class="field">
+        <%= f.label :invitees %>
+        <p>
+          Enter the email address for all the people you want to invite. Seperate each email id by a comma. We will send them an invite
+        </p>
+        <%= f.text_area :invitees, :rows => 5 %>
+      </div>
+      <div class="field share_on_facebook">
+        <%= check_box_tag 'facebook_share', :true %>
+        Share on Facebook
+      </div>
+      <div class="field">
+        <div class="actions">
+          <%= f.submit :class => "large awesome green" %>
+        </div>
+      </div>
+    </div>
+    <ul class="pager wizard">
+      <li class="previous first" style="display:none;"><a href="#">First</a></li>
+      <li class="previous"><a href="#">Previous</a></li>
+      <li class="next last" style="display:none;"><a href="#">Last</a></li>
+      <li class="next"><a href="#">Next</a></li>
+    </ul> 
+  </div>
+    
+    
+
+    
+<% end %>  
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#dp3').datepicker();
+    $('#event_event_time').timepicker();
+  });
+</script>
+
+<script>   $(document).ready(function(){     $('#myTab a:last').tab('show');
+}); </script>

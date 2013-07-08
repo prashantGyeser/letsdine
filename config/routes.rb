@@ -13,7 +13,8 @@ Letsdine::Application.routes.draw do
   namespace :admin do 
     root to: "dashboard#index"
     get "dashboard/index"
-    get "events" => "event#index"
+    #get "events" => "event#index"
+    resources :event
     get "restaurants" => "restaurants#index"
     put "event/send_notification" => "event#send_notification"
     get "users" => "user#index"
