@@ -91,10 +91,10 @@ jquery.bootstrap.wizard.js: jquery.bootstrap.wizard-fb0689402e3e80713289dd7962a8
 jquery/index.bootstrap.wizard.js: jquery.bootstrap.wizard-fb0689402e3e80713289dd7962a864ab.js
 restaurant_picker.js: restaurant_picker-cc0b03132dcc9bd3f1a289dea5964a09.js
 restaurant_picker/index.js: restaurant_picker-cc0b03132dcc9bd3f1a289dea5964a09.js
-admin/admin.css: admin/admin-48dc30962f78722373e7aeaa8be1b828.css
-admin/admin/index.css: admin/admin-48dc30962f78722373e7aeaa8be1b828.css
-admin/application.css: admin/application-48dc30962f78722373e7aeaa8be1b828.css
-admin/application/index.css: admin/application-48dc30962f78722373e7aeaa8be1b828.css
+admin/admin.css: admin/admin-8dcd8bf8010362175e649c2cb5ea2726.css
+admin/admin/index.css: admin/admin-8dcd8bf8010362175e649c2cb5ea2726.css
+admin/application.css: admin/application-8dcd8bf8010362175e649c2cb5ea2726.css
+admin/application/index.css: admin/application-8dcd8bf8010362175e649c2cb5ea2726.css
 application.css: application-054eebb9db81f3f612f948925f540c36.css
 application/index.css: application-054eebb9db81f3f612f948925f540c36.css
 bootstrap-responsive.css: bootstrap-responsive-3a0afd040e59f425bf14fee96ce2985e.css
