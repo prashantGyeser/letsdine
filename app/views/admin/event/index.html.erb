@@ -19,6 +19,7 @@
 						<th>Restaurant</th>
 						<th>Seats Filled</th>
 						<th>Max Seats</th>
+						<th>Actions</th>
 					</tr>
 					<% events.each do |event| %>
 						<% restaurant = Restaurant.find(event.restaurant_id) %>
@@ -30,6 +31,7 @@
 					  		<% total_attendees = Attendee.where("event_id = ?", event.id).pluck(:seats).sum %>
 					  		<td><%= total_attendees %> </td>
 					  		<td><%= event.max_seats %> </td>
+					  		<td><%= link_to "Edit", edit_admin_event_path(event) %></td>
 					  	</tr>
 				  	<% end %>
 				</table>
