@@ -40,10 +40,10 @@ class EventImageUploader < CarrierWave::Uploader::Base
     process :resize_to_limit => [200,200]
   end
   version :large_scaled do
-    process :resize_to_fit => [300, 300]
+    process :resize_to_fill => [300, 300]
   end
   version :extra_large_scaled do
-    process :resize_to_fit => [700, 700]
+    process :resize_to_fill => [700, 700]
   end
   
 
