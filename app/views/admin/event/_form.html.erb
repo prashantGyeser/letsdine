@@ -32,6 +32,11 @@
         <%= f.text_field :event_name %>
       </div>
       <div class="field">
+        <%= f.label :status %>
+        <%# select_tag(:status, '<option value="open">Open</option><option value="closed">Closed</option>') %>
+        <%= f.select :status, [ 'open', 'closed'], :prompt => 'Select One' %>
+      </div>
+      <div class="field">
         <%= f.label :event_description %>
         <%= f.text_area :event_description, :rows => 5 %>
       </div>

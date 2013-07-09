@@ -20,6 +20,7 @@
 #  city              :string(255)
 #  reminder          :string(255)
 #  special           :string(255)
+#  slug              :string(255)
 #
 
 require 'spec_helper'

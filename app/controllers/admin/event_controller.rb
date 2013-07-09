@@ -21,6 +21,8 @@ class Admin::EventController < Admin::ApplicationController
 	# GET /events/1/edit
 	def edit
 	@event = Event.find(params[:id])
+	@restaurants = Restaurant.all
+	@experiences = Experience.all
 	end
 
 	# POST /events
@@ -29,8 +31,6 @@ class Admin::EventController < Admin::ApplicationController
 	@event = Event.new(params[:event])
 	@restaurants = Restaurant.all
 	@experiences = Experience.all
-
-	logger.debug "The experiences are: #{@experiences.inspect}"
 
 	@event.status = "open"
 	@event.user_id = current_user.id
