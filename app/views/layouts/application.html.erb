@@ -93,7 +93,12 @@
             	</div>
               
               <div class="citySelect" id="citySelectDropdown">
-                Select your city... <i class="icon-angle-down icon-2x selectIcon"></i>
+              	<% if session[:city].blank? %>
+              		Select your city... 
+              	<% else %>
+              		Selected City: <%= session[:city] %>
+              	<% end %>
+                <i class="icon-angle-down icon-2x selectIcon"></i>	
               </div>
               <div class="cityList" id="citySelectList">
                 <ul>
@@ -129,40 +134,48 @@
 
 
 	<script>
-		$(document).ready(function(){
-			$('#city-select').change(function() {
-				var selected_city = $('#city-select :selected').val();
-				var url = window.location.pathname
-				var url_controller = url.substring(url.lastIndexOf('/')+1);
-				
-				if (url_controller == "events")
-				{
-					var url_to_submit_to = '/'+selected_city+'/events';
-					window.location = url_to_submit_to;
-				}
-				else if (url == "/")
-				{
-					var url_to_submit_to = '/'+selected_city;
-					window.location = url_to_submit_to;
-				}
-				else
-				{
-					var url_to_submit_to = '/' + selected_city;
-					window.location = url_to_submit_to;
-				}
+      $(document).ready(function () {
+        $('#citySelectList').hide();
+        $('#citySelectList li a').click(function(e){
+          e.preventDefault();
+        });
 
-				
-				//$.ajax({
-				//	type: 'GET',
-				//	url: url_to_submit_to,
-				//	error: function(){  },
-				//	success: function(data){ alert(data) },
-				//	complete: function (){   }
-				//});
-				//return false;
-			})
-		})
-	</script>
+        // Hiding the city select if a user clicks outside the select area
+        $(document).mouseup(function (e)
+        {
+            var container = $("#citySelectList");
+
+            if (container.has(e.target).length === 0)
+            {
+                container.hide();
+            }
+        });
+        $('#citySelectDropdown').click(function(){
+          $('#citySelectList').show();
+        });
+        $('#citySelectList li').click(function(){
+        	var selected_city = $("a",this).attr('href');
+			var url = window.location.pathname
+			var url_controller = url.substring(url.lastIndexOf('/')+1);
+			
+			if (url_controller == "events")
+			{
+				var url_to_submit_to = '/'+selected_city+'/events';
+				window.location = url_to_submit_to;
+			}
+			else if (url == "/")
+			{
+				var url_to_submit_to = '/'+selected_city;
+				window.location = url_to_submit_to;
+			}
+			else
+			{
+				var url_to_submit_to = '/' + selected_city;
+				window.location = url_to_submit_to;
+			}
+        });
+      })
+    </script>
 
 	<script>
 		$(document).ready(function(){
