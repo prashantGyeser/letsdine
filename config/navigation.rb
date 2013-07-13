@@ -53,7 +53,7 @@ SimpleNavigation::Configuration.run do |navigation|
 
     SimpleNavigation::Configuration.run do |navigation|  
       navigation.items do |primary|
-        primary.dom_class = @home_page ? 'homepage' : 'topNav' #'homepage' 
+        #primary.dom_class = @home_page ? 'homepage' : 'topNav' #'homepage' 
         primary.item :home, 'Home', root_path
         primary.item :event, 'Events', events_path
       end

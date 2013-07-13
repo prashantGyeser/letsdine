@@ -2,56 +2,68 @@
     <%= javascript_include_tag "closed-event-overlay" %>
 <% end %>
 
-<div class="container">
-    <div class="row-fluid">
-        <div class="span12">
-            <h1>How it works</h1>
-        </div>
-    </div>
-</div>
-
-<div class="container">
-    <div class="row-fluid">
-
-        <div class="span4">
-            <div class="headerImage-red">
+<div class="subHeader">
+    <div class="container">
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="subHeaderImages">
+                    <%= image_tag "poloroid.png", :class => "firstSubHeaderImage" %>
                 
+                </div>
             </div>
-            <h4>Create events</h4>
-            <p>
-                Create a dining event to meet, interact and network with like-minded people from your city! Or create a dining event to meet family and friends for all your special occasions.
-            </p>
-            <a href=""></a>
-        </div>
 
-        <div class="span4">
-            <div class="headerImage-blue">
+            <div class="span8">
+                <h1>Private celebrations</h1>
+                <p>
+                    Confused on what to do for your birthday? Or still worried on what to do for your anniversary? 
+                </p>
+                <p>
+                    Bid Adieu to all your worries!
+                </p>
+                <p>
+                    Whether you're celebrating a special occasion or hosting a private dinner to catch up with friends; click right here to have a great experience!
+                </p>
+                <p class="bottomMargin">
+                    LetsDine provides specially crafted menu's at the choicest of restaurants in Hyderabad to help you have a memorable day! Just choose your restaurant, invite your friends and family and sit back! While we make this moment special for you.
+                </p>
+
+                <%= link_to 'Create a private event', new_event_path, :class => "css3button topMargin" %> 
+                or <a href="#"><strong>Meet new people</strong></a>
             </div>
-            <h4>Join events</h4>
-            <p>
-                Browse all dining events happening in your city and and join the events that interest you.
-            </p>
-        </div>
 
-        <div class="span4">
-            <div class="headerImage-green">
-            </div>
-            <h4>Join the community</h4>
-            <p>
-                Sign up for a free account and we will keep you informed about all the events that happen in your city.
-            </p>
         </div>
+    </div>
+</div>
 
+
+<div class="row-fluid">
+    <div class="span12">
+        <%= render 'layouts/messages' %>
     </div>
 </div>
 
 <div class="container">
     <div class="row-fluid">
         <div class="span12">
-            <h1>Events</h1>
+            <h1>Community events</h1>
         </div>
     </div>
 </div>
+
+<div class="container">
+    <div class="row-fluid">
+
+        <div class="span12">
+            <p>
+                Meet, interact and network with wonderful people from your city. All this while you enjoy great food!
+            </p>
+        </div>
+        
+        
+
+    </div>
+</div>
+
 
 <div class="content">
         <div class="container">

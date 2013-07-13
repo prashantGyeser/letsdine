@@ -25,6 +25,8 @@
 	<%= stylesheet_link_tag    "custom", :media => "all" %>
 	<%= stylesheet_link_tag    "datepicker", :media => "all" %>
 	<%= stylesheet_link_tag    "bootstrap-timepicker", :media => "all" %>
+	<%= stylesheet_link_tag    "font-awesome", :media => "all" %>
+	<%= stylesheet_link_tag    "font-awesome-ie7", :media => "all" %>
 
 	<%= javascript_include_tag "application" %>
 	<%= javascript_include_tag "jquery-1.9.1" %>
@@ -57,79 +59,70 @@
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
 	<!-- FB start -->
-	<div class="topBar">
-		<div class="navbar">
-    		<div class="navbar-inner">
-        		<div class="container">
-        			<div class="row-fluid">
-        				<div class="span4">
-        					<select name="city-selector" class="locationpicker" id="city-select">
-        						<option>Select your city</option>
-							    <option value="Hyderabad">Hyderabad</option>
-							    <option value="Mumbai">Mumbai</option>
-							    <option value="Ahmedabad">Ahmedabad</option>
-							    <option value="Bangalore">Bangalore</option>
-							  </select>
-							  <% if session[:city].nil? %>
-							  	<h4 class="selected_city">Select a City</h4>
-							  <% elsif session[:city].empty? %>
-							  	<h4 class="selected_city">Select a City</h4>
-							  <% else %>
-							  	<h4 class="selected_city">Current City: <%= session[:city] %> </h4>
-							  <% end %>
-							  
-        				</div>
-        				<div class="span5 logo">
-        					<img src="/assets/logo.png">
-        					<h4>Meet great people over great food</h4>
-        				</div>
-        				<div class="span3 loginDetails">
-        					<div class="loginOptions">
+
+	<div class="header">
+      <div class="container">
+        <div class="row-fluid">
+          <div class="span2">
+            <div class="ribbon">
+              <ul>
+                <li><h4>LetsDine</h4> </li>
+              </ul>
+            </div>
+          </div>
+          <div class="span6">
+            <ul class="topNav">
+            	<%= render_navigation :class => 'test' %>
+              
+            </ul>
+          </div>
+          <div class="span4">
+            <div class="userControlsContainer">
+            	
+            	<div class="usercontrols">
+            		<div class="loginOptions">
         						<% if user_signed_in? %>
 	        						<%= current_user.name %> | <%= link_to "Sign out", destroy_user_session_path %>
 	        					<% else %>
-	        						<%= link_to "LOGIN", new_user_session_path, :class => "login_link" %> 
-	        						<span id="sign_up_link">
-	        							<%= link_to new_user_registration_path, :class => "large awesome blue" do %>
-										  <%= image_tag("signup_image.png", :alt => "Sign up") %>
-										  <span>Sign up</span>
-										<% end %>
-	        						</span> 
-	        						<div>
-	        							Sign up and stay notified.
-	        						</div>
+	        						<%= link_to "LOGIN", new_user_session_path%> 
+	        						|
+	        						<%= link_to "SIGN UP", new_user_registration_path %>
 	        						
 	        					<% end %>
         					</div>
-        				</div>
-        			</div>
-        		</div>
-        	</div>
+            	</div>
+              
+              <div class="citySelect" id="citySelectDropdown">
+                Select your city... <i class="icon-angle-down icon-2x selectIcon"></i>
+              </div>
+              <div class="cityList" id="citySelectList">
+                <ul>
+                  <li><a href="Hyderabad">Hyderabad</a></li>
+                  <li><a href="Bangalore">Bangalore</a></li>
+                  <li><a href="Pune">Pune</a></li>
+                  <li><a href="Ahmedabad">Ahmedabad</a></li>
+                </ul>
+              </div>
+            </div>
+          
+          </div>
         </div>
-	</div>
+      </div>  
+    </div>
 
-	<div class="jumbotron masthead">
-		<div class="container">
+    <% if @home_page %>
+    	
+    <% else %>
+    	<div class="container">
 			<div class="row-fluid">
-				<div class="span6 offset4">
-					<%= render_navigation :class => 'test' %>
+				<div class="span12">
+					<%= render 'layouts/messages' %>
 				</div>
-				<div class="span2">
-					<div class="createEventButtonContainer">
-						<%= link_to "Create Event", :new_event, :class => "large green awesome createEventBtn" %>
-					</div>
-				</div>
-			</div>			
-		</div>
-	</div>
-
-	<div class="container">
-		<div class="row-fluid">
-			<div class="span12">
-				<%= render 'layouts/messages' %>
 			</div>
-		</div>
-	</div>
+		</div>	
+    <% end %>
+
+	
 
 
 	<%= yield %>	

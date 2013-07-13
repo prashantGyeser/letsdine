@@ -47,7 +47,7 @@ Letsdine::Application.configure do
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # config.assets.precompile += %w( search.js )
-  config.assets.precompile += ['bootstrap.css','bootstrap-responsive.css','style.css','datepicker.css','custom.css','prettify.css','bootstrap-timepicker.css', 'bootstrap.js','bootstrap-datepicker.js','bootstrap-timepicker.js','jquery.bootstrap.wizard.js','jquery-1.9.1.js','jquery.gallery.js','zoomflow.css','zoomflow/zoomflow.dev.js','closed-event-overlay.js', 'admin/admin.css', 'application.css', 'dashboard.css', 'event.css','admin/application.js','admin/highcharts.js', 'events.js','restaurant_picker.js','bootstrap-multiselect.js']
+  config.assets.precompile += ['bootstrap.css','bootstrap-responsive.css','style.css','datepicker.css','custom.css','prettify.css','bootstrap-timepicker.css', 'bootstrap.js','bootstrap-datepicker.js','bootstrap-timepicker.js','jquery.bootstrap.wizard.js','jquery-1.9.1.js','jquery.gallery.js','zoomflow.css','zoomflow/zoomflow.dev.js','closed-event-overlay.js', 'admin/admin.css', 'application.css', 'dashboard.css', 'event.css','admin/application.js','admin/highcharts.js', 'events.js','restaurant_picker.js','bootstrap-multiselect.js','font-awesome.css','font-awesome-ie7.css']
 
 
   # Disable delivery errors, bad email addresses will be ignored
