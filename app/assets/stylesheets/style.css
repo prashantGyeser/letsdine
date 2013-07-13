@@ -27,6 +27,83 @@
 {
 	background: #fff;
 }
+a
+{
+	color: #1b6e8a;
+}
+.css3button {
+  font-size: 14px;
+  color: #ffffff;
+  padding: 10px 20px;
+  background: -moz-linear-gradient(
+    top,
+    #dd4024 0%,
+    #b2321c);
+  background: -webkit-gradient(
+    linear, left top, left bottom, 
+    from(#dd4024),
+    to(#b2321c));
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  border-radius: 30px;
+  border: 3px solid #ffffff;
+  -moz-box-shadow:
+    0px 3px 11px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(230,115,95,1);
+  -webkit-box-shadow:
+    0px 3px 11px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(230,115,95,1);
+  box-shadow:
+    0px 3px 11px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(230,115,95,1);
+  text-shadow:
+    0px -1px 0px rgba(000,000,000,0.2),
+    0px 1px 0px rgba(255,255,255,0.3);
+}
+.css3button:hover
+{
+	text-decoration: none;
+	color: #fff;
+	background: -moz-linear-gradient(
+    top,
+    #b2321c 0%,
+    #dd4024);
+  background: -webkit-gradient(
+    linear, left top, left bottom, 
+    from(#b2321c),
+    to(#dd4024));
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  border-radius: 30px;
+  border: 3px solid #ffffff;
+  -moz-box-shadow:
+    0px 3px 11px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(230,115,95,1);
+  -webkit-box-shadow:
+    0px 3px 11px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(230,115,95,1);
+  box-shadow:
+    0px 3px 11px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(230,115,95,1);
+  text-shadow:
+    0px -1px 0px rgba(000,000,000,0.2),
+    0px 1px 0px rgba(255,255,255,0.3);
+
+}
+.css3button:active
+{
+	top: 1px;
+	color: #fff;
+	text-decoration: none;
+}
+.topMargin
+{
+	margin-top: 20px;
+}
+.bottomMargin
+{
+	margin-bottom: 40px;
+}
 /**********************************************************************/
 /* Header style */
 /**********************************************************************/
@@ -34,21 +111,235 @@
 color:#DD4124;
 background-color:white;
 }
-.header:after 
-{
-	content: " ";
+.header:after {
+content: " ";
     display:block;
     position: relative;
-	top:0px;left:0px;
+top:0px;left:0px;
     width:100%;
     height:36px;
     background: linear-gradient(#ffffff 0%, transparent 0%), linear-gradient(135deg, #272220 33.33%, transparent 33.33%) 0 0%, #272220 linear-gradient(45deg, #272220 33.33%, #ffffff 33.33%) 0 0%;
+
     background: -webkit-linear-gradient(#ffffff 0%, transparent 0%), -webkit-linear-gradient(135deg, #272220 33.33%, transparent 33.33%) 0 0%, #272220 -webkit-linear-gradient(45deg, #272220 33.33%, #ffffff 33.33%) 0 0%;
+
     background: -o-linear-gradient(#ffffff 0%, transparent 0%), -o-linear-gradient(135deg, #272220 33.33%, transparent 33.33%) 0 0%, #272220 -o-linear-gradient(45deg, #272220 33.33%, #ffffff 33.33%) 0 0%;
+
     background: -moz-linear-gradient(#ffffff 0%, transparent 0%), -moz-linear-gradient(135deg, #272220 33.33%, transparent 33.33%) 0 0%, #272220 -moz-linear-gradient(45deg, #272220 33.33%, #ffffff 33.33%) 0 0%;
+
     background-repeat: repeat-x;
     background-size: 0px 100%, 9px 27px, 9px 27px;
+    }
+
+
+.header h4
+{
+	color: #fff;
 }
+
+.ribbon {
+  position: relative;
+  background: #DD4124;
+  height: 82px;
+  width: 110px;
+  margin: 0 0 20px 0;
+  z-index: 1;
+  -webkit-box-shadow: 0px 3px 6px rgba(50, 50, 50, 0.5);
+-moz-box-shadow:    0px 3px 6px rgba(50, 50, 50, 0.5);
+box-shadow:         0px 3px 6px rgba(50, 50, 50, 0.5);
+}
+.ribbon:before, .ribbon:after {
+  content: '';
+  position: absolute;
+  border-bottom: 60px solid #DD4124;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  top: 50px;
+  left: -31px;
+  -webkit-transform: rotate(-140deg);
+  -moz-transform: rotate(-140deg);
+  -ms-transform: rotate(-140deg);
+  -o-transform: rotate(-140deg);
+  transform: rotate(-140deg);
+  z-index: 0;
+}
+.ribbon:after {
+  left: auto;
+  right: -31px;
+  -webkit-transform: rotate(140deg);
+  -moz-transform: rotate(140deg);
+  -ms-transform: rotate(140deg);
+  -o-transform: rotate(140deg);
+  transform: rotate(140deg);
+}
+.ribbon ul {
+  margin: 0;
+  padding: 40px 0 0 0;
+  position: relative;
+  z-index: 10;
+  text-align: center;
+}
+.ribbon ul li {
+  display: inline;
+  font-size: 11px;
+  color: #F56550;
+}
+.ribbon ul li a {
+  color: #F56550;
+  font-size: 12px;
+  text-decoration: none;
+}
+.ribbon ul li a:hover {
+  color: #fde4e1;
+}
+
+
+.topNav 
+{
+  
+  list-style: none;
+  margin: 48px 0 0 0;
+}
+.topNav li
+{
+  display: inline;
+  margin-right: 10px;
+}
+.topNav li a
+{
+  font-size: 1.2em;
+  text-transform: uppercase;
+  color: #aaa;
+  font-weight: bold;
+}
+.topNav li a:hover
+{
+  -webkit-transition: color .25s ease-in-out;
+  -moz-transition: color .25s ease-in-out;
+  -o-transition: color .25s ease-in-out;
+  transition: color .25s ease-in-out;
+  color: #DD4124;
+  text-decoration: none;
+}
+.topNav li a.selected
+{
+  color: #DD4124;
+}
+.userControlsContainer
+{
+  float: right;
+  margin: 10px 0 0 0;
+  color: #444;
+}
+.usercontrols
+{
+	float: right;
+	background: #DD4124;
+	margin-top: -10px;
+	padding: 10px;
+	font-weight: bold;
+	color: white;
+}
+.usercontrols a
+{
+	color: #fff;
+}
+.citySelect
+{
+  margin: 38px 0 0 0;
+  background: #f1efee;
+  padding: 10px;
+  color: #9d8d87;
+  font-weight: bold;
+  border: 1px solid #dad4d2;
+}
+.citySelect:hover
+{
+  cursor: pointer;
+}
+.citySelect i
+{
+  line-height: 11px;
+  padding-left: 30px;
+}
+.cityList 
+{
+  background: #fff;
+  margin-top: -1px;
+  position: absolute;
+  z-index: 1000;
+  width: 191px;
+  -webkit-box-shadow: 0px 10px 26px rgba(50, 50, 50, 0.3);
+  -moz-box-shadow:    0px 10px 26px rgba(50, 50, 50, 0.3);
+  box-shadow:         0px 10px 26px rgba(50, 50, 50, 0.3);
+  border: 1px solid #dad4d2;
+}
+.cityList ul
+{
+  list-style: none;
+  margin: 0;
+  padding: 10px 0 0 0;
+}
+.cityList ul li
+{
+  padding: 10px;
+  cursor: pointer;
+}
+.cityList ul li:hover
+{
+  color: #fff;
+  background: #c3bab6;  
+
+}
+.cityList ul li a
+{
+  color: #444;
+  font-weight: bold;
+}
+.cityList ul li a:hover
+{
+  text-decoration: none;
+
+}
+/**********************************************************************/
+/* Homepage masthead style */
+/**********************************************************************/
+.subHeader
+{
+	background: #272220;
+	color: #fff;
+}
+.subHeader a
+{
+	color: #fff;
+}
+.subHeaderImages
+{
+
+}
+.subHeaderImages img
+{
+  float: left;
+  margin: 20px 0 30px 0;
+  transform:rotate(-7deg);
+-ms-transform:rotate(-7deg); /* IE 9 */
+-webkit-transform:rotate(-7deg); /* Safari and Chrome */
+}
+.subHeaderImages .firstSubHeaderImage
+{
+
+}
+.subHeaderImages .secondSubHeaderImage
+{
+  margin-left: -30px;
+}
+.subHeaderImages .thirdSubHeaderImage
+{
+
+}
+
+
+
+
 
 /**********************************************************************/
 /* Login style */
@@ -81,38 +372,7 @@ background-color:white;
 {
 	text-decoration: none;
 }
-.navbar
-{
-	margin-bottom: 0;
-}
-.navbar-inner
-{
-	background-color: #d3371a;
-	background: url("/assets/topBarBG.png");	
-	padding: 10px;
-	margin-bottom: 0;
-	border: none;
-}
-.selected_city
-{
-	color: #fff;
-}
-.masthead
-{
-	background: url("/assets/headerBG.png");
-}
-.logo
-{
-	color: #fff;
-}
-.logo h4
-{
-	margin-top: 15px;
-}
-.createEventButtonContainer
-{
-	float: right;
-}
+
 .homepage 
 {
 	list-style: none;
@@ -196,62 +456,7 @@ background-color:white;
 	text-shadow: 0px 1px 2px #404046;
 }
 
-.topNav 
-{
-	list-style: none;
-	margin-top: 20px;
-	color: #a1afaf;
-	font-size: 18px;
-	text-shadow: 0px 0px 1px #647575;
-}
-.topNav li 
-{
-	display: inline;
-	margin-right: 20px;
-	font-weight: bold;
-}
-.topNav li a
-{
-	color: #a1afaf;
-	font-size: 18px;
-	text-shadow: 0px 0px 1px #647575;
-	text-decoration: none;
 
-	/* First we need to help some browsers along for this to work.
-     Just because a vendor prefix is there, doesn't mean it will
-     work in a browser made by that vendor either, it's just for
-     future-proofing purposes I guess. */
-	-o-transition:.5s;
-	-ms-transition:.5s;
-	-moz-transition:.5s;
-	-webkit-transition:.5s;
-	/* ...and now for the proper property */
-	transition:.5s;
-
-}
-.topNav li a:visited
-{
-	color: #a1afaf;
-	font-size: 18px;
-	text-shadow: 0px 0px 1px #647575;
-}
-.topNav li a:visited
-{
-	color: #a1afaf;
-	font-size: 18px;
-	text-shadow: 0px 0px 1px #647575;
-}
-.topNav li a:hover
-{
-	color: #080809;	
-	text-shadow: 0px 1px 2px #404046;
-}
-
-.topNav li a.selected
-{
-	color: #080809;	
-	text-shadow: 0px 1px 2px #404046;
-}
 .locationpicker
 {
 	margin-top: 10px;
