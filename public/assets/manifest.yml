@@ -1,4 +1,14 @@
 ---
+FontAwesome.otf: FontAwesome-d2e1f2cb067bb8a9b129341f5ed85582.otf
+FontAwesome/index.otf: FontAwesome-d2e1f2cb067bb8a9b129341f5ed85582.otf
+fontawesome-webfont.eot: fontawesome-webfont-009f6d1f667cc42c25e712ab3429cbc7.eot
+fontawesome-webfont/index.eot: fontawesome-webfont-009f6d1f667cc42c25e712ab3429cbc7.eot
+fontawesome-webfont.svg: fontawesome-webfont-f1c2889911d212e1403b68eabc1a3a56.svg
+fontawesome-webfont/index.svg: fontawesome-webfont-f1c2889911d212e1403b68eabc1a3a56.svg
+fontawesome-webfont.ttf: fontawesome-webfont-fb7a72c810ec644f3c26dcca68638308.ttf
+fontawesome-webfont/index.ttf: fontawesome-webfont-fb7a72c810ec644f3c26dcca68638308.ttf
+fontawesome-webfont.woff: fontawesome-webfont-b4d67f1e5651506c3e80d842ee67d6ba.woff
+fontawesome-webfont/index.woff: fontawesome-webfont-b4d67f1e5651506c3e80d842ee67d6ba.woff
 5349283549_40f938f381_o.jpg: 5349283549_40f938f381_o-f531a9afce147e32644f585cbdcad860.jpg
 5349283549_40f938f381_o/index.jpg: 5349283549_40f938f381_o-f531a9afce147e32644f585cbdcad860.jpg
 Jennifer-Lawrence-Thumbnail.jpg: Jennifer-Lawrence-Thumbnail-80da1dce821b1f4c5ea08b6f83a215af.jpg
@@ -57,6 +67,8 @@ logo_shrunk.png: logo_shrunk-36cd05e7145eeeb765ed9c861e483479.png
 logo_shrunk/index.png: logo_shrunk-36cd05e7145eeeb765ed9c861e483479.png
 noProfilePic.png: noProfilePic-d55d6f5f58c3c10b3ee56ce81c367105.png
 noProfilePic/index.png: noProfilePic-d55d6f5f58c3c10b3ee56ce81c367105.png
+poloroid.png: poloroid-2a2c3d331a8546fcac4aa0d72edc90ce.png
+poloroid/index.png: poloroid-2a2c3d331a8546fcac4aa0d72edc90ce.png
 shareEvent.png: shareEvent-aece2864ddad7768e2dbbecbdaf5addd.png
 shareEvent/index.png: shareEvent-aece2864ddad7768e2dbbecbdaf5addd.png
 signup_image.png: signup_image-be4128c2b97a923febd2f0222ec0aa34.png
@@ -97,8 +109,8 @@ admin/admin.css: admin/admin-8dcd8bf8010362175e649c2cb5ea2726.css
 admin/admin/index.css: admin/admin-8dcd8bf8010362175e649c2cb5ea2726.css
 admin/application.css: admin/application-8dcd8bf8010362175e649c2cb5ea2726.css
 admin/application/index.css: admin/application-8dcd8bf8010362175e649c2cb5ea2726.css
-application.css: application-266f5557d192ecd8bb960db940ea78b3.css
-application/index.css: application-266f5557d192ecd8bb960db940ea78b3.css
+application.css: application-170f069a56d3c2c0efbc3da2af95ef85.css
+application/index.css: application-170f069a56d3c2c0efbc3da2af95ef85.css
 bootstrap-responsive.css: bootstrap-responsive-3a0afd040e59f425bf14fee96ce2985e.css
 bootstrap-responsive/index.css: bootstrap-responsive-3a0afd040e59f425bf14fee96ce2985e.css
 bootstrap-timepicker.css: bootstrap-timepicker-507a15d551ef65cab721d901af6a8a7f.css
@@ -109,10 +121,14 @@ custom.css: custom-bd7b102b73bc95fdabfbfb006141a033.css
 custom/index.css: custom-bd7b102b73bc95fdabfbfb006141a033.css
 datepicker.css: datepicker-f030298a599c581d22476f8572d7386d.css
 datepicker/index.css: datepicker-f030298a599c581d22476f8572d7386d.css
+font-awesome-ie7.css: font-awesome-ie7-e0360026c3687b244fedb277b8f6bf17.css
+font-awesome-ie7/index.css: font-awesome-ie7-e0360026c3687b244fedb277b8f6bf17.css
+font-awesome.css: font-awesome-d87a3f144efd5e95717ce1c73b236e05.css
+font-awesome/index.css: font-awesome-d87a3f144efd5e95717ce1c73b236e05.css
 prettify.css: prettify-1c0d6850ec95627c0ae574062b3865f2.css
 prettify/index.css: prettify-1c0d6850ec95627c0ae574062b3865f2.css
-style.css: style-69c26144e30866e3e45183178dc1caa6.css
-style/index.css: style-69c26144e30866e3e45183178dc1caa6.css
+style.css: style-e718db29195bd3b0132310816a1b67f8.css
+style/index.css: style-e718db29195bd3b0132310816a1b67f8.css
 zoomflow.css: zoomflow-74815dbce6c1135a83ee4f17cfc0e6ee.css
 zoomflow/index.css: zoomflow-74815dbce6c1135a83ee4f17cfc0e6ee.css
 jquery.min.map: jquery.min-6c267bfd2b3f36e6edccb2e584934c1c.map
