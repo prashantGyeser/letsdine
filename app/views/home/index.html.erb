@@ -1,35 +1,65 @@
 <% content_for :javascript do %>
     <%= javascript_include_tag "closed-event-overlay" %>
+    <%= javascript_include_tag "cycle" %>
 <% end %>
 
 <div class="subHeader">
     <div class="container">
         <div class="row-fluid">
-            <div class="span4">
-                <div class="subHeaderImages">
-                    <%= image_tag "poloroid.png", :class => "firstSubHeaderImage" %>
-                
+            <div id="slider">
+                <div id="firstSlider" class="slide">
+                    <div class="span4">
+                        <div class="subHeaderImages">
+                            <%= image_tag "poloroid.png", :class => "firstSubHeaderImage" %>
+                        </div>
+                    </div>
+
+                    <div class="span8">
+                        <h1>Private celebrations</h1>
+                        <p>
+                            Confused on what to do for your birthday? Or still worried on what to do for your anniversary? 
+                        </p>
+                        <p>
+                            Bid adieu to all your worries!
+                        </p>
+                        <p>
+                            Whether you're celebrating a special occasion or hosting a private dinner to catch up with friends; click right here to have a great experience!
+                        </p>
+                        <p class="bottomMargin">
+                            LetsDine provides specially crafted menus at the choicest of restaurants in Hyderabad to help you have a memorable day! Just choose your restaurant, invite your friends and family and sit back! While we make this moment special for you.
+                        </p>
+
+                        <%= link_to 'Create a private celebration', new_event_path, :class => "css3button topMargin" %> 
+                    </div>
                 </div>
-            </div>
 
-            <div class="span8">
-                <h1>Private celebrations</h1>
-                <p>
-                    Confused on what to do for your birthday? Or still worried on what to do for your anniversary? 
-                </p>
-                <p>
-                    Bid Adieu to all your worries!
-                </p>
-                <p>
-                    Whether you're celebrating a special occasion or hosting a private dinner to catch up with friends; click right here to have a great experience!
-                </p>
-                <p class="bottomMargin">
-                    LetsDine provides specially crafted menu's at the choicest of restaurants in Hyderabad to help you have a memorable day! Just choose your restaurant, invite your friends and family and sit back! While we make this moment special for you.
-                </p>
+                <!-- Second slider -->
+                <div id="secondSlider" class="slide">
+                    <div class="span4">
+                        <div class="subHeaderImages">
+                            <%= image_tag "community-dining.png", :class => "firstSubHeaderImage" %>
+                        </div>
+                    </div>
 
-                <%= link_to 'Create a private event', new_event_path, :class => "css3button topMargin" %> 
-                or <a href="#communityEventsHeader"><strong>Meet new people</strong></a>
+                    <div class="span8">
+                        <h1>Community events</h1>
+                        <p>
+                            Would you like to make new friends in your city?
+                        </p>
+                        <p>
+                            Meet, interact and become friends with other like-minded people in your city. Join in at one of our themed dining events; to have a great time! 
+                        </p>
+                        <p class="bottomMargin">
+                            Book your seat at the event of your choice, and start living an entirely new experience! Be part of a 'real world' community!
+                        </p>
+
+                        <a href="#communityEventsHeader" class="css3button topMargin">See all the community events</a>
+                    </div>
+                </div>
+
             </div>
+            
+            
 
         </div>
     </div>
@@ -179,6 +209,13 @@
   <% end %>
 </div>
 
+<!-- Slider script -->
+<script>
+$(document).ready(function(){
+    //$('#firstSlider').delay(1000).fadeOut();
+    $('#slider').cycle();
+})
+</script>
 
 
 <% if @no_events_in_city == true %>

@@ -42,7 +42,7 @@ group :test, :development do
 	gem 'rb-inotify', '~> 0.9'
 	gem 'guard-rspec'
 	gem 'minitest'
-	
+	gem 'zeus'
 
 	# Gem list taken from: http://www.codebeerstartups.com/2013/04/must-have-gems-for-development-machine-in-ruby-on-rails/
 	gem "better_errors"

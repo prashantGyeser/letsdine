@@ -133,9 +133,8 @@ ActiveRecord::Schema.define(:version => 20130627214327) do
     t.integer  "user_id"
     t.string   "picture"
     t.text     "about"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-    t.string   "cover_photo"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "restaurants", :force => true do |t|
