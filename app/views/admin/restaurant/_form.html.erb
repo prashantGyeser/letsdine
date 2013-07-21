@@ -1,0 +1,55 @@
+<%= form_for(@restaurant, :html => {:multipart => true}) do |f| %>
+  <% if @restaurant.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@restaurant.errors.count, "error") %> prohibited this restaurant from being saved:</h2>
+
+      <ul>
+      <% @restaurant.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :price %>
+    <%= f.number_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :city %>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :cusine %>
+    <%= f.text_field :cusine %>
+  </div>
+  <div class="field">
+    <%= f.label :photo %>
+    <%= f.file_field :photo %>
+  </div>
+  <%= f.fields_for :menu_items do |builder|%>
+    <div class="field">
+      <%= builder.label :name, "Menu Item Name" %>
+      <%= builder.text_area :name, :rows => 3 %>
+      <%= builder.hidden_field :_destroy %>
+      <%= link_to_function "remove", "remove_fields(this)" %>
+    </div>
+    <div class="field">
+      <%= builder.label :course_name, "Menu Item type" %>
+      <%= builder.text_field :course_name, :rows => 3 %>
+      <%= builder.hidden_field :_destroy %>
+      <%= link_to_function "remove", "remove_fields(this)" %>
+    </div>
+  <% end %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

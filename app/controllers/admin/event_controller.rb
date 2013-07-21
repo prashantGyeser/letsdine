@@ -3,6 +3,7 @@ class Admin::EventController < Admin::ApplicationController
 		#@event_list = Event.all.group_by(&:city)
 		@event_list = Event.find(:all, :order => "status").reverse
 		@event_list = @event_list.group_by(&:city)
+		Event.includes(:restaurant).includes(:attendee => :user).where('event_type != ?', 'private').where('status != ?', 'closed').where('city = ?', session[:city]).limit(12)
 	end
 
 	# GET /events/new
