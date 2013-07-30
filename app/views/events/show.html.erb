@@ -48,7 +48,17 @@
         </div> 
       </div>
 
-      <h3>Price: Rs <%= restaurant.price %></h3>
+
+
+      <h3>Price: 
+        <% if restaurant.city == "Hyderabad" || restaurant.city == "Bangalore" || restaurant.city == "Pune" || restaurant.city == "Ahmedabad" %>
+          Rs 
+        <%elsif restaurant.city == "Kuala Lumpur" || restaurant.city == "Selangor" || restaurant.city == "Perak" || restaurant.city == "Penang" %>
+          RM 
+        <% end %>
+        
+        <%= restaurant.price %>
+      </h3>
       <address>
         <strong><%= restaurant.name %></strong>
         <br>
