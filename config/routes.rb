@@ -1,6 +1,8 @@
 Letsdine::Application.routes.draw do
   
   
+  get "history/index"
+
   get "invites/index"
 
   get "restaurants/index"
