@@ -18,6 +18,8 @@ class Attendee < ActiveRecord::Base
   belongs_to :user
 
   validates :phone_number, :presence => true
+  #validates :seats, :presence => true, :numericality => {:greater_than => 0, :less_than => 10}
+  validates :seats, :presence => true, :numericality => {:greater_than => 0}
 
   def self.total_joins_on(date)
     where("date(created_at) = ?", date).count
