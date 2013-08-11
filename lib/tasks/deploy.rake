@@ -39,14 +39,34 @@ namespace :deploy do
     puts git_add_output
     puts git_commit_output
 
+    puts '###############################################################'
+    puts 'Pushing to bitbucket'
+    puts '###############################################################'
+    bitbucket_push_output = `git push origin master`
+    puts 'Pushing to bitbucket'
+    puts bitbucket_push_output
+
   	puts '###############################################################'
   	puts 'Todo: Deploy to heroku production'
   	puts '###############################################################'
     
-    puts '###############################################################'
-  	puts 'Todo: Migrating database on heroku'
-  	puts '###############################################################'  	
+    production_push_output = `git push production master`
+    puts 'Pushed application to heroku production'
+    puts production_push_output
 
+    puts '###############################################################'
+    puts 'Migrating database on heroku'
+    puts '###############################################################'    
+    production_db_migrate_output = `heroku run rake db:migrate --remote production`
+    puts 'Migrated the database on heroku production'
+    puts production_db_migrate_output
+
+    puts '###############################################################'
+    puts 'Removing all the precompiled assets'
+    puts '###############################################################'
+    assets_clean_output = `rake assets:clean`
+    puts 'Assets cleaned'
+    puts assets_clean_output
 
 
   end
