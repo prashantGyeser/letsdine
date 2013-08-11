@@ -204,7 +204,7 @@
               <% if @event.attendee.nil?%>
                   <% seats_left = other_event.max_seats %>    
               <% else %>
-                  <% seats_left = other_event.max_seats - @event.attendee.pluck(:seats).sum %>
+                  <% seats_left = other_event.max_seats - other_event.attendee.pluck(:seats).sum %>
               <% end %>
               <%= seats_left %> Seats left
           </div>
