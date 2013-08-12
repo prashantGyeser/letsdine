@@ -23,7 +23,7 @@ class EventsController < ApplicationController
     
     if session[:city].nil?
     else
-      @events = Event.includes(:restaurant).includes(:attendee => :user).where('event_type != ?', 'private').where('status != ?', 'closed').where('city = ?', session[:city]).limit(12)
+      @events = Event.includes(:restaurant).includes(:attendee => :user).where('event_type != ?', 'private').where('status != ?', 'closed').where('city = ?', session[:city]).limit(12).order('event_date ASC')
     end
 
     respond_to do |format|
