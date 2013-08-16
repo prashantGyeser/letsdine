@@ -45,6 +45,7 @@ group :test, :development do
 	gem 'guard-rspec'
 	gem 'minitest'
 	gem 'zeus'
+	gem 'annotate'
 
 	# Gem list taken from: http://www.codebeerstartups.com/2013/04/must-have-gems-for-development-machine-in-ruby-on-rails/
 	gem "better_errors"
@@ -67,6 +68,9 @@ group :test, :development do
 	gem 'reek'
 	gem 'request-log-analyzer'
 	gem 'smusher'
+
+	# Unit testing gems
+	gem 'shoulda-matchers'
 end
 
 # To use ActiveModel has_secure_password

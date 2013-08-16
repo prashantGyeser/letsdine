@@ -41,6 +41,11 @@ class Event < ActiveRecord::Base
   extend FriendlyId
   friendly_id :event_name, use: [:slugged, :history]
 
+  def seats_left
+    return self.max_seats - Attendee.where(:event_id => self.id).pluck(:seats).sum
+
+  end
+
   protected
 
   def generate_token
@@ -61,5 +66,6 @@ class Event < ActiveRecord::Base
   end
 
   
+
 
 end

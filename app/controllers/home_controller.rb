@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
+    logger.debug "the value in the city params is: #{params[:city]}"
     if session[:city].nil?
       if params[:city]
         @user_city = params[:city]
@@ -31,7 +32,7 @@ class HomeController < ApplicationController
       
   	else
       # Taken from http://stackoverflow.com/questions/9970300/how-to-chain-where-query-in-rails-3-active-record
-      @events = Event.includes(:restaurant).includes(:attendee => :user).where('event_type != ?', 'private').where('status != ?', 'closed').where('city = ?', session[:city])
+      @events = Event.includes(:restaurant).includes(:attendee => :user).where('event_type != ?', 'private').where('status != ?', 'closed').where('city = ?', session[:city]).order('event_date ASC')
 
   	end
 

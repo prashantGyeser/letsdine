@@ -132,8 +132,7 @@
                         
                         <h4><%= link_to event.event_name, event_path(event) %></h4>
                         <div class="seats_left_event_page">
-                            <% seats_left = event.max_seats - event.attendee.pluck(:seats).sum %>
-                            <%= seats_left %> Seats left
+                            <%= event.seats_left %> Seats left
                         </div>
                         <div class="eventDetails">
                             <div class="detail">
