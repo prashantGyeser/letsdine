@@ -103,7 +103,12 @@
             </div>
             <%= f.hidden_field :event_id, :value => @event.id %>
 
-            <%= f.submit "Join this event", :class => "large red awesome"  %>
+            <% if @event.seats_left <= 0 %>
+              <%= f.submit "Sign up for waiting list", :class => "large red awesome"  %>s
+            <% else %>
+              <%= f.submit "Join this event", :class => "large red awesome"  %>s
+            <% end %>
+            
 
           <% end %>  
         <% end %>

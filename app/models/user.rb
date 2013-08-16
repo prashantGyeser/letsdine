@@ -41,8 +41,11 @@ class User < ActiveRecord::Base
 
   has_many :attendees
   has_many :interests, :dependent => :destroy
-  belongs_to :waiting_list
-  
+  has_many :waiting_lists
+  has_many :waiting_list_entries
+  has_many :waiting_events, :through => :waiting_list_entries, :class_name => "Event", :source => :event
+
+
   accepts_nested_attributes_for :interests, :allow_destroy => true
 
   def welcome_email

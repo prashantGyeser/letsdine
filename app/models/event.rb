@@ -35,6 +35,8 @@ class Event < ActiveRecord::Base
   belongs_to :restaurant
   has_one :experience
   has_many :attendee, :dependent => :destroy
+  has_many :waiting_list_entries
+  has_many :waiting_attendees, :through => :waiting_list_entries, :class_name => "User", :source => :user
 
   before_create :generate_token
 

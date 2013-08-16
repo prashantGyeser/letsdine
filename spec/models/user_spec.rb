@@ -28,5 +28,6 @@
 require 'spec_helper'
 
 describe User do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it {should have_many(:waiting_list_entries)}
+  it {should have_many(:waiting_events).through(:waiting_list_entries)}
 end
