@@ -16,6 +16,8 @@ class Attendee < ActiveRecord::Base
 
   belongs_to :event
   belongs_to :user
+  has_many :waiting_list_entries
+  has_many :waiting_events, :through => :waiting_list_entries, :class_name => "Event", :source => :event
 
   validates :phone_number, :presence => true
   #validates :seats, :presence => true, :numericality => {:greater_than => 0, :less_than => 10}

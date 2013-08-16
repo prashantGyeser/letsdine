@@ -28,6 +28,5 @@
 require 'spec_helper'
 
 describe User do
-  it {should have_many(:waiting_list_entries)}
-  it {should have_many(:waiting_events).through(:waiting_list_entries)}
+  
 end

@@ -70,49 +70,46 @@
         <%= simple_format(@event.event_description) %>      
       </p>
 
-      <% if @event.status == "closed" || @event.status == "full" %>
-          <%= render :partial => "event_notify_emails/form",
-                      :locals => {:event_id => @event.id} %>
+      
+      <% if @already_signed_up == true %>
+        <h4>You have already signed up for this event</h4>          
+        <p>If you want to increase the number of people that will be coming along with you, please drop us an email at hello@gyeser.com and we will get back to you regarding the changes. </p>
       <% else %>
-        <% if @already_signed_up == true %>
-          <h4>You have already signed up for this event</h4>          
-          <p>If you want to increase the number of people that will be coming along with you, please drop us an email at hello@gyeser.com and we will get back to you regarding the changes. </p>
-        <% else %>
-          <%# Join form %>
-          <%= form_for @attendee, :url => attendee_path, :html => {:method => :post} do |f|%>
-            <%# f.error_messages %>
+        <%# Join form %>
+        <%= form_for @attendee, :url => attendee_path, :html => {:method => :post} do |f|%>
+          <%# f.error_messages %>
 
-            <% if @attendee.errors.any? %>
-              <div id="error_explanation">
-                <h2><%= pluralize(@attendee.errors.count, "error") %> prohibited this event from being saved:</h2>
+          <% if @attendee.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(@attendee.errors.count, "error") %> prohibited this event from being saved:</h2>
 
-                <ul>
-                <% @attendee.errors.full_messages.each do |msg| %>
-                  <li><%= msg %></li>
-                <% end %>
-                </ul>
-              </div>  
-            <% end %>
-            <div class="field">
-              <%= f.label :seats, "Number of people attending" %>
-              <%= f.number_field :seats, :required => true, :min => 1 %>
-            </div>
-            <div class="field">
-              <%= f.label :phone_number, "Your phone number"%>
-              <%= f.text_field :phone_number, :required => true %>
-            </div>
-            <%= f.hidden_field :event_id, :value => @event.id %>
+              <ul>
+              <% @attendee.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
+              </ul>
+            </div>  
+          <% end %>
+          <div class="field">
+            <%= f.label :seats, "Number of people attending" %>
+            <%= f.number_field :seats, :required => true, :min => 1 %>
+          </div>
+          <div class="field">
+            <%= f.label :phone_number, "Your phone number"%>
+            <%= f.text_field :phone_number, :required => true %>
+          </div>
+          <%= f.hidden_field :event_id, :value => @event.id %>
 
-            <% if @event.seats_left <= 0 %>
-              <%= f.submit "Sign up for waiting list", :class => "large red awesome"  %>s
-            <% else %>
-              <%= f.submit "Join this event", :class => "large red awesome"  %>s
-            <% end %>
-            
+          <% if @event.seats_left <= 0 %>
+            <%= f.submit "Sign up for waiting list", :class => "large red awesome"  %>
+          <% else %>
+            <%= f.submit "Join this event", :class => "large red awesome"  %>s
+          <% end %>
+          
 
-          <% end %>  
-        <% end %>
+        <% end %>  
       <% end %>
+      
       
       
     </div>

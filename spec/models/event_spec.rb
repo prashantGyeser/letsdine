@@ -50,5 +50,8 @@ describe Event do
 
 
 	end
+
+	it {should have_many(:waiting_list_entries)}
+	it {should have_many(:waiting_attendees).through(:waiting_list_entries)}
   
 end

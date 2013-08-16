@@ -9,9 +9,9 @@
 
 class WaitingListEntry < ActiveRecord::Base
   belongs_to :event
-  belongs_to :user
+  belongs_to :attendee
   # attr_accessible :title, :body
-  validates :user, :event, :presence => true
+  validates :attendee, :event, :presence => true
 
 
 end
