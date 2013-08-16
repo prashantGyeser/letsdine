@@ -52,7 +52,9 @@ Letsdine::Application.routes.draw do
 
   
 
+  get '(:city)-events' => 'home#index'
   get ':city' => 'home#index'
+
   get ':city/events' => 'events#index'
   get ':city/events/:id' => 'events#show'
 
@@ -78,6 +80,7 @@ Letsdine::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+
 
   # Sample resource route with options:
   #   resources :products do

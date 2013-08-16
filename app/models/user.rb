@@ -41,6 +41,7 @@ class User < ActiveRecord::Base
 
   has_many :attendees
   has_many :interests, :dependent => :destroy
+  belongs_to :waiting_list
   
   accepts_nested_attributes_for :interests, :allow_destroy => true
 

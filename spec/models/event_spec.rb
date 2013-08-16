@@ -26,5 +26,29 @@
 require 'spec_helper'
 
 describe Event do
-  pending "add some examples to (or delete) #{__FILE__}"
+	describe "seats_left" do 
+		before do 
+			@event = Event.new(:event_date => DateTime.now, :event_description => "Some long desc", :event_name => "An awesome event name", :event_time => DateTime.now, :restaurant_id => 1, :event_type => "open", :city => "Kuala Lumpur", :max_seats => 10)
+			@event.save
+		end
+
+		it "should return 0 when all seats are filled" do
+			Attendee.new(:event_id => @event.id, :phone_number => "9332432432432", :seats => 10).save
+			@event.seats_left.should == 0
+		end
+
+		it "should return max seats when no seats are filled" do
+			@event.seats_left.should == @event.max_seats
+		end
+
+		it "should correctly calculate the remaining seats when some seats are filled" do
+			Attendee.new(:event_id => @event.id, :phone_number => "9332432432432", :seats => 4).save
+			Attendee.new(:event_id => @event.id, :phone_number => "9332432432432", :seats => 2).save
+			@event.seats_left.should == @event.max_seats - Attendee.where(:event_id => @event.id).pluck(:seats).sum
+		end
+
+
+
+	end
+  
 end

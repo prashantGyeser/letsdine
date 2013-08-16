@@ -1,17 +1,16 @@
 # == Schema Information
 #
-# Table name: profiles
+# Table name: waiting_lists
 #
 #  id         :integer          not null, primary key
-#  user_id    :integer
-#  picture    :string(255)
-#  about      :text
+#  event_id   :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
 require 'spec_helper'
 
-describe Profile do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe WaitingList do
+	it {should belong_to (:event)}
+	it {should belong_to (:users)}
 end
