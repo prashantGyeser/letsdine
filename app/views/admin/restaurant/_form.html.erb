@@ -20,6 +20,11 @@
     <%= f.number_field :price %>
   </div>
   <div class="field">
+    <%= f.label :commission_percentage %>
+    <p>Put this as a percentage of the price above.</p>
+    <%= f.number_field :commission_percentage %>
+  </div>
+  <div class="field">
     <%= f.label :address %>
     <%= f.text_field :address %>
   </div>

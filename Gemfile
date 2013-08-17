@@ -71,6 +71,11 @@ group :test, :development do
 
 	# Unit testing gems
 	gem 'shoulda-matchers'
+
+	# Auto running
+	gem 'guard'
+	gem 'guard-spork'
+	gem 'minitest'
 end
 
 # To use ActiveModel has_secure_password

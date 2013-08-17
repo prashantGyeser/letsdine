@@ -17,5 +17,5 @@
 require 'spec_helper'
 
 describe Restaurant do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it {should validate_presence_of(:commission_percentage)}
 end
