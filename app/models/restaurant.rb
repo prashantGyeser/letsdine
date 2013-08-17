@@ -16,7 +16,7 @@
 #
 
 class Restaurant < ActiveRecord::Base
-  attr_accessible :address, :cusine, :name, :photo, :menu_items_attributes, :price, :city, :commission_percentage
+  attr_accessible :address, :cusine, :name, :photo, :menu_items_attributes, :price, :city, :commission_percentage, :status
 
   has_many :menu_items, :dependent => :destroy
   has_many :events

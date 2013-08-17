@@ -21,7 +21,7 @@ Letsdine::Application.routes.draw do
     put "event/send_notification" => "event#send_notification"
     get "users" => "user#index"
     get "invites" => "invites#index"
-    resources :restaurant
+    resources :restaurants
   end
 
   resources :new_city_notifications
@@ -48,7 +48,7 @@ Letsdine::Application.routes.draw do
   resources :menu_items
 
 
-  resources :restaurants
+  #resources :restaurants
 
   
 

@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row-fluid">
+    <div class="span12">
+      
+    </div>
+  </div>
+</div>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @admin_restaurant.name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @admin_restaurant.address %>
+</p>
+
+<p>
+  <b>Cusine:</b>
+  <%= @admin_restaurant.cusine %>
+</p>
+
+<p>
+  <b>Photo:</b>
+  <%= @admin_restaurant.photo %>
+</p>
+
+<h1>Restaurant Menu</h1>
+<% for menu_item in @admin_restaurant.menu_items %>
+	<div>
+		<%= menu_item.name %>
+		<%= menu_item.course_name %>
+	</div>
+<% end %>
+
+
+<%= link_to 'Edit', edit_admin_restaurant_path(@admin_restaurant) %> |
+<%= link_to 'Back', admin_restaurants_path %>
