@@ -46,6 +46,13 @@ namespace :deploy do
     puts 'Pushing to bitbucket'
     puts bitbucket_push_output
 
+    puts '###############################################################'
+    puts 'Pushing to github'
+    puts '###############################################################'
+    bitbucket_push_output = `git push github master`
+    puts 'Pushing to github'
+    puts bitbucket_push_output
+
   	puts '###############################################################'
   	puts 'Todo: Deploy to heroku production'
   	puts '###############################################################'
