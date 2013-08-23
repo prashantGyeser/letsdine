@@ -55,7 +55,7 @@ class Admin::RestaurantsController < Admin::ApplicationController
           end
         end
 
-        format.html { redirect_to @admin_restaurant, notice: 'Restaurant was successfully created.' }
+        format.html { redirect_to admin_restaurant_path(@admin_restaurant), notice: 'Restaurant was successfully created.' }
         format.json { render json: @admin_restaurant, status: :created, location: @restaurant }
       else
         format.html { render action: "new" }

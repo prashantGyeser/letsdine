@@ -1,4 +1,6 @@
-<%= form_for(@admin_restaurant, :html => {:multipart => true}, :url => admin_restaurant_path) do |f| %>
+<%# form_for(@admin_restaurant, :html => {:multipart => true}, :url => admin_restaurant_path) do |f| %>
+<%# form_for[:admin, @admin_restaurant, :html => {:multipart => true}] do |f| %>
+<%= form_for [:admin, @admin_restaurant], :html => {:multipart => true} do |f| %>
   <% if @admin_restaurant.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@admin_restaurant.errors.count, "error") %> prohibited this restaurant from being saved:</h2>

@@ -33,6 +33,7 @@ Letsdine::Application.routes.draw do
 
   resources :user_invites
 
+  resources :comments
 
   put "discussion/create"
 

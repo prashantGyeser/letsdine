@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130820162329) do
+ActiveRecord::Schema.define(:version => 20130822135332) do
 
   create_table "attendees", :force => true do |t|
     t.integer  "user_id"
@@ -28,6 +28,14 @@ ActiveRecord::Schema.define(:version => 20130820162329) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "comments", :force => true do |t|
+    t.integer  "event_id"
+    t.integer  "user_id"
+    t.text     "comment"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "discussions", :force => true do |t|
     t.integer  "user_id"
     t.integer  "group_id"
@@ -39,6 +47,9 @@ ActiveRecord::Schema.define(:version => 20130820162329) do
   create_table "event_discussions", :force => true do |t|
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "event_id"
+    t.integer  "user_id"
+    t.text     "comment"
   end
 
   create_table "event_notify_emails", :force => true do |t|

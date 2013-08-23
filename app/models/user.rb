@@ -42,6 +42,7 @@ class User < ActiveRecord::Base
   has_many :attendees
   has_many :interests, :dependent => :destroy
   has_many :waiting_lists
+  has_many :comments
   
 
 

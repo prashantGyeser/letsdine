@@ -37,6 +37,7 @@ class Event < ActiveRecord::Base
   has_many :attendee, :dependent => :destroy
   has_many :waiting_list_entries
   has_many :waiting_attendees, :through => :waiting_list_entries, :class_name => "Attendee", :source => :attendee
+  has_many :comments
 
   before_create :generate_token
 
