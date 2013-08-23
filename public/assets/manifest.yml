@@ -87,8 +87,8 @@ admin/application.js: admin/application-1b13569e9620782f423d4cd3ce931750.js
 admin/application/index.js: admin/application-1b13569e9620782f423d4cd3ce931750.js
 admin/highcharts.js: admin/highcharts-8b90df74ca79c5e04628c3f5e8cfeaf2.js
 admin/highcharts/index.js: admin/highcharts-8b90df74ca79c5e04628c3f5e8cfeaf2.js
-application.js: application-2b980b2fb784a0560df1094659c259d2.js
-application/index.js: application-2b980b2fb784a0560df1094659c259d2.js
+application.js: application-c4124f95898cd40016a7a63869049ce6.js
+application/index.js: application-c4124f95898cd40016a7a63869049ce6.js
 bootstrap-datepicker.js: bootstrap-datepicker-ea267d0f4b58e4c693968c4210e25490.js
 bootstrap-datepicker/index.js: bootstrap-datepicker-ea267d0f4b58e4c693968c4210e25490.js
 bootstrap-multiselect.js: bootstrap-multiselect-1343b2f9849c0ea8afd0c2ef933c132e.js
