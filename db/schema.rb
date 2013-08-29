@@ -44,14 +44,6 @@ ActiveRecord::Schema.define(:version => 20130822135332) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "event_discussions", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-    t.integer  "event_id"
-    t.integer  "user_id"
-    t.text     "comment"
-  end
-
   create_table "event_notify_emails", :force => true do |t|
     t.string   "email_address"
     t.integer  "event_id"
