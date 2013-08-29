@@ -21,6 +21,7 @@
 	<%= stylesheet_link_tag    "bootstrap", :media => "all" %>
 	<%= stylesheet_link_tag    "bootstrap-responsive", :media => "all" %>
 	<%= stylesheet_link_tag    "style", :media => "all" %>
+	<%= stylesheet_link_tag    "buttons", :media => "all" %>
 	<%= stylesheet_link_tag    "prettify", :media => "all" %>
 	<%= stylesheet_link_tag    "custom", :media => "all" %>
 	<%= stylesheet_link_tag    "datepicker", :media => "all" %>
@@ -59,6 +60,37 @@
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
 	<!-- FB end -->
+
+	<div class="topBar">
+		<div class="container">
+			<div class="row-fluid">
+				<div class="span4 offset8">
+					<div class="topBarLogin pull-right">
+						<span>Already have an account?</span>
+						<a href="#" class="css3-button css3-button_pink">Login</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="span6 offset3">
+				<div class="headerLogo">
+					<%= image_tag "logo.png" %>
+					<h3>
+						Meet new people with similar interests.
+					</h3>
+					<p>
+						Find people that share your interest and meet them over great food in one of our events.
+					</p>
+					<a href="#" class="css3-button css3-button_blue homepageSignup">Signup with <%= image_tag("facebookLogo.png")%></a>
+					<a href="#" class="css3-button css3-button_pink homepageSignup">Signup with Email</a>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<div class="header">
       <div class="container">
