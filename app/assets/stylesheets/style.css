@@ -68,6 +68,57 @@ body {
       padding-bottom: 5px; }
 
 /**********************************************************************/
+/* Filter style */
+/**********************************************************************/
+.filter {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 10px; }
+  .filter span {
+    font-size: 15px;
+    font-weight: bold;
+    display: inline-block; }
+  .filter .citySelect {
+    margin: 0;
+    background: #f1efee;
+    padding: 10px;
+    color: #9d8d87;
+    font-weight: bold;
+    border: 1px solid #dad4d2;
+    display: inline-block; }
+  .filter .citySelect:hover {
+    cursor: pointer; }
+  .filter .citySelect i {
+    line-height: 11px;
+    padding-left: 30px; }
+  .filter .cityList {
+    background: #fff;
+    margin-top: -1px;
+    position: absolute;
+    left: 100px;
+    z-index: 1000;
+    width: 191px;
+    -webkit-box-shadow: 0px 10px 26px rgba(50, 50, 50, 0.3);
+    -moz-box-shadow: 0px 10px 26px rgba(50, 50, 50, 0.3);
+    box-shadow: 0px 10px 26px rgba(50, 50, 50, 0.3);
+    border: 1px solid #dad4d2; }
+  .filter .cityList ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px 0 0 0; }
+  .filter .cityList ul li {
+    padding: 10px;
+    cursor: pointer; }
+  .filter .cityList ul li:hover {
+    color: #fff;
+    background: #c3bab6; }
+  .filter .cityList ul li a {
+    color: #444;
+    font-weight: bold; }
+  .filter .cityList ul li a:hover {
+    text-decoration: none; }
+
+/**********************************************************************/
 /* Login style */
 /**********************************************************************/
 .loginDetails {

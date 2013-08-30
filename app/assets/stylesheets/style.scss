@@ -2,6 +2,7 @@
 /* Color Scheme */
 /**********************************************************************/
 $brand_color: #dd4124;
+$filter_background_color: #A6733E;
 /**********************************************************************/
 /* Common styles */
 /**********************************************************************/
@@ -94,10 +95,80 @@ body
 		}
 	}
 }
+/**********************************************************************/
+/* Filter style */
+/**********************************************************************/
+.filter
+{
+	background: #fff;
+	border: 1px solid #ddd;
+	padding: 10px;
+	span
+	{
+		font-size: 15px;
+		font-weight: bold;
+		display: inline-block;
+	}
+	.citySelect
+	{
+	  margin: 0;
+	  background: #f1efee;
+	  padding: 10px;
+	  color: #9d8d87;
+	  font-weight: bold;
+	  border: 1px solid #dad4d2;
+	  display: inline-block;
+	}
+	.citySelect:hover
+	{
+	  cursor: pointer;
+	}
+	.citySelect i
+	{
+	  line-height: 11px;
+	  padding-left: 30px;
+	}
+	.cityList 
+	{
+	  background: #fff;
+	  margin-top: -1px;
+	  position: absolute;
+	  left: 100px;
+	  z-index: 1000;
+	  width: 191px;
+	  -webkit-box-shadow: 0px 10px 26px rgba(50, 50, 50, 0.3);
+	  -moz-box-shadow:    0px 10px 26px rgba(50, 50, 50, 0.3);
+	  box-shadow:         0px 10px 26px rgba(50, 50, 50, 0.3);
+	  border: 1px solid #dad4d2;
+	}
+	.cityList ul
+	{
+	  list-style: none;
+	  margin: 0;
+	  padding: 10px 0 0 0;
+	}
+	.cityList ul li
+	{
+	  padding: 10px;
+	  cursor: pointer;
+	}
+	.cityList ul li:hover
+	{
+	  color: #fff;
+	  background: #c3bab6;  
 
+	}
+	.cityList ul li a
+	{
+	  color: #444;
+	  font-weight: bold;
+	}
+	.cityList ul li a:hover
+	{
+	  text-decoration: none;
 
-
-
+	}
+}
 /**********************************************************************/
 /* Login style */
 /**********************************************************************/
