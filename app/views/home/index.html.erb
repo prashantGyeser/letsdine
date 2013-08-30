@@ -3,7 +3,23 @@
     <%= javascript_include_tag "cycle" %>
 <% end %>
 
-
+<div class="container">
+    <div class="row">
+        <div class="span6 offset3">
+            <div class="headerLogo">
+                <%= image_tag "logo.png" %>
+                <h3>
+                    Meet new people with similar interests.
+                </h3>
+                <p>
+                    Find people that share your interest and meet them over great food in one of our events.
+                </p>
+                <a href="#" class="css3-button css3-button_blue homepageSignup">Signup with <%= image_tag("facebookLogo.png")%></a>
+                <a href="#" class="css3-button css3-button_pink homepageSignup">Signup with Email</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="row-fluid">
     <div class="span12">
@@ -17,9 +33,20 @@
         <div class="span12">
             <div class="filter">
                 <span>Select your city: </span>
-                <select id="e1">
-                    <option value="AL">Alabama</option>
-                    <option value="WY">Wyoming</option>
+                <select id="e1" style="width:300px;">
+                    <option></option>
+                    <optgroup label="India">
+                        <option value="Ahmedabad">Ahmedabad</option>
+                        <option value="Bangalore">Bangalore</option>    
+                        <option value="Hyderabad">Hyderabad</option>    
+                        <option value="Pune">Pune</option>    
+                    </optgroup>
+                    <optgroup label="Malaysia">
+                        <option value="Kuala Lumpur">Kuala Lumpur</option>
+                        <option value="Penang">Penang</option>    
+                        <option value="Perak">Perak</option>    
+                        <option value="Selangor">Selangor</option>    
+                    </optgroup>
                 </select>
             </div>
         </div>
