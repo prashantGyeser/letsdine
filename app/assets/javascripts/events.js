@@ -1,4 +1,3 @@
-// Remove this line. Have to modify something so that a push to heroku will work
 $(document).ready(function(){
 	$('#private_event_description').hide();
 	$('#public_event_description').hide();
