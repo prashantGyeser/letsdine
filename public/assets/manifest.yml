@@ -96,6 +96,8 @@ jquery.gallery.js: jquery.gallery-2182d6d54cc1b5c5feb2ef78fbde7d0d.js
 jquery/index.gallery.js: jquery.gallery-2182d6d54cc1b5c5feb2ef78fbde7d0d.js
 restaurant_picker.js: restaurant_picker-cc0b03132dcc9bd3f1a289dea5964a09.js
 restaurant_picker/index.js: restaurant_picker-cc0b03132dcc9bd3f1a289dea5964a09.js
+select2.js: select2-76f1a0965197b9543da9c2e702d90feb.js
+select2/index.js: select2-76f1a0965197b9543da9c2e702d90feb.js
 zoomflow/zoomflow.dev.js: zoomflow/zoomflow.dev-23dcf2a97da4ae698d066a41dccee462.js
 zoomflow/zoomflow/index.dev.js: zoomflow/zoomflow.dev-23dcf2a97da4ae698d066a41dccee462.js
 admin/admin.css: admin/admin-8dcd8bf8010362175e649c2cb5ea2726.css
@@ -110,6 +112,8 @@ bootstrap-timepicker.css: bootstrap-timepicker-507a15d551ef65cab721d901af6a8a7f.
 bootstrap-timepicker/index.css: bootstrap-timepicker-507a15d551ef65cab721d901af6a8a7f.css
 bootstrap.css: bootstrap-2e7db0bcf54e1280ab0c2a9319879a1f.css
 bootstrap/index.css: bootstrap-2e7db0bcf54e1280ab0c2a9319879a1f.css
+buttons.css: buttons-7b5425fb8695ca124851c869e9f2a789.css
+buttons/index.css: buttons-7b5425fb8695ca124851c869e9f2a789.css
 custom.css: custom-bd7b102b73bc95fdabfbfb006141a033.css
 custom/index.css: custom-bd7b102b73bc95fdabfbfb006141a033.css
 datepicker.css: datepicker-f030298a599c581d22476f8572d7386d.css
@@ -120,6 +124,8 @@ font-awesome.css: font-awesome-d87a3f144efd5e95717ce1c73b236e05.css
 font-awesome/index.css: font-awesome-d87a3f144efd5e95717ce1c73b236e05.css
 prettify.css: prettify-1c0d6850ec95627c0ae574062b3865f2.css
 prettify/index.css: prettify-1c0d6850ec95627c0ae574062b3865f2.css
+select2.css: select2-b3fa53946b9cdf68e3de6b61f61a2f58.css
+select2/index.css: select2-b3fa53946b9cdf68e3de6b61f61a2f58.css
 style.css: style-1b13569e9620782f423d4cd3ce931750.css
 style/index.css: style-1b13569e9620782f423d4cd3ce931750.css
 zoomflow.css: zoomflow-74815dbce6c1135a83ee4f17cfc0e6ee.css
