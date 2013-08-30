@@ -21,10 +21,12 @@
 	<%= stylesheet_link_tag    "bootstrap", :media => "all" %>
 	<%= stylesheet_link_tag    "bootstrap-responsive", :media => "all" %>
 	<%= stylesheet_link_tag    "style", :media => "all" %>
+	<%= stylesheet_link_tag    "buttons", :media => "all" %>
 	<%= stylesheet_link_tag    "prettify", :media => "all" %>
 	<%= stylesheet_link_tag    "custom", :media => "all" %>
 	<%= stylesheet_link_tag    "datepicker", :media => "all" %>
 	<%= stylesheet_link_tag    "bootstrap-timepicker", :media => "all" %>
+	<%= stylesheet_link_tag    "select2", :media => "all" %>
 	<%= stylesheet_link_tag    "font-awesome", :media => "all" %>
 	<%= stylesheet_link_tag    "font-awesome-ie7", :media => "all" %>
 
@@ -32,6 +34,7 @@
 	<%= javascript_include_tag "jquery-1.9.1" %>
 	<%= javascript_include_tag "bootstrap" %>
 	<%= javascript_include_tag "closed-event-overlay" %>
+	<%= javascript_include_tag "select2" %>
 	<%= yield :javascript %>	
 	
 	<%= csrf_meta_tags %>
@@ -60,65 +63,22 @@
 	}(document, 'script', 'facebook-jssdk'));</script>
 	<!-- FB end -->
 
-	<div class="header">
-      <div class="container">
-        <div class="row-fluid">
-          <div class="span2">
-            <div class="ribbon">
-              <ul>
-                <li><h4>LetsDine</h4> </li>
-              </ul>
-            </div>
-          </div>
-          <div class="span6">
-            <ul class="topNav">
-            	<%= render_navigation :class => 'test' %>
-              
-            </ul>
-          </div>
-          <div class="span4">
-            <div class="userControlsContainer">
-            	
-            	<div class="usercontrols">
-            		<div class="loginOptions">
-        						<% if user_signed_in? %>
-	        						<%= current_user.name %> | <%= link_to "Sign out", destroy_user_session_path %>
-	        					<% else %>
-	        						<%= link_to "LOGIN", new_user_session_path%> 
-	        						|
-	        						<%= link_to "SIGN UP", new_user_registration_path %>
-	        						
-	        					<% end %>
-        					</div>
-            	</div>
-              
-              <div class="citySelect" id="citySelectDropdown">
-              	<% if session[:city].blank? %>
-              		Select your city... 
-              	<% else %>
-              		Selected City: <%= session[:city] %>
-              	<% end %>
-                <i class="icon-angle-down icon-2x selectIcon"></i>	
-              </div>
-              <div class="cityList" id="citySelectList">
-                <ul>
-                  <li><a href="Hyderabad">Hyderabad</a></li>
-                  <li><a href="Bangalore">Bangalore</a></li>
-                  <li><a href="Pune">Pune</a></li>
-                  <li><a href="Ahmedabad">Ahmedabad</a></li>
-                  <li><a href="Kuala Lumpur">Kuala Lumpur</a></li>
-                  <li><a href="Selangor">Selangor</a></li>
-                  <li><a href="Perak">Perak</a></li>
-                  <li><a href="Penang">Penang</a></li>
-                  
-                </ul>
-              </div>
-            </div>
-          
-          </div>
-        </div>
-      </div>  
-    </div>
+	<div class="topBar">
+		<div class="container">
+			<div class="row-fluid">
+				<div class="span4 offset8">
+					<div class="topBarLogin pull-right">
+						<span>Already have an account?</span>
+						<a href="#" class="css3-button css3-button_pink">Login</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+
+
 
     <% if @home_page %>
     	
@@ -137,6 +97,14 @@
 
 	<%= yield %>	
 
+	<script>
+		$(document).ready(function(){
+			 $("#e1").select2({
+			 	placeholder: "Select a City",
+                		allowClear: true
+			 });
+		});
+	</script>
 
 	<script>
       $(document).ready(function () {
