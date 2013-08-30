@@ -11,6 +11,8 @@ fontawesome-webfont.woff: fontawesome-webfont-b4d67f1e5651506c3e80d842ee67d6ba.w
 fontawesome-webfont/index.woff: fontawesome-webfont-b4d67f1e5651506c3e80d842ee67d6ba.woff
 alert-overlay.png: alert-overlay-1761c70e8456d8ddae4e0caca3a58c21.png
 alert-overlay/index.png: alert-overlay-1761c70e8456d8ddae4e0caca3a58c21.png
+background.png: background-fda7cbe4b71ca00010aa6277a08ae735.png
+background/index.png: background-fda7cbe4b71ca00010aa6277a08ae735.png
 community-dining.png: community-dining-d16cdfbbf0a143259195a670905f8ff1.png
 community-dining/index.png: community-dining-d16cdfbbf0a143259195a670905f8ff1.png
 contentBG.png: contentBG-e5b71b7528a353ed6568848d3dfb261b.png
@@ -19,6 +21,8 @@ eventIcon.png: eventIcon-adcaf8e05642d13f9a706facacc961a7.png
 eventIcon/index.png: eventIcon-adcaf8e05642d13f9a706facacc961a7.png
 eventImage.png: eventImage-b393aabfe2ffca60953921e8bb0e4b6b.png
 eventImage/index.png: eventImage-b393aabfe2ffca60953921e8bb0e4b6b.png
+facebookLogo.png: facebookLogo-8e2ecc9aca22ad9a28bab445d6cb28a6.png
+facebookLogo/index.png: facebookLogo-8e2ecc9aca22ad9a28bab445d6cb28a6.png
 glyphicons-halflings-white.png: glyphicons-halflings-white-6cccd17a7aed91dbc0157d343c68c0d9.png
 glyphicons-halflings-white/index.png: glyphicons-halflings-white-6cccd17a7aed91dbc0157d343c68c0d9.png
 glyphicons-halflings.png: glyphicons-halflings-2851b489e8c39f8fad44fc10efb99c3e.png
@@ -45,8 +49,8 @@ loader.gif: loader-f334e3d7ffee71748d69150ba81ddf81.gif
 loader/index.gif: loader-f334e3d7ffee71748d69150ba81ddf81.gif
 locationIcon.png: locationIcon-4fbf527f6b20b0ee83a793f4607a8309.png
 locationIcon/index.png: locationIcon-4fbf527f6b20b0ee83a793f4607a8309.png
-logo.png: logo-06d1d41faae3f23eb0c7180506fee7fb.png
-logo/index.png: logo-06d1d41faae3f23eb0c7180506fee7fb.png
+logo.png: logo-e3b941e5fb1677289e0d7cd6aa869c21.png
+logo/index.png: logo-e3b941e5fb1677289e0d7cd6aa869c21.png
 logo_shrunk.png: logo_shrunk-36cd05e7145eeeb765ed9c861e483479.png
 logo_shrunk/index.png: logo_shrunk-36cd05e7145eeeb765ed9c861e483479.png
 noProfilePic.png: noProfilePic-d55d6f5f58c3c10b3ee56ce81c367105.png
@@ -67,8 +71,8 @@ admin/application.js: admin/application-1b13569e9620782f423d4cd3ce931750.js
 admin/application/index.js: admin/application-1b13569e9620782f423d4cd3ce931750.js
 admin/highcharts.js: admin/highcharts-8b90df74ca79c5e04628c3f5e8cfeaf2.js
 admin/highcharts/index.js: admin/highcharts-8b90df74ca79c5e04628c3f5e8cfeaf2.js
-application.js: application-c4124f95898cd40016a7a63869049ce6.js
-application/index.js: application-c4124f95898cd40016a7a63869049ce6.js
+application.js: application-18f4f125bfb75512f42e48d3d479b185.js
+application/index.js: application-18f4f125bfb75512f42e48d3d479b185.js
 bootstrap-datepicker.js: bootstrap-datepicker-ea267d0f4b58e4c693968c4210e25490.js
 bootstrap-datepicker/index.js: bootstrap-datepicker-ea267d0f4b58e4c693968c4210e25490.js
 bootstrap-multiselect.js: bootstrap-multiselect-1343b2f9849c0ea8afd0c2ef933c132e.js
@@ -98,8 +102,8 @@ admin/admin.css: admin/admin-8dcd8bf8010362175e649c2cb5ea2726.css
 admin/admin/index.css: admin/admin-8dcd8bf8010362175e649c2cb5ea2726.css
 admin/application.css: admin/application-a2fb5098b7dbb6232e917179a16748cb.css
 admin/application/index.css: admin/application-a2fb5098b7dbb6232e917179a16748cb.css
-application.css: application-4604c0c98d45ea24ff9392721a620ba4.css
-application/index.css: application-4604c0c98d45ea24ff9392721a620ba4.css
+application.css: application-7bc1bcc9d4aa01d108ad743b39110fee.css
+application/index.css: application-7bc1bcc9d4aa01d108ad743b39110fee.css
 bootstrap-responsive.css: bootstrap-responsive-3a0afd040e59f425bf14fee96ce2985e.css
 bootstrap-responsive/index.css: bootstrap-responsive-3a0afd040e59f425bf14fee96ce2985e.css
 bootstrap-timepicker.css: bootstrap-timepicker-507a15d551ef65cab721d901af6a8a7f.css
@@ -116,8 +120,8 @@ font-awesome.css: font-awesome-d87a3f144efd5e95717ce1c73b236e05.css
 font-awesome/index.css: font-awesome-d87a3f144efd5e95717ce1c73b236e05.css
 prettify.css: prettify-1c0d6850ec95627c0ae574062b3865f2.css
 prettify/index.css: prettify-1c0d6850ec95627c0ae574062b3865f2.css
-style.css: style-24d701e32aa52a7f206e381d5c8f65a6.css
-style/index.css: style-24d701e32aa52a7f206e381d5c8f65a6.css
+style.css: style-1b13569e9620782f423d4cd3ce931750.css
+style/index.css: style-1b13569e9620782f423d4cd3ce931750.css
 zoomflow.css: zoomflow-74815dbce6c1135a83ee4f17cfc0e6ee.css
 zoomflow/index.css: zoomflow-74815dbce6c1135a83ee4f17cfc0e6ee.css
 jquery.min.map: jquery.min-6c267bfd2b3f36e6edccb2e584934c1c.map
