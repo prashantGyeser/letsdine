@@ -125,7 +125,11 @@ body
 	}
 	h4
 	{
-		padding: 10px;
+		padding: 0 10px;
+	}
+	p
+	{
+		padding: 0 10px 10px 10px;
 	}
 }
 
@@ -137,11 +141,24 @@ body
 		position: absolute;
 		top: 15px;
 		left: 0px;
-		/*background: $brand_color_80_trasparent;*/
-		background: red;
+		background: $brand_color_80_trasparent;
 		padding: 10px;
 		color: white;
 
+	}
+}
+.eventDetails
+{
+	padding: 10px;
+	.detail
+	{
+		color: #000;
+		font-weight: bold;
+		.map-icon
+		{
+			margin-left: 2px;
+			margin-right: 3px;
+		}
 	}
 }
 /**********************************************************************/

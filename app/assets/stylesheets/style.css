@@ -87,7 +87,9 @@ body {
   -webkit-border-radius: 6px 6px 0px 0px;
   border-radius: 6px 6px 0px 0px; }
 .event h4 {
-  padding: 10px; }
+  padding: 0 10px; }
+.event p {
+  padding: 0 10px 10px 10px; }
 
 .eventListContainer {
   position: relative; }
@@ -95,10 +97,18 @@ body {
     position: absolute;
     top: 15px;
     left: 0px;
-    /*background: $brand_color_80_trasparent;*/
-    background: red;
+    background: rgba(221, 65, 36, 0.8);
     padding: 10px;
     color: white; }
+
+.eventDetails {
+  padding: 10px; }
+  .eventDetails .detail {
+    color: #000;
+    font-weight: bold; }
+    .eventDetails .detail .map-icon {
+      margin-left: 2px;
+      margin-right: 3px; }
 
 /**********************************************************************/
 /* Login style */
