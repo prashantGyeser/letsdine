@@ -3,23 +3,16 @@
     <%= javascript_include_tag "cycle" %>
 <% end %>
 
-<div class="container">
-    <div class="row">
-        <div class="span6 offset3">
-            <div class="headerLogo">
-                <%= image_tag "logo.png" %>
-                <h3>
-                    Meet new people with similar interests.
-                </h3>
-                <p>
-                    Find people that share your interest and meet them over great food in one of our events.
-                </p>
-                <a href="#" class="css3-button css3-button_blue homepageSignup">Signup with <%= image_tag("facebookLogo.png")%></a>
-                <a href="#" class="css3-button css3-button_pink homepageSignup">Signup with Email</a>
-            </div>
-        </div>
-    </div>
-</div>
+<% content_for :homepageHeader do %>
+    <h3>
+        Meet new people with similar interests.
+    </h3>
+    <p>
+        Find people that share your interest and meet them over great food in one of our events.
+    </p>
+    <a href="#" class="css3-button css3-button_blue homepageSignup">Signup with <%= image_tag("facebookLogo.png")%></a>
+    <a href="#" class="css3-button css3-button_pink homepageSignup">Signup with Email</a>
+<% end %>
 
 <div class="row-fluid">
     <div class="span12">
