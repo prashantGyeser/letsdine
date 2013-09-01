@@ -10,8 +10,9 @@
     <p>
         Find people that share your interest and meet them over great food in one of our events.
     </p>
-    <a href="#" class="css3-button css3-button_blue homepageSignup">Signup with <%= image_tag("facebookLogo.png")%></a>
-    <a href="" class="css3-button css3-button_pink homepageSignup">Signup with Email</a>
+    
+    <a href="<%= user_omniauth_authorize_path(:facebook) %>" class="css3-button css3-button_blue homepageSignup">Signup with <%= image_tag("facebookLogo.png")%></a>
+    <a href="<%= new_user_registration_path %>" class="css3-button css3-button_pink homepageSignup">Signup with Email</a>
 <% end %>
 
 <div class="row-fluid">
