@@ -2,6 +2,8 @@ class ApplicationController < ActionController::Base
 	protect_from_forgery
 	after_filter :store_location
 
+	layout :layout_by_resource
+
 	def store_location
 		# store last url as long as it isn't a /users path
 		session[:previous_url] = request.fullpath unless request.fullpath =~ /\/users/
@@ -68,4 +70,15 @@ class ApplicationController < ActionController::Base
 	def after_sign_out_path_for(resource)
 	  session[:previous_url] || root_path
 	end
+
+	protected
+
+	  def layout_by_resource
+	    if devise_controller?
+	      "devise/sessions"
+	    else
+	      "application"
+	    end
+	  end
+
 end

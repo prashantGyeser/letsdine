@@ -154,7 +154,7 @@ body {
       background-color: white;
       position: absolute;
       top: 11px;
-      left: 50%;
+      left: 45%;
       font-weight: bold;
       font-size: 18px; }
   .login .loginWithFacebook {
@@ -164,6 +164,18 @@ body {
     .login .loginWithFacebook img {
       padding-bottom: 5px;
       margin-left: 5px; }
+  .login .loginFooter {
+    background: #dd4124;
+    margin: 30px -10px -10px -10px;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    text-align: center; }
+    .login .loginFooter .linksDivider {
+      margin: 0 10px;
+      display: inline; }
+    .login .loginFooter a {
+      color: white; }
 
 /**********************************************************************/
 /* TBD */
