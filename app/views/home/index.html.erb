@@ -11,7 +11,7 @@
         Find people that share your interest and meet them over great food in one of our events.
     </p>
     <a href="#" class="css3-button css3-button_blue homepageSignup">Signup with <%= image_tag("facebookLogo.png")%></a>
-    <a href="#" class="css3-button css3-button_pink homepageSignup">Signup with Email</a>
+    <a href="" class="css3-button css3-button_pink homepageSignup">Signup with Email</a>
 <% end %>
 
 <div class="row-fluid">
@@ -25,8 +25,14 @@
     <div class="row-fluid">
         <div class="span12">
             <div class="filter">
-                <span>Select your city: </span>
-                <select id="e1" style="width:300px;">
+
+                <% if session[:city].blank? %>
+                    <span>See all events in: </span>    
+                <% else %>
+                    <span>Showing events for <%= session[:city] %>. </span>
+                <% end %>
+                
+                <select id="citySelect" style="width:300px;">
                     <option></option>
                     <optgroup label="India">
                         <option value="Ahmedabad">Ahmedabad</option>
@@ -101,13 +107,17 @@
                     <% else %>
                         <div class="event white_background">    
                     <% end %>
+                        <div class="eventListContainer">
 
                         <% if event.event_image.blank? %>
                             <%= image_tag restaurant.photo_url(:large_scaled).to_s %>
                         <% else %>
                             <%= image_tag event.event_image_url(:large_scaled).to_s %>
                         <% end %>
-
+                            <div class="seatsLeft">
+                                <%= event.seats_left %> Seats left
+                            </div>
+                        </div>
                         <% if event.status == 'closed' || event.status == "full" %>
                             <div class="closed">
                                 <% if event.status == "full" %>
@@ -119,17 +129,15 @@
                         <% end %>
                         
                         <h4><%= link_to event.event_name, event_path(event) %></h4>
-                        <div class="seats_left_event_page">
-                            <%= event.seats_left %> Seats left
-                        </div>
+                        
                         <div class="eventDetails">
                             <div class="detail">
-                                <img src="/assets/locationIcon.png">
+                                <i class="icon-map-marker map-icon"></i>
                                 <%= restaurant.name %>
                             </div>
 
                             <div class="detail">
-                                <img src="/assets/timeIcon.png">
+                                <i class="icon-time"></i>
                                 <%= event.event_date.strftime("%d %B %Y") %>
                                 <%= event.event_time.strftime("%I:%M%p") %>
                             </div>
@@ -137,19 +145,6 @@
                         <p>
                             <%= truncate(event.event_description, :length => 100) %> <%= link_to "See event", event_path(event) %>
                         </p>
-                        <div class="peopleAttending">
-                            <% event.attendee.first(4).each do |attendee| %>
-                                <% if attendee.user.image.blank? %>
-                                    <%= image_tag "/assets/noProfilePic.png", "data-toggle" => "tooltip", :title => attendee.user.name, :class => "profilePic" %>    
-                                <% else %>
-                                    <%= image_tag attendee.user.image.to_s, "data-toggle" => "tooltip", :title => attendee.user.name, :class => "profilePic" %>    
-                                <% end %>
-
-                            <% end %>
-                            <p>
-                                <%= link_to "See All People Attending", event_path(event) %>
-                            </p>
-                        </div>
                     </div>
                 </div>    
 

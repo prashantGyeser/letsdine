@@ -2,6 +2,7 @@
 /* Color Scheme */
 /**********************************************************************/
 $brand_color: #dd4124;
+$brand_color_darker: #c1381e;
 $filter_background_color: #A6733E;
 $brand_color_80_trasparent: rgba(221,65,36,.8);
 $black_80_transparent: rgba(0,0,0,.8);
@@ -117,6 +118,9 @@ body
 /**********************************************************************/
 .event
 {
+	-webkit-box-shadow: 2px 2px 5px rgba(50, 50, 50, 0.4);
+	-moz-box-shadow:    2px 2px 5px rgba(50, 50, 50, 0.4);
+	box-shadow:         2px 2px 5px rgba(50, 50, 50, 0.4);
 	img
 	{
 		-moz-border-radius: 0px;
@@ -164,33 +168,73 @@ body
 /**********************************************************************/
 /* Login style */
 /**********************************************************************/
-.loginDetails
+.loginLogo
 {
-	margin-top: 10px;
-	font-size: 16px;
-	color: #fff;
-
+	padding: 10px;
+	margin: 0 auto;
+	width: 300px;
 }
-.loginOptions
+.login
 {
-	float: right;
-}
-.loginDetails a
-{
-	color: #fff;
-}
-.login_link
-{
-	font-weight: bold;
-	margin-right: 10px;
-}
-#sign_up_link a
-{
-	margin-top: 5px;
-}
-#sign_up_link a:hover
-{
-	text-decoration: none;
+	background: white;
+	padding: 10px;
+	margin: 0 auto;
+	width: 300px;
+	.input-block-level {
+	  //display: block;
+	  -moz-box-sizing: border-box; 
+	  -webkit-box-sizing: border-box; 
+	  box-sizing: border-box;
+	}
+	.add-on
+	{
+		background: $brand_color;
+		color: white;
+		border: 1px solid $brand_color_darker;
+	}
+	.width-90-percent	
+	{
+		width: 90%;
+	}
+	.width-95-percent	
+	{
+		width: 95%;
+	}
+	.loginButton
+	{
+		font-size: 15px;
+		text-transform: uppercase;
+		text-align: center;
+		display: inline-block;
+		padding-bottom: 25px;
+	}
+	.facebookLoginDivider
+	{
+		border-top: 1px solid #ccc;
+		position: relative;
+		margin-bottom: 20px;
+		.or
+		{
+			margin-top: -20px;
+			background-color: white;
+			position: absolute;
+			top: 11px;
+			left: 50%;
+			font-weight: bold;
+			font-size: 18px;
+		}
+	}
+	.loginWithFacebook
+	{
+		font-size: 15px;
+		text-transform: uppercase;
+		text-align: center;
+		img
+		{
+			padding-bottom: 5px;
+			margin-left: 5px;
+		}
+	}
 }
 /**********************************************************************/
 /* TBD */

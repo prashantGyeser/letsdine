@@ -82,14 +82,18 @@ body {
 /**********************************************************************/
 /* Event List Item Style */
 /**********************************************************************/
-.event img {
-  -moz-border-radius: 0px;
-  -webkit-border-radius: 6px 6px 0px 0px;
-  border-radius: 6px 6px 0px 0px; }
-.event h4 {
-  padding: 0 10px; }
-.event p {
-  padding: 0 10px 10px 10px; }
+.event {
+  -webkit-box-shadow: 2px 2px 5px rgba(50, 50, 50, 0.4);
+  -moz-box-shadow: 2px 2px 5px rgba(50, 50, 50, 0.4);
+  box-shadow: 2px 2px 5px rgba(50, 50, 50, 0.4); }
+  .event img {
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 6px 6px 0px 0px;
+    border-radius: 6px 6px 0px 0px; }
+  .event h4 {
+    padding: 0 10px; }
+  .event p {
+    padding: 0 10px 10px 10px; }
 
 .eventListContainer {
   position: relative; }
@@ -113,26 +117,53 @@ body {
 /**********************************************************************/
 /* Login style */
 /**********************************************************************/
-.loginDetails {
-  margin-top: 10px;
-  font-size: 16px;
-  color: #fff; }
+.loginLogo {
+  padding: 10px;
+  margin: 0 auto;
+  width: 300px; }
 
-.loginOptions {
-  float: right; }
-
-.loginDetails a {
-  color: #fff; }
-
-.login_link {
-  font-weight: bold;
-  margin-right: 10px; }
-
-#sign_up_link a {
-  margin-top: 5px; }
-
-#sign_up_link a:hover {
-  text-decoration: none; }
+.login {
+  background: white;
+  padding: 10px;
+  margin: 0 auto;
+  width: 300px; }
+  .login .input-block-level {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+  .login .add-on {
+    background: #dd4124;
+    color: white;
+    border: 1px solid #c1381e; }
+  .login .width-90-percent {
+    width: 90%; }
+  .login .width-95-percent {
+    width: 95%; }
+  .login .loginButton {
+    font-size: 15px;
+    text-transform: uppercase;
+    text-align: center;
+    display: inline-block;
+    padding-bottom: 25px; }
+  .login .facebookLoginDivider {
+    border-top: 1px solid #ccc;
+    position: relative;
+    margin-bottom: 20px; }
+    .login .facebookLoginDivider .or {
+      margin-top: -20px;
+      background-color: white;
+      position: absolute;
+      top: 11px;
+      left: 50%;
+      font-weight: bold;
+      font-size: 18px; }
+  .login .loginWithFacebook {
+    font-size: 15px;
+    text-transform: uppercase;
+    text-align: center; }
+    .login .loginWithFacebook img {
+      padding-bottom: 5px;
+      margin-left: 5px; }
 
 /**********************************************************************/
 /* TBD */

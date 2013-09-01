@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	
+	<% if session[:city].nil? %>
+		<% session[:city] = "" %>
+	<% end %>
+
+	<% if (yield :title).empty? %>
+		<% if session[:city].empty? %>
+			<title>Things to do and people to meetup up with</title>	
+		<% else %>
+			<title>Things to do in <%= session[:city] %></title>
+		<% end %>	
+	<% else %>
+		<title><%= yield :title %></title>		
+	<% end %>
+	
+
+	<%= stylesheet_link_tag    "application", :media => "all" %>
+	<%= stylesheet_link_tag    "bootstrap", :media => "all" %>
+	<%= stylesheet_link_tag    "bootstrap-responsive", :media => "all" %>
+	<%= stylesheet_link_tag    "style", :media => "all" %>
+	<%= stylesheet_link_tag    "buttons", :media => "all" %>
+	<%= stylesheet_link_tag    "prettify", :media => "all" %>
+	<%= stylesheet_link_tag    "custom", :media => "all" %>
+	<%= stylesheet_link_tag    "datepicker", :media => "all" %>
+	<%= stylesheet_link_tag    "bootstrap-timepicker", :media => "all" %>
+	<%= stylesheet_link_tag    "select2", :media => "all" %>
+	<%= stylesheet_link_tag    "font-awesome", :media => "all" %>
+	<%= stylesheet_link_tag    "font-awesome-ie7", :media => "all" %>
+
+	<%= javascript_include_tag "application" %>
+	<%= javascript_include_tag "jquery-1.9.1" %>
+	<%= javascript_include_tag "bootstrap" %>
+	<%= javascript_include_tag "closed-event-overlay" %>
+	<%= javascript_include_tag "select2" %>
+	<%= yield :javascript %>	
+	
+	<%= csrf_meta_tags %>
+
+	
+</head>
+<body <%= yield :body_class %>>
+	
+
+<%= yield %>	
+
+
+
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-39739783-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+	
+
+</body>
+</html>

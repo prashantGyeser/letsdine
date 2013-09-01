@@ -69,7 +69,7 @@
 				<div class="span4 offset8">
 					<div class="topBarLogin pull-right">
 						<span>Already have an account?</span>
-						<a href="#" class="css3-button css3-button_pink">Login</a>
+						<a href="<%= new_user_session_path %>" class="css3-button css3-button_pink">Login</a>
 					</div>
 				</div>
 			</div>
@@ -108,10 +108,22 @@
 
 	<script>
 		$(document).ready(function(){
-			 $("#e1").select2({
-			 	placeholder: "Select a City",
+			<% if session[:city].blank? %>
+                		var placeholderText = "Select a City";
+                	<% else %>
+                		var placeholderText = "Select another city";
+                <% end %>
+			 $("#citySelect").select2({
+			 	placeholder: placeholderText,
                 		allowClear: true
 			 });
+			  $("#citySelect").on("change", function(e) {
+                    	var selected_city = e.val;
+				//var url = window.location.pathname
+				//var url_controller = url.substring(url.lastIndexOf('/')+1);
+				var selected_city_url = "/"+ selected_city;
+				window.location = selected_city_url;
+                    });
 		});
 	</script>
 
