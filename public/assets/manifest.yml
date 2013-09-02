@@ -110,6 +110,8 @@ bootstrap-timepicker.css: bootstrap-timepicker-507a15d551ef65cab721d901af6a8a7f.
 bootstrap-timepicker/index.css: bootstrap-timepicker-507a15d551ef65cab721d901af6a8a7f.css
 bootstrap.css: bootstrap-2e7db0bcf54e1280ab0c2a9319879a1f.css
 bootstrap/index.css: bootstrap-2e7db0bcf54e1280ab0c2a9319879a1f.css
+buttons.css: buttons-7b5425fb8695ca124851c869e9f2a789.css
+buttons/index.css: buttons-7b5425fb8695ca124851c869e9f2a789.css
 custom.css: custom-bd7b102b73bc95fdabfbfb006141a033.css
 custom/index.css: custom-bd7b102b73bc95fdabfbfb006141a033.css
 datepicker.css: datepicker-f030298a599c581d22476f8572d7386d.css
