@@ -87,15 +87,12 @@
                 
             </div>    
         <% end %>
-
-        <div class="event_date_time">
-          <%= @event.event_date.strftime("%d %B %Y") %>
-          <%= @event.event_time.strftime("%I:%M%p") %>
-        </div>
+        
       </div>
     </div>
     <div class="span6">
       <h1><%= @event.event_name %></h1>   
+      <!--
       <div class="seats_left_container">
         <div class="seats_left">
           <% if @seats_left <= 0 %>
@@ -106,8 +103,13 @@
           <% end %>
         </div> 
       </div>
+      -->
 
-
+      <div class="event_date_time">
+        <i class="icon-time"></i>
+        <%= @event.event_date.strftime("%d %B %Y") %>
+        <%= @event.event_time.strftime("%I:%M%p") %>
+      </div>
 
       <h3>Price: 
         <% if restaurant.city == "Hyderabad" || restaurant.city == "Bangalore" || restaurant.city == "Pune" || restaurant.city == "Ahmedabad" %>
@@ -121,7 +123,11 @@
       <address>
         <strong><%= restaurant.name %></strong>
         <br>
-        <%= restaurant.address %>  
+        <div class="restaurant-address">
+          <i class="icon-map-marker map-icon"></i>
+          <%= restaurant.address %>  
+        </div>
+        
       </address>
       
       <%#  %>
@@ -162,9 +168,8 @@
           <% if @event.seats_left <= 0 %>
             <%= f.submit "Sign up for waiting list", :class => "large red awesome"  %>
           <% else %>
-            <%= f.submit "Join this event", :class => "large red awesome"  %>
+            <%= f.submit "Join this event", :class => "css3-button css3-button_pink joinEvent"  %>
           <% end %>
-          
 
         <% end %>  
       <% end %>

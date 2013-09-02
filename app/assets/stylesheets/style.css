@@ -115,6 +115,30 @@ body {
       margin-right: 3px; }
 
 /**********************************************************************/
+/* Event Show Page Style */
+/**********************************************************************/
+.eventDetailsImage {
+  border: 6px solid #fff;
+  -webkit-box-shadow: 2px 2px 5px rgba(50, 50, 50, 0.4);
+  -moz-box-shadow: 2px 2px 5px rgba(50, 50, 50, 0.4);
+  box-shadow: 2px 2px 5px rgba(50, 50, 50, 0.4); }
+
+.event_date_time {
+  font-weight: bold; }
+
+.restaurant-address {
+  font-weight: bold; }
+
+.joinEvent {
+  font-size: 15px;
+  padding-bottom: 30px;
+  text-transform: uppercase;
+  text-align: center; }
+
+/**********************************************************************/
+/* Other events style */
+/**********************************************************************/
+/**********************************************************************/
 /* Login style */
 /**********************************************************************/
 .loginLogo {
