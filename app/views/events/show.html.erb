@@ -63,9 +63,120 @@
 
 <% content_for :title, "#{@event.event_name} | LetsDine" %>
 
+    <% restaurant = Restaurant.find(@event.restaurant_id)%>
+
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-md-8 eventPage">
+          <% if @event.event_image.blank? %>
+              <%= image_tag restaurant.photo_url(:extra_large_scaled).to_s %>
+          <% else %>
+              <%= image_tag @event.event_image_url(:extra_large_scaled).to_s %>
+          <% end %>
+          
+          <div class="eventPageContent">
+            <h2><%=@event.event_name%></h2>
+            <span>
+              <i class="icon-calendar"></i>
+              Saturday, 21 September 2013 4:00PM
+            </span>
+            <div class="eventDescription">
+              <%= simple_format(@event.event_description) %>      
+            </div>
+
+            <h3>Menu</h3>
+            <div class="row">
+              <div class="col-md-6">
+                <strong class="menuItemsHeader">Beverage</strong>
+                <p class="menuItemExplanation">Choice of either</p>
+                <ul class="menuItems">
+                  <li>Coffee</li>
+                  <li>Tea</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <strong class="menuItemsHeader">Dessert</strong>
+                Kulfi Falooda with Gulab Jamun
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <strong class="menuItemsHeader">Main Course</strong>
+                <ul class="menuItems">
+                  <li>Sahi Paneer</li>
+                  <li>Telengana Fish Curry</li>
+                  <li>Dal Dhaba</li>
+                  <li>Murgh Biriyani</li>
+                  <li>Tarkari Biryani</li>
+                  <li>Assorted Indian Breads</li>
+                </ul>
+              </div>
+              <div class="col-md-6"></div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="joinEvent">
+                <h2>Come Join Us</h2>
+                <h4><strong>Rs. <%= restaurant.price %></strong> per person</h4>
+                <form role="form">
+                  <div class="form-group">
+                    <label for="seats">Number of people coming</label>
+                    <input type="integer" class="form-control" id="seats" placeholder="Number of people attending including you">
+                  </div>
+                  <div class="form-group">
+                    <label for="phoneNumber">Phone number</label>
+                    <p>
+                      We will only use your phone number to confirm your attendance for the event.
+                    </p>
+                    <input type="text" class="form-control" id="phoneNumber" placeholder="Your phone number">
+                  </div>
+                  <button type="submit" class="css3-button css3-button_pink full_width">Join Event</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="joinEvent">
+                <h2>Event Location</h2>
+                <div id="map_canvas" style="width: 100%; height: 300px;background: #ccc;"></div>
+              </div>
+            </div>
+          </div>
+            
+          <div class="row">
+            <div class="col-md-12">
+              <div class="joinEvent">
+                <h2>People Attending</h2>
+                <div class="peopleAttending">
+                  <i class="icon-user"></i>
+                  <i class="icon-user"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
 
 <%# restaurant = Restaurant.find(@event.restaurant_id) %>
-<% restaurant = @event.restaurant %>
+
 <input type="hidden" value=<%= @event.id %> id="event_id" >
 
 <div class="container">

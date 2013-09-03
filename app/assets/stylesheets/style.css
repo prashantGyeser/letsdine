@@ -1,341 +1,185 @@
-/**********************************************************************/
-/* Color Scheme */
-/**********************************************************************/
-/**********************************************************************/
-/* Common styles */
-/**********************************************************************/
-#error_explanation {
-  color: #d10000; }
-
-.field_with_errors input {
-  border: 1px solid #d10000;
-  background: #ffe2e2; }
-
-.field_with_errors textarea {
-  border: 1px solid #d10000;
-  background: #ffe2e2; }
-
-.createEventBtn {
-  margin-top: 10px; }
-
-.special {
-  background-color: #292929; }
-
-.white_background {
-  background: #fff; }
-
+/*******************************************************************/
+/* Common Styles */
+/*******************************************************************/
+/* Link Styles */
 a {
   color: #1b6e8a; }
 
-.topMargin {
-  margin-top: 20px; }
-
-.bottomMargin {
-  margin-bottom: 40px; }
-
-/**********************************************************************/
-/* Body Styling */
-/**********************************************************************/
+/*******************************************************************/
+/* Body Styles */
+/*******************************************************************/
 body {
-  background: url("/assets/background.png"); }
+  font-family: "nimbus-sans",sans-serif;
+  font-size: 16px;
+  background: #f4f4f4;
+  color: #333; }
 
-/**********************************************************************/
-/* Topbar style */
-/**********************************************************************/
+/*******************************************************************/
+/* Top Bar Styles */
+/*******************************************************************/
 .topBar {
-  margin-top: 10px; }
-  .topBar .topBarLogin span {
-    float: left;
-    margin-top: 10px;
-    margin-right: 10px; }
-  .topBar .topBarLogin a {
-    display: inline-block;
-    text-transform: uppercase; }
-
-/**********************************************************************/
-/* Header style */
-/**********************************************************************/
-.headerLogo {
-  text-align: center; }
-  .headerLogo h3 {
-    margin: 20px 0 0 0; }
-  .headerLogo .homepageSignup {
-    font-size: 15px;
-    text-transform: uppercase;
+  background: #333333; }
+  .topBar .logo {
+    margin-top: 5px; }
+  .topBar .topBarText {
+    color: white;
+    font-size: 33px;
+    font-family: "museo-slab",serif;
+    font-weight: 100;
     text-align: center;
-    display: inline-block; }
-    .headerLogo .homepageSignup img {
-      padding-bottom: 5px; }
+    -webkit-transform: rotate(0.0deg);
+    text-shadow: 0 0 1px rgba(51, 51, 51, 0.2); }
+    .topBar .topBarText .topBarTextHighlight {
+      font-weight: 900;
+      letter-spacing: 1px; }
+  .topBar .topBarButtons {
+    margin: 20px 0 30px 0;
+    text-align: center; }
+    .topBar .topBarButtons .facebookLoginButton {
+      padding: 20px 10px 10px 10px;
+      margin-right: 20px;
+      display: inline;
+      text-transform: uppercase; }
+      .topBar .topBarButtons .facebookLoginButton img {
+        margin-left: 5px;
+        margin-bottom: 10px; }
 
-/**********************************************************************/
-/* Filter style */
-/**********************************************************************/
+/*******************************************************************/
+/* Naigation Styles */
+/*******************************************************************/
+.topNav {
+  list-style: none;
+  color: white;
+  margin: 15px 0 0 0;
+  padding: 0; }
+  .topNav li {
+    display: inline;
+    margin-left: 15px; }
+  .topNav li.selected {
+    color: #dd4124; }
+
+.loginButton {
+  margin: 10px; }
+
+/*******************************************************************/
+/* Common Styles */
+/*******************************************************************/
 .filter {
-  background: #fff;
-  border: 1px solid #ddd;
-  padding: 10px; }
-  .filter span {
-    font-size: 15px;
-    font-weight: bold;
-    display: inline-block; }
+  background: white;
+  padding: 10px 0;
+  margin-bottom: 10px; }
 
-/**********************************************************************/
-/* Event List Item Style */
-/**********************************************************************/
-.event {
-  -webkit-box-shadow: 2px 2px 5px rgba(50, 50, 50, 0.4);
-  -moz-box-shadow: 2px 2px 5px rgba(50, 50, 50, 0.4);
-  box-shadow: 2px 2px 5px rgba(50, 50, 50, 0.4); }
-  .event img {
+/*******************************************************************/
+/* Event List Styles */
+/*******************************************************************/
+.eventListingItem {
+  -webkit-box-shadow: 1px 0px 10px rgba(50, 50, 50, 0.2);
+  -moz-box-shadow: 1px 0px 10px rgba(50, 50, 50, 0.2);
+  box-shadow: 1px 0px 10px rgba(50, 50, 50, 0.2);
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 6px 6px 6px 6px;
+  border-radius: 6px 6px 6px 6px; }
+
+.imageWithOverlay {
+  position: relative; }
+  .imageWithOverlay img {
     -moz-border-radius: 0px;
     -webkit-border-radius: 6px 6px 0px 0px;
-    border-radius: 6px 6px 0px 0px; }
-  .event h4 {
-    padding: 0 10px; }
-  .event p {
-    padding: 0 10px 10px 10px; }
-
-.eventListContainer {
-  position: relative; }
-  .eventListContainer .seatsLeft {
+    border-radius: 6px 6px 0px 0px;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc; }
+  .imageWithOverlay .eventDate {
     position: absolute;
-    top: 15px;
-    left: 0px;
+    top: 82%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: inline;
+    padding: 10px;
+    width: 100%;
+    -webkit-box-shadow: 0px -5px 10px rgba(50, 50, 50, 0.5);
+    -moz-box-shadow: 0px -5px 10px rgba(50, 50, 50, 0.5);
+    box-shadow: 0px -5px 10px rgba(50, 50, 50, 0.5); }
+    .imageWithOverlay .eventDate span {
+      font-weight: bold; }
+  .imageWithOverlay .seatsLeft {
+    position: absolute;
+    top: 10px;
+    left: 0;
     background: rgba(221, 65, 36, 0.8);
     padding: 10px;
-    color: white; }
-
-.eventDetails {
-  padding: 10px; }
-  .eventDetails .detail {
-    color: #000;
+    color: white;
     font-weight: bold; }
-    .eventDetails .detail .map-icon {
-      margin-left: 2px;
-      margin-right: 3px; }
 
-/**********************************************************************/
-/* Event Show Page Style */
-/**********************************************************************/
-.eventDetailsImage {
-  border: 6px solid #fff;
-  -webkit-box-shadow: 2px 2px 5px rgba(50, 50, 50, 0.4);
-  -moz-box-shadow: 2px 2px 5px rgba(50, 50, 50, 0.4);
-  box-shadow: 2px 2px 5px rgba(50, 50, 50, 0.4); }
-
-.event_date_time {
-  font-weight: bold; }
-
-.restaurant-address {
-  font-weight: bold; }
-
-.joinEvent {
-  font-size: 15px;
-  padding-bottom: 30px;
-  text-transform: uppercase;
-  text-align: center; }
-
-/**********************************************************************/
-/* Other events style */
-/**********************************************************************/
-/**********************************************************************/
-/* Login style */
-/**********************************************************************/
-.loginLogo {
-  padding: 10px;
-  margin: 0 auto;
-  width: 300px; }
-
-.login {
+.eventListingContent {
   background: white;
   padding: 10px;
-  margin: 0 auto;
-  width: 300px; }
-  .login .input-block-level {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box; }
-  .login .add-on {
-    background: #dd4124;
-    color: white;
-    border: 1px solid #c1381e; }
-  .login .width-90-percent {
-    width: 90%; }
-  .login .width-95-percent {
-    width: 95%; }
-  .login .loginButton {
-    font-size: 15px;
-    text-transform: uppercase;
-    text-align: center;
-    display: inline-block;
-    padding-bottom: 25px; }
-  .login .facebookLoginDivider {
-    border-top: 1px solid #ccc;
-    position: relative;
-    margin-bottom: 20px; }
-    .login .facebookLoginDivider .or {
-      margin-top: -20px;
-      background-color: white;
-      position: absolute;
-      top: 11px;
-      left: 45%;
-      font-weight: bold;
-      font-size: 18px; }
-  .login .loginWithFacebook {
-    font-size: 15px;
-    text-transform: uppercase;
-    text-align: center; }
-    .login .loginWithFacebook img {
-      padding-bottom: 5px;
-      margin-left: 5px; }
-  .login .loginFooter {
-    background: #dd4124;
-    margin: 30px -10px -10px -10px;
-    padding: 10px;
-    color: white;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc; }
+  .eventListingContent h4 {
+    margin-top: 0;
+    padding-top: 0; }
+  .eventListingContent span {
     font-weight: bold;
-    text-align: center; }
-    .login .loginFooter .linksDivider {
-      margin: 0 10px;
-      display: inline; }
-    .login .loginFooter a {
-      color: white; }
+    margin-bottom: 10px;
+    display: block; }
 
-/**********************************************************************/
-/* TBD */
-/**********************************************************************/
-.detail {
-  color: #ccc;
-  margin-bottom: 5px; }
+/*******************************************************************/
+/* Event Page Styles */
+/*******************************************************************/
+.eventPage {
+  background: white;
+  margin-top: 40px;
+  padding: 40px;
+  -webkit-box-shadow: 1px 0px 10px rgba(50, 50, 50, 0.2);
+  -moz-box-shadow: 1px 0px 10px rgba(50, 50, 50, 0.2);
+  box-shadow: 1px 0px 10px rgba(50, 50, 50, 0.2);
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 6px 6px 6px 6px;
+  border-radius: 6px 6px 6px 6px; }
+  .eventPage h3 {
+    font-weight: bold; }
+  .eventPage .menuItemsHeader {
+    display: block;
+    margin-top: 10px; }
+  .eventPage .menuItemExplanation {
+    font-style: italic;
+    margin: 5px 0;
+    padding: 0; }
+  .eventPage .menuItems {
+    margin: 0 0 0 20px;
+    padding: 0; }
 
+.eventPageContent {
+  background: white; }
+  .eventPageContent .eventDescription p {
+    margin-top: 10px;
+    font-style: italic; }
+
+.joinEvent {
+  background: white;
+  margin-top: 40px;
+  padding: 20px;
+  -webkit-box-shadow: 1px 0px 10px rgba(50, 50, 50, 0.2);
+  -moz-box-shadow: 1px 0px 10px rgba(50, 50, 50, 0.2);
+  box-shadow: 1px 0px 10px rgba(50, 50, 50, 0.2); }
+  .joinEvent .full_width {
+    width: 100%;
+    padding: 15px 10px 25px 10px; }
+  .joinEvent .peopleAttending i {
+    font-size: 50px; }
+
+/*******************************************************************/
+/* Footer Styles */
+/*******************************************************************/
 .footer {
-  background: url("/assets/topBarBG.png");
-  margin-top: 20px; }
-
-/**********************************************************************/
-/* TBD */
-/**********************************************************************/
-.restaurantList ul {
-  list-style: none;
-  margin: 0; }
-
-.restaurantList ul li img {
-  float: left;
-  margin-right: 10px; }
-
-.restaurantDetailsCotaniner {
-  float: left;
-  padding: 10px; }
-
-.restaurantDetailsCotaniner:hover {
-  background: #cceaff;
-  cursor: pointer; }
-
-.selectedRestaurant {
-  background: #cceaff;
-  cursor: pointer; }
-
-.restaurantDetailsCotaniner img {
-  float: left;
-  margin-right: 10px; }
-
-.restaurantDetailsCotaniner div {
-  float: left; }
-
-.restaurantList ul li {
-  clear: both;
-  padding: 10px 0; }
-
-.restaurantList ul li a {
-  padding: 10px; }
-
-.restaurantList ul h4 {
-  margin-top: 0; }
-
-.restaurantMenu ul {
-  list-style: none;
-  margin: 0; }
-
-.restaurantMenu ul li {
-  margin-bottom: 5px; }
-
-.restaurantMenu h3 {
-  margin: 0; }
-
-.restaurantDetailsContainer {
-  margin-bottom: 10px; }
-
-/**********************************************************************/
-/* TBD */
-/**********************************************************************/
-#interests_select {
-  margin-bottom: 10px; }
-
-.zoomflow {
-  margin-top: -200px; }
-
-.share_on_facebook {
-  margin-bottom: 10px; }
-
-.event_type_radio {
+  background: #333;
+  color: #fff;
+  padding: 10px 0;
   margin-top: 10px; }
 
-.event_radio {
-  float: left; }
-
-.event_radio_label {
-  float: left;
-  margin: 0 10px 0 5px; }
-
-.total_attendees {
-  padding: 10px;
-  background: #ccc; }
-
-.total_attendees_highlight {
-  background: #d3371a;
-  color: #fff;
-  border: 1px solid #972713;
-  padding: 20px; }
-
-/********************************************************************************/
-/* Map Styling */
-/********************************************************************************/
-/**********************************************************************/
-/* Profile style */
-/**********************************************************************/
-.profile_header_image {
-  border: 15px solid #fff;
-  margin-bottom: 20px;
-  /* Box shadow*/
-  box-shadow: 0 0 8px #888888;
-  -moz-box-shadow: 0 0 8px #888888;
-  -webkit-box-shadow: 0 0 8px #888888; }
-
-.profile_picture {
-  margin-top: -130px;
-  margin-left: 20px;
-  border: 9px solid #fff;
-  /* Making the image circular */
-  width: 100%px;
-  height: 100%px;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  /* Box shadow*/
-  box-shadow: 0 0 8px #888888;
-  -moz-box-shadow: 0 0 8px #888888;
-  -webkit-box-shadow: 0 0 8px #888888; }
-
-.event_attending {
-  border: 1px solid #ccc;
-  margin-bottom: 10px; }
-
-.event_attending h4 {
-  padding: 10px; }
-
-.other_people_attending {
-  border-top: 1px solid #ccc;
-  background: #eee;
-  padding: 10px; }
-
-/**********************************************************************/
+/*******************************************************************/
+/* Common Styles */
+/*******************************************************************/

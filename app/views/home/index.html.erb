@@ -4,54 +4,54 @@
 <% end %>
 
 <% content_for :homepageHeader do %>
-    <h3>
-        Meet new people with similar interests.
-    </h3>
-    <p>
-        Find people that share your interest and meet them over great food in one of our events.
-    </p>
     
-    <a href="<%= user_omniauth_authorize_path(:facebook) %>" class="css3-button css3-button_blue homepageSignup">Signup with <%= image_tag("facebookLogo.png")%></a>
-    <a href="<%= new_user_registration_path %>" class="css3-button css3-button_pink homepageSignup">Signup with Email</a>
+         <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <h4 class="topBarText">
+              Meet <span class="topBarTextHighlight">great people</span> over <span class="topBarTextHighlight">great food.</span>
+            </h4>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+            <div class="topBarButtons">
+              <a href="<%= user_omniauth_authorize_path(:facebook) %>" class="css3-button css3-button_blue facebookLoginButton">
+                Sign up with 
+                <%= image_tag("facebookLogo.png")%>
+              </a>  
+              <a href="<%= new_user_registration_path %>" class="css3-button css3-button_pink facebookLoginButton">
+                Sign up with email
+              </a>
+            </div>
+            
+          </div>
+        </div>
+    
+
 <% end %>
 
-<div class="row-fluid">
-    <div class="span12">
-        <%= render 'layouts/messages' %>
+<div id="map_canvas" style="width: 100%; height: 300px;background: #ccc; border-bottom:4px solid #333;"></div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <%= render 'layouts/messages' %>
+        </div>
     </div>
 </div>
 
 
-<div class="container">
-    <div class="row-fluid">
-        <div class="span12">
-            <div class="filter">
 
-                <% if session[:city].blank? %>
-                    <span>See all events in: </span>    
-                <% else %>
-                    <span>Showing events for <%= session[:city] %>. </span>
-                <% end %>
-                
-                <select id="citySelect" style="width:300px;">
-                    <option></option>
-                    <optgroup label="India">
-                        <option value="Ahmedabad">Ahmedabad</option>
-                        <option value="Bangalore">Bangalore</option>    
-                        <option value="Hyderabad">Hyderabad</option>    
-                        <option value="Pune">Pune</option>    
-                    </optgroup>
-                    <optgroup label="Malaysia">
-                        <option value="Kuala Lumpur">Kuala Lumpur</option>
-                        <option value="Penang">Penang</option>    
-                        <option value="Perak">Perak</option>    
-                        <option value="Selangor">Selangor</option>    
-                    </optgroup>
-                </select>
+<div class="filter">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                City Select
             </div>
         </div>
     </div>
-</div>    
+</div>
 
 
 
@@ -75,91 +75,9 @@
     </div>
 </div>
 
-<div class="container">
-    <div class="row-fluid">
 
-        <div class="span12">
-            <p>
-                Meet, interact and network with wonderful people from your city. All this while you enjoy great food!
-            </p>
-        </div>
-        
-        
+<%= render partial: 'events/event_list', :collection => @events, :as => :events %>
 
-    </div>
-</div>
-
-
-<div class="content">
-        <div class="container">
-            <% eventCount = 0 %>
-            <% @events.each do |event| %>
-                <% restaurant = event.restaurant %>
-
-                <% if ( eventCount%4 ) == 0 %>
-                    <div class="row-fluid">  
-                <% end %>
-
-                <div class="span3">
-                    
-                    <%# Todo: Right now I have setup the special field in the event table as a string value. This needs to be changed to a boolean. Right now using a boolean value seems to ruby interpret the values incorrectly when they are coming in the params. Need to figure out why this is happening and fix it. %>
-                    <% if event.special == "true" %>
-                        <div class="event_special">
-                    <% else %>
-                        <div class="event white_background">    
-                    <% end %>
-                        <div class="eventListContainer">
-
-                        <% if event.event_image.blank? %>
-                            <%= image_tag restaurant.photo_url(:large_scaled).to_s %>
-                        <% else %>
-                            <%= image_tag event.event_image_url(:large_scaled).to_s %>
-                        <% end %>
-                            <div class="seatsLeft">
-                                <%= event.seats_left %> Seats left
-                            </div>
-                        </div>
-                        <% if event.status == 'closed' || event.status == "full" %>
-                            <div class="closed">
-                                <% if event.status == "full" %>
-                                    <h3>Full</h3>
-                                <% else %>
-                                    <h3>Closed</h3>    
-                                <% end %>
-                            </div>    
-                        <% end %>
-                        
-                        <h4><%= link_to event.event_name, event_path(event) %></h4>
-                        
-                        <div class="eventDetails">
-                            <div class="detail">
-                                <i class="icon-map-marker map-icon"></i>
-                                <%= restaurant.name %>
-                            </div>
-
-                            <div class="detail">
-                                <i class="icon-time"></i>
-                                <%= event.event_date.strftime("%d %B %Y") %>
-                                <%= event.event_time.strftime("%I:%M%p") %>
-                            </div>
-                        </div>
-                        <p>
-                            <%= truncate(event.event_description, :length => 100) %> <%= link_to "See event", event_path(event) %>
-                        </p>
-                    </div>
-                </div>    
-
-                <% if ( eventCount%3 ) == 0 && eventCount != 0%>
-                    </div>        
-                    <% eventCount = 0 %>
-                <% else %>
-                    <% eventCount = eventCount + 1 %>
-                <% end %>                
-                <%# Closing tag for the new row div %>
-                
-            <% end %>
-        </div>
-    </div>   
 
 
 
