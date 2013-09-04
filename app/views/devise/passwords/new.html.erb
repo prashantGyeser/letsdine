@@ -8,13 +8,12 @@
 	<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
 		  <%= devise_error_messages! %>
 
-		  <div class="input-prepend">
+		  <div class="form-group">
 		  	<%= f.label :email %>
-		  	<i class="icon-envelope-alt add-on"></i>
-		  	<%= f.email_field :email, :autofocus => true, :class => "input-block-level width-90-percent" %>
+		  	<%= f.email_field :email, :autofocus => true, :class => "form-control" %>
 		  </div>
 
-		  <div><%= f.submit "Send me reset instructions", :class => "css3-button css3-button_pink loginButton input-block-level width-95-percent" %></div>
+		  <div><%= f.submit "Send me reset instructions", :class => "css3-button css3-button_pink loginPageButton" %></div>
 		<% end %>
 
 	<div class="facebookLoginDivider">

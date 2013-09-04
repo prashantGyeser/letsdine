@@ -1,6 +1,6 @@
 <%- if devise_mapping.omniauthable? %>
   <%- resource_class.omniauth_providers.each do |provider| %>
-    <%= link_to omniauth_authorize_path(resource_name, provider), :class=>"css3-button css3-button_blue loginWithFacebook width-90-percent" do %>
+    <%= link_to omniauth_authorize_path(resource_name, provider), :class=>"css3-button css3-button_blue loginPageFacebookButton" do %>
     	Sign in with <%= image_tag("facebookLogo.png") %>	
     <%end%>
   <% end -%>

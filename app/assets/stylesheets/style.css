@@ -285,6 +285,24 @@ body {
     display: block;
     width: 100%;
     padding-bottom: 20px; }
+  .login .loginPageFacebookButton {
+    display: block;
+    width: 100%;
+    padding-bottom: 25px; }
+    .login .loginPageFacebookButton img {
+      margin-left: 5px;
+      padding-bottom: 5px; }
+  .login .facebookLoginDivider {
+    margin: 20px 0 10px 0;
+    border-top: 1px solid #ccc; }
+    .login .facebookLoginDivider .or {
+      margin-top: -10px;
+      position: relative;
+      left: 49%; }
+  .login .loginFooter {
+    margin-top: 20px; }
+    .login .loginFooter .linksDivider {
+      display: inline; }
 
 /*******************************************************************/
 /* Footer Styles */

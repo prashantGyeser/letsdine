@@ -19,53 +19,40 @@
 <div class="login">
 	<h2>Sign up</h2>
 
-	<% resource.interests.build %>
-
 	<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
 	  <%= devise_error_messages! %>
 
-	  <div class="input-prepend">
+	  <div class="form-group">
 	  	<%= f.label :name %>
-	  	 <i class="icon-user add-on"></i>
-	  	<%= f.text_field :name, :autofocus => true, :class => "input-block-level width-90-percent" %>
+	  	<%= f.text_field :name, :autofocus => true, :class => "form-control" %>
 	  </div>
 
-	  <div class="input-prepend">
+	  <div class="form-group">
 	  	<%= f.label :city %>
-	  	<i class="icon-map-marker add-on"></i>
-	  	<%= f.text_field :city, :class => "input-block-level width-90-percent" %>
+	  	<%= f.text_field :city, :class => "form-control" %>
 	  </div>
 
-	  <div>
-	  	<%= f.label :interests %>
-	  	<%# Todo: Fix the issue where there is an empty {} in the select option below  %>
-	  	<%= f.fields_for :interests do |builder| %>
-		  <% optionsHash = { "ArtAndCulture" => "Art & Culture","EducationAndLearning" => "Education & Learning","HealthAndFitness" => "Health & Fitness", "FoodAndDrink" => "Food & Drink","HobbiesAndCrafts" => "Hobbies & Crafts","MusicAndMovies" => "Music & Movies","EducationAndLearning" => "Education & Learning","OutdoorAndAdventure" => "Outdoor & Adventure","Photography" => "Photography","SportsAndRecreation" => "Sports & Recreation","EntrepreneursAndBusinessNetworking" => "Entrepreneurs & Business Networking","Technology" => "Technology"} %>
-		  <%= builder.select(:name, optionsHash,{},{:multiple=>"multiple", :size=>5}) %>
-		<% end %>
 
-	  </div>
-	  <br/>
 
-	  <div class="input-prepend">
+	  <div class="form-group">
 	  	<%= f.label :email %>
-	  	<i class="icon-envelope-alt add-on"></i>
-	  	<%= f.email_field :email, :class => "input-block-level width-90-percent" %>
+	  	
+	  	<%= f.email_field :email, :class => "form-control" %>
 	  </div>
 
-	  <div class="input-prepend">
+	  <div class="form-group">
 	  	<%= f.label :password %>
-	  	<i class="icon-lock add-on"></i>
-	  	<%= f.password_field :password, :class => "input-block-level width-90-percent" %>
+	  	
+	  	<%= f.password_field :password, :class => "form-control" %>
 	  </div>
 
-	  <div class="input-prepend">
+	  <div class="form-group">
 	  	<%= f.label :password_confirmation %>
-	  	<i class="icon-lock add-on"></i>
-	  	<%= f.password_field :password_confirmation, :class => "input-block-level width-90-percent" %>
+	  	
+	  	<%= f.password_field :password_confirmation, :class => "form-control" %>
 	  </div>
 
-	  <div><%= f.submit "Sign up", :class => "css3-button css3-button_pink loginButton input-block-level width-95-percent" %></div>
+	  <div><%= f.submit "Sign up", :class => "css3-button css3-button_pink loginPageButton" %></div>
 	<% end %>
 
 
