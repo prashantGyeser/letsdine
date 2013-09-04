@@ -95,9 +95,120 @@ body
 .filter
 {
 	background: white;
-	padding: 10px 0;
+	padding: 20px 0;
 	margin-bottom: 10px;
+	color: #737373;
+	#citySelect
+	{
+		&:hover
+	{
+		background: #8a8a8a;
+		cursor: pointer;
+	}
+		background: #737373;
+		color: white;
+		//display: inline;
+		padding: 10px;
+		width: 200px;
+		-moz-border-radius: 0px;
+		-webkit-border-radius: 3px 3px 3px 3px;
+		border-radius: 3px 3px 3px 3px; 
+		i
+		{
+			font-size: 1.4em;
+			line-height: 20px;
+			background: #8a8a8a;
+			padding: 10px;
+			margin: -10px -10px 0 0;
+			border: 1px solid #8a8a8a;
+			-webkit-border-top-right-radius: 3px;
+			-webkit-border-bottom-right-radius: 3px;
+			-moz-border-radius-topright: 3px;
+			-moz-border-radius-bottomright: 3px;
+			border-top-right-radius: 3px;
+			border-bottom-right-radius: 3px;
+		}
+	}
+	.hidden_div
+	{
+		visibility:hidden;
+	}
+	#cityList 
+	{
+
+		z-index: 100;
+		position:absolute;
+		left:15px;
+		top:42px;
+		display: block;
+		width: 200px;
+		//position: relative;
+		background: #f8f8f8;
+		border: 1px solid #ececec;
+		margin-top: 10px;
+		-webkit-box-shadow: 1px 0px 10px rgba(50, 50, 50, 0.2);
+		-moz-box-shadow:    1px 0px 10px rgba(50, 50, 50, 0.2);
+		box-shadow:         1px 0px 10px rgba(50, 50, 50, 0.2);
+		-moz-border-radius: 0px;
+		-webkit-border-radius: 6px 6px 6px 6px;
+		border-radius: 6px 6px 6px 6px; 
+		ul
+		{
+			list-style: none;
+			margin: 10px 0 0 0;
+			//padding: 10px;
+			padding: 0;
+			strong
+			{
+				padding: 10px;
+			}
+			ul li
+			{
+				padding: 10px 20px;
+				&:hover
+				{
+					background: #ececec;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+	#cityList:after, #cityList:before {
+		bottom: 100%;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+		
+	}
+
+	#cityList:after {
+		border-color: rgba(248, 248, 248, 0);
+		border-bottom-color: #f8f8f8;
+		border-width: 10px;
+		left: 90%;
+		margin-left: -10px;
+	}
+	#cityList:before {
+		border-color: rgba(236, 236, 236, 0);
+		border-bottom-color: #ececec;
+		border-width: 11px;
+		left: 90%;
+		margin-left: -11px;
+	}
 }
+/*******************************************************************/
+/* Scroll Bar Styles */
+/*******************************************************************/
+.nano { 
+	background: #bba; 
+	width: 1000px; 
+	height:500px; 
+}
+.nano .pane   { background: #888; }
+.nano .slider { background: #111; }
 /*******************************************************************/
 /* Event List Styles */
 /*******************************************************************/
@@ -238,6 +349,31 @@ body
 		{
 			font-size: 50px;
 		}
+	}
+}
+/*******************************************************************/
+/* Devise Page Styles */
+/*******************************************************************/
+.loginLogo
+{
+	margin: 0 auto;
+	width: 300px;
+	padding: 10px;	
+}
+.login
+{
+	margin: 0 auto;
+	width: 300px;
+	background: white;
+	padding: 10px;
+	-webkit-box-shadow: 1px 0px 10px rgba(50, 50, 50, 0.2);
+	-moz-box-shadow:    1px 0px 10px rgba(50, 50, 50, 0.2);
+	box-shadow:         1px 0px 10px rgba(50, 50, 50, 0.2);
+	.loginPageButton
+	{
+		display: block;
+		width: 100%;
+		padding-bottom: 20px;
 	}
 }
 /*******************************************************************/

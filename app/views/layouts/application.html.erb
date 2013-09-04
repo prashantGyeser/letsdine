@@ -26,19 +26,19 @@
 
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <%= stylesheet_link_tag    "bootstrap", :media => "all" %>
 
     <!-- Font awesome core CSS -->
-    <link href="css/font-awesome.css" rel="stylesheet">    
-    <link href="css/font-awesome-ie7.css" rel="stylesheet">    
-    
-    
+    <%= stylesheet_link_tag    "font-awesome", :media => "all" %>
+    <%= stylesheet_link_tag    "font-awesome-ie7", :media => "all" %>
 
     <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/buttons.css" rel="stylesheet">
+    <%= stylesheet_link_tag    "style", :media => "all" %>
+    <%= stylesheet_link_tag    "buttons", :media => "all" %>
+    
     <!-- Lato font -->
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
+
 
     
     <!-- Typekit Fonts -->
@@ -116,9 +116,11 @@
 
 
     </script>
-	<%= yield :javascript %>	
+    <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag "jquery-1.10.2.min" %>
+    <%= yield :javascript %>	
 	
-	<%= csrf_meta_tags %>
+    <%= csrf_meta_tags %>
 
 	<!--Start of Zopim Live Chat Script-->
 	<script type="text/javascript">
@@ -133,6 +135,8 @@
 	
 </head>
 <body <%= yield :body_class %>>
+  <div class="wrap">
+
 	<!-- FB start -->
 	<div id="fb-root"></div>
 	<script>(function(d, s, id) {
@@ -191,27 +195,6 @@
 	<%= yield %>	
 
 	<script>
-		$(document).ready(function(){
-			<% if session[:city].blank? %>
-                		var placeholderText = "Select a City";
-                	<% else %>
-                		var placeholderText = "Select another city";
-                <% end %>
-			 $("#citySelect").select2({
-			 	placeholder: placeholderText,
-                		allowClear: true
-			 });
-			  $("#citySelect").on("change", function(e) {
-                    	var selected_city = e.val;
-				//var url = window.location.pathname
-				//var url_controller = url.substring(url.lastIndexOf('/')+1);
-				var selected_city_url = "/"+ selected_city;
-				window.location = selected_city_url;
-                    });
-		});
-	</script>
-
-	<script>
       $(document).ready(function () {
         $('#citySelectList').hide();
         $('#citySelectList li a').click(function(e){
@@ -255,12 +238,6 @@
       })
     </script>
 
-	<script>
-		$(document).ready(function(){
-			$('#jl').tooltip()
-		})
-	</script>
-
 	<script type="text/javascript">
 
 	  var _gaq = _gaq || [];
@@ -281,6 +258,9 @@
 			</div>
 		</div>
 	</div>
+    <div id="push"></div>
+</div>
+
 	<div class="footer">
 		<div class="container">
 			<div class="row-">
@@ -293,3 +273,4 @@
 	
 </body>
 </html>
+

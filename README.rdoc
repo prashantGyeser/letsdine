@@ -1,3 +1,8 @@
+== Devise AJAX
+TBD
+Taken from 
+http://natashatherobot.com/devise-sign-up-ajax-rails/
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
