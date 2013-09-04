@@ -96,7 +96,7 @@ body {
   .filter .hidden_div {
     visibility: hidden; }
   .filter #cityList {
-    z-index: 100;
+    z-index: 1000;
     position: absolute;
     left: 15px;
     top: 42px;
@@ -118,7 +118,8 @@ body {
       .filter #cityList ul strong {
         padding: 10px; }
       .filter #cityList ul ul li {
-        padding: 10px 20px; }
+        padding: 10px 30px 10px 20px;
+        margin-right: 10px; }
         .filter #cityList ul ul li:hover {
           background: #ececec;
           cursor: pointer; }
@@ -147,9 +148,14 @@ body {
 /* Scroll Bar Styles */
 /*******************************************************************/
 .nano {
-  background: #bba;
-  width: 1000px;
-  height: 500px; }
+  width: 200px;
+  height: 300px; }
+
+.content {
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  top: 0; }
 
 .nano .pane {
   background: #888; }
