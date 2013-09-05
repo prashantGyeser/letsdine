@@ -47,6 +47,8 @@ cycle.js: cycle-61ca7a15f44c5f606dfad5ac283a0a53.js
 cycle/index.js: cycle-61ca7a15f44c5f606dfad5ac283a0a53.js
 events.js: events-cff7de0dcc014ec7641f9fe5c1ce3a88.js
 events/index.js: events-cff7de0dcc014ec7641f9fe5c1ce3a88.js
+jquery-1.10.2.min.js: jquery-1.10.2.min-da0ab1ac131e76ab3810ffec8d9e45c9.js
+jquery-1/index.10.2.min.js: jquery-1.10.2.min-da0ab1ac131e76ab3810ffec8d9e45c9.js
 jquery.bootstrap.wizard.js: jquery.bootstrap.wizard-fb0689402e3e80713289dd7962a864ab.js
 jquery/index.bootstrap.wizard.js: jquery.bootstrap.wizard-fb0689402e3e80713289dd7962a864ab.js
 jquery.nanoscroller.min.js: jquery.nanoscroller.min-69955875e8b784295566c9e508b2af21.js
