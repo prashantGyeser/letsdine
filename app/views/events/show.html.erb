@@ -82,7 +82,9 @@
               Saturday, 21 September 2013 4:00PM
             </span>
             <div class="eventDescription">
-              <%= simple_format(@event.event_description) %>      
+              <% event_description_html =  RedCloth.new(@event.event_description).to_html %>      
+              <%# simple_format(@event.event_description) %>      
+              <%= raw event_description_html %>
             </div>
 
             <h3>Menu</h3>
