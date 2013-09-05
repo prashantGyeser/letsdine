@@ -203,7 +203,7 @@ h4 {
     border-right: 1px solid #ccc; }
   .imageWithOverlay .eventDate {
     position: absolute;
-    top: 82%;
+    top: 70%;
     left: 0;
     background: rgba(0, 0, 0, 0.5);
     color: white;

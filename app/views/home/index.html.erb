@@ -98,9 +98,9 @@
     
 
 <% end %>
-
+<!--
 <div id="map_canvas" style="width: 100%; height: 300px;background: #ccc; border-bottom:4px solid #333;"></div>
-
+-->
 <div class="container">
     <div class="row">
         <div class="col-md-12">
@@ -175,8 +175,7 @@
     </div>
 </div>
 
-
-<%= render partial: 'events/event_list', :collection => @events, :as => :events %>
+<%= render partial: 'events/event_list',  :locals => {:events => @events} %>
 
 <script>
   $(".nano").nanoScroller();

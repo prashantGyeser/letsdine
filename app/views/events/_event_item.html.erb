@@ -3,9 +3,9 @@
 	<div class="eventListingItem">
 		<div class="imageWithOverlay">
 			<% if event.event_image.blank? %>
-				<%= image_tag restaurant.photo, :class=> "img-responsive" %>
+				<%= image_tag restaurant.photo_url(:event_page_image).to_s, :class=> "img-responsive" %>
 			<% else %>
-				<%= image_tag event.event_image, :class=> "img-responsive" %>
+				<%= image_tag event.event_image_url(:event_page_image).to_s, :class=> "img-responsive" %>
 			<% end %>
 			
 			<div class="eventDate">
