@@ -49,6 +49,8 @@ events.js: events-cff7de0dcc014ec7641f9fe5c1ce3a88.js
 events/index.js: events-cff7de0dcc014ec7641f9fe5c1ce3a88.js
 jquery.bootstrap.wizard.js: jquery.bootstrap.wizard-fb0689402e3e80713289dd7962a864ab.js
 jquery/index.bootstrap.wizard.js: jquery.bootstrap.wizard-fb0689402e3e80713289dd7962a864ab.js
+jquery.nanoscroller.min.js: jquery.nanoscroller.min-69955875e8b784295566c9e508b2af21.js
+jquery/index.nanoscroller.min.js: jquery.nanoscroller.min-69955875e8b784295566c9e508b2af21.js
 restaurant_picker.js: restaurant_picker-cc0b03132dcc9bd3f1a289dea5964a09.js
 restaurant_picker/index.js: restaurant_picker-cc0b03132dcc9bd3f1a289dea5964a09.js
 select2.js: select2-76f1a0965197b9543da9c2e702d90feb.js
@@ -75,6 +77,8 @@ font-awesome-ie7.css: font-awesome-ie7-e0360026c3687b244fedb277b8f6bf17.css
 font-awesome-ie7/index.css: font-awesome-ie7-e0360026c3687b244fedb277b8f6bf17.css
 font-awesome.css: font-awesome-d87a3f144efd5e95717ce1c73b236e05.css
 font-awesome/index.css: font-awesome-d87a3f144efd5e95717ce1c73b236e05.css
+nanoscroller.css: nanoscroller-260ab262942ad54e678b5b28d199e7e1.css
+nanoscroller/index.css: nanoscroller-260ab262942ad54e678b5b28d199e7e1.css
 prettify.css: prettify-1c0d6850ec95627c0ae574062b3865f2.css
 prettify/index.css: prettify-1c0d6850ec95627c0ae574062b3865f2.css
 select2.css: select2-b3fa53946b9cdf68e3de6b61f61a2f58.css
