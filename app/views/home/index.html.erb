@@ -1,7 +1,74 @@
 <% content_for :javascript do %>
     <%= stylesheet_link_tag    "nanoscroller.css", :media => "all" %>
     <%= javascript_include_tag "closed-event-overlay" %>
-    <%= javascript_include_tag "jquery.nanoscroller.min" %>    
+    <%= javascript_include_tag "jquery.nanoscroller.min" %>
+
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script>
+      var map;
+      var marker;
+      var myLatlng = new google.maps.LatLng(17.432259,78.407529);
+
+      function initialize() {
+        var mapOptions = {
+          zoom: 14,
+          center: myLatlng,
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+          styles: [
+          {
+             featureType: 'all',
+             elementType: 'all',
+             stylers: [
+               { visibility: "on" },
+               // Increase to -100 to remove all color
+               { saturation: -80 }
+            ]
+          }]
+        };
+
+        map = new google.maps.Map(document.getElementById('map_canvas'),
+            mapOptions);
+
+        var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h2 id="firstHeading" class="firstHeading">Via Milano </h2>'+
+            '<div id="bodyContent">'+
+            '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+            'sandstone rock formation in the southern part of the '+
+            'Northern Territory, central Australia. It lies 335 km (208 mi) '+
+            'south west of the nearest large town, Alice Springs; 450 km '+
+            '(280 mi) by road. Kata Tjuta and Uluru are the two major '+
+            'features of the Uluru - Kata Tjuta National Park. Uluru is '+
+            'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
+            'Aboriginal people of the area. It has many springs, waterholes, '+
+            'rock caves and ancient paintings. Uluru is listed as a World '+
+            'Heritage Site.</p>'+
+            '<p>Attribution: Uluru, <a href="http://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+            'http://en.wikipedia.org/w/index.php?title=Uluru</a> (last visited June 22, 2009).</p>'+
+            '</div>'+
+            '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString
+        });
+
+        marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title: 'Hello World!'
+        });
+
+        google.maps.event.addListener(marker, 'click', function() {
+          infowindow.open(map,marker);
+        });
+      }
+
+      google.maps.event.addDomListener(window, 'load', initialize);
+
+
+    </script>
+
 <% end %>
 
 <% content_for :homepageHeader do %>
@@ -31,9 +98,9 @@
     
 
 <% end %>
-<!--
+
 <div id="map_canvas" style="width: 100%; height: 300px;background: #ccc; border-bottom:4px solid #333;"></div>
--->
+
 <div class="container">
     <div class="row">
         <div class="col-md-12">

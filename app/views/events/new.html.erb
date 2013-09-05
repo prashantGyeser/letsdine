@@ -1,5 +1,6 @@
 <% content_for :javascript do%>
 	<%= javascript_include_tag "restaurant_picker" %>
+	<%= javascript_include_tag "bootstrap" %>
 	<%= javascript_include_tag "events" %>
 	<%= javascript_include_tag "jquery.bootstrap.wizard" %>
 	<%= javascript_include_tag "bootstrap-datepicker" %>
@@ -7,10 +8,10 @@
 <% end %>
 
 
-<div class="content">
+<div class="newEventContent">
     <div class="container">
-        <div class="row-fluid">
-        	<div class="span8 offset2">
+        <div class="row">
+        	<div class="col-md-12">
         		<div class="event">
         			<h1>New event</h1>
 		        	<div id="rootwizard">
