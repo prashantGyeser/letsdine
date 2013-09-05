@@ -1,12 +1,9 @@
 <div class="container">
-	<% logger.debug "Inspecting the events that are coming in" %>
-	<% logger.debug @events.inspect %>
-
 	<% counter = 0%>
 	<% total_events = @events.count%>
 	<% @events.each do |event|%>
 		<% if counter == 0 %>
-			<div class="row">
+			<div class="row row-bottom-spacing">
 				<%= render 'events/event_item', :event => event  %>
 				<% counter = counter + 1%>
 		<% elsif counter== 2 %>
