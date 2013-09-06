@@ -18,6 +18,14 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
+    <%= f.label :latitude%>
+    <%= f.number_field :latitude %>
+  </div>
+  <div class="field">
+    <%= f.label :longitude%>
+    <%= f.number_field :longitude %>
+  </div>
+  <div class="field">
     <p>
       By default any new restaurant created is shown in the event/new page. If you want to hide the restaurant from that list set this field to hidden 
     </p>
