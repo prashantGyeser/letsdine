@@ -118,3 +118,6 @@ gem "friendly_id"
 
 # Textile markup editor
 gem 'RedCloth'
+
+# Google analytics access
+gem 'oauth2'

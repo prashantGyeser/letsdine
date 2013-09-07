@@ -1,2 +1,97 @@
-<h1>Admin::History#index</h1>
-<p>Find me in app/views/admin/history/index.html.erb</p>
+<div class="container">
+	<div class="contentContainer">
+
+		<div class="row">
+			<div class="col-md-12">
+				<h1>Historic Data</h1>
+			</div>
+		</div>
+
+
+
+		<div class="row">
+			<div class="col-md-12">
+				<% counter = 0%>
+				<table class="table table-striped">
+					<tr>
+						<th>Month</th>
+						<th>Events</th>
+						<th>Total Attendees</th>
+						<th>Total signups</th>
+					</tr>
+
+						<% @event_months.keys.sort.each do |month| %>
+						<% @cancelled_events = [] %>
+						<% logger.debug "The month thingy is: #{month}" %>
+						<% total_signups = User.where('created_at BETWEEN ? AND ?', month.beginning_of_month, month.end_of_month).count%>
+					<tr>
+						<td>
+							<h3><%= month.strftime('%B') %></h3>
+						</td>
+						<td>
+							<% total_events = @event_months[month].count %>
+							<div>
+								Total: <%= @event_months[month].count %>
+							</div>
+							
+							<% total_attendees_in_a_month = 0%>
+
+							<% @event_months[month].each do |event| %>
+								<% event_attendees = Attendee.where(:event_id => event.id).pluck(:seats).sum%>
+								<% total_attendees_in_a_month = total_attendees_in_a_month + event_attendees%>
+								<% if event_attendees < 4 %>
+									<% @cancelled_events << event %>	
+								<% end %>
+							<% end %>
+							<div>
+								Cancelled: <%= @cancelled_events.count %>
+
+								<!-- Button trigger modal -->
+							<a data-toggle="modal" href="#<%= counter %>">See cancelled events</a>
+
+							<!-- Modal -->
+							<div class="modal fade" id="<%= counter %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+											<h3 class="modal-title">Cancelled event list</h3>
+										</div>
+										<div class="modal-body">
+											<ul>
+												<% @cancelled_events.each do |cancelled|  %>
+													<li>Name: <%= cancelled.event_name %> | City: <%= cancelled.city%>  </li>
+												<% end %>
+											</ul>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+										</div>
+									</div><!-- /.modal-content -->
+								</div><!-- /.modal-dialog -->
+							</div><!-- /.modal -->
+							</div>
+							
+							<div>
+								Actual: <%= total_events - @cancelled_events.count%>
+							</div>
+						</td>
+						<td>
+							<%= total_attendees_in_a_month%>
+						</td>
+						<td>
+							<%= total_signups %>
+						</td>
+						<% counter = counter + 1%>
+						<% end %>
+					</tr>
+				</table>
+				
+			</div>
+			
+		</div>
+
+	</div>
+
+</div>
+
