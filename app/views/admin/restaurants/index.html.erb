@@ -1,6 +1,6 @@
 <div class="container">
-  <div class="row-fluid">
-    <div class="span12">
+  <div class="row">
+    <div class="col-md-12">
       <%= link_to "Create Restaurant", :new_admin_restaurant, :class => "btn btn-large btn-primary createEventButton" %>
     </div>
   </div>
@@ -8,16 +8,15 @@
 
 
 <div class="container">
-  <div class="row-fluid">
-    <div class="span12">
+  <div class="row">
+    <div class="col-md-12">
       <h1>Listing restaurants</h1>
 
-      <table>
+      <table class="table table-striped">
         <tr>
           <th>Name</th>
           <th>Address</th>
-          <th>Cusine</th>
-          <th>Photo</th>
+          <th>City</th>
           <th></th>
           <th></th>
           <th></th>
@@ -27,8 +26,7 @@
         <tr>
           <td><%= restaurant.name %></td>
           <td><%= restaurant.address %></td>
-          <td><%= restaurant.cusine %></td>
-          <td><%= restaurant.photo %></td>
+          <td><%= restaurant.city %></td>
           <td><%= link_to 'Show', admin_restaurant_path(restaurant) %></td>
           <td><%= link_to 'Edit', edit_admin_restaurant_path(restaurant) %></td>
         </tr>

@@ -13,6 +13,8 @@
 #  city                  :string(255)
 #  status                :string(255)
 #  commission_percentage :decimal(, )
+#  latitude              :float
+#  longitude             :float
 #
 
 require 'spec_helper'

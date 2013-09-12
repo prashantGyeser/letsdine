@@ -1,1 +1,0 @@
-function remove_fields(e){$(e).prev("input[type=hidden]").value="1",$(e).closest(".field").hide()}
