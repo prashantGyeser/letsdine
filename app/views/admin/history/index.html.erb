@@ -99,9 +99,10 @@
 					</tr>
 					<% @popular_events.each do |event|%>
 					<tr>
-						<td><%= event.event_name%></td>
-						<td><%= event.total_attendees %></td>
-						<td><%= event.city %></td>
+						<% logger.debug  "The value in the view for the event is: #{event}" %>
+						<td><%= event[:event_name]%></td>
+						<td><%= event[:total_attendees] %></td>
+						<td><%= event[:city] %></td>
 					</tr>
 					<% end %>
 				</table>
