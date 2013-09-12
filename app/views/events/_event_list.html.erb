@@ -1,0 +1,27 @@
+<div class="container">
+	<% counter = 0%>
+	<% total_events = @events.count%>
+	<% @events.each do |event|%>
+		<% if counter == 0 %>
+			<div class="row row-bottom-spacing">
+				<%= render 'events/event_item', :event => event  %>
+				<% counter = counter + 1%>
+		<% elsif counter== 2 %>
+		
+				<%= render 'events/event_item', :event => event  %>
+			</div>
+			<% counter = 0 %>
+		
+		<% else %>
+		
+				<%= render 'events/event_item', :event => event  %>
+				<% counter = counter + 1%>
+		
+		<% end %>
+	<% end %>
+
+	<% if counter != 2%>
+		</div>
+	<% end %>
+
+</div>

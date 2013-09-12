@@ -1,869 +1,473 @@
-/**********************************************************************/
-/* Color Scheme */
-/**********************************************************************/
-$brand_color: #dd4124;
-$filter_background_color: #A6733E;
-/**********************************************************************/
-/* Common styles */
-/**********************************************************************/
-#error_explanation
-{
-	color: #d10000;
-}
-.field_with_errors input
-{
-	border: 1px solid #d10000;	
-	background: #ffe2e2;
-}
-.field_with_errors textarea
-{
-	border: 1px solid #d10000;	
-	background: #ffe2e2;
-}
-.createEventBtn
-{
-	margin-top: 10px;
-}
-.special
-{
-	background-color: #292929;
-}
-.white_background
-{
-	background: #fff;
-}
+/*******************************************************************/
+/* Common Styles */
+/*******************************************************************/
+$brand_color: #DD4124;
+$topBar_color: #333;
+$contrast_blue: #1b6e8a;
+$brand_color_80_percent: rgba(221, 65, 36, .8);
+/* Link Styles */
 a
 {
-	color: #1b6e8a;
+	color: $contrast_blue;
 }
-.topMargin
-{
-	margin-top: 20px;
-}
-.bottomMargin
-{
-	margin-bottom: 40px;
-}
-/**********************************************************************/
-/* Body Styling */
-/**********************************************************************/
+/*******************************************************************/
+/* Body Styles */
+/*******************************************************************/
 body
 {
-	background: url("/assets/background.png");
+	//font-family: 'Lato', sans-serif;
+	font-family: "nimbus-sans",sans-serif;
+	font-size: 16px;
+	//font-weight: 400;
+	background: #f4f4f4;
+	color: #333;
 }
-/**********************************************************************/
-/* Topbar style */
-/**********************************************************************/
+h1
+{
+	font-family: "museo-slab",serif;
+	font-weight: 500;
+}
+h2
+{
+	font-family: "museo-slab",serif;
+	font-weight: 500;
+}
+h3
+{
+	font-family: "museo-slab",serif;
+	font-weight: 500;
+}
+h4
+{
+	font-family: "museo-slab",serif;
+	font-weight: 500;
+}
+/*******************************************************************/
+/* Top Bar Styles */
+/*******************************************************************/
 .topBar
 {
-	margin-top: 10px;
-	.topBarLogin
+	background: $topBar_color;
+	padding: 20px 0;
+	.logo
 	{
-		
-		span
+		margin-top: 5px;
+	}
+	.topBarText
+	{
+		color: white;
+		font-size: 33px;
+		font-family: "museo-slab",serif;
+		font-weight: 100;
+		text-align: center;
+		-webkit-transform: rotate(-0.0000000001deg);
+		text-shadow: 0 0 1px rgba(51,51,51,0.2);
+		.topBarTextHighlight
 		{
-			float: left;
-			margin-top: 10px;
-			margin-right: 10px;
+			font-weight: 900;
+			letter-spacing: 1px;
 		}
-		a
+	}
+	.topBarButtons
+	{
+		margin: 20px 0 30px 0;
+		text-align: center;
+		.facebookLoginButton
 		{
-			display: inline-block;
+			padding: 20px 10px 10px 10px;
+			margin-right: 20px;
+			display: inline;
 			text-transform: uppercase;
+			img
+			{
+				margin-left: 5px;
+				margin-bottom: 10px;
+			}
 		}
 	}
 }
-/**********************************************************************/
-/* Header style */
-/**********************************************************************/
-.headerLogo
+/*******************************************************************/
+/* Naigation Styles */
+/*******************************************************************/
+.topNav
 {
-	text-align: center;
+	list-style: none;
+	color: white;
+	margin: 15px 0 0 0;
+	padding: 0;
+	li
+	{
+		display: inline;
+		margin-left: 15px;
+
+	}
+	li.selected
+	{
+		color: $brand_color;
+	}
+}
+.loginButton
+{
+	margin-top: 10px;
+	padding: 10px 10px 20px 10px;
+}
+/*******************************************************************/
+/* Filter Styles */
+/*******************************************************************/
+.filter
+{
+	background: white;
+	padding: 20px 0;
+	margin-bottom: 10px;
+	color: #737373;
+	#citySelect
+	{
+		&:hover
+	{
+		background: #8a8a8a;
+		cursor: pointer;
+	}
+		background: #737373;
+		color: white;
+		//display: inline;
+		padding: 10px;
+		width: 200px;
+		-moz-border-radius: 0px;
+		-webkit-border-radius: 3px 3px 3px 3px;
+		border-radius: 3px 3px 3px 3px; 
+		i
+		{
+			font-size: 1.4em;
+			line-height: 20px;
+			background: #8a8a8a;
+			padding: 10px;
+			margin: -10px -10px 0 0;
+			border: 1px solid #8a8a8a;
+			-webkit-border-top-right-radius: 3px;
+			-webkit-border-bottom-right-radius: 3px;
+			-moz-border-radius-topright: 3px;
+			-moz-border-radius-bottomright: 3px;
+			border-top-right-radius: 3px;
+			border-bottom-right-radius: 3px;
+		}
+	}
+	.hidden_div
+	{
+		visibility:hidden;
+	}
+	#cityList 
+	{
+
+		z-index: 1000;
+		position:absolute;
+		left:15px;
+		top:42px;
+		display: block;
+		width: 200px;
+		//position: relative;
+		background: #f8f8f8;
+		border: 1px solid #ececec;
+		margin-top: 10px;
+		-webkit-box-shadow: 1px 0px 10px rgba(50, 50, 50, 0.2);
+		-moz-box-shadow:    1px 0px 10px rgba(50, 50, 50, 0.2);
+		box-shadow:         1px 0px 10px rgba(50, 50, 50, 0.2);
+		-moz-border-radius: 0px;
+		-webkit-border-radius: 6px 6px 6px 6px;
+		border-radius: 6px 6px 6px 6px; 
+		ul
+		{
+			list-style: none;
+			margin: 10px 0 0 0;
+			//padding: 10px;
+			padding: 0;
+			strong
+			{
+				padding: 10px;
+			}
+			ul li
+			{
+				padding: 10px 30px 10px 20px;
+				margin-right: 10px;
+				&:hover
+				{
+					background: #ececec;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+	#cityList:after, #cityList:before {
+		bottom: 100%;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+		
+	}
+
+	#cityList:after {
+		border-color: rgba(248, 248, 248, 0);
+		border-bottom-color: #f8f8f8;
+		border-width: 10px;
+		left: 90%;
+		margin-left: -10px;
+	}
+	#cityList:before {
+		border-color: rgba(236, 236, 236, 0);
+		border-bottom-color: #ececec;
+		border-width: 11px;
+		left: 90%;
+		margin-left: -11px;
+	}
+}
+/*******************************************************************/
+/* Scroll Bar Styles */
+/*******************************************************************/
+.nano { 
+	
+	width: 200px; 
+	height:300px; 
+}
+.content
+{
+	position:absolute;
+	z-index: 100;
+	left: 0;
+	top: 0;
+}
+.nano .pane   { background: #888; }
+.nano .slider { background: #111; }
+/*******************************************************************/
+/* Event List Styles */
+/*******************************************************************/
+.eventListingItem
+{
+	-webkit-box-shadow: 1px 0px 10px rgba(50, 50, 50, 0.2);
+	-moz-box-shadow:    1px 0px 10px rgba(50, 50, 50, 0.2);
+	box-shadow:         1px 0px 10px rgba(50, 50, 50, 0.2);
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 6px 6px 6px 6px;
+	border-radius: 6px 6px 6px 6px; 
+}
+.imageWithOverlay
+{
+	position: relative;
+	img
+	{
+		-moz-border-radius: 0px;
+		-webkit-border-radius: 6px 6px 0px 0px;
+		border-radius: 6px 6px 0px 0px; 
+		border-top: 1px solid #ccc;
+		border-left: 1px solid #ccc;
+		border-right: 1px solid #ccc;
+	}
+	.eventDate
+	{
+		position: absolute;
+		top: 70%;
+		left: 0;
+		background: rgba(0,0,0,.5);
+		color: white;
+		display: inline;
+		padding: 10px;
+		width: 100%;
+		-webkit-box-shadow: 0px -5px 10px rgba(50, 50, 50, 0.5);
+		-moz-box-shadow:    0px -5px 10px rgba(50, 50, 50, 0.5);
+		box-shadow:         0px -5px 10px rgba(50, 50, 50, 0.5);
+		span
+		{
+			font-weight: bold;
+		}
+	}
+	.seatsLeft
+	{
+		position: absolute;
+		top: 10px;
+		left: 0;
+		background: $brand_color_80_percent;
+		padding: 10px;
+		color: white;
+		font-weight: bold;
+	}
+}
+.eventListingContent
+{
+	background: white;
+	padding: 10px;
+	border-bottom: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	h4	
+	{
+		margin-top: 0;
+		padding-top: 0;
+	}
+	span
+	{
+		font-weight: bold;
+		margin-bottom: 10px;
+		display: block;
+	}
+}
+.row-bottom-spacing
+{
+	margin-bottom: 30px;
+}
+/*******************************************************************/
+/* New Event Styles */
+/*******************************************************************/
+.newEventContent
+{
+
+	.event
+	{
+		background: white;
+		margin: 40px 0;
+		padding: 40px;
+		-webkit-box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.2);
+		-moz-box-shadow:    0px 0px 10px rgba(50, 50, 50, 0.2);
+		box-shadow:         0px 0px 10px rgba(50, 50, 50, 0.2);
+	}	
+}
+
+/*******************************************************************/
+/* Event Page Styles */
+/*******************************************************************/
+.eventPage
+{
+	background: white;
+	margin-top: 40px;
+	padding: 40px;
+	-webkit-box-shadow: 1px 0px 10px rgba(50, 50, 50, 0.2);
+	-moz-box-shadow:    1px 0px 10px rgba(50, 50, 50, 0.2);
+	box-shadow:         1px 0px 10px rgba(50, 50, 50, 0.2);
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 6px 6px 6px 6px;
+	border-radius: 6px 6px 6px 6px; 	
 	h3
 	{
-		margin: 20px 0 0 0;
+		font-weight: bold;
 	}
-	.homepageSignup
+	.menuItemsHeader
 	{
-		font-size: 15px;
-		text-transform: uppercase;
-		text-align: center;
-		display: inline-block;
+		display: block;
+		margin-top: 10px;
+	}
+
+	.menuItemExplanation
+	{
+		font-style: italic;
+		margin: 5px 0;
+		padding: 0;
+	}
+	.menuItems
+	{
+		margin: 0 0 0 20px;
+		padding: 0;
+	}
+}
+.eventPageContent
+{
+	background: white;
+	.eventDescription
+	{
+		p
+		{
+			margin-top: 10px;
+			font-style: italic;	
+		}
+		
+	}
+}
+.joinEvent
+{
+	background: white;
+	margin-top: 40px;
+	padding: 20px;
+	-webkit-box-shadow: 1px 0px 10px rgba(50, 50, 50, 0.2);
+	-moz-box-shadow:    1px 0px 10px rgba(50, 50, 50, 0.2);
+	box-shadow:         1px 0px 10px rgba(50, 50, 50, 0.2);
+	.full_width
+	{
+		width: 100%;
+		padding: 15px 10px 25px 10px;
+	}
+	.peopleAttending
+	{
+		i
+		{
+			font-size: 50px;
+		}
+	}
+}
+/*******************************************************************/
+/* Devise Page Styles */
+/*******************************************************************/
+.loginLogo
+{
+	margin: 0 auto;
+	width: 300px;
+	padding: 10px;	
+}
+.login
+{
+	margin: 0 auto;
+	width: 300px;
+	background: white;
+	padding: 10px;
+	-webkit-box-shadow: 1px 0px 10px rgba(50, 50, 50, 0.2);
+	-moz-box-shadow:    1px 0px 10px rgba(50, 50, 50, 0.2);
+	box-shadow:         1px 0px 10px rgba(50, 50, 50, 0.2);
+	.loginPageButton
+	{
+		display: block;
+		width: 100%;
+		padding-bottom: 20px;
+	}
+	.loginPageFacebookButton
+	{
+		display: block;
+		width: 100%;
+		padding-bottom: 25px;	
 		img
 		{
+			margin-left: 5px;
 			padding-bottom: 5px;
 		}
 	}
-}
-/**********************************************************************/
-/* Filter style */
-/**********************************************************************/
-.filter
-{
-	background: #fff;
-	border: 1px solid #ddd;
-	padding: 10px;
-	span
+	.facebookLoginDivider
 	{
-		font-size: 15px;
-		font-weight: bold;
-		display: inline-block;
+		margin: 20px 0 10px 0;
+		border-top: 1px solid #ccc;
+		.or
+		{
+			margin-top: -10px;
+			position: relative;
+			left: 49%;
+		}
 	}
-	.citySelect
+	.loginFooter
 	{
-	  margin: 0;
-	  background: #f1efee;
-	  padding: 10px;
-	  color: #9d8d87;
-	  font-weight: bold;
-	  border: 1px solid #dad4d2;
-	  display: inline-block;
-	}
-	.citySelect:hover
-	{
-	  cursor: pointer;
-	}
-	.citySelect i
-	{
-	  line-height: 11px;
-	  padding-left: 30px;
-	}
-	.cityList 
-	{
-	  background: #fff;
-	  margin-top: -1px;
-	  position: absolute;
-	  left: 100px;
-	  z-index: 1000;
-	  width: 191px;
-	  -webkit-box-shadow: 0px 10px 26px rgba(50, 50, 50, 0.3);
-	  -moz-box-shadow:    0px 10px 26px rgba(50, 50, 50, 0.3);
-	  box-shadow:         0px 10px 26px rgba(50, 50, 50, 0.3);
-	  border: 1px solid #dad4d2;
-	}
-	.cityList ul
-	{
-	  list-style: none;
-	  margin: 0;
-	  padding: 10px 0 0 0;
-	}
-	.cityList ul li
-	{
-	  padding: 10px;
-	  cursor: pointer;
-	}
-	.cityList ul li:hover
-	{
-	  color: #fff;
-	  background: #c3bab6;  
+		margin-top: 20px;
+		.linksDivider
+		{
+			display: inline;
 
-	}
-	.cityList ul li a
-	{
-	  color: #444;
-	  font-weight: bold;
-	}
-	.cityList ul li a:hover
-	{
-	  text-decoration: none;
-
+		}
 	}
 }
-/**********************************************************************/
-/* Login style */
-/**********************************************************************/
-.loginDetails
-{
-	margin-top: 10px;
-	font-size: 16px;
-	color: #fff;
-
-}
-.loginOptions
-{
-	float: right;
-}
-.loginDetails a
-{
-	color: #fff;
-}
-.login_link
-{
-	font-weight: bold;
-	margin-right: 10px;
-}
-#sign_up_link a
-{
-	margin-top: 5px;
-}
-#sign_up_link a:hover
-{
-	text-decoration: none;
-}
-
-.homepage 
-{
-	list-style: none;
-	color: #a1afaf;
-	margin-top: 20px;
-	margin-left: -20px;
-	margin-bottom: 10px;
-	font-size: 18px;
-	text-shadow: 0px 0px 1px #647575;
-}
-.headerImage-red
-{
-	background: url(/assets/eventIcon.png) no-repeat center center;
-	background-color: rgba(221,65,36,.5);
-	min-height: 110px;
-	min-width: 110px;
-
-}
-.headerImage-blue
-{
-	background: url(/assets/joinEvent.png) no-repeat center center;
-	background-color: rgba(27,110,138,.5);
-	min-height: 110px;
-	min-width: 110px;
-
-}
-.headerImage-green
-{
-	background: url(/assets/shareEvent.png) no-repeat center center;
-	background-color: rgba(131,202,33,.5);
-	min-height: 110px;
-	min-width: 110px;
-
-}
-.homepage li 
-{
-	display: inline;
-	margin-right: 20px;
-	font-weight: bold;
-}
-.homepage li a
-{
-	color: #a1afaf;
-	font-size: 18px;
-	text-shadow: 0px 0px 1px #647575;
-	text-decoration: none;
-
-	/* First we need to help some browsers along for this to work.
-     Just because a vendor prefix is there, doesn't mean it will
-     work in a browser made by that vendor either, it's just for
-     future-proofing purposes I guess. */
-	-o-transition:.5s;
-	-ms-transition:.5s;
-	-moz-transition:.5s;
-	-webkit-transition:.5s;
-	/* ...and now for the proper property */
-	transition:.5s;
-
-}
-.homepage li a:visited
-{
-	color: #a1afaf;
-	font-size: 18px;
-	text-shadow: 0px 0px 1px #647575;
-}
-.homepage li a:visited
-{
-	color: #a1afaf;
-	font-size: 18px;
-	text-shadow: 0px 0px 1px #647575;
-}
-.homepage li a:hover
-{
-	color: #080809;	
-	text-shadow: 0px 1px 2px #404046;
-}
-
-.homepage li a.selected
-{
-	color: #080809;	
-	text-shadow: 0px 1px 2px #404046;
-}
-
-
-.locationpicker
-{
-	margin-top: 10px;
-}
-.slider
-{
-	margin-top: -170px;
-
-}
-.slider img
-{
-	position: relative;
-	left: 20px;
-	right: 20px;
-	
-}
-.slider img .currentSliderImage
-{
-
-}
-.gallery
-{
-	height: 400px;
-	width: 100%;
-}
-
-.content
-{
-	
-}
-/**********************************************************************/
-/* Event box styles */
-/**********************************************************************/
-.event {
-  width: 90%;
-  height: auto;
-  margin: 20px auto;
-  padding: 20px;
-  position: relative;
-  background: white;
-  border: 1px solid #cccccc;
-  border-radius: 3px; }
-
-.event::before,
-.event::after {
-  content: "";
-  position: absolute;
-  bottom: -3px;
-  left: 2px;
-  right: 2px;
-  top: 0;
-  z-index: -1;
-  background: #fff;
-  border: 1px solid #cccccc; }
-
-.event::after {
-  left: 4px;
-  right: 4px;
-  bottom: -5px;
-  z-index: -2;
-  box-shadow: 0 8px 8px -5px rgba(0, 0, 0, 0.3); }
-
-.event img
-{
-	position: relative;
-}
-.closed 
-{
-	position: absolute;
-	top: 20px;
-	left: 20px;
-	padding: 10px;
-	color: #fff;
-	font-weight: bold;
-	background: rgba(0,0,0,.8);
-}
-.closed h3
-{
-	vertical-align: middle;
-	text-align: center;
-	color: #fff;
-	padding-top: 20px;
-}
-.event h4
-{
-	margin-bottom: 20px;
-}
-.event p
-{
-	margin-top: 10px;
-}
-/* Special event box styling */
-.event_special {
-  width: 90%;
-  height: auto;
-  margin: 20px auto;
-  padding: 20px;
-  position: relative;
-  background: #292929;
-  border: 1px solid #181818;
-  border-radius: 3px; }
-
-.event_special::before,
-.event_special::after {
-  content: "";
-  position: absolute;
-  bottom: -3px;
-  left: 2px;
-  right: 2px;
-  top: 0;
-  z-index: -1;
-  background: #292929;
-  border: 1px solid #181818; }
-
-.event_special::after {
-  left: 4px;
-  right: 4px;
-  bottom: -5px;
-  z-index: -2;
-  box-shadow: 0 8px 8px -5px rgba(0, 0, 0, 0.3); }
-.event_special p 
-{
-	color: #fff;
-}
-/**********************************************************************/
-.detail
-{
-	color: #ccc;
-	margin-bottom: 5px;
-}
+/*******************************************************************/
+/* Footer Styles */
+/*******************************************************************/
 .footer
 {
-	background: url("/assets/topBarBG.png");	
-	margin-top: 20px;
-}
-
-
-.peopleAttending
-{
-	margin-top: 20px;
-}
-.eventHeader
-{
-	height: 400px;
-}
-.eventImage
-{
-	border: 6px solid #000;
-}
-.eventDetailsImage {
-  width: 90%;
-  height: auto;
-  margin: 20px auto 10px -5px;
-  padding: 20px;
-  position: relative;
-  background: white;
-  border: 1px solid #cccccc;
-  border-radius: 3px; }
-
-.eventDetailsImage::before,
-.eventDetailsImage::after {
-  content: "";
-  position: absolute;
-  bottom: -3px;
-  left: 2px;
-  right: 2px;
-  top: 0;
-  z-index: -1;
-  background: #fff;
-  border: 1px solid #cccccc; }
-
-.eventDetailsImage::after {
-  left: 4px;
-  right: 4px;
-  bottom: -5px;
-  z-index: -2;
-  box-shadow: 0 8px 8px -5px rgba(0, 0, 0, 0.3); }
-
-  .eventDetailsText
-  {
-  	margin-top: 10px;
-  	
-  }
-
-.eventDetailsImage img
-{
-	position: relative;
-}
-.event_date_time
-{
-	padding: 10px;
-	position: absolute;
-	top: 20px;
-	left: 20px;
-	background: rgba(0,0,0,0.8);
+	background: #333;
 	color: #fff;
-	font-weight: bold;
-	font-size: 21px;
-}
-
-.restaurantList
-{
-	
-}
-.restaurantList ul
-{
-	list-style: none;
-	margin: 0;
-}
-.restaurantList ul li img
-{
-	float: left;
-	margin-right: 10px;
-}
-.restaurantDetailsCotaniner
-{
-	float: left;
-	padding: 10px;
-}
-.restaurantDetailsCotaniner:hover
-{
-	background: #cceaff;
-	cursor: pointer;
-}
-.selectedRestaurant
-{
-	background: #cceaff;
-	cursor: pointer;
-}
-.restaurantDetailsCotaniner img
-{
-	float: left;
-	margin-right: 10px;
-}
-.restaurantDetailsCotaniner div
-{
-	float: left;
-}
-.restaurantList ul li
-{
-	clear: both;
 	padding: 10px 0;
-	
-}
-.restaurantList ul li a
-{
-	padding: 10px;
-}
-.restaurantList ul h4
-{
-	margin-top: 0;
-}
-.restaurantMenu
-{
-	
-}
-.restaurantMenu ul
-{
-	list-style: none;
-	margin: 0;
-}
-.restaurantMenu ul li
-{
-	margin-bottom: 5px;
-}
-.restaurantMenu h3
-{
-	margin: 0;
-}
-.restaurantDetailsContainer
-{
-	margin-bottom: 10px;
-}
-
-  /* Buttons */
-.awesome, .awesome:visited {
-	background: #222 url(alert-overlay.png) repeat-x; 
-	display: inline-block; 
-	padding: 5px 10px 6px; 
-	color: #fff; 
-	text-decoration: none;
-	-moz-border-radius: 5px; 
-	-webkit-border-radius: 5px;
-	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
-	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
-	text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
-	border-bottom: 1px solid rgba(0,0,0,0.25);
-	position: relative;
-	cursor: pointer;
-}
-
-	.awesome:hover							{ background-color: #111; color: #fff; }
-	.awesome:active							{ top: 1px; }
-	.small.awesome, .small.awesome:visited 			{ font-size: 11px; }
-	.awesome, .awesome:visited,
-	.medium.awesome, .medium.awesome:visited 		{ font-size: 13px; font-weight: bold; line-height: 1; text-shadow: 0 -1px 1px rgba(0,0,0,0.25); }
-	.large.awesome, .large.awesome:visited 			{ font-size: 14px; padding: 8px 14px 9px; }
-	
-	.green.awesome, .green.awesome:visited		{ background-color: #91bd09; }
-	.green.awesome:hover						{ background-color: #749a02; }
-	.blue.awesome, .blue.awesome:visited		{ background-color: #2daebf; }
-	.blue.awesome:hover							{ background-color: #007d9a; }
-	.red.awesome, .red.awesome:visited			{ background-color: #e33100; }
-	.red.awesome:hover							{ background-color: #872300; }
-	.magenta.awesome, .magenta.awesome:visited		{ background-color: #a9014b; }
-	.magenta.awesome:hover							{ background-color: #630030; }
-	.orange.awesome, .orange.awesome:visited		{ background-color: #ff5c00; }
-	.orange.awesome:hover							{ background-color: #d45500; }
-	.yellow.awesome, .yellow.awesome:visited		{ background-color: #ffb515; }
-
-.login {
-  width: 45%;
-  height: auto;
-  margin: 20px auto;
-  padding: 20px;
-  position: relative;
-  background: white;
-  border: 1px solid #cccccc;
-  border-radius: 3px; }
-
-.login::before,
-.login::after {
-  content: "";
-  position: absolute;
-  bottom: -3px;
-  left: 2px;
-  right: 2px;
-  top: 0;
-  z-index: -1;
-  background: #fff;
-  border: 1px solid #cccccc; }
-
-.login::after {
-  left: 4px;
-  right: 4px;
-  bottom: -5px;
-  z-index: -2;
-  box-shadow: 0 8px 8px -5px rgba(0, 0, 0, 0.3); }
-#interests_select
-{
-	margin-bottom: 10px;
-}
-.zoomflow
-{
-	margin-top: -200px;
-}
-.share_on_facebook
-{
-	margin-bottom: 10px;
-}
-
-.event_type_radio
-{
 	margin-top: 10px;
 }
-.event_radio
-{
-	float: left;
-}
-.event_radio_label
-{
-	float: left;
-	margin: 0 10px 0 5px;
-}
-.total_attendees
-{
-	padding: 10px;
-	background: #ccc;	
-}
-.total_attendees_highlight
-{
-	background: #d3371a;
-	color: #fff;
-	border: 1px solid #972713;
-	padding: 20px;
-}
-/********************************************************************************/
-/* Map Styling */
-/********************************************************************************/
-
-
-/********************************************************************************/
-/* Group Styling */
-/********************************************************************************/
-.new_group_button_container
-{
-	border-top: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
-	padding: 10px 0;
-	margin-bottom: 20px;
-}
-.group_body
-{
-	background: url('/assets/groupsBG.png');
-}
-.group-row
-{
-	margin-bottom: 10px;
-}
-.group
-{
-	background: #fff;
-}
-.group .image
-{
-	position: relative;
-	width: 100%
-}
-.group .image h4
-{
-	position: absolute; 
-	top: 10px; 
-	left: 10px; 
-	padding: 10px;
-	background: rgba(0,0,0,.6);
-	color: #fff;
-
-	text-shadow:0px 2px 2px #333333
-}
-.group .image h4.group_category
-{
-	position: absolute; 
-	top: 80%; 
-	left: 10px; 
-	padding: 10px;
-	background: rgba(0,0,0,.6);
-	color: #fff;
-
-	text-shadow:0px 2px 2px #333333
-} 
-.groups_filter ul
-{
-	list-style: none;
-	margin: 0;
-}
-.groups_filter ul li
-{
-	margin-bottom: 10px;
-	padding: 10px;
-}
-.groups_filter ul li:hover
-{
-	background: url("/assets/headerBG.png");
-	color: #fff;
-	cursor: pointer;
-
-}
-.groups_filter ul li a:hover
-{
-	text-decoration: none;
-}
-.group_details
-{
-	padding: 10px;
-}
-.group-sub-menu
-{
-	margin: 0;
-	padding: 10px;
-	background: #fff;
-	list-style: none;
-	
-}
-.group-sub-menu li
-{
-	display: inline;
-	margin-right: 20px;
-	padding: 12px;
-}
-.group-sub-menu li:hover
-{
-	background: url("/assets/headerBG.png");
-	color: #fff;
-	cursor: pointer;
-}
-.discussion-list
-{
-	background: #fff;
-	padding: 10px;
-	margin-top: 20px;
-}
-.discussion-list ul
-{
-	list-style: none;
-	margin: 0 0 30px 0;
-}
-.discussion-list ul li
-{
-	border-bottom: 1px solid #ccc;
-	padding-bottom: 10px;
-	padding-top: 20px;
-}
-.discussion-list img
-{
-	float: left;
-	
-}
-.discussion-list .comment
-{
-	margin-left: 50px;
-}
-.seats_left_container
-{
-	margin: 30px 0;
-}
-.seats_left
-{
-	background: $brand_color;
-	display: inline;
-	padding: 20px;
-	font-size: 21px;
-	color: #fff;
-	font-weight: bold;
-}
-.eventDetails
-{
-	margin-top: 20px;
-}
-.seats_left_event_page
-{
-	background: $brand_color;
-	display: inline;
-	color: #fff;
-	padding: 10px;
-	font-weight: bold;
-	margin-top: 20px;
-}
-.restaurant_hidden
-{
-	display: none;
-}
-
-/**********************************************************************/
-/* Profile style */
-/**********************************************************************/
-.profile_header_image
-{
-	border: 15px solid #fff;
-	margin-bottom: 20px;
-
-	/* Box shadow*/
-	box-shadow: 0 0 8px #888888;
-	-moz-box-shadow: 0 0 8px #888888;
-	-webkit-box-shadow: 0 0 8px #888888;
-}
-.profile_picture
-{
-	margin-top: -130px;
-	margin-left: 20px;
-	border: 9px solid #fff;
-
-
-	/* Making the image circular */
-	width: 100%px;
-	height: 100%px;
-	border-radius: 50%;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-
-	/* Box shadow*/
-	box-shadow: 0 0 8px #888888;
-	-moz-box-shadow: 0 0 8px #888888;
-	-webkit-box-shadow: 0 0 8px #888888;	
-
-}
-.event_attending
-{
-	border: 1px solid #ccc;
-	margin-bottom: 10px;
-}
-.event_attending h4
-{
-	padding: 10px;
-}
-.other_people_attending
-{
-
-	border-top: 1px solid #ccc;
-	background: #eee;
-	padding: 10px;
-}
-/**********************************************************************/
+/*******************************************************************/
+/* Common Styles */
+/*******************************************************************/

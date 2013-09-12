@@ -1,21 +1,21 @@
 <div class="container">
-	<div class="row-fluid">
-		<div class="span12">
+	<div class="row">
+		<div class="col-md-12">
 			<%= link_to "Create Event", :new_admin_event, :class => "btn btn-large btn-primary createEventButton" %>
 		</div>
 	</div>
 </div>
 
 <div class="container">
-	<div class="row-fluid">
-		<div class="span12">
+	<div class="row">
+		<div class="col-md-12">
 			<% @event_list.each do |city,events| %>
 			<h2><%= city %></h2>
 				<table class="table table-striped">
 					<tr>
 						<th>Type</th>
 						<th>Name</th>
-						<th>Date</th>
+						<th>Event Date</th>
 						<th>Restaurant</th>
 						<th>Seats Filled</th>
 						<th>Max Seats</th>

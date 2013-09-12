@@ -46,7 +46,10 @@ class Event < ActiveRecord::Base
 
   def seats_left
     return self.max_seats - Attendee.where(:event_id => self.id).pluck(:seats).sum
+  end
 
+  def total_attendees 
+    return Attendee.where(:event_id => self.id).pluck(:seats).sum
   end
 
   protected

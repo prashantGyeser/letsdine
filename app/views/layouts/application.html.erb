@@ -17,27 +17,48 @@
 	<% end %>
 	
 
-	<%= stylesheet_link_tag    "application", :media => "all" %>
-	<%= stylesheet_link_tag    "bootstrap", :media => "all" %>
-	<%= stylesheet_link_tag    "bootstrap-responsive", :media => "all" %>
-	<%= stylesheet_link_tag    "style", :media => "all" %>
-	<%= stylesheet_link_tag    "buttons", :media => "all" %>
-	<%= stylesheet_link_tag    "prettify", :media => "all" %>
-	<%= stylesheet_link_tag    "custom", :media => "all" %>
-	<%= stylesheet_link_tag    "datepicker", :media => "all" %>
-	<%= stylesheet_link_tag    "bootstrap-timepicker", :media => "all" %>
-	<%= stylesheet_link_tag    "select2", :media => "all" %>
-	<%= stylesheet_link_tag    "font-awesome", :media => "all" %>
-	<%= stylesheet_link_tag    "font-awesome-ie7", :media => "all" %>
-
-	<%= javascript_include_tag "application" %>
-	<%= javascript_include_tag "jquery-1.9.1" %>
-	<%= javascript_include_tag "bootstrap" %>
-	<%= javascript_include_tag "closed-event-overlay" %>
-	<%= javascript_include_tag "select2" %>
-	<%= yield :javascript %>	
 	
-	<%= csrf_meta_tags %>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="LetsDine">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">    
+
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <!-- Bootstrap core CSS -->
+    <%= stylesheet_link_tag    "bootstrap", :media => "all" %>
+
+    <!-- Font awesome core CSS -->
+    <%= stylesheet_link_tag    "font-awesome", :media => "all" %>
+    <%= stylesheet_link_tag    "font-awesome-ie7", :media => "all" %>
+
+    <!-- Custom styles for this template -->
+    <%= stylesheet_link_tag    "style", :media => "all" %>
+    <%= stylesheet_link_tag    "buttons", :media => "all" %>
+    
+    <!-- Lato font -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
+
+
+    
+    <!-- Typekit Fonts -->
+    
+    <script type="text/javascript" src="//use.typekit.net/yjy6rjo.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	
+	
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/lib/html5shiv.js"></script>
+      <script src="js/lib/respond.min.js"></script>
+    <![endif]-->
+
+    
+    <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag "jquery-1.10.2.min" %>
+    <%= yield :javascript %>	
+	
+    <%= csrf_meta_tags %>
 
 	<!--Start of Zopim Live Chat Script-->
 	<script type="text/javascript">
@@ -52,6 +73,8 @@
 	
 </head>
 <body <%= yield :body_class %>>
+  <div class="wrap">
+
 	<!-- FB start -->
 	<div id="fb-root"></div>
 	<script>(function(d, s, id) {
@@ -64,20 +87,32 @@
 	<!-- FB end -->
 
 	<div class="topBar">
-		<div class="container">
-			<div class="row-fluid">
-				<div class="span4 offset8">
-					<div class="topBarLogin pull-right">
-						<span>Already have an account?</span>
-						<a href="#" class="css3-button css3-button_pink">Login</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-md-2 logo">
+            <%= image_tag("logo.png")%>
+          </div>
 
-	
+          <div class="col-md-6">
+            <ul class="topNav pull-right">
+              <li class="selected">Home</li>
+              <li>How it works</li>
+              <li>About Us</li>
+              <li>Contact Us</li>
+            </ul>
+          </div>
 
+          <div class="col-md-4">
+            <a href="<%= new_user_session_path %>" class="css3-button css3-button_pink loginButton pull-right" style="padding-bottom:25px">Login/Signup</a>
+          </div>
+
+        </div>
+
+        <%= yield :homepageHeader %>
+
+      </div>
+    </div>
 
 
     <% if @home_page %>
@@ -96,15 +131,6 @@
 
 
 	<%= yield %>	
-
-	<script>
-		$(document).ready(function(){
-			 $("#e1").select2({
-			 	placeholder: "Select a City",
-                		allowClear: true
-			 });
-		});
-	</script>
 
 	<script>
       $(document).ready(function () {
@@ -150,12 +176,6 @@
       })
     </script>
 
-	<script>
-		$(document).ready(function(){
-			$('#jl').tooltip()
-		})
-	</script>
-
 	<script type="text/javascript">
 
 	  var _gaq = _gaq || [];
@@ -176,6 +196,19 @@
 			</div>
 		</div>
 	</div>
+    <div id="push"></div>
+</div>
 
+	<div class="footer">
+		<div class="container">
+			<div class="row-">
+				<div class="col-md-12">
+		            All rights reserved Gyeser
+		          </div>
+			</div>
+		</div>
+	</div>
+	
 </body>
 </html>
+

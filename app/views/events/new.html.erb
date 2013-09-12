@@ -1,16 +1,25 @@
 <% content_for :javascript do%>
+	<%= stylesheet_link_tag    "bootstrap-markdown.min", :media => "all" %>
+	<%= stylesheet_link_tag    "bootstrap-formhelpers", :media => "all" %>
 	<%= javascript_include_tag "restaurant_picker" %>
+	<%= javascript_include_tag "bootstrap" %>
 	<%= javascript_include_tag "events" %>
 	<%= javascript_include_tag "jquery.bootstrap.wizard" %>
-	<%= javascript_include_tag "bootstrap-datepicker" %>
 	<%= javascript_include_tag "bootstrap-timepicker" %>
+	<%= javascript_include_tag "markdown" %>
+	<%= javascript_include_tag "to-markdown" %>
+	<%= javascript_include_tag "bootstrap-markdown" %>
+	<%= javascript_include_tag "bootstrap-formhelpers-datepicker" %>
+	<%= javascript_include_tag "bootstrap-formhelpers-datepicker.en_US" %>
+	
+	
 <% end %>
 
 
-<div class="content">
+<div class="newEventContent">
     <div class="container">
-        <div class="row-fluid">
-        	<div class="span8 offset2">
+        <div class="row">
+        	<div class="col-md-12">
         		<div class="event">
         			<h1>New event</h1>
 		        	<div id="rootwizard">
@@ -28,6 +37,12 @@
         </div>
     </div>
 </div>
+
+<script>
+	$(document).ready(function(){
+		$("#some-textarea").markdown({autofocus:false,savable:false});
+	})
+</script>
 
 <script type="text/javascript">
 	$(document).ready(function() {

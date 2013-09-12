@@ -13,10 +13,12 @@
 #  city                  :string(255)
 #  status                :string(255)
 #  commission_percentage :decimal(, )
+#  latitude              :float
+#  longitude             :float
 #
 
 class Restaurant < ActiveRecord::Base
-  attr_accessible :address, :cusine, :name, :photo, :menu_items_attributes, :price, :city, :commission_percentage, :status
+  attr_accessible :address, :cusine, :name, :photo, :menu_items_attributes, :price, :city, :commission_percentage, :status, :latitude, :longitude
 
   has_many :menu_items, :dependent => :destroy
   has_many :events

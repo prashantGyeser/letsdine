@@ -36,6 +36,8 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me, :name,  :interests_attributes, :city
   # attr_accessible :title, :body
 
+  validates :city, :presence => true
+
   # Sending out a welcome email after a person registers
   #after_create :welcome_email
 

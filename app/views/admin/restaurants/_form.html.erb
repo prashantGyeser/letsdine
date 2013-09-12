@@ -13,56 +13,114 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <p>
-      By default any new restaurant created is shown in the event/new page. If you want to hide the restaurant from that list set this field to hidden 
-    </p>
-    <%= f.label :status %>
-    <%= f.select :status, [ 'open', 'hidden'], :prompt => 'Select One' %>
-  </div>
-  <div class="field">
-    <%= f.label :price %>
-    <%= f.number_field :price %>
-  </div>
-  <div class="field">
-    <%= f.label :commission_percentage %>
-    <p>Put this as a percentage of the price above.</p>
-    <%= f.number_field :commission_percentage %>
-  </div>
-  <div class="field">
-    <%= f.label :address %>
-    <%= f.text_field :address %>
-  </div>
-  <div class="field">
-    <%= f.label :city %>
-    <%= f.text_field :city %>
-  </div>
-  <div class="field">
-    <%= f.label :cusine %>
-    <%= f.text_field :cusine %>
-  </div>
-  <div class="field">
-    <%= f.label :photo %>
-    <%= f.file_field :photo %>
-  </div>
-  <%= f.fields_for :menu_items do |builder|%>
-    <div class="field">
-      <%= builder.label :name, "Menu Item Name" %>
-      <%= builder.text_area :name, :rows => 3 %>
-      <%= builder.hidden_field :_destroy %>
-      <%= link_to_function "remove", "remove_fields(this)" %>
+  
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <%= f.label :name %>
+        <p>Restaurant name will be shown along with the address.</p>
+        <%= f.text_field :name, :class=>"form-control" %>
+      </div>
     </div>
-    <div class="field">
-      <%= builder.label :course_name, "Menu Item type" %>
-      <%= builder.text_field :course_name, :rows => 3 %>
-      <%= builder.hidden_field :_destroy %>
-      <%= link_to_function "remove", "remove_fields(this)" %>
+    <div class="col-md-4">
+      <div class="form-group">
+        <%= f.label :price %>
+        <p>Total price the customer pays us including the percentage we have to pay the restaurant.</p>
+        <%= f.number_field :price, :class=>"form-control" %>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <%= f.label :commission_percentage %>
+        <p>Percentage of the price we get. This should be a value between 1-100.</p>
+        <%= f.number_field :commission_percentage, :class=>"form-control" %>
+      </div>
+    </div>
+  </div>
+
+   <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <%= f.label :status %>
+        <p>If hidden you can only see this restaurant in the admin page when creating a new event.</p>
+        <%= f.select(:status, [ 'open', 'hidden'], {}, {:class => "selectpicker"}) %>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <%= f.label :latitude%>
+        <p>Latitude at which the resturant is located.</p>
+        <%= f.number_field :latitude, :class=>"form-control" %>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <%= f.label :longitude%>
+        <p>Longitude at which the resturant is located.</p>
+        <%= f.number_field :longitude, :class=>"form-control" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <%= f.label :city %>
+        <p>City in which this restaurant is.</p>
+        <%= f.text_field :city, :class=>"form-control" %>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <%= f.label :address %>
+        <p>Restaurant address.</p>
+        <%= f.text_field :address, :class=>"form-control" %>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <%= f.label :cusine %>
+        <p>Kind of cusine this restaurant serves.</p>
+        <%= f.text_field :cusine, :class=>"form-control" %>    
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <%= f.label :photo %>
+      <p>This photo will be used in case no photo is selected for the event....So make sure it is good :-) </p>
+      <%= f.file_field :photo %>
+    </div>
+  </div>
+    
+  
+  <div class="row">
+  </div>
+
+  <%= f.fields_for :menu_items do |builder|%>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= builder.label :name, "Menu Item Name" %>
+          <%= builder.text_area :name, :rows => 3, :class=>"form-control" %>
+          <%= builder.hidden_field :_destroy %>
+          <%# link_to_function "remove", "remove_fields(this)" %>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= builder.label :course_name, "Menu Item type" %>
+          <%= builder.text_field :course_name, :rows => 3, :class=>"form-control" %>
+          <%= builder.hidden_field :_destroy %>
+          <%# link_to_function "remove", "remove_fields(this)" %>
+        </div>
+        
+      </div>
     </div>
   <% end %>
+
   <div class="actions">
     <%= f.submit %>
   </div>

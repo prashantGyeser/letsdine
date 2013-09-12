@@ -4,11 +4,11 @@
 	background: #fff }
 	.bwizard-steps .active {
 		color: #fff;
-		background: #007ACC
+		background: #1b6e8a
 		
 		 }
 	.bwizard-steps .active:after {
-		border-left-color: #007ACC }
+		border-left-color: #1b6e8a }
 	.bwizard-steps .active a {
 		color: #fff;
 		cursor: default }
@@ -17,7 +17,7 @@
 		top: -1px;
 		margin: 0 5px 0 0; padding: 1px 5px 2px }
 	.bwizard-steps .active .label {
-		background-color: #333;}
+		background-color: #081f27;}
 	.bwizard-steps li {
 		display: inline-block; position: relative;
 		margin-right: 5px;
@@ -60,7 +60,7 @@
 		content: "";
 		z-index: 2; }
 	.bwizard-steps a {
-		color: #333 }
+		color: #081f27 }
 	.bwizard-steps a:hover {
 		text-decoration: none }
 .bwizard-steps.clickable li:not(.active) {

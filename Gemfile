@@ -115,3 +115,7 @@ gem 'json', '~> 1.7.7'
 
 # Friendly urls
 gem "friendly_id"
+
+# Textile markup editor
+gem 'RedCloth'
+

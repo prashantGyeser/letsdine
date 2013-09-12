@@ -5,37 +5,43 @@
 
 	
 	<%= stylesheet_link_tag    "admin/application", :media => "all" %>
-	<%= stylesheet_link_tag    "bootstrap", :media => "all" %>
-	<%= stylesheet_link_tag    "bootstrap-responsive", :media => "all" %>
+	<%= stylesheet_link_tag    "bootstrap", :media => "all" %>	
+	<%= stylesheet_link_tag    "font-awesome", :media => "all" %>
 	<%= stylesheet_link_tag    "admin/admin", :media => "all" %>
-	<link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+	<%= stylesheet_link_tag    "admin/bootstrap-select", :media => "all" %>
 	<%= yield :stylesheet %>	
 
 	<%= javascript_include_tag "admin/application" %>
-	<%= javascript_include_tag "jquery-1.9.1" %>
+	<%= javascript_include_tag "jquery-1.10.2.min" %>
 	<%= javascript_include_tag "bootstrap" %>
 	<%= javascript_include_tag "admin/highcharts" %>
+	<%= javascript_include_tag "admin/bootstrap-select" %>
+	
 	<%= yield :javascript %>	
 	
-
+	<!-- Typekit Fonts -->
+	
+    <script type="text/javascript" src="//use.typekit.net/yjy6rjo.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	
 	<%= csrf_meta_tags %>
 
 </head>
 <body>
 	<div class="header">
 		<div class="container">
-			<div class="row-fluid">
-				<div class="span8">
+			<div class="row">
+				<div class="col-md-8">
 					<ul>
 						<li><a href="/admin">Dashboard</a></li>
 						<li><a href="/admin/users">Users</a></li>
 						<li><a href="/admin/restaurants">Restaurants</a></li>
 						<li><a href="/admin/event">Events</a></li>
 						<li><a href="/admin/invites">Invites</a></li>
-
+						<li><a href="/admin/history">History</a></li>	
 					</ul>
 				</div>
-				<div class="span4 user_info">
+				<div class="col-md-4 user_info">
 					<% if user_signed_in? %>
 						<%= link_to " Sign out", destroy_user_session_path %><span><%= current_user.name %> |</span>
 					<% end %>
