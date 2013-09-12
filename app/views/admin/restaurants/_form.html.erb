@@ -51,14 +51,14 @@
       <div class="form-group">
         <%= f.label :latitude%>
         <p>Latitude at which the resturant is located.</p>
-        <%= f.number_field :latitude, :class=>"form-control" %>
+        <%= f.number_field :latitude, :class=>"form-control", "step" => "any" %>
       </div>
     </div>
     <div class="col-md-4">
       <div class="form-group">
         <%= f.label :longitude%>
         <p>Longitude at which the resturant is located.</p>
-        <%= f.number_field :longitude, :class=>"form-control" %>
+        <%= f.number_field :longitude, :class=>"form-control", "step" => "any" %>
       </div>
     </div>
   </div>

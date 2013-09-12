@@ -7,9 +7,24 @@
    <script>
     function initialize() {
     var locations = [
-        ['DESCRIPTION', 17.42887,78.412941],
-        ['DESCRIPTION', 17.415092,78.45061],
-        ['DESCRIPTION', 17.43406,78.404927]
+        //['DESCRIPTION', 17.42887,78.412941],
+        //['DESCRIPTION', 17.415092,78.45061],
+        //['DESCRIPTION', 17.43406,78.404927]
+        <% events_counter = 1 %>
+        <% total_events = @events.count %>
+        <% @events.each do |event| %>
+          
+          <% restaurant = Restaurant.find(event.restaurant_id) %>
+          
+          <% if events_counter == total_events %>
+            ['<%= event.event_name %>', <%= restaurant.latitude %>,<%= restaurant.longitude %>, <%= restaurant.id%>]
+          <% else %>
+            ['<%= event.event_name %>', <%= restaurant.latitude %>,<%= restaurant.longitude %>, <%= restaurant.id%>],
+          <% end %>
+
+          <% events_counter = events_counter + 1 %>
+
+        <% end %>
     ];
 
     window.map = new google.maps.Map(document.getElementById('map_canvas'), {
