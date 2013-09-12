@@ -22,6 +22,7 @@
 
 						<% @event_months.keys.sort.each do |month| %>
 						<% @cancelled_events = [] %>
+						<% events_conducted = [] %>
 						<% logger.debug "The month thingy is: #{month}" %>
 						<% total_signups = User.where('created_at BETWEEN ? AND ?', month.beginning_of_month, month.end_of_month).count%>
 					<tr>
@@ -41,6 +42,8 @@
 								<% total_attendees_in_a_month = total_attendees_in_a_month + event_attendees%>
 								<% if event_attendees < 4 %>
 									<% @cancelled_events << event %>	
+								<% else %>
+									<% events_conducted << event %>
 								<% end %>
 							<% end %>
 							<div>
@@ -49,31 +52,20 @@
 								<!-- Button trigger modal -->
 							<a data-toggle="modal" href="#<%= counter %>">See cancelled events</a>
 
-							<!-- Modal -->
-							<div class="modal fade" id="<%= counter %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-								<div class="modal-dialog">
-									<div class="modal-content">
-										<div class="modal-header">
-											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-											<h3 class="modal-title">Cancelled event list</h3>
-										</div>
-										<div class="modal-body">
-											<ul>
-												<% @cancelled_events.each do |cancelled|  %>
-													<li>Name: <%= cancelled.event_name %> | City: <%= cancelled.city%>  </li>
-												<% end %>
-											</ul>
-										</div>
-										<div class="modal-footer">
-											<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-										</div>
-									</div><!-- /.modal-content -->
-								</div><!-- /.modal-dialog -->
-							</div><!-- /.modal -->
+							<%= render partial: 'modal',  :locals => {:cancelled_events => @cancelled_events, :counter => counter, :modal_title => "Cancelled event list"} %>
+							<% counter = counter + 1%>
 							</div>
 							
 							<div>
 								Actual: <%= total_events - @cancelled_events.count%>
+								
+								<a data-toggle="modal" href="#<%= counter %>">See events conducted</a>
+
+								<%# This finds all the events that are not in the cancelled events array. But it does it for ALL events in the database, but that is not required right now. I just need the records for this month%>
+								<%# events_conducted = Event.find(:all, :conditions => ['id not in (?)', @cancelled_events.map(&:id)])%>
+								
+								<%= render partial: 'modal',  :locals => {:cancelled_events => events_conducted, :counter => counter, :modal_title => "Conducted event list"} %>
+								<% counter = counter + 1%>
 							</div>
 						</td>
 						<td>
@@ -82,13 +74,38 @@
 						<td>
 							<%= total_signups %>
 						</td>
-						<% counter = counter + 1%>
+						
 						<% end %>
 					</tr>
 				</table>
 				
 			</div>
 			
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h1>Most Popular Events</h1>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<table class="table table-striped">
+					<tr>
+						<th>Event name</th>
+						<th>Attendees</th>
+						<th>City</th>
+					</tr>
+					<% @popular_events.each do |event|%>
+					<tr>
+						<td><%= event.event_name%></td>
+						<td><%= event.total_attendees %></td>
+						<td><%= event.city %></td>
+					</tr>
+					<% end %>
+				</table>
+			</div>
 		</div>
 
 	</div>
