@@ -49,7 +49,6 @@ ActiveRecord::Schema.define(:version => 20130905181006) do
     t.datetime "updated_at", :null => false
     t.integer  "event_id"
     t.integer  "user_id"
-    t.text     "comment"
   end
 
   create_table "event_notify_emails", :force => true do |t|

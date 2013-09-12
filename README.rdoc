@@ -3,6 +3,9 @@ TBD
 Taken from 
 http://natashatherobot.com/devise-sign-up-ajax-rails/
 
+== Admin history sort
+http://stackoverflow.com/questions/5739158/rails-ruby-how-to-sort-an-array
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
