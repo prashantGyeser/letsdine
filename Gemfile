@@ -119,3 +119,5 @@ gem "friendly_id"
 # Textile markup editor
 gem 'RedCloth'
 
+# Speed up precompile by only compiling the files that have changed
+gem 'turbo-sprockets-rails3'
