@@ -1,28 +1,40 @@
 <% counter = 1%>
+<% events_counter = 0 %>
 <% total_items = @menu_items_categorized.count%>
+
 <% @menu_items_categorized.each do |course_name, menu_items|%>
 	<% if counter == 1 %>
 		<div class="row">
-			<%= render 'menu_item', :course_name => course_name, :menu_items => menu_items  %>
-			<% counter = counter + 1%>
-	<% elsif counter== 2 %>
-	
-			<%= render 'menu_item', :course_name => course_name, :menu_items => menu_items  %>
-		</div>
-		<% counter = 1 %>
-	
+		<%= render 'menu_item', :course_name => course_name, :menu_items => menu_items  %>
+		<% events_counter = events_counter + 1 %>
+
+		<% if events_counter >= total_items %>
+			</div>
+			<% counter = counter + 1%>	
+			<% events_counter = events_counter + 1 %>
+		<% else %>
+			<% counter = counter + 1%>	
+			<% events_counter = events_counter + 1 %>
+		<% end %>
+			
 	<% else %>
 	
-			<%= render 'menu_item', :course_name => course_name, :menu_items => menu_items  %>
-			<% counter = counter + 1%>
-			<% if counter >= total_items %>
-				</div>
-			<% end %>
-	
+		<%= render 'menu_item', :course_name => course_name, :menu_items => menu_items  %>
+		</div>
+		
+		<% if events_counter >= total_items %>
+			
+		<% else %>
+			<% counter = 1 %>
+			<% events_counter = events_counter + 1 %>	
+		<% end %>
+		
 	<% end %>
+
 <% end %>
 
 <% if counter != 2%>
+	
 	</div>
 <% end %>
 
