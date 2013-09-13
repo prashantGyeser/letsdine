@@ -85,7 +85,12 @@
               <div class="span6">
                 <% @restaurants.each do |restaurant| %>
                   <div class="restaurantDetailsCotaniner restaurant_hidden <%= restaurant.city %>" id="<%= restaurant.id %>"> 
-                    <%= image_tag restaurant.photo_url(:thumb).to_s %>
+                    <% if restaurant.photo_url(:thumb).to_s.nil? %>
+                      
+                    <% else %>
+                      <%= image_tag restaurant.photo_url(:thumb).to_s %>  
+                    <% end %>
+                    
                     <div class="restaurantDetails">
                       <h4><%= restaurant.name %></h4>
                       <h4>Price: <%= restaurant.price %> </h4>
