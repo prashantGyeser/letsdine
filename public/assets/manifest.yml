@@ -35,6 +35,8 @@ admin/highcharts.js: admin/highcharts-8b90df74ca79c5e04628c3f5e8cfeaf2.js
 admin/highcharts/index.js: admin/highcharts-8b90df74ca79c5e04628c3f5e8cfeaf2.js
 application.js: application-18f4f125bfb75512f42e48d3d479b185.js
 application/index.js: application-18f4f125bfb75512f42e48d3d479b185.js
+bootstrap-formhelpers-datepicker.js: bootstrap-formhelpers-datepicker-c4cb7113d3a7d8b686a4040b09421ea6.js
+bootstrap-formhelpers-datepicker/index.js: bootstrap-formhelpers-datepicker-c4cb7113d3a7d8b686a4040b09421ea6.js
 bootstrap-markdown.js: bootstrap-markdown-ddd3bd546cc4fb84d37bee0768559f56.js
 bootstrap-markdown/index.js: bootstrap-markdown-ddd3bd546cc4fb84d37bee0768559f56.js
 bootstrap-multiselect.js: bootstrap-multiselect-1343b2f9849c0ea8afd0c2ef933c132e.js
