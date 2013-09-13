@@ -69,6 +69,8 @@ admin/application.css: admin/application-4238ac0e1527102ea3669dd6b7d33c89.css
 admin/application/index.css: admin/application-4238ac0e1527102ea3669dd6b7d33c89.css
 application.css: application-9bb915b66c5f6e1839ea384be5dd13c0.css
 application/index.css: application-9bb915b66c5f6e1839ea384be5dd13c0.css
+bootstrap-formhelpers.css: bootstrap-formhelpers-faaa71a4bd575e5b7651e644ee16c808.css
+bootstrap-formhelpers/index.css: bootstrap-formhelpers-faaa71a4bd575e5b7651e644ee16c808.css
 bootstrap-markdown.min.css: bootstrap-markdown.min-497d65ddd42c669004a3c484775256c4.css
 bootstrap-markdown/index.min.css: bootstrap-markdown.min-497d65ddd42c669004a3c484775256c4.css
 bootstrap-responsive.css: bootstrap-responsive-3a0afd040e59f425bf14fee96ce2985e.css
