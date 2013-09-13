@@ -1,7 +1,7 @@
 <% content_for :javascript do %>
     <%= javascript_include_tag "closed-event-overlay" %>
     <% restaurant = Restaurant.find(@event.restaurant_id)%>
-    <!--
+    
     <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
     <script>
@@ -58,7 +58,7 @@
 
 
     </script>
-  -->
+  
 <% end %>
 
 
@@ -69,13 +69,13 @@
       <div class="row">
         <% restaurant = Restaurant.find(@event.restaurant_id)%>
         <div class="col-md-8 eventPage">
-          <!--
+  
           <% if @event.event_image.blank? %>
               <%= image_tag restaurant.photo_url(:event_page_image).to_s %>
           <% else %>
               <%= image_tag @event.event_image_url(:event_page_image).to_s %>
           <% end %>
-          -->
+  
           <div class="eventPageContent">
             <h2><%=@event.event_name%></h2>
             <span>
@@ -120,9 +120,9 @@
       <div class="col-md-12">
         <div class="joinEvent">
           <h2>Event Location</h2>
-          <!--
+  
           <div id="map_canvas" style="width: 100%; height: 300px;background: #ccc;"></div>
-          -->
+  
         </div>
       </div>
     </div>
