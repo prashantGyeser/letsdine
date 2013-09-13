@@ -6,6 +6,11 @@ http://natashatherobot.com/devise-sign-up-ajax-rails/
 == Admin history sort
 http://stackoverflow.com/questions/5739158/rails-ruby-how-to-sort-an-array
 
+== Running in production mode
+rake db:migrate RAILS_ENV="production" 
+rails s -e production
+RAILS_ENV=production rails console
+
 == Heroku pull and push database from heroku and to heroku from a localmachine
 https://github.com/ddollar/heroku-pg-transfer
 
