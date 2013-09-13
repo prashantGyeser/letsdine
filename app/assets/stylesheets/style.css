@@ -60,6 +60,11 @@ h4 {
       .topBar .topBarButtons .facebookLoginButton img {
         margin-left: 5px;
         margin-bottom: 10px; }
+  .topBar .userDetails {
+    margin-top: 15px;
+    color: white; }
+    .topBar .userDetails a {
+      color: white; }
 
 /*******************************************************************/
 /* Naigation Styles */
@@ -268,6 +273,12 @@ h4 {
 /*******************************************************************/
 /* Event Page Styles */
 /*******************************************************************/
+.goBack {
+  background: #1b6e8a;
+  padding: 10px 20px; }
+  .goBack a {
+    color: white; }
+
 .eventPage {
   background: white;
   margin-top: 40px;

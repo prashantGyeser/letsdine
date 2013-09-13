@@ -39,6 +39,6 @@ class HomeController < ApplicationController
   	if @events.empty?
 		  @no_events_in_city = true  			
     end
-  	
+  
   end
 end

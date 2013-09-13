@@ -85,6 +85,15 @@ h4
 			}
 		}
 	}
+	.userDetails
+	{
+		margin-top: 15px;
+		color: white;
+		a
+		{
+			color: white;
+		}		
+	}
 }
 /*******************************************************************/
 /* Naigation Styles */
@@ -360,6 +369,15 @@ h4
 /*******************************************************************/
 /* Event Page Styles */
 /*******************************************************************/
+.goBack
+{
+	background: $contrast_blue;
+	padding: 10px 20px;
+	a
+	{
+		color: white;
+	}
+}
 .eventPage
 {
 	background: white;

@@ -98,15 +98,29 @@
 
           <div class="col-md-6">
             <ul class="topNav pull-right">
+            	<!-- 
               <li class="selected">Home</li>
               <li>How it works</li>
               <li>About Us</li>
               <li>Contact Us</li>
+              -->
             </ul>
+
           </div>
 
           <div class="col-md-4">
+
+		<% if user_signed_in? %>
+			<div class="userDetails pull-right">
+				<%= current_user.name %> | <%= link_to "Sign out", destroy_user_session_path %>
+			</div>
+			
+		<% else %>
+			<%= link_to "Login/Signup", new_user_session_path, :class => "css3-button css3-button_pink loginButton pull-right", :style=>"padding-bottom:25px"%> 
+		<% end %>
+		<!--
             <a href="<%= new_user_session_path %>" class="css3-button css3-button_pink loginButton pull-right" style="padding-bottom:25px">Login/Signup</a>
+          -->
           </div>
 
         </div>

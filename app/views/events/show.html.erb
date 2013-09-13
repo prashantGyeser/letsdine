@@ -1,7 +1,7 @@
 <% content_for :javascript do %>
     <%= javascript_include_tag "closed-event-overlay" %>
     <% restaurant = Restaurant.find(@event.restaurant_id)%>
-    
+
     <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
     <script>
@@ -67,6 +67,11 @@
 
     <div class="container">
       <div class="row">
+        <div class="col-md-12">
+          <strong class="goBack"><a href="/">Go back to event list</a></strong>
+        </div>
+      </div>
+      <div class="row">
         <% restaurant = Restaurant.find(@event.restaurant_id)%>
         <div class="col-md-8 eventPage">
   
@@ -92,29 +97,57 @@
           </div>
         </div>
         <div class="col-md-4">
-          <div class="row">
+          <% if @already_signed_up == false %>
+          
+            <div class="row">
         
             <div class="col-md-12">
              <div class="joinEvent">
                <h2>Come Join Us</h2>
                <h4><strong>Rs. <%= restaurant.price %></strong> per person</h4>
-               <form role="form">
-                 <div class="form-group">
-                   <label for="seats">Number of people coming</label>
-                   <input type="integer" class="form-control" id="seats" placeholder="Number of people attending including you">
-                  </div>
-                  <div class="form-group">
-                    <label for="phoneNumber">Phone number</label>
-                    <p>
-                      We will only use your phone number to confirm your attendance for the event.
-                    </p>
-                    <input type="text" class="form-control" id="phoneNumber" placeholder="Your phone number">
-                  </div>
-                  <button type="submit" class="css3-button css3-button_pink full_width">Join Event</button>
-                </form>
+                <%= form_for @attendee, :url => attendee_path, :html => {:method => :post} do |f|%>
+          <%# f.error_messages %>
+
+          <% if @attendee.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(@attendee.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+              <ul>
+              <% @attendee.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
+              </ul>
+            </div>  
+          <% end %>
+
+          <div class="form-group">
+              <%= f.label :seats, "Number of people attending" %>
+              <%= f.number_field :seats, :required => true, :min => 1, :class => "form-control", :placeholder => "Number of people attending including you" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :phone_number, "Phone number"%>
+            
+            <p>
+            We will only use your phone number to confirm your attendance for the event.
+            </p>
+            <%= f.text_field :phone_number, :required => true, :class => "form-control", :placeholder => "Your phone number" %>
+            
+          </div>
+          <%= f.hidden_field :event_id, :value => @event.id %>
+
+          <% if @event.seats_left <= 0 %>
+            <%= f.submit "Sign up for waiting list", :class => "css3-button css3-button_pink full_width"  %>
+          <% else %>
+            <%= f.submit "Join this event", :class => "css3-button css3-button_pink full_width"  %>
+          <% end %>
+
+        <% end %>  
+
               </div>
       </div>
     </div>
+          <% end %>
+          
 
     <div class="row">
       <div class="col-md-12">

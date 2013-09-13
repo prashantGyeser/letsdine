@@ -1,6 +1,7 @@
 class AttendeesController < ApplicationController
 	#before_filter :authenticate_user!
 	def create
+		logger.debug "It is getting to the attendees controller"
 		if current_user.nil?
 			session[:attendee]	= params
 			redirect_to new_user_session_path
