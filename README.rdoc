@@ -3,8 +3,12 @@ TBD
 Taken from 
 http://natashatherobot.com/devise-sign-up-ajax-rails/
 
+== Admin history sort
+http://stackoverflow.com/questions/5739158/rails-ruby-how-to-sort-an-array
+
 == Heroku pull and push database from heroku and to heroku from a localmachine
 https://github.com/ddollar/heroku-pg-transfer
+
 
 == Welcome to Rails
 

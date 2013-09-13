@@ -1,12 +1,13 @@
 <% content_for :javascript do %>
     <%= javascript_include_tag "closed-event-overlay" %>
-
+    <% restaurant = Restaurant.find(@event.restaurant_id)%>
+    <!--
     <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
     <script>
       var map;
       var marker;
-      var myLatlng = new google.maps.LatLng(17.432259,78.407529);
+      var myLatlng = new google.maps.LatLng(<%= restaurant.latitude %>,<%= restaurant.longitude %>);
 
       function initialize() {
         var mapOptions = {
@@ -57,24 +58,24 @@
 
 
     </script>
+  -->
 <% end %>
 
 
 
 <% content_for :title, "#{@event.event_name} | LetsDine" %>
 
-    <% restaurant = Restaurant.find(@event.restaurant_id)%>
-
     <div class="container">
       <div class="row">
-        
+        <% restaurant = Restaurant.find(@event.restaurant_id)%>
         <div class="col-md-8 eventPage">
+          <!--
           <% if @event.event_image.blank? %>
               <%= image_tag restaurant.photo_url(:event_page_image).to_s %>
           <% else %>
               <%= image_tag @event.event_image_url(:event_page_image).to_s %>
           <% end %>
-          
+          -->
           <div class="eventPageContent">
             <h2><%=@event.event_name%></h2>
             <span>
@@ -86,82 +87,21 @@
               <%# simple_format(@event.event_description) %>      
               <%= raw event_description_html %>
             </div>
-
-<<<<<<< HEAD
-        <% end %>  
-      <% end %>
-      
-      
-      
-    </div>
-  </div>
-</div>
-
-<div class="container">
-  <div class="row-fluid">
-    <div class="span12">
-      <!--
-      <h1>Restaurant Location</h1>
-      <div id="map-canvas" style="width: 100%; height: 300px"></div>
-    -->
-    </div>
-  </div>
-</div>
-
-<div class="container">
-  <div class="row-fluid">
-    <div class="span6">
-      <% total_number_of_courses = 0 %>
-
-      <% @menu_items_categorized.each do |course_name, menu_items| %>
-        
-        <% total_number_of_courses = total_number_of_courses + 1 %>
-      <% end %>      
-
             <h3>Menu</h3>
-            <div class="row">
-              <div class="col-md-6">
-                <strong class="menuItemsHeader">Beverage</strong>
-                <p class="menuItemExplanation">Choice of either</p>
-                <ul class="menuItems">
-                  <li>Coffee</li>
-                  <li>Tea</li>
-                </ul>
-              </div>
-              <div class="col-md-6">
-                <strong class="menuItemsHeader">Dessert</strong>
-                Kulfi Falooda with Gulab Jamun
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6">
-                <strong class="menuItemsHeader">Main Course</strong>
-                <ul class="menuItems">
-                  <li>Sahi Paneer</li>
-                  <li>Telengana Fish Curry</li>
-                  <li>Dal Dhaba</li>
-                  <li>Murgh Biriyani</li>
-                  <li>Tarkari Biryani</li>
-                  <li>Assorted Indian Breads</li>
-                </ul>
-              </div>
-              <div class="col-md-6"></div>
-            </div>
-
-
+            <%= render partial: 'menu',  :locals => {:menu_items_categorized => @menu_items_categorized} %>
           </div>
         </div>
-
         <div class="col-md-4">
           <div class="row">
+        
             <div class="col-md-12">
-              <div class="joinEvent">
-                <h2>Come Join Us</h2>
-                <h4><strong>Rs. <%= restaurant.price %></strong> per person</h4>
-                <form role="form">
-                  <div class="form-group">
-                    <label for="seats">Number of people coming</label>
-                    <input type="integer" class="form-control" id="seats" placeholder="Number of people attending including you">
+             <div class="joinEvent">
+               <h2>Come Join Us</h2>
+               <h4><strong>Rs. <%= restaurant.price %></strong> per person</h4>
+               <form role="form">
+                 <div class="form-group">
+                   <label for="seats">Number of people coming</label>
+                   <input type="integer" class="form-control" id="seats" placeholder="Number of people attending including you">
                   </div>
                   <div class="form-group">
                     <label for="phoneNumber">Phone number</label>
@@ -173,99 +113,43 @@
                   <button type="submit" class="css3-button css3-button_pink full_width">Join Event</button>
                 </form>
               </div>
-            </div>
-          </div>
+      </div>
+    </div>
 
-          <div class="row">
-            <div class="col-md-12">
-              <div class="joinEvent">
-                <h2>Event Location</h2>
-                <div id="map_canvas" style="width: 100%; height: 300px;background: #ccc;"></div>
-              </div>
-            </div>
-          </div>
-            
-          <div class="row">
-            <div class="col-md-12">
-              <div class="joinEvent">
-                <h2>People Attending</h2>
-                <div class="peopleAttending">
-                  <i class="icon-user"></i>
-                  <i class="icon-user"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-
+    <div class="row">
+      <div class="col-md-12">
+        <div class="joinEvent">
+          <h2>Event Location</h2>
+          <!--
+          <div id="map_canvas" style="width: 100%; height: 300px;background: #ccc;"></div>
+          -->
         </div>
       </div>
     </div>
 
-
-
-
-
-
-
-
-
-
-
-<div id="communication" class="modal hide fade">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-    <h3>Invite your friends</h3>
-  </div>
-  <div class="modal-body">
-    <p>Inivite a friend and get a discount on <a href="www.flatpebble.com/">flatpebble</a> for personal photo prints and photobooks</p>
-    <% if @just_joined == true %>
-      <%= render :partial => "user_invites/form",
-                      :locals => {:user_id => current_user.id, :event_id => @event.id} %>  
-    <% end %>
-    <div id="offer">
-      Use the following coupon code on the flatpebble site to redeem this offer.
-      <h4>FP15</h4>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="joinEvent">
+          <h2>People Attending</h2>
+          
+          <div class="peopleAttending">
+            <% @event.attendee.each do |personAttending| %>
+              <% user = personAttending.user %>
+              <% if user.image.blank? %>
+                <i class="icon-user no_profile_pic" data-toogle="tooltip" title="<%= user.name %>"></i>
+              <% else %>
+                  <%= image_tag user.image.to_s, "data-toggle" => "tooltip", :title => user.name, :class => "profilePic" %>    
+              <% end %>
+            <% end %>  
+            
+          </div>
+        </div>
+      </div>
     </div>
+
   </div>
-  <div class="modal-footer">
-    <a href="#" class="large awesome green" id="friends_invite">Invite friends</a>
-  </div>
+
+
+
+    </div>
 </div>
-
-
-<% if @just_joined == true %>
-  
-  <script>
-    $(document).ready(function(){
-      $('#offer').hide();
-      $('#communication').modal('show');
-      $('#friends_invite').click(function() {
-        var valuesToSubmit = $('#new_user_invite').serialize();
-        console.log(valuesToSubmit);
-        $.ajax({
-          url: $('#new_user_invite').attr('action'),
-          data: valuesToSubmit,
-          type: "POST",
-          dataType: "JSON"
-        }).success(function(json){
-          $('#communication').find('form').hide();
-          $('#offer').show();
-          //$('#communication').modal('hide');
-        });
-        
-        return false;
-      });
-    });
-  </script>  
-  
-<% end %>
-
-<script>
-  $(document).ready(function(){
-
-    //$('.profilePic').tooltip('show')
-    $('.profilePic').hover(function(){
-      $(this).tooltip('show');
-    });
-  });
-</script>
