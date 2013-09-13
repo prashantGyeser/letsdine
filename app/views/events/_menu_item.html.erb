@@ -1,0 +1,9 @@
+<div class="col-md-6">
+	<strong class="menuItemsHeader"><%= course_name %></strong>
+	<% menu_items.each do |menu_item| %>
+		<% menu_item_html =  RedCloth.new(menu_item.name).to_html %>      
+      	<%# simple_format(@event.event_description) %>      
+      	<%= raw menu_item_html %>	
+	<% end %>
+	
+</div>

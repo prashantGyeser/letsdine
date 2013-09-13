@@ -309,6 +309,12 @@ h4 {
     padding: 15px 10px 25px 10px; }
   .joinEvent .peopleAttending i {
     font-size: 50px; }
+  .joinEvent .peopleAttending {
+    margin-top: 20px; }
+    .joinEvent .peopleAttending i {
+      margin-top: 10px; }
+    .joinEvent .peopleAttending img {
+      margin-top: -25px; }
 
 /*******************************************************************/
 /* Devise Page Styles */
