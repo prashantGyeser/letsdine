@@ -104,7 +104,12 @@
             <div class="col-md-12">
              <div class="joinEvent">
                <h2>Come Join Us</h2>
-               <h4><strong>Rs. <%= restaurant.price %></strong> per person</h4>
+               <% if restaurant.city == "Hyderabad" || restaurant.city == "Bangalore" || restaurant.city == "Pune" || restaurant.city == "Ahmedabad" %>
+                <h4><strong>Rs. <%= restaurant.price %></strong> per person</h4>
+              <%elsif restaurant.city == "Kuala Lumpur" || restaurant.city == "Selangor" || restaurant.city == "Perak" || restaurant.city == "Penang" %>
+                <h4><strong>RM. <%= restaurant.price %></strong> per person</h4>
+              <% end %>
+               
                 <%= form_for @attendee, :url => attendee_path, :html => {:method => :post} do |f|%>
           <%# f.error_messages %>
 
