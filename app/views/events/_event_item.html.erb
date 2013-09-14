@@ -9,7 +9,8 @@
 			<% end %>
 			
 			<div class="eventDate">
-				<span><%= event.event_date.strftime("%A %d - %B")%> </span>
+
+				<span><%= event.event_date.strftime("%A, %d %B %Y") %> <%= event.event_time.strftime("%I:%M%p") %> </span>
 			</div>
 			<div class="seatsLeft">
 				<%= event.seats_left %> Seats Left

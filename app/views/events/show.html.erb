@@ -85,7 +85,7 @@
             <h2><%=@event.event_name%></h2>
             <span>
               <i class="icon-calendar"></i>
-              Saturday, 21 September 2013 4:00PM
+              <%= @event.event_date.strftime("%A, %d %B %Y") %> <%= @event.event_time.strftime("%I:%M%p") %>
             </span>
             <div class="eventDescription">
               <% event_description_html =  RedCloth.new(@event.event_description).to_html %>      
