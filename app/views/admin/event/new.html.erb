@@ -1,0 +1,95 @@
+<% content_for :stylesheet do%>
+	<%# stylesheet_link_tag    "prettify", :media => "all" %>
+<% end %>
+<% content_for :javascript do%>
+	<%# javascript_include_tag "restaurant_picker" %>
+	<%= javascript_include_tag "jquery-ui-1.10.3.custom" %>
+	
+
+<% end %>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<h1 class="newEventHeading">New Event</h1>
+		</div>
+	</div>
+</div>
+
+<%= render 'form' %>
+
+<script>  
+    $(document).ready(function(){
+    	$('#dateTimeAlert').hide();
+    	$('.retaurantMenu').hide();
+
+      $('#calendar').datepicker({
+        inline: true,
+        firstDay: 1,
+        showOtherMonths: true,
+        dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+        dateFormat: "dd-mm-yy",
+        onSelect: function() { 
+          // Refer to http://stackoverflow.com/a/8938962/68611 for how this is done.
+          var newFormat = $.datepicker.formatDate("DD, d MM, yy", $(this).datepicker("getDate"));
+
+          $('#showDate').html(newFormat);
+          $('#infoDate').html(newFormat);
+        }
+      });
+
+      // Time select code
+      $('.timeTable td').click(function(){
+        var morningOrEvening = $(this).parent().parent().parent().attr('id');
+        var amOrPM = "";
+        var time = "";
+
+        if (morningOrEvening == 'morning') 
+        {
+          time = $(this).html();
+          //var timeAsFloat = parseFloat(time);
+
+          var hour = time.substring(0,2) ;
+          var min = time.slice(-2);
+          var timeString = hour + '.' + min;
+          console.log("The hour is:" + hour + " ; The min is:" + min);
+          var timeAsFloat = parseFloat(timeString);
+
+          if (timeAsFloat >= 12) 
+          {
+            console.log("the time is:" + timeAsFloat + 'PM');
+            amOrPM = 'PM';
+          }
+          else
+          {
+            console.log("the time is:" + timeAsFloat + 'AM');
+            amOrPM = 'AM';
+          };
+
+        } 
+        else
+        {
+          time = $(this).html();
+          amOrPM = 'PM';
+        };
+
+        $('#infoTime').html(time + amOrPM);
+        $('#dateTimeAlert').show();
+      });
+
+      
+      // Restaurant select code
+      $('.restaurantDetails li').click(function(){
+		$('.retaurantMenu').hide();      	
+        	var restaurantSelectedId = $(this).find('input:hidden').val();
+        	var menuToShow = "#" + restaurantSelectedId
+        	$(menuToShow).show();
+
+
+      });
+
+    });
+
+
+
+  </script>
