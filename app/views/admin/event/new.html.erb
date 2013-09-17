@@ -1,11 +1,14 @@
 <% content_for :stylesheet do%>
-	<%# stylesheet_link_tag    "prettify", :media => "all" %>
+  <%# stylesheet_link_tag    "prettify", :media => "all" %>
+  <%= stylesheet_link_tag    "nanoscroller", :media => "all" %>
+  <%= stylesheet_link_tag    "select2", :media => "all" %>
+  
 <% end %>
 <% content_for :javascript do%>
-	<%# javascript_include_tag "restaurant_picker" %>
-	<%= javascript_include_tag "jquery-ui-1.10.3.custom" %>
-	
-
+  <%# javascript_include_tag "restaurant_picker" %>
+  <%= javascript_include_tag "jquery-ui-1.10.3.custom" %>
+  <%= javascript_include_tag "jquery.nanoscroller.min" %>
+  <%= javascript_include_tag "select2" %>
 <% end %>
 
 <div class="container">
@@ -84,12 +87,19 @@
         	var restaurantSelectedId = $(this).find('input:hidden').val();
         	var menuToShow = "#" + restaurantSelectedId
         	$(menuToShow).show();
-
+        	$('.restaurantDetails li').removeAttr( 'style' );
+        	$(this).css('background','#f6f7f9')
 
       });
 
     });
 
+  </script>
 
-
+  <script>
+    $("#inviteFriends").select2({
+      tags:[""],
+      tokenSeparators: [",", ";", " "]
+    });
+    
   </script>

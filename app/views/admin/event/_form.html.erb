@@ -1,7 +1,6 @@
 <%= form_for(@event, :html => {:multipart => true}) do |f| %>
 
 <%# Event details tab start %>
-
 <div class="container">
   <div class="row">
     <div class="col-md-12 newEventPage expandable-panel" id="cp-1">
@@ -244,7 +243,46 @@
                 <% end %>
           </div>
         </div>
+        <div class="row">
+            <div class="col-md-12">
+              <a href="#" class="btn btn-primary nextStep">Restaurant selection completed</a>
+            </div>
+          </div>
       </div>      
+
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 newEventPage expandable-panel" id="cp-4">
+            <div class="newEventSummary">
+              <h4>
+                <div class="initialHeader">
+                  <span class="step">3</span>
+                  <span class="text">Fill In The Event Date and Time</span>
+                </div>
+                <div class="successHeader">
+                  <span><i class="icon-ok-sign finished"></i></span>
+                  <span class="text">Event Date and Time Completed</span>
+                  <a href="#" class="pull-right">Modify Event Date and Time</a>
+                </div>
+              </h4>
+            </div>
+            <div class="expandable-panel-content">
+              <div class="form-group">
+                <label for="event_name">Event name</label>
+                <input type="hidden" id="inviteFriends" style="width:100%"/>
+                
+                <!--
+                <textarea class="form-control" placeholder="Enter the people you want to invite" rows="5"></textarea>
+                -->
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
 
     </div>
   </div>
