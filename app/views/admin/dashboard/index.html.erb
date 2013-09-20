@@ -158,30 +158,28 @@ $(function () {
                             <div id="attendeeModal<%= event.id%>" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="<%= event.event_name%> Attendees" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                            <h3 id="myModalLabel"><%= event.event_name %> Attendees</h3>
-                                          </div>          
-                                          <div class="modal-body">
-                                            <% attendees = Attendee.where("event_id = ?", event.id) %>
-                                            <ul>
-                                                <% attendees.each do |attedee| %>
-                                                    <% user = User.find(attedee.user_id) %>
-                                                    <li>
-                                                        <%= user.name %> - Phone number: <%= attedee.phone_number %> - Seats: <%= attedee.seats %> 
-                                                    </li>
-                                                <% end %>
-                                                
-                                            </ul>
-                                          </div>
-
-                                          <div class="modal-footer">
-                                            <button class="btn btn-large" data-dismiss="modal" aria-hidden="true">Close</button>
-                                          </div>
+                                              <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                <h3 id="myModalLabel"><%= event.event_name %> Attendees</h3>
+                                              </div>
+                                              <div class="modal-body">
+                                                <% attendees = Attendee.where("event_id = ?", event.id) %>
+                                                <ul>
+                                                    <% attendees.each do |attedee| %>
+                                                        <% user = User.find(attedee.user_id) %>
+                                                        <li>
+                                                            <%= user.name %> - Phone number: <%= attedee.phone_number %> - Seats: <%= attedee.seats %> 
+                                                        </li>
+                                                    <% end %>
+                                                    
+                                                </ul>
+                                              </div>
+                                              <div class="modal-footer">
+                                                <button class="btn btn-large" data-dismiss="modal" aria-hidden="true">Close</button>
+                                              </div>
+                                            </div>
                                         </div>
-
                                     </div>
-                                </div>
                             <!-- End Modal -->
                             <!--<a href="#" class="btn btn-primary btn-small" >View Attendees</a>-->
                             
