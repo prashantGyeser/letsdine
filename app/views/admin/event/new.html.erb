@@ -103,3 +103,25 @@
     });
     
   </script>
+
+  <script>
+  $(document).ready(function(){
+    $(document).mouseup(function (e)
+    {
+        var container = $("#cityList");
+        if (container.has(e.target).length === 0)
+        {
+          container.addClass('hidden_div');
+        }
+      });
+    
+    $('#citySelect').click(function(){
+      $('#cityList').removeClass('hidden_div');
+      $('#cityList .content ul ul li').click(function(e){
+        var citySelected = $(this).text();
+        
+        
+      });
+    });
+  });
+</script>

@@ -1,5 +1,19 @@
 <%= form_for(@event, :html => {:multipart => true}) do |f| %>
 
+  <%# Error start %>
+  <% if @event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+      <ul>
+      <% @event.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>  
+  <% end %>
+  <%# Error end %>
+
 <%# Event details tab start %>
 <div class="container">
   <div class="row">
@@ -25,20 +39,61 @@
             <label>Select the kind of event you want to conduct</label>
             <div class="radio">
             <label>
+              <!--
             <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+          -->
+            <%= f.radio_button :event_type, "private", :class => "event_radio", :id => "private_event_radio" %>
             Private Event - You have to share the url with your friends
             </label>
             </div>
             <div class="radio">
             <label>
-            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+            <%= f.radio_button :event_type, "public", :class => "event_radio", :id => "public_event_radio" %>
             Public Event - Listed on the LetsDine homepage
             </label>
             </div>
           </div>
           <div class="col-md-6">
             <label>Where do you want to conduct the event?</label>
-           <div class="citySelect">Select city</div>
+            <div id="citySelect">
+                  Select your city
+                  <i class="icon-angle-down pull-right"></i>
+                </div>
+
+                <div id="cityList">
+                <!--
+                <div id="cityList" class="hidden_div">
+                -->
+                  <!--
+                  <div class="nano">
+                  -->
+                  <div class="content"> 
+                    <ul>
+                      <li>
+                        <strong>India</strong>
+                        <ul>
+                          <li>Ahmedabad</li>
+                          <li>Bangalore</li>
+                          <li>Hyderabad</li>
+                          <li>Pune</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <strong>Malaysia</strong>
+                        <ul>
+                          <li>Kuala Lumpur</li>
+                          <li>Penang</li>
+                          <li>Perak</li>
+                          <li>Selangor</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                  <!--
+                  </div>
+                -->
+                </div>
+            
            </div>
           </div>
 
