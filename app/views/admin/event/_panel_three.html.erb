@@ -21,6 +21,7 @@
       <div class="expandable-panel-content">
         <div class="row">
           <div class="col-md-5">
+            <%= f.hidden_field :restaurant_id %>
             <ul class="restaurantDetails">
               <% @restaurants.each do |restaurant| %>
                 <li class="<%= restaurant.city %>">

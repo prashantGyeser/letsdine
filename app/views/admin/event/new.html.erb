@@ -32,7 +32,8 @@
         showOtherMonths: true,
         dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
         dateFormat: "dd-mm-yy",
-        onSelect: function() { 
+        onSelect: function(date,inst) { 
+          $('#event_event_date').val(date);
           // Refer to http://stackoverflow.com/a/8938962/68611 for how this is done.
           var newFormat = $.datepicker.formatDate("DD, d MM, yy", $(this).datepicker("getDate"));
 
@@ -85,7 +86,8 @@
       $('.restaurantDetails li').click(function(){
 		$('.retaurantMenu').hide();      	
         	var restaurantSelectedId = $(this).find('input:hidden').val();
-        	var menuToShow = "#" + restaurantSelectedId
+            $('#event_restaurant_id').val(restaurantSelectedId);
+        	var menuToShow = "#" + restaurantSelectedId;
         	$(menuToShow).show();
         	$('.restaurantDetails li').removeAttr( 'style' );
         	$(this).css('background','#f6f7f9')
@@ -122,7 +124,7 @@
       $('#cityList').removeClass('hidden_div');
       $('#cityList .content ul ul li').click(function(e){
         var citySelected = $(this).text();
-
+        $('#event_city').val(citySelected);
         $('#cityList').addClass('hidden_div');
 
         $('.restaurantDetails li').hide();
