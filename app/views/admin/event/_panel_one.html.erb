@@ -45,19 +45,19 @@
             <div class="col-md-6">
               <div class="form-group">
                 <label for="event_name">Event name</label>
-                <input type="text" class="form-control" id="event_name" placeholder="Enter the event name">
+                <%= f.text_field :event_name, :class => "form-control", :placeholder => "Enter the event name" %>
               </div>
             </div>
             <div class="col-md-6">
               <label for="event_name">Maximum number of people that can attend</label>
-              <input type="number" class="form-control" id="max_seats" placeholder="Enter the maximum number of people that can attend">
+              <%= f.number_field :max_seats, :class => "form-control", :placeholder => "Enter the maximum number of people that can attend" %>
             </div>
           </div>
 
           <div class="row">
             <div class="col-md-12">
               <label for="event_description">Description for this event</label>
-              <textarea class="form-control" rows="3" placeholder="Enter a description for this event"></textarea>
+              <%= f.text_area :event_description, :class => "form-control", :placeholder => "Enter a description for this event", :rows => "3" %>
             </div>
           </div>
 

@@ -63,11 +63,13 @@
           {
             console.log("the time is:" + timeAsFloat + 'PM');
             amOrPM = 'PM';
+            $('#event_event_time').val(time);
           }
           else
           {
             console.log("the time is:" + timeAsFloat + 'AM');
             amOrPM = 'AM';
+            $('#event_event_time').val(time);
           };
 
         } 
@@ -75,6 +77,16 @@
         {
           time = $(this).html();
           amOrPM = 'PM';
+
+          var hour = time.substring(0,2) ;
+          var min = time.slice(-2);
+          var timeString = hour + '.' + min;
+          console.log("The hour is:" + hour + " ; The min is:" + min);
+          var timeAsFloat = parseFloat(timeString);
+
+          var timeTwentyFourHour = timeAsFloat + 12;
+          //var valueToStore = timeTwentyFourHour;
+          $('#event_event_time').val(timeTwentyFourHour);
         };
 
         $('#infoTime').html(time + amOrPM);
