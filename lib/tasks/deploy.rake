@@ -46,6 +46,13 @@ namespace :deploy do
     puts 'Pushing to bitbucket'
     puts bitbucket_push_output
 
+    puts '###############################################################'
+    puts 'Pushing to github'
+    puts '###############################################################'
+    github_push_output = `git push github master`
+    puts 'Pushing to github'
+    puts github_push_output
+
   	puts '###############################################################'
   	puts 'Todo: Deploy to heroku production'
   	puts '###############################################################'
@@ -95,6 +102,13 @@ namespace :deploy do
     puts 'Assets added to git and commited'
     puts git_add_output
     puts git_commit_output
+
+    puts '###############################################################'
+    puts 'Pushing to github'
+    puts '###############################################################'
+    github_push_output = `git push github master`
+    puts 'Pushing to github'
+    puts github_push_output
 
     puts '###############################################################'
     puts 'Deploy to heroku staging'
