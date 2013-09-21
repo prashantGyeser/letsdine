@@ -1,0 +1,93 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 newEventPage expandable-panel" id="cp-3">
+      <!-- Header start -->
+      <div class="newEventSummary">
+        <h4>
+          <div class="initialHeader">
+            <span class="step">3</span>
+            <span class="text">Fill In The Event Date and Time</span>
+          </div>
+          <div class="successHeader">
+            <span><i class="icon-ok-sign finished"></i></span>
+            <span class="text">Event Date and Time Completed</span>
+            <a href="#" class="pull-right">Modify Event Date and Time</a>
+          </div>
+        </h4>
+      </div>
+      <!-- Header end -->
+
+      <!-- Panel start -->
+      <div class="expandable-panel-content">
+        <div class="row">
+          <div class="col-md-5">
+            <ul class="restaurantDetails">
+              <% @restaurants.each do |restaurant| %>
+                <li class="<%= restaurant.city %>">
+                  <% restaurantHiddenFieldId = "restaurant_id_" + restaurant.id.to_s %>
+                  <%= hidden_field_tag restaurantHiddenFieldId, restaurant.id  %>
+                  <h4><%= restaurant.name %></h4>
+                  <% if restaurant.city == "Kuala Lumpur" || restaurant.city == "Selangor" || restaurant.city == "Perak" || restaurant.city == "Penang" %>
+                    <h4><span>RM <%= restaurant.price %> per person</span></h4>  
+                  <% else %>
+                    <h4><span>Rs <%= restaurant.price %> per person</span></h4>
+                  <% end %>
+                </li>  
+              <% end %>
+              
+            </ul>
+          </div>
+          <div class="col-md-7">
+            <% @restaurants.each do |restaurant| %>
+
+              <div class="retaurantMenu" id="<%= restaurant.id %>">
+                    <div class="menuTopBar">
+
+                      <div class="row">
+                        <div class="col-md-3">
+                          <% if restaurant.photo_url(:thumb).to_s.blank? %>
+                          <% else %>
+                            <%= image_tag restaurant.photo_url(:thumb).to_s, :style => "width:150px;height:150px;" %>                            
+                          <% end %>
+                        </div>
+                        <div class="col-md-7">
+                          <h2><%= restaurant.name %></h2>
+                          <div class="row">
+                            <div class="col-md-12">
+                              <%= restaurant.address %>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="newEventRestaurantSeatingDetails">
+                      <h2>Menu</h2>
+                      <% menu_items = restaurant.menu_items %>
+                      <% @menu_items_categorized = menu_items.group_by { |menu_item| menu_item.course_name} %>
+                      <%= render partial: 'events/menu',  :locals => {:menu_items_categorized => @menu_items_categorized} %>
+                      
+                    </div>
+
+                  </div>
+                <% end %>
+          </div>
+        </div>
+          <div class="row">
+            <div class="col-md-12">
+              <a href="#" class="btn btn-primary nextStep">Restaurant selection completed</a>
+            </div>
+          </div>
+      </div>      
+      <!-- Panel end -->
+
+     
+
+
+
+    </div>
+  </div>
+</div>
+
+
+  

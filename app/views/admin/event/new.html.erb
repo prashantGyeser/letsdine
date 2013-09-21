@@ -106,6 +106,9 @@
 
   <script>
   $(document).ready(function(){
+    $('#cityList').addClass('hidden_div');
+    $('.restaurantDetails li').hide();
+
     $(document).mouseup(function (e)
     {
         var container = $("#cityList");
@@ -119,8 +122,14 @@
       $('#cityList').removeClass('hidden_div');
       $('#cityList .content ul ul li').click(function(e){
         var citySelected = $(this).text();
+
+        $('#cityList').addClass('hidden_div');
+
+        $('.restaurantDetails li').hide();
         
-        
+        var listToShow = '.restaurantDetails' + ' li.' + citySelected;
+        console.log(listToShow);
+        $(listToShow).show();
       });
     });
   });
