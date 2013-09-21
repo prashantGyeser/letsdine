@@ -39,6 +39,8 @@ class User < ActiveRecord::Base
   # Sending out a welcome email after a person registers
   #after_create :welcome_email
 
+  #validates :city, :presence => true
+
   has_many :attendees
   has_many :interests, :dependent => :destroy
   has_many :waiting_lists

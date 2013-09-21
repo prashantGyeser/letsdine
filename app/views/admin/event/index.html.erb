@@ -31,10 +31,16 @@
 					  		<% total_attendees = Attendee.where("event_id = ?", event.id).pluck(:seats).sum %>
 					  		<td><%= total_attendees %> </td>
 					  		<td><%= event.max_seats %> </td>
-					  		<td><%= link_to "Edit", edit_admin_event_path(event) %> | <a href="#attendeeModal<%= event.id%>" data-toggle="modal">View Attendees</a> </td>
+					  		<td>
+					  			<%= link_to "Edit", edit_admin_event_path(event) %> 
+					  			| 
+					  			<a data-toggle="modal" href="#attendeeModal<%= event.id%>" data-toggle="modal">View Attendees</a> 
+					  		</td>
 
 					  		<!-- Modal -->
-		                            <div id="attendeeModal<%= event.id%>" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="<%= event.event_name%> Attendees" aria-hidden="true">
+		                            <div id="attendeeModal<%= event.id%>" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="<%= event.event_name%> Attendees" aria-hidden="true">
+		                            	<div class="modal-dialog">
+		                            		<div class="modal-content">
 		                              <div class="modal-header">
 		                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 		                                <h3 id="myModalLabel"><%= event.event_name %> Attendees</h3>
@@ -45,7 +51,7 @@
 		                                    <% attendees.each do |attedee| %>
 		                                        <% user = User.find(attedee.user_id) %>
 		                                        <li>
-		                                            <%= user.name %> - Phone number: <%= attedee.phone_number %> - Seats: <%= attedee.seats %> 
+		                                            <%= user.name %> - P: <%= attedee.phone_number %> - E: <%= user.email %> - Seats: <%= attedee.seats %> 
 		                                        </li>
 		                                    <% end %>
 		                                    
@@ -54,6 +60,8 @@
 		                              <div class="modal-footer">
 		                                <button class="btn btn-large" data-dismiss="modal" aria-hidden="true">Close</button>
 		                              </div>
+		                            </div>
+		                            </div>
 		                            </div>
 		                            <!-- End Modal -->
 					  	</tr>
