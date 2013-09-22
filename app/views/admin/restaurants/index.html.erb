@@ -16,6 +16,8 @@
         <tr>
           <th>Name</th>
           <th>Address</th>
+          <th>Latitude</th>
+          <th>Longitude</th>
           <th>City</th>
           <th></th>
           <th></th>
@@ -26,6 +28,8 @@
         <tr>
           <td><%= restaurant.name %></td>
           <td><%= restaurant.address %></td>
+          <td><%= restaurant.latitude %></td>
+          <td><%= restaurant.longitude %></td>
           <td><%= restaurant.city %></td>
           <td><%= link_to 'Show', admin_restaurant_path(restaurant) %></td>
           <td><%= link_to 'Edit', edit_admin_restaurant_path(restaurant) %></td>
