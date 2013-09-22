@@ -18,7 +18,7 @@
 
         map = new google.maps.Map(document.getElementById('map_canvas'),
             mapOptions);
-
+        /*
         var contentString = '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
@@ -38,6 +38,9 @@
             'http://en.wikipedia.org/w/index.php?title=Uluru</a> (last visited June 22, 2009).</p>'+
             '</div>'+
             '</div>';
+        */
+
+        var contentString = "<%= restaurant.name %>"
 
         var infowindow = new google.maps.InfoWindow({
             content: contentString
