@@ -1,0 +1,32 @@
+<%= form_for [:admin, @admin_event] do |f| %>
+  <%# Error start %>
+  <% if @admin_event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@admin_event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+      <ul>
+      <% @admin_event.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>  
+  <% end %>
+  <%# Error end %>
+
+<%# Event details tab start %>
+<%= render :partial => 'panel_one', :locals => { :f => f } %>
+<%# Event details tab end %>
+
+<%# Event Date and Time tab start %>
+<%= render :partial => 'panel_two', :locals => { :f => f } %>
+<%# Event Date and Time tab end %>
+
+<%# Restaurant select tab start %>
+<%= render :partial => 'panel_three', :locals => { :f => f } %>
+<%# Restaurant select tab end %>
+
+<%# Restaurant select tab start %>
+<%= render :partial => 'panel_four', :locals => { :f => f } %>
+<%# Restaurant select tab end %>
+
+<% end %>
