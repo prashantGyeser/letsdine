@@ -496,6 +496,9 @@ table.ui-datepicker-calendar {
   left: 90%;
   margin-left: -11px; }
 
+.restaurantSelectedBG {
+  background: #f6f7f9; }
+
 /******************************************************************************/
 /* Dashboard Styling */
 /******************************************************************************/

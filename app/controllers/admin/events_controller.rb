@@ -44,7 +44,7 @@ class Admin::EventsController < Admin::ApplicationController
 
 	invitee_emails = params[:event][:invitees].split(",")
 
-	@admin_event.city = params[:city]
+	#@admin_event.city = params[:city]
 
 	respond_to do |format|
 	  if @admin_event.save
