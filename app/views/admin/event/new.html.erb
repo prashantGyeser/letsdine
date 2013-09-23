@@ -1,53 +1,150 @@
 <% content_for :stylesheet do%>
-	<%= stylesheet_link_tag    "prettify", :media => "all" %>
-	<%= stylesheet_link_tag    "custom", :media => "all" %>
-	<%= stylesheet_link_tag    "bootstrap-timepicker", :media => "all" %>
+  <%# stylesheet_link_tag    "prettify", :media => "all" %>
+  <%= stylesheet_link_tag    "nanoscroller", :media => "all" %>
+  <%= stylesheet_link_tag    "select2", :media => "all" %>
+  
 <% end %>
 <% content_for :javascript do%>
-	<%= javascript_include_tag "restaurant_picker" %>
-	<%= javascript_include_tag "events" %>
-	<%= javascript_include_tag "jquery.bootstrap.wizard" %>
-	<%= javascript_include_tag "bootstrap-timepicker" %>
+  <%# javascript_include_tag "restaurant_picker" %>
+  <%= javascript_include_tag "jquery-ui-1.10.3.custom" %>
+  <%= javascript_include_tag "jquery.nanoscroller.min" %>
+  <%= javascript_include_tag "select2" %>
 <% end %>
 
-
-<div class="content">
-    <div class="container">
-        <div class="row-fluid">
-        	<div class="span8 offset2">
-        		<div class="event">
-        			<h1>New event</h1>
-		        	<div id="rootwizard">
-						<ul>
-						  	<li><a href="#tab1" data-toggle="tab"><span class="label">1</span> Event Details</a></li>
-							<li><a href="#tab2" data-toggle="tab"><span class="label">2</span> Restaurant </a></li>
-							<li><a href="#tab3" data-toggle="tab"><span class="label">3</span> Invite People </a></li>
-						</ul>
-						<%= render 'form' %>
-
-						<!--<%= link_to 'Back', events_path %>-->
-					</div>
-        		</div>
-			</div>
-        </div>
-    </div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<h1 class="newEventHeading">New Event</h1>
+		</div>
+	</div>
 </div>
 
-<script type="text/javascript">
-	$(document).ready(function() {
-  		$('#rootwizard').bootstrapWizard({'tabClass': 'bwizard-steps'});
-	});
-</script>
+<%= render 'form' %>
 
-<script>
-	$(document).ready(function(){
-		$('#city').change(function(){
-			var selected_city = $('#city :selected').val();
-			$('.restaurantDetailsCotaniner').addClass('restaurant_hidden');
-			$('.menuItems').hide();
-			class_to_find = '.'+selected_city;
-			$(class_to_find).removeClass('restaurant_hidden');
-			//$('.restaurantMenu').show();
-		});
-	});
+<script>  
+    $(document).ready(function(){
+    	$('#dateTimeAlert').hide();
+    	$('.retaurantMenu').hide();
+
+      $('#calendar').datepicker({
+        inline: true,
+        firstDay: 1,
+        showOtherMonths: true,
+        dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+        dateFormat: "dd-mm-yy",
+        onSelect: function(date,inst) { 
+          $('#event_event_date').val(date);
+          // Refer to http://stackoverflow.com/a/8938962/68611 for how this is done.
+          var newFormat = $.datepicker.formatDate("DD, d MM, yy", $(this).datepicker("getDate"));
+
+          $('#showDate').html(newFormat);
+          $('#infoDate').html(newFormat);
+        }
+      });
+
+      // Time select code
+      $('.timeTable td').click(function(){
+        var morningOrEvening = $(this).parent().parent().parent().attr('id');
+        var amOrPM = "";
+        var time = "";
+
+        if (morningOrEvening == 'morning') 
+        {
+          time = $(this).html();
+          //var timeAsFloat = parseFloat(time);
+
+          var hour = time.substring(0,2) ;
+          var min = time.slice(-2);
+          var timeString = hour + '.' + min;
+          console.log("The hour is:" + hour + " ; The min is:" + min);
+          var timeAsFloat = parseFloat(timeString);
+
+          if (timeAsFloat >= 12) 
+          {
+            console.log("the time is:" + timeAsFloat + 'PM');
+            amOrPM = 'PM';
+            $('#event_event_time').val(time);
+          }
+          else
+          {
+            console.log("the time is:" + timeAsFloat + 'AM');
+            amOrPM = 'AM';
+            $('#event_event_time').val(time);
+          };
+
+        } 
+        else
+        {
+          time = $(this).html();
+          amOrPM = 'PM';
+
+          var hour = time.substring(0,2) ;
+          var min = time.slice(-2);
+          var timeString = hour + '.' + min;
+          console.log("The hour is:" + hour + " ; The min is:" + min);
+          var timeAsFloat = parseFloat(timeString);
+
+          var timeTwentyFourHour = timeAsFloat + 12;
+          //var valueToStore = timeTwentyFourHour;
+          $('#event_event_time').val(timeTwentyFourHour);
+        };
+
+        $('#infoTime').html(time + amOrPM);
+        $('#dateTimeAlert').show();
+      });
+
+      
+      // Restaurant select code
+      $('.restaurantDetails li').click(function(){
+		$('.retaurantMenu').hide();      	
+        	var restaurantSelectedId = $(this).find('input:hidden').val();
+            $('#event_restaurant_id').val(restaurantSelectedId);
+        	var menuToShow = "#" + restaurantSelectedId;
+        	$(menuToShow).show();
+        	$('.restaurantDetails li').removeAttr( 'style' );
+        	$(this).css('background','#f6f7f9')
+
+      });
+
+    });
+
+  </script>
+
+  <script>
+    $("#inviteFriends").select2({
+      tags:[""],
+      tokenSeparators: [",", ";", " "]
+    });
+    
+  </script>
+
+  <script>
+  $(document).ready(function(){
+    $('#cityList').addClass('hidden_div');
+    $('.restaurantDetails li').hide();
+
+    $(document).mouseup(function (e)
+    {
+        var container = $("#cityList");
+        if (container.has(e.target).length === 0)
+        {
+          container.addClass('hidden_div');
+        }
+      });
+    
+    $('#citySelect').click(function(){
+      $('#cityList').removeClass('hidden_div');
+      $('#cityList .content ul ul li').click(function(e){
+        var citySelected = $(this).text();
+        $('#event_city').val(citySelected);
+        $('#cityList').addClass('hidden_div');
+
+        $('.restaurantDetails li').hide();
+        
+        var listToShow = '.restaurantDetails' + ' li.' + citySelected;
+        console.log(listToShow);
+        $(listToShow).show();
+      });
+    });
+  });
 </script>

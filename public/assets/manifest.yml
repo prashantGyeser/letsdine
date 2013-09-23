@@ -99,6 +99,8 @@ admin/application.js: admin/application-1b13569e9620782f423d4cd3ce931750.js
 admin/application/index.js: admin/application-1b13569e9620782f423d4cd3ce931750.js
 admin/highcharts.js: admin/highcharts-8b90df74ca79c5e04628c3f5e8cfeaf2.js
 admin/highcharts/index.js: admin/highcharts-8b90df74ca79c5e04628c3f5e8cfeaf2.js
+admin/newEvent.js: admin/newEvent-a9cd8cb3e1e20f44eb68e35ccc3a19fd.js
+admin/newEvent/index.js: admin/newEvent-a9cd8cb3e1e20f44eb68e35ccc3a19fd.js
 application.js: application-18f4f125bfb75512f42e48d3d479b185.js
 application/index.js: application-18f4f125bfb75512f42e48d3d479b185.js
 bootstrap-datepicker.js: bootstrap-datepicker-ea267d0f4b58e4c693968c4210e25490.js
@@ -124,6 +126,8 @@ events/index.js: events-cff7de0dcc014ec7641f9fe5c1ce3a88.js
 index.html: index-dc4e7e08d4bfba4dbf19714fe6628101.html
 jquery-1.10.2.min.js: jquery-1.10.2.min-da0ab1ac131e76ab3810ffec8d9e45c9.js
 jquery-1/index.10.2.min.js: jquery-1.10.2.min-da0ab1ac131e76ab3810ffec8d9e45c9.js
+jquery-ui-1.10.3.custom.js: jquery-ui-1.10.3.custom-5a33a23fe99199083489f8421a882bf7.js
+jquery-ui-1/index.10.3.custom.js: jquery-ui-1.10.3.custom-5a33a23fe99199083489f8421a882bf7.js
 jquery.bootstrap.wizard.js: jquery.bootstrap.wizard-fb0689402e3e80713289dd7962a864ab.js
 jquery/index.bootstrap.wizard.js: jquery.bootstrap.wizard-fb0689402e3e80713289dd7962a864ab.js
 jquery.gallery.js: jquery.gallery-2182d6d54cc1b5c5feb2ef78fbde7d0d.js
@@ -138,10 +142,10 @@ select2.js: select2-76f1a0965197b9543da9c2e702d90feb.js
 select2/index.js: select2-76f1a0965197b9543da9c2e702d90feb.js
 to-markdown.js: to-markdown-d49ad0b5cc780d81f52c77bfe00fa02b.js
 to-markdown/index.js: to-markdown-d49ad0b5cc780d81f52c77bfe00fa02b.js
-admin/admin.css: admin/admin-d41c7d90ae5d1b5fc8558c4b5e12ffa4.css
-admin/admin/index.css: admin/admin-d41c7d90ae5d1b5fc8558c4b5e12ffa4.css
-admin/application.css: admin/application-c937bc6076e9f44db06f0a1e3906566a.css
-admin/application/index.css: admin/application-c937bc6076e9f44db06f0a1e3906566a.css
+admin/admin.css: admin/admin-08fde8e76374e30f8d70286a3b3c3fbd.css
+admin/admin/index.css: admin/admin-08fde8e76374e30f8d70286a3b3c3fbd.css
+admin/application.css: admin/application-ad8965d40decf61d16b9af6f2faea9b6.css
+admin/application/index.css: admin/application-ad8965d40decf61d16b9af6f2faea9b6.css
 application.css: application-5346c73feb6f359e0d4d401d0ae87133.css
 application/index.css: application-5346c73feb6f359e0d4d401d0ae87133.css
 bootstrap-formhelpers.css: bootstrap-formhelpers-faaa71a4bd575e5b7651e644ee16c808.css
