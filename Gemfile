@@ -121,3 +121,6 @@ gem 'RedCloth'
 
 # Speed up precompile by only compiling the files that have changed
 gem 'turbo-sprockets-rails3'
+
+# Librato gem 
+gem 'librato-rails'
