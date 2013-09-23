@@ -123,4 +123,5 @@ gem 'RedCloth'
 gem 'turbo-sprockets-rails3'
 
 # Adding librato metric to the app. Look at librato.com for details
+# Also see https://devcenter.heroku.com/articles/librato for heroku deployment instructions
 gem 'librato-rails'
