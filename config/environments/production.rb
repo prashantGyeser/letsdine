@@ -66,4 +66,14 @@ Letsdine::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
   config.action_mailer.default_url_options = { :host => 'letsdine.co' }
+
+  # Adding cachely cahing to the applicaion
+  # Make sure to remove Rack::Cache if you are using it:
+  config.middleware.delete "Rack::Cache"
+  # Add the Rack::Cachely middleware:
+  config.middleware.use Rack::Cachely
+  # Turn on caching:
+  config.action_controller.perform_caching = true
+  # cachely config end
+
 end

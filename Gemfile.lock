@@ -223,6 +223,8 @@ GEM
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
+    rack-cachely (0.4.1)
+      rack
     rack-contrib (1.1.0)
       rack (>= 0.9.1)
     rack-mini-profiler (0.1.26)
@@ -397,6 +399,7 @@ DEPENDENCIES
   pry
   pry-doc
   quiet_assets
+  rack-cachely
   rack-mini-profiler
   railroady
   rails (= 3.2.13)
