@@ -124,6 +124,3 @@ gem 'turbo-sprockets-rails3'
 
 # Adding librato metric to the app. Look at librato.com for details
 gem 'librato-rails'
-
-# Caching gem for cachely 
-gem 'rack-cachely'
