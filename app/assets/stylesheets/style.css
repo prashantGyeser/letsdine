@@ -77,6 +77,8 @@ h4 {
   .topNav li {
     display: inline;
     margin-left: 15px; }
+    .topNav li a {
+      color: white; }
   .topNav li.selected {
     color: #dd4124; }
 
