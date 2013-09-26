@@ -68,7 +68,35 @@
 	</script>
 	<!--End of Zopim Live Chat Script-->
 
-	
+	<!-- Start of Woopra Code -->
+	<script>
+	(function(){
+	    var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
+	})("woopra");
+
+	woopra.config({
+	    domain: 'letsdine.co'
+	});
+	woopra.track();
+	</script>
+	<!-- End of Woopra Code -->
+	<script>
+
+		/* Place this on a template where a customer initially is identified
+		   or after authentication. (Important: Update these values) */
+		   <% if user_signed_in? %>
+			woopra.identify({
+			    email: '<%= current_user.email %>',
+			    name: '<%= current_user.name %>'			    
+			});
+
+			// The identify code should be added before the "track()" function
+			woopra.track();   	
+		   <% end %>
+		
+	</script>
+
+
 </head>
 <body <%= yield :body_class %>>
   <div class="wrap">
@@ -232,6 +260,21 @@
 		})();
 	</script>
 	<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100656639ns.gif" /></p></noscript>
+
+
+	<!-- Custom event tracking -->
+	<!--
+	<script>
+
+	/* Below is an example of a "payment" event that is sent when 
+	   you process a payment for a customer. */
+
+	woopra.track('payment', {
+	    amount: '49.95',
+	    currency: 'USD'
+	});
+	</script>
+	-->
 </body>
 </html>
 
