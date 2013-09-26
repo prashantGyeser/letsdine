@@ -95,11 +95,11 @@ window.onload = loadScript;
         <div class="row">
           <div class="col-md-6 col-md-offset-3">
             <div class="topBarButtons">
-              <a href="<%= user_omniauth_authorize_path(:facebook) %>" class="css3-button css3-button_blue facebookLoginButton">
+              <a href="<%= user_omniauth_authorize_path(:facebook) %>" class="css3-button css3-button_blue facebookLoginButton" id="homepageSignupWithFB">
                 Sign up with 
                 <%= image_tag("facebookLogo.png")%>
               </a>  
-              <a href="<%= new_user_registration_path %>" class="css3-button css3-button_pink facebookLoginButton">
+              <a href="<%= new_user_registration_path %>" class="css3-button css3-button_pink facebookLoginButton" id="signupWithEmailHeaderButtom">
                 Sign up with email
               </a>
             </div>
@@ -214,3 +214,16 @@ window.onload = loadScript;
     });
   });
 </script>
+
+<script>
+    $(document).ready(function(){
+      $('#homepageSignupWithFB').click(function(){
+        mixpanel.track("Homepage FB signup button click"); 
+      });
+
+      $('#signupWithEmailHeaderButtom').click(function(){
+        mixpanel.track("Homepage email signup header button click"); 
+      });
+
+    });
+  </script>

@@ -15,6 +15,14 @@
 		})();
 	</script>
 	<!-- End Inspectlet Embed Code -->
+
+	<!-- Begin mixpanel tracking code -->
+	<!-- start Mixpanel --><script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==
+typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);
+b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);
+mixpanel.init("8109b4e39a8360bc43bf067857408e00");</script><!-- end Mixpanel -->
+	<!-- End mixpanel tracking code -->
+
 	<% if session[:city].nil? %>
 		<% session[:city] = "" %>
 	<% end %>
@@ -145,7 +153,7 @@
           <div class="col-md-4">
             <ul class="topNav">
 
-              <li><a href="http://letsdine.uservoice.com">Support</a></li>
+              <li><a href="http://letsdine.uservoice.com" id="topBarSupportButton">Support</a></li>
               <!--
               <li>How it works</li>
               <li>About Us</li>
@@ -163,7 +171,7 @@
 			</div>
 			
 		<% else %>
-			<%= link_to "Login/Signup", new_user_session_path, :class => "css3-button css3-button_pink loginButton pull-right", :style=>"padding-bottom:25px"%> 
+			<%= link_to "Login/Signup", new_user_session_path, :class => "css3-button css3-button_pink loginButton pull-right", :style=>"padding-bottom:25px", :id => "topBarSignupButton" %> 
 		<% end %>
 		<!--
             <a href="<%= new_user_session_path %>" class="css3-button css3-button_pink loginButton pull-right" style="padding-bottom:25px">Login/Signup</a>
@@ -320,6 +328,25 @@ UserVoice.push(['showTab', 'classic_widget', {
 	});
 	</script>
 	-->
+	
+	
+	<script>
+	    $(document).ready(function(){
+	      $('#topBarSignupButton').click(function(){
+	        mixpanel.track("Topbar signup button click"); 
+	      });
+
+	      $('#topBarSupportButton').click(function(){
+	        mixpanel.track("Topbar support link click"); 
+	      });
+	      
+	      $('#uvTabLabel').click(function(){
+	        mixpanel.track("Uservoice right side tab click"); 
+	      });
+
+	    });
+	  </script>
+
 </body>
 </html>
 
