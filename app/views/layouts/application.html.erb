@@ -86,8 +86,8 @@
 		   or after authentication. (Important: Update these values) */
 		   <% if user_signed_in? %>
 			woopra.identify({
-			    email: '{{ <%= current_user.email %> }}',
-			    name: '{{ <%= current_user.name %> }}'			    
+			    email: '<%= current_user.email %>',
+			    name: '<%= current_user.name %>'			    
 			});
 
 			// The identify code should be added before the "track()" function
