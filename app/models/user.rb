@@ -25,6 +25,8 @@
 #  role                   :string(255)
 #
 
+# Second email started sending from: 27-09-2013 11:50PM
+
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
