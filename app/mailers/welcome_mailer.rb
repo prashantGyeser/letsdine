@@ -14,5 +14,18 @@ class WelcomeMailer < ActionMailer::Base
 		#headers['X-MC-Track'] = "opens, clicks_htmlonly"
 	end
 
+	def autoresponder(email_address, name)
+		#email_subject = "Welcome to LetsDine!"
+		@name = name
+		#mail(:to => email_address, :subject => email_subject)	
+
+		mail   to:      email_address # normal mailer stuff
+		         #subject: email_subject
+
+		headers['X-MC-Template'] = "need-help-autoresponder"
+		headers['X-MC-MergeVars'] = {"FNAME": "#{name}"}
+		headers['X-MC-SendAt'] = (Time.now.utc) + (32*60)
+
+	end
 
 end

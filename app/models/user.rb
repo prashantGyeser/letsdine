@@ -38,7 +38,7 @@ class User < ActiveRecord::Base
 
   # Sending out a welcome email after a person registers
   after_create :welcome_email
-
+  after_create :autoresponder
   #validates :city, :presence => true
 
   has_many :attendees
@@ -51,8 +51,11 @@ class User < ActiveRecord::Base
   accepts_nested_attributes_for :interests, :allow_destroy => true
 
   def welcome_email
-    logger.debug "It is getting to just before the welciome email send"
     WelcomeMailer.welcome(email, name).deliver  
+  end
+
+  def autoresponder
+    WelcomeMailer.autoresponder(email, name).deliver
   end
 
   def self.from_omniauth(auth)
