@@ -1,7 +1,8 @@
 class WelcomeMailer < ActionMailer::Base
 	after_action :set_business_headers
+  	
+  	default :from => "LetsDine <notifications@letsdine.co>"
 
-  default :from => "LetsDine <notifications@letsdine.co>"
 	def welcome(email_address, name)
 		email_subject = "Welcome to LetsDine!"
 		@name = name
