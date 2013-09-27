@@ -23,7 +23,7 @@ class WelcomeMailer < ActionMailer::Base
 		         #subject: email_subject
 
 		headers['X-MC-Template'] = "need-help-autoresponder"
-		headers['X-MC-MergeVars'] = {"FNAME": "#{name}"}
+		headers['X-MC-MergeVars'] = "{'FNAME': "#{name}"}"
 		headers['X-MC-SendAt'] = (Time.now.utc) + (32*60)
 
 	end
