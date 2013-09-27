@@ -1,5 +1,5 @@
 class WelcomeMailer < ActionMailer::Base
-	after_action :set_business_headers
+	before_filter :set_business_headers
   	
   	default :from => "LetsDine <notifications@letsdine.co>"
 
