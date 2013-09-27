@@ -37,7 +37,7 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
 
   # Sending out a welcome email after a person registers
-  #after_create :welcome_email
+  after_create :welcome_email
 
   #validates :city, :presence => true
 
@@ -51,6 +51,7 @@ class User < ActiveRecord::Base
   accepts_nested_attributes_for :interests, :allow_destroy => true
 
   def welcome_email
+    logger.debug "It is getting to just before the welciome email send"
     WelcomeMailer.welcome(email, name).deliver  
   end
 
