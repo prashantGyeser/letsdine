@@ -4,10 +4,10 @@ class WelcomeMailer < ActionMailer::Base
 	def welcome(email_address, name)
 		email_subject = "Welcome to LetsDine!"
 		@name = name
-		#mail(:to => email_address, :subject => email_subject)	
+		mail(:to => email_address, :subject => email_subject)	
 
-		mail   to:      email_address, # normal mailer stuff
-		         subject: email_subject
+		#mail   to:      email_address, # normal mailer stuff
+		 #        subject: email_subject
 
 		headers['X-MC-Tags'] = "signups"
 		# Setting the headers for Mandrill tracking
