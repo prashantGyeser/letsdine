@@ -71,7 +71,7 @@ select2.js: c2d33915e0b227927e7da558b4107f76
 to-markdown.js: cf539dd715150a9a7182237d2e062b63
 zoomflow/zoomflow.dev.js: f919a37c414c04b6bea2b8f508af3e49
 admin/admin.css: 5fc4ba6f27887001fa9f4bed9dae7efe
-admin/application.css: 63a1f3cfd1e54270fdee09c3035b7af2
+admin/application.css: c7ff3e08e82611672d893482c7737a2d
 application.css: 52adbc27fbd2b0ad5d904db38a80d3d8
 bootstrap-formhelpers.css: c3c0e37dc84432fe18d43e454b5f02ff
 bootstrap-markdown.min.css: 497d65ddd42c669004a3c484775256c4
