@@ -2,13 +2,17 @@
   <%# stylesheet_link_tag    "prettify", :media => "all" %>
   <%= stylesheet_link_tag    "nanoscroller", :media => "all" %>
   <%= stylesheet_link_tag    "select2", :media => "all" %>
-  
+  <%= stylesheet_link_tag    "bootstrap-markdown.min", :media => "all" %>
 <% end %>
 <% content_for :javascript do%>
+  <%= stylesheet_link_tag    "bootstrap-markdown.min", :media => "all" %>
   <%# javascript_include_tag "restaurant_picker" %>
   <%= javascript_include_tag "jquery-ui-1.10.3.custom" %>
   <%= javascript_include_tag "jquery.nanoscroller.min" %>
   <%= javascript_include_tag "select2" %>
+  <%= javascript_include_tag "markdown" %>
+  <%= javascript_include_tag "to-markdown" %>
+  <%= javascript_include_tag "bootstrap-markdown" %>
 <% end %>
 
 <div class="container">
@@ -164,4 +168,10 @@
       });
     });
   });
+</script>
+
+<script>
+  $(document).ready(function(){
+    $("#event_event_description").markdown({autofocus:false,savable:false});
+  })
 </script>
