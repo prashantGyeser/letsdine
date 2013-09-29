@@ -1,19 +1,18 @@
 <% content_for :stylesheet do%>
-<<<<<<< HEAD
-	<%= stylesheet_link_tag    "prettify", :media => "all" %>
-	<%= stylesheet_link_tag    "custom", :media => "all" %>
-=======
   <%# stylesheet_link_tag    "prettify", :media => "all" %>
   <%= stylesheet_link_tag    "nanoscroller", :media => "all" %>
   <%= stylesheet_link_tag    "select2", :media => "all" %>
-  
->>>>>>> production
+  <%= stylesheet_link_tag    "bootstrap-markdown.min", :media => "all" %>
 <% end %>
 <% content_for :javascript do%>
+  <%= stylesheet_link_tag    "bootstrap-markdown.min", :media => "all" %>
   <%# javascript_include_tag "restaurant_picker" %>
   <%= javascript_include_tag "jquery-ui-1.10.3.custom" %>
   <%= javascript_include_tag "jquery.nanoscroller.min" %>
   <%= javascript_include_tag "select2" %>
+  <%= javascript_include_tag "markdown" %>
+  <%= javascript_include_tag "to-markdown" %>
+  <%= javascript_include_tag "bootstrap-markdown" %>
 <% end %>
 
 <div class="container">
@@ -90,8 +89,21 @@
           var timeAsFloat = parseFloat(timeString);
 
           var timeTwentyFourHour = timeAsFloat + 12;
+
+          var twentyFourHour = timeTwentyFourHour.toString().split(".")[0]; ///before
+
+          var twentyFourMin = timeTwentyFourHour.toString().split(".")[1]; ///after
+          if (typeof twentyFourMin != 'undefined')
+          {
+            var timeValToServer = twentyFourHour + ':' + twentyFourMin;
+          }
+          else
+          {
+              var timeValToServer = twentyFourHour + ':' + '00';
+          }
+          
           //var valueToStore = timeTwentyFourHour;
-          $('#event_event_time').val(timeTwentyFourHour);
+          $('#event_event_time').val(timeValToServer);
         };
 
         $('#infoTime').html(time + amOrPM);
@@ -106,8 +118,10 @@
             $('#event_restaurant_id').val(restaurantSelectedId);
         	var menuToShow = "#" + restaurantSelectedId;
         	$(menuToShow).show();
-        	$('.restaurantDetails li').removeAttr( 'style' );
-        	$(this).css('background','#f6f7f9')
+        	//$('.restaurantDetails li').removeAttr( 'style' );
+        	//$(this).css('background','#f6f7f9');
+          $('.restaurantDetails li').removeClass( 'restaurantSelectedBG' );
+ $(this).addClass('restaurantSelectedBG');
 
       });
 
@@ -141,6 +155,8 @@
       $('#cityList').removeClass('hidden_div');
       $('#cityList .content ul ul li').click(function(e){
         var citySelected = $(this).text();
+        console.log("The selected city is:");
+        console.log(citySelected);
         $('#event_city').val(citySelected);
         $('#cityList').addClass('hidden_div');
 
@@ -152,4 +168,10 @@
       });
     });
   });
+</script>
+
+<script>
+  $(document).ready(function(){
+    $("#event_event_description").markdown({autofocus:false,savable:false});
+  })
 </script>
