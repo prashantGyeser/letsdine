@@ -188,3 +188,532 @@ ul.event_list
   color: $white;
 }
 /******************************************************************************/
+/* New Event Styling */
+/******************************************************************************/
+.newEventHeading
+{
+	margin-bottom: 0;
+}
+.event
+{
+	background: white;
+	margin-top: 40px;
+	//padding: 40px;
+}
+.newEventPage
+{
+	background: white;
+	margin-top: 40px;
+	padding: 0;
+	-webkit-box-shadow: 1px 0px 10px rgba(50, 50, 50, 0.2);
+	-moz-box-shadow:    1px 0px 10px rgba(50, 50, 50, 0.2);
+	box-shadow:         1px 0px 10px rgba(50, 50, 50, 0.2);
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 6px 6px 6px 6px;
+	border-radius: 6px 6px 6px 6px; 	
+	h1
+	{
+		padding: 20px 20px 0 20px;
+	}
+	h3
+	{
+		margin: 0;
+		font-weight: bold;
+	}
+	.menuItemsHeader
+	{
+		display: block;
+		margin-top: 10px;
+	}
+
+	.menuItemExplanation
+	{
+		font-style: italic;
+		margin: 5px 0;
+		padding: 0;
+	}
+	.menuItems
+	{
+		margin: 0 0 0 20px;
+		padding: 0;
+	}
+	.restaurantDetails
+	{
+		padding: 0;
+		margin: 0;
+		//background: #f6f7f9;
+		list-style: none;
+		color: #959595;
+		li
+		{
+			padding: 10px 20px;
+			border-bottom: 1px solid #e4e4e4;
+			&:hover
+			{
+				background: #f6f7f9;
+				cursor: pointer;
+			}
+			span
+			{
+				color: #6b6b69;
+				font-weight: bold;
+			}
+		}
+	}
+	.retaurantMenu
+	{
+		border: 1px solid #e4e4e4;
+		margin-left: -30px;
+		//padding: 10px 20px;
+		.menuTopBar
+		{
+			padding: 10px 20px;
+			background: #f6f7f9;
+			margin-bottom: 90px;
+			h1
+			{
+				padding: 0;
+				margin: 0;
+			}
+			h2	
+			{
+				padding: 0;
+				margin: 0;
+			}
+			img
+			{
+				margin-bottom: -75px;
+				border: 4px solid #fff;
+				-webkit-box-shadow: 1px 0px 10px rgba(50, 50, 50, 0.2);
+				-moz-box-shadow:    1px 0px 10px rgba(50, 50, 50, 0.2);
+				box-shadow:         1px 0px 10px rgba(50, 50, 50, 0.2);
+				-moz-border-radius: 0px;
+				-webkit-border-radius: 3px 3px 3px 3px;
+				border-radius: 3px 3px 3px 3px; 	
+			}
+		}
+		.newEventRestaurantDescription
+		{
+			padding: 10px 20px;
+			font-style: italic;	
+		}
+		.newEventRestaurantSeatingDetails
+		{
+			padding: 10px 20px;
+			strong
+			{
+				display: block;
+			}
+			.description
+			{
+				font-style: italic;
+			}
+		}
+	}
+	.step
+	{
+		background: #cccccc;
+		border-radius: 0.8em;
+		-moz-border-radius: 0.8em;
+		-webkit-border-radius: 0.8em;
+		color: #ffffff;
+		display: inline-block;
+		font-weight: bold;
+		line-height: 1.6em;
+		margin-right: 5px;
+		text-align: center;
+		width: 1.6em; 
+		font-size: 24px;
+		margin-right: 12px;
+	}
+}
+/* Panels */
+.newEventSummary
+{
+	padding: 20px;
+	h4	
+	{
+		display: inline;
+		i
+		{
+			margin-right: 20px;
+			margin-top: -10px;
+			font-size: 40px;
+			float: left;
+			color: #ccc;
+		}
+		text
+		{
+			margin-bottom: 50px;
+		}
+		.finished
+		{
+			color: #1aa248;
+		}
+	}
+	
+}
+/* Collapsible panels */
+.expandable-panel-content
+{
+	padding: 20px;
+}
+.nextStep
+{
+	margin-top: 20px;
+	background: #1aa248;
+	border: 1px solid #137634;
+	&:hover
+	{
+		background: #137634;
+	}
+}
+.datepicker
+{
+	width: 100%;
+	text-align: center;
+	td
+	{
+		padding: 10px;
+	}
+	.datePickerNav
+	{
+		background: #d8d8d8;
+		color: #acacac;
+		font-size: 30px;
+		&:hover
+		{
+			background: #767676;
+			color: white;
+			cursor: pointer;
+		}
+	}
+	.daysHeading
+	{
+		color: #9c9c9c;
+		font-weight: bold;
+	}
+	.month
+	{
+		border-bottom: 1px solid #d8d8d8;
+		border-top: 1px solid #d8d8d8;
+	}
+	.days
+	{
+		td
+		{
+			border: 1px solid #e1e1e1;
+			color: #767676;
+			&:hover
+			{
+				background: $contrast_blue;
+				color: #fff;
+				cursor: pointer;
+			}
+
+		}
+		.over
+		{
+			color: #d2d2d2;
+			&:hover
+			{
+				background: white;
+				color: #d2d2d2;
+				cursor: none;
+			}			
+		}
+	}
+}
+.timeHeader
+{
+	background: $contrast_blue;
+	padding: 10px;
+	text-align: center;
+	color: white;
+}
+.timeSubHeader
+{
+	margin-top: 10px;
+	border-bottom: 1px solid #d8d8d8;
+}
+.timeTable
+{
+	width: 100%;
+	margin-top: 10px;
+	padding: 10px;
+	
+	td
+	{
+		background: #d8d8d8;
+		border: 18px solid white;
+		text-align: center;
+		color: #747474;
+		padding: 10px;	
+		font-weight: bold;
+		&:hover
+		{
+			background-color: $contrast_blue;
+			color: white;
+			cursor: pointer;
+		}
+	}
+}
+/* JQuery UI - calendar styling */
+// Removing default margins and padding
+.ui-datepicker,
+.ui-datepicker table,
+.ui-datepicker tr,
+.ui-datepicker td,
+.ui-datepicker th {
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-spacing: 0;
+}
+.ui-datepicker table
+{
+	width: 100%;
+	text-align: center;
+}
+// Header styling
+.ui-datepicker-header 
+{
+	position: relative;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #d8d8d8;
+	border-top: 1px solid #d8d8d8;
+	padding-top: 15px;
+	padding-bottom: 14px;
+}
+.ui-datepicker-title { text-align: center; }
+.ui-datepicker-month {
+    position: relative;
+    padding-right: 15px;
+    color: #565656;
+}
+.ui-datepicker-year {
+    padding-left: 8px;
+    color: #a8a8a8;
+}
+.ui-datepicker-month
+{
+	font-weight: bold;
+}
+// Prev next styling
+.ui-datepicker-prev,
+.ui-datepicker-next {
+    position: absolute;
+    top: -1px;
+    background: #d8d8d8;
+    padding: 10px;
+    cursor: pointer;
+
+}
+ 
+.ui-datepicker-prev {
+    left: 0;
+    background: #d8d8d8;
+    padding: 5px 20px;
+    color: #acacac;
+    font-size: 30px;
+    &:hover
+    {
+    	background: #767676;
+		color: white;
+		cursor: pointer; 
+    }
+}
+
+.ui-datepicker-next {
+    right: 0;
+    padding: 5px 20px;
+    color: #acacac;
+    font-size: 30px;
+    &:hover
+    {
+    	background: #767676;
+		color: white;
+		cursor: pointer; 
+    }
+}
+ 
+
+ 
+.ui-datepicker-prev span { background-position: 0px 0px; }
+ 
+.ui-datepicker-next span { background-position: -5px 0px; }
+ 
+.ui-datepicker-prev-hover span { background-position: 0px -10px; }
+ 
+.ui-datepicker-next-hover span { background-position: -5px -10px; }
+
+// Days table styling
+table.ui-datepicker-calendar
+{
+	text-align: center;
+	th
+	{
+		text-align: center;
+		padding-bottom:10px;
+		color: #9c9c9c;
+		
+	}
+	td
+	{
+		border: 1px solid #e1e1e1;
+		color: #767676;
+		padding: 10px;
+		&:hover
+		{
+			background: $contrast_blue;
+			color: #fff;
+			cursor: pointer;
+			a
+			{
+				color: white;
+				text-decoration: none;
+			}
+		}
+		a
+		{
+			color: #767676;
+		}
+	}
+	td.ui-state-disabled
+	{
+		color: #d2d2d2;
+		&:hover
+		{
+			background: white;
+			color: #d2d2d2;
+			cursor: none;
+		}	
+	}
+	.ui-state-active {
+		//background: $contrast_blue;
+		color: white
+	}
+	.ui-datepicker-current-day
+	{
+		background: $contrast_blue;
+	}
+
+}
+/* City select styling */
+#citySelect
+	{
+		&:hover
+		{
+			background: #8a8a8a;
+			cursor: pointer;
+		}
+		background: #737373;
+		color: white;
+		//display: inline;
+		padding: 10px;
+		width: 200px;
+		-moz-border-radius: 0px;
+		-webkit-border-radius: 3px 3px 3px 3px;
+		border-radius: 3px 3px 3px 3px; 
+		i
+		{
+			font-size: 1.4em;
+			line-height: 20px;
+			background: #8a8a8a;
+			padding: 10px;
+			margin: -10px -10px 0 0;
+			border: 1px solid #8a8a8a;
+			-webkit-border-top-right-radius: 3px;
+			-webkit-border-bottom-right-radius: 3px;
+			-moz-border-radius-topright: 3px;
+			-moz-border-radius-bottomright: 3px;
+			border-top-right-radius: 3px;
+			border-bottom-right-radius: 3px;
+		}
+	}
+	.hidden_div
+	{
+		visibility:hidden;
+	}
+	#cityList 
+	{
+
+		z-index: 1000;
+		position:absolute;
+		left:15px;
+		top:69px;
+		display: block;
+		width: 200px;
+		//position: relative;
+		background: #f8f8f8;
+		border: 1px solid #ececec;
+		margin-top: 10px;
+		-webkit-box-shadow: 1px 0px 10px rgba(50, 50, 50, 0.2);
+		-moz-box-shadow:    1px 0px 10px rgba(50, 50, 50, 0.2);
+		box-shadow:         1px 0px 10px rgba(50, 50, 50, 0.2);
+		-moz-border-radius: 0px;
+		-webkit-border-radius: 6px 6px 6px 6px;
+		border-radius: 6px 6px 6px 6px; 
+		ul
+		{
+			list-style: none;
+			margin: 10px 0 0 0;
+			//padding: 10px;
+			padding: 0;
+			strong
+			{
+				padding: 10px;
+			}
+			ul li
+			{
+				padding: 10px 30px 10px 20px;
+				margin-right: 10px;
+				&:hover
+				{
+					background: #ececec;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+	#cityList:after, #cityList:before {
+		bottom: 100%;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+		
+	}
+
+	#cityList:after {
+		border-color: rgba(248, 248, 248, 0);
+		border-bottom-color: #f8f8f8;
+		border-width: 10px;
+		left: 90%;
+		margin-left: -10px;
+	}
+	#cityList:before {
+		border-color: rgba(236, 236, 236, 0);
+		border-bottom-color: #ececec;
+		border-width: 11px;
+		left: 90%;
+		margin-left: -11px;
+	}
+
+.restaurantSelectedBG
+{
+	background: #f6f7f9;
+}
+/******************************************************************************/
+/* Dashboard Styling */
+/******************************************************************************/
+
+/******************************************************************************/
+/* Dashboard Styling */
+/******************************************************************************/
+
+/******************************************************************************/
+/* Dashboard Styling */
+/******************************************************************************/

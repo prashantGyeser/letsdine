@@ -17,7 +17,7 @@ Letsdine::Application.routes.draw do
     root to: "dashboard#index"
     get "dashboard/index"
     #get "events" => "event#index"
-    resources :event
+    resources :events
     put "event/send_notification" => "event#send_notification"
     get "users" => "user#index"
     get "invites" => "invites#index"
