@@ -91,7 +91,7 @@
               <%= @event.event_date.strftime("%A, %d %B %Y") %> <%= @event.event_time.strftime("%I:%M%p") %>
             </span>
             <div class="eventDescription">
-              <% event_description_html =  RedCloth.new(@event.event_description).to_html %>      
+              <% event_description_html =  BlueCloth.new(@event.event_description).to_html %>      
               <%# simple_format(@event.event_description) %>      
               <%= raw event_description_html %>
             </div>
