@@ -23,7 +23,16 @@
 				<i class="icon-map-marker"></i>
 				<%= restaurant.name %>
 			</span>   
-			<%= truncate(event.event_description, :length => 100) %> <%= link_to "See event", event_path(event) %>
+			<% event_description_html =  RedCloth.new(event.event_description).to_html %>      
+			<%# simple_format(@event.event_description) %>      
+
+			<%# 
+			Use if the markdown has to be shown and converted a proper text and shown 
+			description_to_show = sanitize(truncate(RedCloth.new(event.event_description).to_html, length: 100)) 
+			%>
+			<% description_to_show = sanitize(truncate(event.event_description, length: 100)) %>
+			<%# truncate(description_to_show, :length => 100) %>
+			<%= description_to_show %> <%= link_to "See event", event_path(event) %>
 		</div>
 	</div>
 </div>
