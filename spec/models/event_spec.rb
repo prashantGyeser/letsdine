@@ -53,5 +53,5 @@ describe Event do
 
 	it {should have_many(:waiting_list_entries)}
 	it {should have_many(:waiting_attendees).through(:waiting_list_entries)}
-  
+  it {should have_many(:event_discussions)}
 end

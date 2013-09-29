@@ -52,7 +52,6 @@ namespace :deploy do
     github_push_output = `git push github master`
     puts 'Pushing to github'
     puts github_push_output
-
   	puts '###############################################################'
   	puts 'Todo: Deploy to heroku production'
   	puts '###############################################################'

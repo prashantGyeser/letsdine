@@ -47,7 +47,7 @@ class User < ActiveRecord::Base
   has_many :interests, :dependent => :destroy
   has_many :waiting_lists
   has_many :comments
-  
+  has_many :event_discussions
 
 
   accepts_nested_attributes_for :interests, :allow_destroy => true
