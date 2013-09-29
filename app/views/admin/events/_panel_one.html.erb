@@ -54,7 +54,16 @@
           </div>
 
           <div class="row">
-            <div class="col-md-12">
+             <div class="col-md-6">
+              <div class="form-group">
+                <%= f.label :event_image %>
+                <%= f.file_field :event_image %>  
+                <p class="help-block">This picture will be shown on the homepage and in the event page.</p>
+              </div>
+              
+
+            </div>
+            <div class="col-md-6">
               <label for="event_description">Description for this event</label>
               <%# f.text_area :event_description, :class => "form-control", :placeholder => "Enter a description for this event", :rows => "3" %>
               <%= f.text_area :event_description, :class=>"form-control",  :rows => 10, "data-provide"=> "markdown" %>
