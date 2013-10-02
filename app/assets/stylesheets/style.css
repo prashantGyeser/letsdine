@@ -72,7 +72,7 @@ h4 {
 .topNav {
   list-style: none;
   color: white;
-  margin: 15px 0 0 0;
+  margin: 0 0 0 0;
   padding: 0; }
   .topNav li {
     display: inline;
@@ -89,12 +89,10 @@ h4 {
 /*******************************************************************/
 /* Filter Styles */
 /*******************************************************************/
-.filter {
-  background: white;
-  padding: 20px 0;
+.headerCitySelect {
   margin-bottom: 10px;
   color: #737373; }
-  .filter #citySelect {
+  .headerCitySelect #citySelect {
     background: #737373;
     color: white;
     padding: 10px;
@@ -102,10 +100,10 @@ h4 {
     -moz-border-radius: 0px;
     -webkit-border-radius: 3px 3px 3px 3px;
     border-radius: 3px 3px 3px 3px; }
-    .filter #citySelect:hover {
+    .headerCitySelect #citySelect:hover {
       background: #8a8a8a;
       cursor: pointer; }
-    .filter #citySelect i {
+    .headerCitySelect #citySelect i {
       font-size: 1.4em;
       line-height: 20px;
       background: #8a8a8a;
@@ -118,9 +116,9 @@ h4 {
       -moz-border-radius-bottomright: 3px;
       border-top-right-radius: 3px;
       border-bottom-right-radius: 3px; }
-  .filter .hidden_div {
+  .headerCitySelect .hidden_div {
     visibility: hidden; }
-  .filter #cityList {
+  .headerCitySelect #cityList {
     z-index: 1000;
     position: absolute;
     left: 15px;
@@ -136,19 +134,19 @@ h4 {
     -moz-border-radius: 0px;
     -webkit-border-radius: 6px 6px 6px 6px;
     border-radius: 6px 6px 6px 6px; }
-    .filter #cityList ul {
+    .headerCitySelect #cityList ul {
       list-style: none;
       margin: 10px 0 0 0;
       padding: 0; }
-      .filter #cityList ul strong {
+      .headerCitySelect #cityList ul strong {
         padding: 10px; }
-      .filter #cityList ul ul li {
+      .headerCitySelect #cityList ul ul li {
         padding: 10px 30px 10px 20px;
         margin-right: 10px; }
-        .filter #cityList ul ul li:hover {
+        .headerCitySelect #cityList ul ul li:hover {
           background: #ececec;
           cursor: pointer; }
-  .filter #cityList:after, .filter #cityList:before {
+  .headerCitySelect #cityList:after, .headerCitySelect #cityList:before {
     bottom: 100%;
     border: solid transparent;
     content: " ";
@@ -156,13 +154,13 @@ h4 {
     width: 0;
     position: absolute;
     pointer-events: none; }
-  .filter #cityList:after {
+  .headerCitySelect #cityList:after {
     border-color: rgba(248, 248, 248, 0);
     border-bottom-color: #f8f8f8;
     border-width: 10px;
     left: 90%;
     margin-left: -10px; }
-  .filter #cityList:before {
+  .headerCitySelect #cityList:before {
     border-color: rgba(236, 236, 236, 0);
     border-bottom-color: #ececec;
     border-width: 11px;

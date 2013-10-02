@@ -146,14 +146,48 @@ mixpanel.init("8109b4e39a8360bc43bf067857408e00");</script><!-- end Mixpanel -->
       <div class="container">
         <div class="row">
           
-          <div class="col-md-4 logo">
-            <%= image_tag("logo.png")%>
+          <div class="col-md-5 logo">
+          	<div class="headerCitySelect">
+          		<div id="citySelect">
+                  Select your city
+                  <i class="icon-angle-down pull-right"></i>
+                </div>
+                <div id="cityList" class="hidden_div">
+                  <div class="nano">
+                  <div class="content"> 
+                    <ul>
+                      <li>
+                        <strong>India</strong>
+                        <ul>
+                          <li>Ahmedabad</li>
+                          <li>Bangalore</li>
+                          <li>Hyderabad</li>
+                          <li>Pune</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <strong>Malaysia</strong>
+                        <ul>
+                          <li>Kuala Lumpur</li>
+                          <li>Penang</li>
+                          <li>Perak</li>
+                          <li>Selangor</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  </div>
+                </div>
+          	</div>
+          	
+
           </div>
 
-          <div class="col-md-4">
+          <div class="col-md-3">
             <ul class="topNav">
 
-              <li><a href="http://letsdine.uservoice.com" id="topBarSupportButton">Support</a></li>
+              <a href="/"><%= image_tag("logo.png")%></a>
               <!--
               <li>How it works</li>
               <li>About Us</li>
