@@ -40,7 +40,8 @@ class EventsController < ApplicationController
     @user_invite = UserInvite.new
 
     @other_events = Event.includes(:restaurant).includes(:attendee => :user).where('event_type != ?', 'private').where('status != ?', 'closed').where('city = ?', session[:city]).limit(4)
-    
+
+
     if session[:joined]
       @just_joined = true
       session.delete :joined

@@ -6,6 +6,9 @@ http://natashatherobot.com/devise-sign-up-ajax-rails/
 == Admin history sort
 http://stackoverflow.com/questions/5739158/rails-ruby-how-to-sort-an-array
 
+== Setting up and using Mandrill SMTP headers
+http://stackoverflow.com/questions/16172562/rails-delayed-job-argument-error-with-mailer
+
 == Running in production mode
 rake db:migrate RAILS_ENV="production" 
 rails s -e production
