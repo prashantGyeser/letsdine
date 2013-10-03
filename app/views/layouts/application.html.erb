@@ -145,11 +145,23 @@ mixpanel.init("8109b4e39a8360bc43bf067857408e00");</script><!-- end Mixpanel -->
 	<div class="topBar">
       <div class="container">
         <div class="row">
-          
+          <% if session[:city].nil? %>
+                <% session[:city] = "" %>
+            <% end %>
           <div class="col-md-5 logo">
           	<div class="headerCitySelect">
+          		<% if session[:city].empty? %>
+          			
+          		<% else %>
+          			<span style="color: white; font-weight:bold;">Showing <%= session[:city] %> events</span>
+          		<% end %>
           		<div id="citySelect">
-                  Select your city
+          			<% if session[:city].empty? %>
+          				Select your city		
+          			<% else %>
+          				Change city
+          			<% end %>
+                  
                   <i class="icon-angle-down pull-right"></i>
                 </div>
                 <div id="cityList" class="hidden_div">
