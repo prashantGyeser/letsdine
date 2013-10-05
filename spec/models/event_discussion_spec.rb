@@ -8,6 +8,7 @@
 #  event_id   :integer
 #  user_id    :integer
 #  comment    :text
+#
 
 #
 

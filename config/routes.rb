@@ -1,6 +1,10 @@
 Letsdine::Application.routes.draw do
   
   
+  #resources :carts
+  match 'carts/checkout', :to => 'carts#checkout'
+
+
   get "history/index"
 
   get "invites/index"

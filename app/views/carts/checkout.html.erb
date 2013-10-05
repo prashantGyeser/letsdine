@@ -1,0 +1,63 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<h1>Verify your details</h1>
+
+			<table class="table">
+				<tr>
+					<th>Event Details</th>
+					<th>Seats</th>
+					<th>
+						<span class="pull-right">
+							Cost per seat
+						</span>
+						
+					</th>
+				</tr>
+				<tr>
+					<td>Event name</td>
+					<td>10 Seats</td>
+					<td>
+						<span class="pull-right">
+							Cost per seat
+						</span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<span class="pull-right">
+							<strong>Total Cost: RM 5000</strong>
+						</span>
+					</td>
+				</tr>
+			</table>
+
+			<h4>Total price to pay: RM 5000</h4>
+
+			<!-- IPay88 form start-->
+			<FORM method="post" name="ePayment"
+			action="https://www.mobile88.com/ePayment/entry.asp">
+				<INPUT type="hidden" name="MerchantCode" value="M06101">
+				<INPUT type="hidden" name="PaymentId" value="2">
+				<INPUT type="hidden" name="RefNo" value="A00000001">
+				<INPUT type="hidden" name="Amount" value="1.00">
+				<INPUT type="hidden" name="Currency" value="MYR">
+				<INPUT type="hidden" name="ProdDesc" value="Photo Print">
+				<INPUT type="hidden" name="UserName" value="John Tan">
+				<INPUT type="hidden" name="UserEmail" value="john@hotmail.com">
+				<INPUT type="hidden" name="UserContact" value="0126500100">
+				<INPUT type="hidden" name="Remark" value="">
+				<INPUT type="hidden" name="Lang" value="UTF-8">
+				<INPUT type="hidden" name="Signature" value="84dNMbfgjLMS42IqSTPqQ99cUGA=">
+				<INPUT type="hidden" name="ResponseURL"
+				value="http://www.YourResponseURL.com/payment/response.asp">
+				<INPUT type="hidden" name="BackendURL"
+				value="http://www.YourBackendURL.com/payment/backend_response.asp">
+				<INPUT type="submit" value="Proceed with Payment" name="Submit">
+			</FORM>
+			<!-- IPay88 form end -->
+
+
+		</div>
+	</div>
+</div>

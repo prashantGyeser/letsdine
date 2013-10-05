@@ -1,0 +1,31 @@
+<h1>Listing carts</h1>
+
+<table>
+  <tr>
+    <th>Seats</th>
+    <th>Cost per seat</th>
+    <th>User</th>
+    <th>Attendee</th>
+    <th>Event</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @carts.each do |cart| %>
+  <tr>
+    <td><%= cart.seats %></td>
+    <td><%= cart.cost_per_seat %></td>
+    <td><%= cart.user_id %></td>
+    <td><%= cart.attendee_id %></td>
+    <td><%= cart.event_id %></td>
+    <td><%= link_to 'Show', cart %></td>
+    <td><%= link_to 'Edit', edit_cart_path(cart) %></td>
+    <td><%= link_to 'Destroy', cart, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Cart', new_cart_path %>

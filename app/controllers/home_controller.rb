@@ -3,7 +3,7 @@ class HomeController < ApplicationController
     headers['Cache-Control'] = 'public; max-age=86400'
   end
   def index
-    logger.debug "the value in the city params is: #{params[:city]}"
+    
     if session[:city].nil?
       if params[:city]
         @user_city = params[:city]
