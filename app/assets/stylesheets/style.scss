@@ -528,5 +528,51 @@ h4
 	margin-top: 10px;
 }
 /*******************************************************************/
+/* Checkout Styles */
+/*******************************************************************/
+.checkoutContainer
+{
+
+	margin: 20px 0;
+
+	-webkit-box-shadow: 1px 0px 10px rgba(50, 50, 50, 0.2);
+	-moz-box-shadow:    1px 0px 10px rgba(50, 50, 50, 0.2);
+	box-shadow:         1px 0px 10px rgba(50, 50, 50, 0.2);
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 6px 6px 6px 6px;
+	border-radius: 6px 6px 6px 6px; 
+
+	.checkoutHeader
+	{
+		background: $topBar_color;
+		color: #fff;
+		padding: 20px;
+	}
+	.checkout
+	{
+		background: #fff;
+		padding: 20px;
+
+		.checkoutEventDescriptionSummary
+		{
+			margin: 5px 0 10px 0;
+		}
+		.subText
+		{
+			color: #919191;
+		}
+		.seatsPrice	
+		{
+			margin-bottom: 20px;
+			input
+			{
+				width: 50%;
+				float: left;
+			}
+		}
+	}
+}
+
+/*******************************************************************/
 /* Common Styles */
 /*******************************************************************/

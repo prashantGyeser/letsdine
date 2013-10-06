@@ -13,5 +13,10 @@
 #
 
 class Cart < ActiveRecord::Base
-  attr_accessible :attendee_id, :cost_per_seat, :event_id, :seats, :user_id
+  attr_accessible :attendee_id, :cost_per_seat, :event_id, :seats, :user_id, :purchased_at
+
+  def signature(stringToGetSignatureFrom)
+  	return Base64.encode64(Digest::SHA1.hexdigest(stringToGetSignatureFrom).scan(/../).collect { |a| a.hex.chr }.join).chomp
+  end
+
 end

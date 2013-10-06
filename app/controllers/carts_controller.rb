@@ -1,4 +1,7 @@
 class CartsController < ApplicationController
+
+  layout "cart"
+
   # GET /carts
   # GET /carts.json
   def index
@@ -82,7 +85,16 @@ class CartsController < ApplicationController
   end
 
   def checkout
+    require 'digest/sha1'
+    require 'base64'
+
+
     @cart = Cart.find(session[:cart][:id])
+    @event = Event.find(@cart.event_id)
+    @restaurant = Restaurant.find(@event.restaurant_id)
+    @attendee = Attendee.find(@cart.attendee_id)
+    @total_price = @restaurant.price * @attendee.seats
+    @user = User.find(@attendee.user_id)
 
     respond_to do |format|
       format.html # show.html.erb

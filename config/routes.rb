@@ -1,6 +1,9 @@
 Letsdine::Application.routes.draw do
   
   
+  resources :payment_notifications
+
+
   #resources :carts
   match 'carts/checkout', :to => 'carts#checkout'
 

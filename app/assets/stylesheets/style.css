@@ -376,5 +376,33 @@ h4 {
   margin-top: 10px; }
 
 /*******************************************************************/
+/* Checkout Styles */
+/*******************************************************************/
+.checkoutContainer {
+  margin: 20px 0;
+  -webkit-box-shadow: 1px 0px 10px rgba(50, 50, 50, 0.2);
+  -moz-box-shadow: 1px 0px 10px rgba(50, 50, 50, 0.2);
+  box-shadow: 1px 0px 10px rgba(50, 50, 50, 0.2);
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 6px 6px 6px 6px;
+  border-radius: 6px 6px 6px 6px; }
+  .checkoutContainer .checkoutHeader {
+    background: #333333;
+    color: #fff;
+    padding: 20px; }
+  .checkoutContainer .checkout {
+    background: #fff;
+    padding: 20px; }
+    .checkoutContainer .checkout .checkoutEventDescriptionSummary {
+      margin: 5px 0 10px 0; }
+    .checkoutContainer .checkout .subText {
+      color: #919191; }
+    .checkoutContainer .checkout .seatsPrice {
+      margin-bottom: 20px; }
+      .checkoutContainer .checkout .seatsPrice input {
+        width: 50%;
+        float: left; }
+
+/*******************************************************************/
 /* Common Styles */
 /*******************************************************************/
