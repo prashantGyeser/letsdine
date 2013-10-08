@@ -6,6 +6,12 @@ class Admin::DashboardController < Admin::ApplicationController
 
 	    @total_attendees_to_date = 0
 
+	    #@total_signups = User.all.count
+	    #@user_ids = User.pluck(:id)
+	    #Attendee.where(:user_id => @user_ids).count
+
+	    @total_attendees = Attendee.all.count
+
 		respond_to do |format|
 	    	format.html # index.html.erb
 	    	format.json { render json: @dashboard }
