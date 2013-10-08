@@ -1,3 +1,9 @@
+<% content_for :javascript do%>
+    <%= javascript_include_tag "admin/Chart" %>
+    
+<% end %>
+
+
 <script type="text/javascript">
 $(function () {
         $('#container').highcharts({
@@ -57,48 +63,95 @@ $(function () {
 
         </script>
 
-<div class="container">
-    <div class="row-fluid">
-        <div class="span12">
-            <h1>Sign ups</h1>
-            <div id="container" style="min-width: 100%; height: 400px; margin: 0 auto"></div>
-        </div>
+
+<div class="row">
+    <div class="col-md-12">
+        <h3>Sign ups</h3>
+        <!--
+        <div id="container" style="min-width: 100%; height: 400px; margin: 0 auto"></div>
+        -->
+        <!-- Responsive canvas fix: https://github.com/nnnick/Chart.js/issues/56 -->
+        <canvas id="canvas" height="300" width="1000"></canvas>
     </div>
 </div>
 
-<div class="container">
-    <div class="row-fluid">
-        <div class="span12">
-            <h1>Stats</h1>
-        </div>
+<div class="row">
+    <div class="col-md-6">
+        <h3>Sign ups vs Attenddes</h3>
+        <canvas id="signupsVsAttendees" height="300" width="300"></canvas>
+    </div>
+    <div class="col-md-6">
+        <h3>FB vs Email signups</h3>
+        <canvas id="fbVsEmail" height="300" width="300"></canvas>
     </div>
 </div>
 
-<div class="container">
-    <div class="row-fluid">
-        <div class="span3 key_stat green">
-            <%= User.total_signups_this_month %> Sign ups this month
-        </div>
-        <div class="span3 key_stat red">
-            <%= Attendee.total_attendees_this_month %> attendees this month
-        </div>
-        <div class="span3 key_stat red">
-            <%= Event.total_events_this_month%> events this month
-        </div>
-        <div class="span3 key_stat green">
-            Revenue this month
-        </div>
+
+<div class="row">
+    <div class="col-md-12">
+        <h3>Stats for this month</h3>
     </div>
 </div>
 
-<div class="container">
-    <div class="row-fluid">
-        <div class="span12">
-            <h1>Events</h1>
+<div class="row">
+    <div class="col-md-3">
+        <h3>
+            <div class="stat">
+                <strong><%= User.total_signups_this_month %></strong> 
+                <div class="statTitle">
+                    Sign ups 
+                </div>
+            </div>
             
-        </div>
+        </h3>
+    </div>
+    <div class="col-md-3">
+        <h3>
+            <div class="stat">
+                <strong>
+                    <%= Attendee.total_attendees_this_month %>
+                </strong> 
+                <div class="statTitle">
+                    Attendees
+                </div>
+            </div>
+        </h3>  
+    </div>
+    <div class="col-md-3">
+        <h3>
+            <div class="stat">
+                <strong>
+                    <%= Event.total_events_this_month%>
+                </strong> 
+                <div class="statTitle">
+                    Events
+                </div>
+            </div>
+        </h3>
+    </div>
+    <div class="col-md-3">
+        <h3>
+            <div class="stat">
+                <strong>
+                    
+                </strong> 
+                <div class="statTitle">
+                    Revenue
+                </div>
+            </div>
+        </h3>
+        
     </div>
 </div>
+
+
+
+<div class="row">
+    <div class="col-md-12">
+        <h3>Events</h3>
+    </div>
+</div>
+
 
 <div class="container">
     <div class="row-fluid">
@@ -230,3 +283,91 @@ $(function () {
         });
     })
 </script>
+
+
+    <script>
+
+        var lineChartData = {
+            labels : ["January","February","March","April","May","June","July"],
+            datasets : [
+                {
+                    fillColor : "rgba(220,220,220,0.5)",
+                    strokeColor : "rgba(220,220,220,1)",
+                    pointColor : "rgba(220,220,220,1)",
+                    pointStrokeColor : "#fff",
+                    data : [65,59,90,81,56,55,40]
+                },
+                {
+                    fillColor : "rgba(151,187,205,0.5)",
+                    strokeColor : "rgba(151,187,205,1)",
+                    pointColor : "rgba(151,187,205,1)",
+                    pointStrokeColor : "#fff",
+                    data : [28,48,40,19,96,27,100]
+                }
+            ]
+            
+        }
+
+    var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Line(lineChartData);
+    
+    </script>
+
+    <script>
+
+        var doughnutData = [
+                {
+                    value: 30,
+                    color:"#F7464A"
+                },
+                {
+                    value : 50,
+                    color : "#46BFBD"
+                },
+                {
+                    value : 100,
+                    color : "#FDB45C"
+                },
+                {
+                    value : 40,
+                    color : "#949FB1"
+                },
+                {
+                    value : 120,
+                    color : "#4D5360"
+                }
+            
+            ];
+
+    var myDoughnut = new Chart(document.getElementById("signupsVsAttendees").getContext("2d")).Doughnut(doughnutData);
+    
+    </script>
+
+    <script>
+
+        var doughnutData = [
+                {
+                    value: 30,
+                    color:"#F7464A"
+                },
+                {
+                    value : 50,
+                    color : "#46BFBD"
+                },
+                {
+                    value : 100,
+                    color : "#FDB45C"
+                },
+                {
+                    value : 40,
+                    color : "#949FB1"
+                },
+                {
+                    value : 120,
+                    color : "#4D5360"
+                }
+            
+            ];
+
+    var myDoughnut = new Chart(document.getElementById("fbVsEmail").getContext("2d")).Doughnut(doughnutData);
+    
+    </script>

@@ -8,6 +8,7 @@
 	<%= stylesheet_link_tag    "bootstrap", :media => "all" %>	
 	<%= stylesheet_link_tag    "font-awesome", :media => "all" %>
 	<%= stylesheet_link_tag    "admin/admin", :media => "all" %>
+	<%= stylesheet_link_tag    "admin/simple-sidebar", :media => "all" %>
 	
 	<%= yield :stylesheet %>	
 
@@ -20,15 +21,50 @@
 	<%= yield :javascript %>	
 	
 	<!-- Typekit Fonts -->
-	
+	<!--
     <script type="text/javascript" src="//use.typekit.net/yjy6rjo.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-	
+	-->
 	
 	<%= csrf_meta_tags %>
 
 </head>
 <body>
+
+
+    <div id="wrapper">
+      
+      <!-- Sidebar -->
+      <div id="sidebar-wrapper">
+        <ul class="sidebar-nav {{ active }}" ng-click="$event.preventDefault()">
+          <li class="sidebar-brand"><a href="/">LetsDine Admin</a></li>
+          <li><a href="#" class="dashboard" ng-click="active='dashboard'">Dashboard</a></li>
+          <li><a href="#" class="events" ng-click="active='events'">Events</a></li>
+          <li><a href="#" class="restaurants" ng-click="active='restaurants'">Restaurants</a></li>
+          <li><a href="#" class="users" ng-click="active='users'">Users</a></li>
+          <li><a href="#" class="serverStuff" ng-click="active='serverStuff'">Server Stuff</a></li>
+        </ul>
+      </div>
+          
+      <!-- Page content -->
+      <div id="page-content-wrapper" ng-controller="EventListCtrl">
+		<div class="content-header">
+			<h1>
+				<a id="menu-toggle" href="#" class="btn btn-default"><i class="icon-reorder"></i></a>
+				Dashboard
+			</h1>
+		</div>
+
+      	<!-- Keep all page content within the page-content inset div! -->
+        	<div class="page-content inset">
+        		<%= yield %>	
+        	</div>
+      </div>
+      
+    </div>
+
+
+    <!--
 	<div class="header">
 		<div class="container">
 			<div class="row">
@@ -50,7 +86,17 @@
 			</div>
 		</div>
 	</div>
-	<%= yield %>	
+	-->
+
+
+    <!-- Put this into a custom JavaScript file to make things more organized -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("active");
+    });
+    </script>
+
 </body>
 
 </html>
