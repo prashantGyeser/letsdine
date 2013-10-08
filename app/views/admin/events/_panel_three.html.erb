@@ -24,7 +24,12 @@
             <%= f.hidden_field :restaurant_id %>
             <ul class="restaurantDetails">
               <% @restaurants.each do |restaurant| %>
+              <% if restaurant.city == "Kuala Lumpur" %>
+                <li class="Kuala_Lumpur">  
+              <% else %>
                 <li class="<%= restaurant.city %>">
+              <% end %>
+                
                   <% restaurantHiddenFieldId = "restaurant_id_" + restaurant.id.to_s %>
                   <%= hidden_field_tag restaurantHiddenFieldId, restaurant.id  %>
                   <h4><%= restaurant.name %></h4>

@@ -161,8 +161,15 @@
         $('#cityList').addClass('hidden_div');
 
         $('.restaurantDetails li').hide();
+        if (citySelected == "Kuala Lumpur") 
+        {
+          var listToShow = '.restaurantDetails' + ' li.' + "Kuala_Lumpur";  
+        } 
+        else
+        {
+          var listToShow = '.restaurantDetails' + ' li.' + citySelected;  
+        };
         
-        var listToShow = '.restaurantDetails' + ' li.' + citySelected;
         console.log(listToShow);
         $(listToShow).show();
       });
