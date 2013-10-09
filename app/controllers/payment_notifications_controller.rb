@@ -24,6 +24,7 @@ class PaymentNotificationsController < ApplicationController
     reference_id = params[:RefNo]
     cart_id = reference_id[5..-1].to_i
     @payment_notification.cart_id = cart_id
+    @cart = Cart.find(@payment_notification.cart_id)
 
     respond_to do |format|
       if @payment_notification.save
