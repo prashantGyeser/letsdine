@@ -131,3 +131,8 @@ gem 'bluecloth'
 
 # Gem to remove all the html tags
 gem 'sanitize'
+
+# Monitoring gems
+gem 'appsignal'
+gem "bugsnag"
+gem 'rollbar'
