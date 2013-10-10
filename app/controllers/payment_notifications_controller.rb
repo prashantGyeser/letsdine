@@ -15,6 +15,7 @@ class PaymentNotificationsController < ApplicationController
     end
   end
 
+  #public 
   # POST /payment_notifications
   # POST /payment_notifications.json
   def create
@@ -26,10 +27,13 @@ class PaymentNotificationsController < ApplicationController
     @payment_notification.cart_id = cart_id
     @cart = Cart.find(@payment_notification.cart_id)
 
+    session[:payment_notification] = @payment_notification
+
     respond_to do |format|
       if @payment_notification.save
-        format.html { redirect_to @payment_notification, notice: 'Payment notification was successfully created.' }
-        format.json { render json: @payment_notification, status: :created, location: @payment_notification }
+        format.html { redirect_to carts_status_path, notice: 'Check your status below.' }
+
+        #format.json { render json: @payment_notification, status: :created, location: @payment_notification }
       else
         format.html { render action: "new" }
         format.json { render json: @payment_notification.errors, status: :unprocessable_entity }

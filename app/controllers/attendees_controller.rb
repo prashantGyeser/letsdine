@@ -43,7 +43,8 @@ class AttendeesController < ApplicationController
 				respond_to do |format|
 					if @attendee.save 
 
-						if @event.event_name == "ipay88 test event"
+						#if @event.event_name == "ipay88 test event"
+						if @event.status == "closed"
 							@event = Event.find(params[:attendee][:event_id])
 							@restaurant = Restaurant.find(@event.restaurant_id)
 							@cart = Cart.new

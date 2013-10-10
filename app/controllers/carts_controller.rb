@@ -102,4 +102,16 @@ class CartsController < ApplicationController
     end
   end
 
+  def status
+    @payment_notification = session[:payment_notification]
+
+    @status = @payment_notification.status
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @status }
+    end
+
+  end
+
 end
