@@ -1,47 +1,15 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <%= link_to "Create Restaurant", :new_admin_restaurant, :class => "btn btn-large btn-primary createEventButton" %>
-    </div>
+<% content_for :header do %>
+    Restaurant List
+<% end %>
+
+
+<div class="row">
+  <div class="col-md-12">
+    <%= link_to "Create Restaurant", :new_admin_restaurant, :class => "button is-letsdine-primary" %>
+
+    <%= render partial: 'restaurants',  :locals => {:admin_restaurants => @admin_restaurants} %>    
+
   </div>
 </div>
 
-
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <h1>Listing restaurants</h1>
-
-      <table class="table table-striped">
-        <tr>
-          <th>Name</th>
-          <th>Address</th>
-          <th>Latitude</th>
-          <th>Longitude</th>
-          <th>City</th>
-          <th></th>
-          <th></th>
-          <th></th>
-        </tr>
-
-      <% @admin_restaurants.each do |restaurant| %>
-        <tr>
-          <td><%= restaurant.name %></td>
-          <td><%= restaurant.address %></td>
-          <td><%= restaurant.latitude %></td>
-          <td><%= restaurant.longitude %></td>
-          <td><%= restaurant.city %></td>
-          <td><%= link_to 'Show', admin_restaurant_path(restaurant) %></td>
-          <td><%= link_to 'Edit', edit_admin_restaurant_path(restaurant) %></td>
-        </tr>
-      <% end %>
-      </table>
-
-      <br />
-
-      <%= link_to 'New Restaurant', new_admin_restaurant_path %>
-
-    </div>
-  </div>
-</div>
 

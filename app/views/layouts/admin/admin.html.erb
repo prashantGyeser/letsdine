@@ -43,7 +43,7 @@
           <li><a href="/admin/events" class="events" ng-click="active='events'">Events</a></li>
           <li><a href="/admin/restaurants" class="restaurants" ng-click="active='restaurants'">Restaurants</a></li>
           <li><a href="/admin/users" class="users" ng-click="active='users'">Users</a></li>
-          <li><a href="/admin/history" class="serverStuff" ng-click="active='serverStuff'">Server Stuff</a></li>
+          <li><a href="/admin/history" class="serverStuff" ng-click="active='serverStuff'">History</a></li>
         </ul>
       </div>
           
@@ -52,7 +52,7 @@
 		<div class="content-header">
 			<h1>
 				<a id="menu-toggle" href="#" class="btn btn-default"><i class="icon-reorder"></i></a>
-				Dashboard
+				<%= yield :header %>
 			</h1>
 		</div>
 

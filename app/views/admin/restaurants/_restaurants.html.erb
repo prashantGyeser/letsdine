@@ -1,0 +1,15 @@
+<ul class="adminList">
+    <% admin_restaurants.each do |restaurant| %>
+        <li>
+            <div class="eventListTop">
+                <%= link_to restaurant.name, admin_restaurant_path(restaurant), :class => "event_name" %>
+                <%= link_to 'Edit', edit_admin_restaurant_path(restaurant), :class => "pull-right eventListActions" %>
+            </div>
+            <ul class="eventListSubDetails">
+                <li><span>City:</span> <%= restaurant.city %></li>
+                <li><span>Latitude:</span> <%= restaurant.latitude %></li>
+                <li><span>Longitude:</span> <%= restaurant.longitude %></li>
+            </ul>   
+        </li>
+    <% end %>
+</ul>

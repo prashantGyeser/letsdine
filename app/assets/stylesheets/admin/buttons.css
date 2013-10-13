@@ -77,6 +77,7 @@
 .button.is-letsdine-primary:focus {
   background-color: #85d5d4;
   border-color: #85d5d4;
+  text-decoration: none;
 }
 .button.is-letsdine-primary.is-active,
 .button.is-letsdine-primary:active {
@@ -96,11 +97,26 @@
 .button.is-secondary:focus {
   background-color: #b6a2e7;
   border-color: #b6a2e7;
+  text-decoration: none;
 }
 .button.is-secondary.is-active,
 .button.is-secondary:active {
   background-color: #7652d1;
   border-color: #7652d1;
+}
+.button.is-letsdine-secondary {
+  background-color: #4d5360;
+  border-color: #4d5360;
+}
+.button.is-letsdine-secondary:hover,
+.button.is-letsdine-secondary:focus {
+  background-color: #6b7486;
+  border-color: #6b7486;
+}
+.button.is-letsdine-secondary.is-active,
+.button.is-letsdine-secondary:active {
+  background-color: #3e434d;
+  border-color: #3e434d;
 }
 .button.is-secondary.is-disabled,
 .button.is-secondary[disabled] {
