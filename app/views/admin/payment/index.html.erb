@@ -1,0 +1,53 @@
+<% content_for :header do %>
+    Payments and Status
+<% end %>
+
+<div class="row">
+	<div class="col-md-12">
+		<ul class="adminList">
+			<% @payments.each do |payment| %>
+				<li>
+					<div class="eventListTop">
+		                    <h4>
+		                    	<% if payment.status.to_i == 0 %>
+		                    		<span class="failureText">
+		                    			Customer went to the ipay88 page and stopped
+		                    		</span>
+		                    	<% elsif payment.status.to_i == 1 %>
+		                    		<span class="failureText">
+		                    			Customer went to the bank page and stopped
+		                    		</span>
+		                    	<% else %>
+		                    		<span class="successText">
+		                    			Woo hoo! Success!
+		                    		</span>
+		                    	<% end %>
+		                    </h4>
+		                </div>
+		                <div class="ipay88Params">
+		                		<%= payment.params %>
+		                </div>
+				</li>
+			<% end %>
+		</ul>
+
+		<h1>Carts</h1>
+		
+		<ul class="adminList">
+			<% @carts.each do |cart| %>
+				<li>
+					<div class="eventListTop">
+						<% event = Event.find(cart.event_id) %>
+						<%# attendee = Attendee.find(cart.attendee_id) %>
+						<%# user = User.find(attendee.user_id) %>
+						<h4><%= event.event_name %></h4>
+					</div>
+					<ul class="eventListSubDetails">
+		                		<li><span>Cart Id:</span> <%= cart.id %></li>
+		                </ul>
+				</li>
+			<% end %>
+		</ul>
+
+	</div>
+</div>
