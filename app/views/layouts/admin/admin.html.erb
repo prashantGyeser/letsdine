@@ -9,7 +9,8 @@
 	<%= stylesheet_link_tag    "font-awesome", :media => "all" %>
 	<%= stylesheet_link_tag    "admin/admin", :media => "all" %>
 	<%= stylesheet_link_tag    "admin/simple-sidebar", :media => "all" %>
-	
+	<%= stylesheet_link_tag    "admin/buttons", :media => "all" %>
+
 	<%= yield :stylesheet %>	
 
 	<%= javascript_include_tag "admin/application" %>
@@ -38,11 +39,11 @@
       <div id="sidebar-wrapper">
         <ul class="sidebar-nav {{ active }}" ng-click="$event.preventDefault()">
           <li class="sidebar-brand"><a href="/">LetsDine Admin</a></li>
-          <li><a href="#" class="dashboard" ng-click="active='dashboard'">Dashboard</a></li>
-          <li><a href="#" class="events" ng-click="active='events'">Events</a></li>
-          <li><a href="#" class="restaurants" ng-click="active='restaurants'">Restaurants</a></li>
-          <li><a href="#" class="users" ng-click="active='users'">Users</a></li>
-          <li><a href="#" class="serverStuff" ng-click="active='serverStuff'">Server Stuff</a></li>
+          <li><a href="/admin" class="dashboard" ng-click="active='dashboard'">Dashboard</a></li>
+          <li><a href="/admin/events" class="events" ng-click="active='events'">Events</a></li>
+          <li><a href="/admin/restaurants" class="restaurants" ng-click="active='restaurants'">Restaurants</a></li>
+          <li><a href="/admin/users" class="users" ng-click="active='users'">Users</a></li>
+          <li><a href="/admin/history" class="serverStuff" ng-click="active='serverStuff'">Server Stuff</a></li>
         </ul>
       </div>
           

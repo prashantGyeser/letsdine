@@ -8,7 +8,6 @@
 #  status            :string(255)
 #  ref_id            :string(255)
 #  error_description :text
-#  create            :string(255)
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null
 #

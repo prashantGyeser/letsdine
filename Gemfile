@@ -131,3 +131,7 @@ gem 'bluecloth'
 
 # Gem to remove all the html tags
 gem 'sanitize'
+
+# Getting records by time i.e. year, month, week, etc
+#gem 'by_star', :git => "git://github.com/radar/by_star"
+gem 'by_star'

@@ -1,10 +1,39 @@
 /******************************************************************************/
+/* Color Scheme */
+/******************************************************************************/
+/******************************************************************************/
+/* Common styling */
+/******************************************************************************/
+a {
+  color: #46bfbd; }
+  a:hover {
+    color: white;
+    background: #46bfbd; }
+
+/******************************************************************************/
 /* Chart styling */
 /******************************************************************************/
 .canvas {
   width: 100% !important;
   max-width: 1000px;
   height: auto !important; }
+
+.legend {
+  margin-top: 20px; }
+  .legend .ledgentItemContainer {
+    float: left;
+    margin-right: 20px; }
+    .legend .ledgentItemContainer .square {
+      height: 20px;
+      width: 20px;
+      display: inline-block;
+      vertical-align: center;
+      float: left;
+      margin-right: 5px; }
+    .legend .ledgentItemContainer .dark_blue {
+      background: #97bbcd; }
+    .legend .ledgentItemContainer .light_blue {
+      background: gainsboro; }
 
 /******************************************************************************/
 /* Stats styling */
@@ -20,6 +49,47 @@
     font-size: 15px;
     margin-top: 10px; }
 
+/******************************************************************************/
+/* List styling */
+/******************************************************************************/
+.adminList {
+  margin: 0 0 20px 0;
+  padding: 0;
+  list-style: none; }
+  .adminList li {
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc; }
+    .adminList li ul {
+      margin: 0;
+      padding: 10px 0 0 0;
+      list-style: none; }
+      .adminList li ul li {
+        display: inline;
+        border-bottom: none;
+        margin-right: 10px; }
+        .adminList li ul li span {
+          color: #949fb1; }
+
+/******************************************************************************/
+/* Event list styling */
+/******************************************************************************/
+.eventListCity {
+  color: #949fb1;
+  padding: 20px 0;
+  border-bottom: 1px solid #ccc; }
+
+.event_name {
+  font-weight: bold; }
+
+.eventListActions {
+  color: #fdb45c; }
+  .eventListActions:hover {
+    background: #fdb45c;
+    color: white; }
+
+/******************************************************************************/
+/* Chart styling */
+/******************************************************************************/
 /******************************************************************************/
 /* Chart styling */
 /******************************************************************************/

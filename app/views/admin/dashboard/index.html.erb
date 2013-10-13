@@ -3,85 +3,36 @@
     
 <% end %>
 
-
-<script type="text/javascript">
-$(function () {
-        $('#container').highcharts({
-            chart: {
-                type: 'area',
-            },
-            title: {
-                text: ''
-            },
-            xAxis: {
-                type: 'datetime',
-            },
-            yAxis: {
-                title: {
-                    text: ''
-                }
-            },
-            tooltip: {
-                borderColor: "#fff",
-                backgroundColor: "rgba(255,255,255,1)",
-                pointFormat: '{series.name}: <b>{point.y:,.0f}</b> joined'
-            },
-            plotOptions: {
-                area: {
-                    marker: {
-                        enabled: false,
-                        symbol: 'circle',
-                        radius: 2,
-                        states: {
-                            hover: {
-                                enabled: true
-                            }
-                        }
-                    }
-                }
-            },
-            series: [{
-                name: 'Signups',
-                color: '#dd4124',
-                fillColor: 'rgba(221,65,36,.2)',
-                pointInterval: <%= 1.day * 1000 %>,
-                pointStart: <%= 4.weeks.ago.to_i * 1000 %>,
-                data: <%= (4.weeks.ago.to_date..Date.today).map {|date| User.total_signups_on(date).to_i}.inspect %>
-            },
-            {
-                name: 'Attendees',
-                color: '#83ca21',
-                fillColor: 'rgba(131,202,33,.2)',
-                pointInterval: <%= 1.day * 1000 %>,
-                pointStart: <%= 4.weeks.ago.to_i * 1000 %>,
-                data: <%= (4.weeks.ago.to_date..Date.today).map {|date| Attendee.total_joins_on(date).to_i}.inspect %>
-            },
-            ]
-        });
-    });
-    
-
-        </script>
-
-
 <div class="row">
     <div class="col-md-12">
-        <h3>Sign ups</h3>
-        <!--
-        <div id="container" style="min-width: 100%; height: 400px; margin: 0 auto"></div>
-        -->
+        <h3>Sign ups vs Attendees</h3>
         <!-- Responsive canvas fix: https://github.com/nnnick/Chart.js/issues/56 -->
-        <canvas id="canvas" height="300" width="1000"></canvas>
+        <canvas id="signupsVsAttendeesLine" height="300" width="1000"></canvas>
+        <div class="legend">
+            <div class="ledgentItemContainer">
+                <div class="square light_blue"></div>
+                Users
+            </div>
+            
+            <div class="ledgentItemContainer">
+                <div class="square dark_blue"></div>
+                Attendees
+            </div>
+            
+            
+        </div>
     </div>
 </div>
 
 <div class="row">
     <div class="col-md-6">
-        <h3>Sign ups vs Attenddes</h3>
+        <h3 style="color:#ccc;">Sign ups vs Attenddes</h3>
+        <p>Not done yet. This is just a place holder</p>
         <canvas id="signupsVsAttendees" height="300" width="300"></canvas>
     </div>
     <div class="col-md-6">
-        <h3>FB vs Email signups</h3>
+        <h3 style="color:#ccc;">FB vs Email signups</h3>
+        <p>Not done yet. This is just a place holder</p>
         <canvas id="fbVsEmail" height="300" width="300"></canvas>
     </div>
 </div>
@@ -145,107 +96,46 @@ $(function () {
 </div>
 
 
-
 <div class="row">
     <div class="col-md-12">
         <h3>Events</h3>
+        <p>The send notifications button below does not work right now. Clicking on it will not do anything</p>
+        <button class="button is-letsdine-primary">Send Notifications for Upcoming Events</button>
+        <%= render partial: 'admin/events/events',  :locals => {:event_list => @event_list} %>
     </div>
 </div>
 
-
-<div class="container">
-    <div class="row-fluid">
-        <div class="span12">
-            <% @event_list.each do |city,events| %>
-                <h3><%= city %></h3>
-                <ul class="event_list">
-                    <% events.each do |event| %>
-                        <li>
-                            <div class="list-item-container">
-
-                                <% if event.reminder == "sent" %>
-                                    <div class="notification_status green">
-                                    <i class="icon-ok"></i>    
-                                <% else %>
-                                    <div class="notification_status grey">
-                                    <i class="icon-envelope-alt"></i>
+<% @event_list.each do |city,events| %>
+    <% events.each do |event| %>
+        <!-- Modal -->
+        <div id="attendeeModal<%= event.id%>" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="<%= event.event_name%> Attendees" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h3 id="myModalLabel"><%= event.event_name %> Attendees</h3>
+                          </div>
+                          <div class="modal-body">
+                            <% attendees = Attendee.where("event_id = ?", event.id) %>
+                            <ul>
+                                <% attendees.each do |attedee| %>
+                                    <% user = User.find(attedee.user_id) %>
+                                    <li>
+                                        <%= user.name %> - Phone number: <%= attedee.phone_number %> - Seats: <%= attedee.seats %> 
+                                    </li>
                                 <% end %>
-                                    </div> 
-
-                                <div class="eventDetails">
-                                    <%= link_to event.event_name, event_path(event) %>
-                                    <% if event.event_type = "public" %>
-                                        <span class="green">Public</span> 
-                                    <% else %>
-                                        <span class="red">Private</span> 
-                                    <% end %>
-                                    
-                                </div>
-
-                                <% if event.reminder == "sent"%>
-                                <% else %>
-                                    <a href="<%= event.id %>" class="btn btn-large float-right send_notification">
-                                        Send Notifications
-                                    </a>
-                                <% end %>
-
-                            </div>  
-
-                        <div class="event-details-list">
-                            <% total_people_attending = 0%>
-                            <% total_people_attending =  Attendee.where(:event_id => event.id).pluck(:seats).sum %>
-                            <% if event.user_id.nil? %>
-                                <% event_creator = "Akhilesh" %>
-                            <% else %>
-                                <% event_creator = User.find(event.user_id).name %>    
-                            <% end %>
-                            
-                            <span><a  data-toggle="modal" href="#attendeeModal<%= event.id%>" class="btn" data-toggle="modal">View Attendees</a></span>
-                            <span>Event date: <%= event.event_date.strftime("%d/%m/%Y") %> </span>
-                            <span><%= total_people_attending %> People Attending</span>
-                            <span>Rs. <%= total_people_attending * Restaurant.find(event.restaurant_id).price%> Expected Earning</span>
-                            <span>Max seats: <%= event.max_seats %> </span>
-                            <span>Created by: <%= event_creator %> </span>
-
-                            <!-- Modal -->
-                            <div id="attendeeModal<%= event.id%>" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="<%= event.event_name%> Attendees" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                              <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                                <h3 id="myModalLabel"><%= event.event_name %> Attendees</h3>
-                                              </div>
-                                              <div class="modal-body">
-                                                <% attendees = Attendee.where("event_id = ?", event.id) %>
-                                                <ul>
-                                                    <% attendees.each do |attedee| %>
-                                                        <% user = User.find(attedee.user_id) %>
-                                                        <li>
-                                                            <%= user.name %> - Phone number: <%= attedee.phone_number %> - Seats: <%= attedee.seats %> 
-                                                        </li>
-                                                    <% end %>
-                                                    
-                                                </ul>
-                                              </div>
-                                              <div class="modal-footer">
-                                                <button class="btn btn-large" data-dismiss="modal" aria-hidden="true">Close</button>
-                                              </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                            <!-- End Modal -->
-                            <!--<a href="#" class="btn btn-primary btn-small" >View Attendees</a>-->
-                            
+                                
+                            </ul>
+                          </div>
+                          <div class="modal-footer">
+                            <button class="btn btn-large" data-dismiss="modal" aria-hidden="true">Close</button>
+                          </div>
                         </div>
-                    </li>                    
-                <% end %>
-
-            </ul>
-            <% end %>
-        </div>
-    </div>
-</div>
-
+                    </div>
+                </div>
+        <!-- End Modal -->
+    <% end %>
+<% end %>
 
 
 <script>
@@ -285,33 +175,33 @@ $(function () {
 </script>
 
 
-    <script>
-pointInterval: <%= 1.day * 1000 %>,
-pointStart: <%= 4.weeks.ago.to_i * 1000 %>,
-data: <%= (4.weeks.ago.to_date..Date.today).map {|date| User.total_signups_on(date).to_i}.inspect %>
-                
+    <script>                
         var lineChartData = {
-            labels : ["January","February","March","April","May","June","July"],
+            labels : ["Three weeks ago","Two weeks ago","Last week","This week"],
             datasets : [
                 {
                     fillColor : "rgba(220,220,220,0.5)",
                     strokeColor : "rgba(220,220,220,1)",
                     pointColor : "rgba(220,220,220,1)",
                     pointStrokeColor : "#fff",
-                    data : [65,59,90,81,56,55,40]
+                    data : <%= @users %>
                 },
                 {
                     fillColor : "rgba(151,187,205,0.5)",
                     strokeColor : "rgba(151,187,205,1)",
                     pointColor : "rgba(151,187,205,1)",
                     pointStrokeColor : "#fff",
-                    data : [28,48,40,19,96,27,100]
+                    data : <%= @attendees %>
                 }
             ]
             
         }
 
-    var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Line(lineChartData);
+        
+
+    var myLine = new Chart(document.getElementById("signupsVsAttendeesLine").getContext("2d")).Line(lineChartData, {
+
+    });
     
     </script>
 
@@ -319,11 +209,11 @@ data: <%= (4.weeks.ago.to_date..Date.today).map {|date| User.total_signups_on(da
 
         var doughnutData = [
                 {
-                    value: <%= @total_signups %>,
+                    value: 50,
                     color:"#F7464A"
                 },
                 {
-                    value : <%= @total_attendees %>,
+                    value : 20,
                     color : "#46BFBD"
                 }
             ];

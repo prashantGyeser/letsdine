@@ -1,0 +1,20 @@
+<% event_list.each do |city,events| %>
+    <div class="eventListCity"><%= city %></div>
+    <ul class="adminList">
+        <% events.each do |event| %>
+            <li>
+                <div class="eventListTop">
+                    <%= link_to event.event_name, event_path(event), :class => "event_name" %>
+                    <a data-toggle="modal" href="#attendeeModal<%= event.id%>" class="pull-right eventListActions">View Attendees</a>
+                </div>
+                <ul class="eventListSubDetails">
+                    <li><span>Event date:</span> <%= event.event_date.strftime("%d/%m/%Y") %></li>
+                    <li><span>People attending:</span> <%= event.total_attendees %></li>
+                    <li><span>Expected earning:</span> <%= event.total_attendees * Restaurant.find(event.restaurant_id).price %></li>
+                    <li><span>Max seats:</span> <%= event.max_seats %></li>
+                    <li><span>Created by:</span> <%= User.find(event.user_id).name %></li>
+                </ul>   
+            </li>
+        <% end %>
+    </ul>
+<% end %>
