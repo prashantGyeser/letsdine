@@ -2,6 +2,7 @@ class PaymentNotificationsController < ApplicationController
   
   # The create method will be accessed by the IPay88 callback. Removing the protection so that it can write to the db from this create method and only from the create method.
   protect_from_forgery :except => :create
+  skip_before_filter :verify_authenticity_token, :except => [:create]
 
   # GET /payment_notifications/1
   # GET /payment_notifications/1.json
@@ -14,6 +15,7 @@ class PaymentNotificationsController < ApplicationController
     end
   end
 
+  #public 
   # POST /payment_notifications
   # POST /payment_notifications.json
   def create
@@ -23,11 +25,15 @@ class PaymentNotificationsController < ApplicationController
     reference_id = params[:RefNo]
     cart_id = reference_id[5..-1].to_i
     @payment_notification.cart_id = cart_id
+    @cart = Cart.find(@payment_notification.cart_id)
+
+    session[:payment_notification] = @payment_notification
 
     respond_to do |format|
       if @payment_notification.save
-        format.html { redirect_to @payment_notification, notice: 'Payment notification was successfully created.' }
-        format.json { render json: @payment_notification, status: :created, location: @payment_notification }
+        format.html { redirect_to carts_status_path, notice: 'Check your status below.' }
+
+        #format.json { render json: @payment_notification, status: :created, location: @payment_notification }
       else
         format.html { render action: "new" }
         format.json { render json: @payment_notification.errors, status: :unprocessable_entity }

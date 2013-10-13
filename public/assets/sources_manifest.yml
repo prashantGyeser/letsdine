@@ -12,7 +12,10 @@ glyphicons-halflings-regular.woff: c866ecc8bb1c848e2a8557b67499891d
 Jennifer-Lawrence-Thumbnail.jpg: 80da1dce821b1f4c5ea08b6f83a215af
 Jennifer-Lawrence.jpg: 96ec5049feae13cfd0bea477a396b512
 alert-overlay.png: 1761c70e8456d8ddae4e0caca3a58c21
+allianceLogo.png: e496fbc5fff44e0fd8a3cfbb1155cad9
 background.png: fda7cbe4b71ca00010aa6277a08ae735
+checkoutBG.png: f98178eed0522658d3d9ef1a420965db
+cimbLogo.png: fac0d75f40f62fba45856605513c96f0
 community-dining.png: d16cdfbbf0a143259195a670905f8ff1
 contentBG.png: e5b71b7528a353ed6568848d3dfb261b
 eventDetailPageHeaderImage.png: c91f87ba3ec138a8582f7c7ea13c6cb0
@@ -26,6 +29,7 @@ glyphicons-halflings-white.png: 6cccd17a7aed91dbc0157d343c68c0d9
 glyphicons-halflings.png: 2851b489e8c39f8fad44fc10efb99c3e
 groupsBG.png: 7389488e3dff557f47c0bab111c01a94
 headerBG.png: d4c95e03b452f2190b06dfa4a6f8da78
+hongLeongBank.png: 354d6d5640846e0b3d6a6687b70bae23
 hugh-jackman-thumbnail.jpg: fd6cc7440950106b9a6c1013cc8b0c83
 hugh-jackman.jpg: 8594a9f4522d5497c266f0eac4390a36
 img/1.jpg: b1e273e6a24a445d7293cf79aac3451e
@@ -39,6 +43,9 @@ loader.gif: f334e3d7ffee71748d69150ba81ddf81
 locationIcon.png: 4fbf527f6b20b0ee83a793f4607a8309
 logo.png: e3b941e5fb1677289e0d7cd6aa869c21
 logo_shrunk.png: 36cd05e7145eeeb765ed9c861e483479
+maybank2U.png: c62e2a43c1a13c57b760d79e474e123d
+mepsCash.png: 96f38df831cd4a6083c85bc1cd3aae3e
+mepsFPX.png: c7ace61001aca6f1a454d02cbe55bcfd
 noProfilePic.png: d55d6f5f58c3c10b3ee56ce81c367105
 poloroid.png: 2a2c3d331a8546fcac4aa0d72edc90ce
 shareEvent.png: aece2864ddad7768e2dbbecbdaf5addd
@@ -73,7 +80,7 @@ select2.js: c2d33915e0b227927e7da558b4107f76
 to-markdown.js: cf539dd715150a9a7182237d2e062b63
 admin/admin.css: e7b99cbe770b9e675a47929b5617308c
 admin/application.css: 7bb20918271b03d8817b85f45d83a2b2
-application.css: f5acd456c61bebfd54e07788c23d769c
+application.css: 96fceac74f804bf89de4a30be81cb50c
 bootstrap-formhelpers.css: c3c0e37dc84432fe18d43e454b5f02ff
 bootstrap-markdown.min.css: 497d65ddd42c669004a3c484775256c4
 bootstrap-timepicker.css: 650d6c7cd29d81a42822bd1213d7dbbd
@@ -86,6 +93,6 @@ font-awesome.css: ea9682b6b274fb93ef55f43cf2c28d2f
 nanoscroller.css: 2f98d8f979db96969ddc1fd5497b0eef
 prettify.css: eb91c3cf87ace942c55813a319755201
 select2.css: 3a3678d596c085612bc14115d8a5df7e
-style.css: ebcae319a31a654e614bb54d26f32621
+style.css: 7abd164c379dfd667bad57beb6997b56
 zoomflow.css: 255cf4ba4171354bb291452c29c1d415
 jquery.min.map: 6c267bfd2b3f36e6edccb2e584934c1c

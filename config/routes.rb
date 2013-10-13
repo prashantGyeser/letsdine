@@ -8,6 +8,8 @@ Letsdine::Application.routes.draw do
   match 'carts/checkout', :to => 'carts#checkout'
 
 
+  get "carts/status" => "carts#status"
+
   get "history/index"
 
   get "invites/index"

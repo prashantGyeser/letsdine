@@ -1,53 +1,96 @@
 <div class="container">
 	<div class="row">
-		<div class="col-md-6 col-md-offset-3	">
+		<div class="col-md-4 col-md-offset-4">
 			<div class="checkoutContainer">
-				<div class="checkoutHeader">
-				<h1>CHECKOUT</h1>
-			</div>
-			<div class="checkout">
 				
-				<div class="checkoutPurchaseDetails">
-					<strong><%= @event.event_name %></strong>
-					<div class="checkoutEventDescriptionSummary subText">
-						<% html = sanitize(BlueCloth.new(@event.event_description).to_html)  %>
-						<% description_to_show = truncate(Sanitize.clean(html), :length => 100) %>
-						<%= description_to_show %>
+				<div class="checkoutHeader">
+					<h3>Checkout </h3>
+				</div>
+
+				<div class="checkoutContents">
+
+					<div class="eventName">
+						<strong>Event name: <%= @event.event_name %></strong>
 					</div>
-					<div class="seatsPrice">
-						<div class="row">
-							<div class="col-md-4">
-								<strong><%= @attendee.seats %></strong>
-								<span class="subText">
-									<% if @attendee.seats > 1 %>
-										Seats
-									<% else %>
-										Seat
-									<% end %>
-								</span>
-							</div>
-							<div class="col-md-8">
-								<div class="pull-right">
-									<span class="subText">
-										Total:
-									</span>
-									<strong>RM <%= @total_price %></strong>	
-									
 
+					<div class="row">
+						<div class="col-md-6 no-right-padding">
+							<div class="price">
+								<div class="descText">
+									Upto 10 seats 
 								</div>
-
+								<strong class="pricePerSeat">RM <%= @restaurant.price %></strong>
+								<div class="subDesc">
+									per seat
+								</div>
 							</div>
 						</div>
-						
+						<div class="col-md-6 no-left-padding">
+							<div class="specialPrice">
+								<div class="descText">
+									10 seats and more
+								</div>
+								<strong class="pricePerSeat">RM <%= @restaurant.price %></strong>
+								<div class="subDesc">
+									per seat
+								</div>
+							</div>
+						</div>
 					</div>
+					
+					
+				</div>
 
+				<div class="checkoutSeats">
+					<h3>
+						<strong><%= @attendee.seats %></strong> 
+						<% if @attendee.seats > 1 %>
+							Seats
+						<% else %>
+							Seat
+						<% end %>
+						
+					</h3>
+					<!--
+					<input type="number" class="form-control" placeholder="Seats">
+				-->
+				</div>
+
+				<div class="cartTotal">
+					<strong>Total</strong>
+					<div class="pull-right cartTotalPrice">
+						RM <%= @total_price %>
+					</div>
+				</div>
+
+				
+
+				<div class="pay">
 					<!-- IPay88 form start-->
 					<% stringToEncrypt = "mS7uLHMgnkM06101MYDEV#{@cart.id}100MYR"   %>
 					<% signatureToSendToIPay88 = @cart.signature(stringToEncrypt) %>
 					<FORM method="post" name="ePayment"
 					action="https://www.mobile88.com/epayment/entry.asp">
 						<INPUT type="hidden" name="MerchantCode" value="M06101">
-						<INPUT type="hidden" name="PaymentId" value="2">
+						<INPUT type="hidden" name="PaymentId" value="" id="paymentOption">
+						<div id="selectPaymentMethod">
+							<h4>Select a payment method</h4>
+							<div class="paymentOptions">
+								<select id="paymentOptionSelect">
+									<option value="">- Please select a payment option -</option>
+									<option value="6">Maybank2U</option>
+									<option value="8">Alliance Online</option>
+									<option value="14">RHB</option>
+									<option value="15">Hong Leong Online</option>
+									<option value="16">FPX</option>
+									<option value="17">Mobile Money</option>
+									<option value="20">CIMB Click</option>
+									<option value="22">Web Cash</option>
+									<option value="23">MEPS Cash</option>
+									<option value="33">Paypal</option>
+								</select>
+							</div>
+						</div>
 						<INPUT type="hidden" name="RefNo" value="MYDEV<%= @cart.id%>">
 						<INPUT type="hidden" name="Amount" value="1.00">
 						<INPUT type="hidden" name="Currency" value="MYR">
@@ -62,22 +105,25 @@
 						value="<%= payment_notifications_url %>">
 						<INPUT type="hidden" name="BackendURL"
 						value="<%= payment_notifications_url %>">
-						<INPUT type="submit" value="Proceed with Payment" name="Submit">
+					
+						<button>Pay Securely</button>
 					</FORM>
 					<!-- IPay88 form end -->
-
-
+					
 				</div>
 
 			</div>
 			
-
 			
-
-			
-			</div>
-
-
 		</div>
 	</div>
 </div>
+
+<script>
+	$(document).ready(function(){
+		$( "#paymentOptionSelect" ).change(function() {
+		  //alert($(this).val());
+		  $('#paymentOption').val($(this).val());
+		});
+	});
+</script>

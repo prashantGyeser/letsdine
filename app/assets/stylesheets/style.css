@@ -378,8 +378,41 @@ h4 {
 /*******************************************************************/
 /* Checkout Styles */
 /*******************************************************************/
+	/*
+	.checkoutHeader
+	{
+		background: $topBar_color;
+		color: #fff;
+		padding: 20px;
+	}
+	.checkout
+	{
+		background: #fff;
+		padding: 20px;
+
+		.checkoutEventDescriptionSummary
+		{
+			margin: 5px 0 10px 0;
+		}
+		.subText
+		{
+			color: #919191;
+		}
+		.seatsPrice	
+		{
+			margin-bottom: 20px;
+			input
+			{
+				width: 50%;
+				float: left;
+			}
+		}
+	}
+	*/
+/*******************************************************************/
+/* Checkout Styles V2 */
+/*******************************************************************/
 .checkoutContainer {
-  margin: 20px 0;
   -webkit-box-shadow: 1px 0px 10px rgba(50, 50, 50, 0.2);
   -moz-box-shadow: 1px 0px 10px rgba(50, 50, 50, 0.2);
   box-shadow: 1px 0px 10px rgba(50, 50, 50, 0.2);
@@ -387,22 +420,93 @@ h4 {
   -webkit-border-radius: 6px 6px 6px 6px;
   border-radius: 6px 6px 6px 6px; }
   .checkoutContainer .checkoutHeader {
-    background: #333333;
-    color: #fff;
-    padding: 20px; }
-  .checkoutContainer .checkout {
-    background: #fff;
-    padding: 20px; }
-    .checkoutContainer .checkout .checkoutEventDescriptionSummary {
-      margin: 5px 0 10px 0; }
-    .checkoutContainer .checkout .subText {
-      color: #919191; }
-    .checkoutContainer .checkout .seatsPrice {
-      margin-bottom: 20px; }
-      .checkoutContainer .checkout .seatsPrice input {
-        width: 50%;
-        float: left; }
+    background: #0a2a35;
+    padding: 10px;
+    margin-top: 20px;
+    color: white;
+    text-transform: uppercase; }
+  .checkoutContainer .checkoutContents {
+    background: white;
+    padding: 10px; }
+    .checkoutContainer .checkoutContents .eventName {
+      padding-bottom: 20px; }
+    .checkoutContainer .checkoutContents .no-right-padding {
+      padding-right: 0; }
+    .checkoutContainer .checkoutContents .no-left-padding {
+      padding-left: 0; }
+    .checkoutContainer .checkoutContents .price {
+      background: #def2f9;
+      padding: 10px 0;
+      text-align: center;
+      color: #1b6e8a; }
+    .checkoutContainer .checkoutContents .specialPrice {
+      background: #1b6e8a;
+      color: white;
+      padding: 10px 0;
+      text-align: center; }
+    .checkoutContainer .checkoutContents .descText {
+      text-transform: uppercase;
+      font-size: 13px; }
+    .checkoutContainer .checkoutContents .subDesc {
+      text-transform: uppercase;
+      font-size: 13px; }
+    .checkoutContainer .checkoutContents .pricePerSeat {
+      font-size: 30px; }
+  .checkoutContainer .checkoutSeats {
+    padding: 10px 10px 10px 10px;
+    background: white;
+    margin-top: -10px; }
+  .checkoutContainer .pay {
+    background: white;
+    padding: 10px; }
+    .checkoutContainer .pay button {
+      width: 100%;
+      display: block;
+      line-height: 1em;
+      text-transform: uppercase;
+      text-align: center;
+      border: 0;
+      cursor: pointer;
+      letter-spacing: 1px;
+      font-weight: bold;
+      text-decoration: none;
+      margin: 0;
+      padding: 18px 24px 16px 25px;
+      color: #fff;
+      background: #82b255;
+      -webkit-box-shadow: 0 2px 0 rgba(81, 122, 22, 0.75), inset 0 -1px 0 rgba(255, 255, 255, 0.2);
+      -moz-box-shadow: 0 2px 0 rgba(81, 122, 22, 0.75), inset 0 -1px 0 rgba(255, 255, 255, 0.2);
+      box-shadow: 0 2px 0 rgba(81, 122, 22, 0.75), inset 0 -1px 0 rgba(255, 255, 255, 0.2);
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px; }
+      .checkoutContainer .pay button:hover {
+        color: #fff;
+        background: #719f46; }
+      .checkoutContainer .pay button:active {
+        background: #5e8837;
+        -webkit-box-shadow: inset 0 2px 0 rgba(64, 108, 0, 0.75);
+        -moz-box-shadow: inset 0 2px 0 rgba(64, 108, 0, 0.75);
+        box-shadow: inset 0 2px 0 rgba(64, 108, 0, 0.75); }
+  .checkoutContainer .cartTotal {
+    background: #ede9d8;
+    padding: 20px 10px; }
+    .checkoutContainer .cartTotal strong {
+      line-height: 1.8em;
+      text-transform: uppercase; }
+    .checkoutContainer .cartTotal .cartTotalPrice {
+      font-size: 39px;
+      margin-top: -15px; }
+  .checkoutContainer #selectPaymentMethod {
+    background: white; }
+  .checkoutContainer #paymentOptionSelect {
+    margin-bottom: 20px; }
 
+/*******************************************************************/
+/* Common Styles */
+/*******************************************************************/
 /*******************************************************************/
 /* Common Styles */
 /*******************************************************************/
