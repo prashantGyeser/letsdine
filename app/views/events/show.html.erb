@@ -241,7 +241,7 @@
             <meta property="og:image:secure_url" content="<%= @event.event_image_url(:extra_large_scaled) %>" />              
           <% end %>
 
-          <a href="https://www.facebook.com/sharer/sharer.php?u=letsdine.co%2Fevents%2Fevents%2Fsunday-spa-brunch-ladies-afternoon-out" target="_blank" class="btn btn-primary">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=<%=u event_url(@event) %>" target="_blank" class="btn btn-primary">
           Share on Facebook
   
   <%#u event_url(@event) %>

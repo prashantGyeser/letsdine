@@ -109,6 +109,8 @@ topBarBG.png: topBarBG-78e160f5aac3985110e62277150ecf74.png
 topBarBG/index.png: topBarBG-78e160f5aac3985110e62277150ecf74.png
 waterfall.jpg: waterfall-509fd8265fd4c6e23f3d2c5cc9745bd3.jpg
 waterfall/index.jpg: waterfall-509fd8265fd4c6e23f3d2c5cc9745bd3.jpg
+admin/Chart.js: admin/Chart-645741df2cf7f4e33bcfe2b36fdf4f78.js
+admin/Chart/index.js: admin/Chart-645741df2cf7f4e33bcfe2b36fdf4f78.js
 admin/application.js: admin/application-1b13569e9620782f423d4cd3ce931750.js
 admin/application/index.js: admin/application-1b13569e9620782f423d4cd3ce931750.js
 admin/highcharts.js: admin/highcharts-8b90df74ca79c5e04628c3f5e8cfeaf2.js
@@ -156,10 +158,12 @@ select2.js: select2-76f1a0965197b9543da9c2e702d90feb.js
 select2/index.js: select2-76f1a0965197b9543da9c2e702d90feb.js
 to-markdown.js: to-markdown-d49ad0b5cc780d81f52c77bfe00fa02b.js
 to-markdown/index.js: to-markdown-d49ad0b5cc780d81f52c77bfe00fa02b.js
-admin/admin.css: admin/admin-08fde8e76374e30f8d70286a3b3c3fbd.css
-admin/admin/index.css: admin/admin-08fde8e76374e30f8d70286a3b3c3fbd.css
-admin/application.css: admin/application-ad8965d40decf61d16b9af6f2faea9b6.css
-admin/application/index.css: admin/application-ad8965d40decf61d16b9af6f2faea9b6.css
+admin/admin.css: admin/admin-de7d84e0eb2f6b7ab30dea0aae90b1f3.css
+admin/admin/index.css: admin/admin-de7d84e0eb2f6b7ab30dea0aae90b1f3.css
+admin/application.css: admin/application-1fd6e1b9cacbcefcfbf447d284f7f251.css
+admin/application/index.css: admin/application-1fd6e1b9cacbcefcfbf447d284f7f251.css
+admin/simple-sidebar.css: admin/simple-sidebar-1f66c85eba6dcdaeb0021304fc20411d.css
+admin/simple-sidebar/index.css: admin/simple-sidebar-1f66c85eba6dcdaeb0021304fc20411d.css
 application.css: application-8bece3af36c6f4bee93443ecc5d5fcd2.css
 application/index.css: application-8bece3af36c6f4bee93443ecc5d5fcd2.css
 bootstrap-formhelpers.css: bootstrap-formhelpers-faaa71a4bd575e5b7651e644ee16c808.css

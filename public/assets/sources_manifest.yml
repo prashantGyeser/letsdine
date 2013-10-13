@@ -54,6 +54,7 @@ sliderImage1.png: 5dad0202a6d16cc93ebbf62804b4e7c6
 timeIcon.png: 030cbb9a35b95c008949e1e1af48b31f
 topBarBG.png: 78e160f5aac3985110e62277150ecf74
 waterfall.jpg: 509fd8265fd4c6e23f3d2c5cc9745bd3
+admin/Chart.js: df90d9a49a19bee94cd5c86607a659b0
 admin/application.js: 2921ef9c0b76325246bbbd05c6ab45c1
 admin/highcharts.js: 13a50ce6d39c982250df3a5eee5f4ddb
 admin/newEvent.js: 715fb1beb81998da833077ab22555980
@@ -78,8 +79,9 @@ markdown.js: 182d669049bdd03f8a492e97ff79f867
 restaurant_picker.js: 014673f6c819af153d9fb7d92a54bab9
 select2.js: c2d33915e0b227927e7da558b4107f76
 to-markdown.js: cf539dd715150a9a7182237d2e062b63
-admin/admin.css: e7b99cbe770b9e675a47929b5617308c
-admin/application.css: 7bb20918271b03d8817b85f45d83a2b2
+admin/admin.css: 0dbf87aabbe4895bd54bf97556cb280e
+admin/application.css: 13ae20a1e9cc8ba7db301915aa5072f3
+admin/simple-sidebar.css: 0adb5067489523d74606e579d0be6808
 application.css: 96fceac74f804bf89de4a30be81cb50c
 bootstrap-formhelpers.css: c3c0e37dc84432fe18d43e454b5f02ff
 bootstrap-markdown.min.css: 497d65ddd42c669004a3c484775256c4
