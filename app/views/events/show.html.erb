@@ -1,5 +1,6 @@
 <% content_for :javascript do %>
     <%= javascript_include_tag "closed-event-overlay" %>
+    <%= javascript_include_tag "bootstrap" %>
     <% restaurant = Restaurant.find(@event.restaurant_id)%>
 
     <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
@@ -221,3 +222,45 @@
 
     </div>
 </div>
+
+
+ <!-- Share modal start -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">It is better with friends</h4>
+        </div>
+        <div class="modal-body">
+          
+
+          <% if @event.event_image.blank? %>
+            <meta property="og:image:secure_url" content="<%= restaurant.photo_url(:extra_large_scaled) %>" />
+          <% else %>
+            <meta property="og:image:secure_url" content="<%= @event.event_image_url(:extra_large_scaled) %>" />              
+          <% end %>
+
+          <a href="https://www.facebook.com/sharer/sharer.php?u=letsdine.co%2Fevents%2Fevents%2Fsunday-spa-brunch-ladies-afternoon-out" target="_blank" class="btn btn-primary">
+          Share on Facebook
+  
+  <%#u event_url(@event) %>
+  
+          </a>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /. Share modal end -->
+
+<% if @just_joined == true %>
+  <script>
+    $(document).ready(function(){
+      $('#myModal').modal("show");
+    });
+  </script>  
+<% end %>
+  
