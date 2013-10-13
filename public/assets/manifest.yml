@@ -162,6 +162,8 @@ admin/admin.css: admin/admin-de7d84e0eb2f6b7ab30dea0aae90b1f3.css
 admin/admin/index.css: admin/admin-de7d84e0eb2f6b7ab30dea0aae90b1f3.css
 admin/application.css: admin/application-1fd6e1b9cacbcefcfbf447d284f7f251.css
 admin/application/index.css: admin/application-1fd6e1b9cacbcefcfbf447d284f7f251.css
+admin/buttons.css: admin/buttons-d1d0cec8c1aff328796100f301c700cd.css
+admin/buttons/index.css: admin/buttons-d1d0cec8c1aff328796100f301c700cd.css
 admin/simple-sidebar.css: admin/simple-sidebar-1f66c85eba6dcdaeb0021304fc20411d.css
 admin/simple-sidebar/index.css: admin/simple-sidebar-1f66c85eba6dcdaeb0021304fc20411d.css
 application.css: application-8bece3af36c6f4bee93443ecc5d5fcd2.css
