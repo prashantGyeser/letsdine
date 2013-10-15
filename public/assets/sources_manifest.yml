@@ -57,7 +57,7 @@ waterfall.jpg: 509fd8265fd4c6e23f3d2c5cc9745bd3
 admin/Chart.js: df90d9a49a19bee94cd5c86607a659b0
 admin/application.js: 2921ef9c0b76325246bbbd05c6ab45c1
 admin/highcharts.js: 13a50ce6d39c982250df3a5eee5f4ddb
-admin/newEvent.js: 715fb1beb81998da833077ab22555980
+admin/newEvent.js: daa2397a2fb438c89a728fbe25097c31
 application.js: e3df0d09517cf77385a52665b1174860
 bootstrap-datepicker.js: b0082f25812fba89994a872b5d373b29
 bootstrap-formhelpers-datepicker.en_US.js: 430e9104410e7500cd81b6fe03b91e49
@@ -79,8 +79,8 @@ markdown.js: 182d669049bdd03f8a492e97ff79f867
 restaurant_picker.js: 014673f6c819af153d9fb7d92a54bab9
 select2.js: c2d33915e0b227927e7da558b4107f76
 to-markdown.js: cf539dd715150a9a7182237d2e062b63
-admin/admin.css: 0dbf87aabbe4895bd54bf97556cb280e
-admin/application.css: 13ae20a1e9cc8ba7db301915aa5072f3
+admin/admin.css: 8b17581c33160bbd34e336ce0d546442
+admin/application.css: 78af5746dc7e2d4a06af7c460ca190eb
 admin/buttons.css: 8b779be62e11b5bb7e8aff772158fff7
 admin/simple-sidebar.css: 0adb5067489523d74606e579d0be6808
 application.css: 96fceac74f804bf89de4a30be81cb50c

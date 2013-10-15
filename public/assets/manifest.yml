@@ -158,10 +158,10 @@ select2.js: select2-76f1a0965197b9543da9c2e702d90feb.js
 select2/index.js: select2-76f1a0965197b9543da9c2e702d90feb.js
 to-markdown.js: to-markdown-d49ad0b5cc780d81f52c77bfe00fa02b.js
 to-markdown/index.js: to-markdown-d49ad0b5cc780d81f52c77bfe00fa02b.js
-admin/admin.css: admin/admin-de7d84e0eb2f6b7ab30dea0aae90b1f3.css
-admin/admin/index.css: admin/admin-de7d84e0eb2f6b7ab30dea0aae90b1f3.css
-admin/application.css: admin/application-1fd6e1b9cacbcefcfbf447d284f7f251.css
-admin/application/index.css: admin/application-1fd6e1b9cacbcefcfbf447d284f7f251.css
+admin/admin.css: admin/admin-b7ab01f880ef0e6a6ff9f8f8ad71b4c2.css
+admin/admin/index.css: admin/admin-b7ab01f880ef0e6a6ff9f8f8ad71b4c2.css
+admin/application.css: admin/application-09f1a52e4caedf445cde4588118e4676.css
+admin/application/index.css: admin/application-09f1a52e4caedf445cde4588118e4676.css
 admin/buttons.css: admin/buttons-d1d0cec8c1aff328796100f301c700cd.css
 admin/buttons/index.css: admin/buttons-d1d0cec8c1aff328796100f301c700cd.css
 admin/simple-sidebar.css: admin/simple-sidebar-1f66c85eba6dcdaeb0021304fc20411d.css
