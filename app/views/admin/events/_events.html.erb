@@ -5,7 +5,12 @@
             <li>
                 <div class="eventListTop">
                     <%= link_to event.event_name, event_path(event), :class => "event_name" %>
-                    <a data-toggle="modal" href="#attendeeModal<%= event.id%>" class="pull-right eventListActions">View Attendees</a>
+
+                    <div class="pull-right">
+                        <a data-toggle="modal" href="#attendeeModal<%= event.id%>" class="eventListActions">View Attendees</a>
+                        |
+                        <%= link_to "Edit", edit_admin_event_path(event), :class => "eventListActions" %>
+                    </div>
                 </div>
                 <ul class="eventListSubDetails">
                     <li><span>Event date:</span> <%= event.event_date.strftime("%d/%m/%Y") %></li>
