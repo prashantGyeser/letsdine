@@ -56,8 +56,9 @@ mixpanel.init("8109b4e39a8360bc43bf067857408e00");</script><!-- end Mixpanel -->
     <!-- Custom styles for this template -->
     <%= stylesheet_link_tag    "style", :media => "all" %>
     <%= stylesheet_link_tag    "buttons", :media => "all" %>
-    
 
+    <!-- Select2 css -->
+    <%= stylesheet_link_tag    "select2", :media => "all" %>
     
     <!-- Typekit Fonts -->
     
@@ -75,8 +76,11 @@ mixpanel.init("8109b4e39a8360bc43bf067857408e00");</script><!-- end Mixpanel -->
     
     <%= javascript_include_tag "application" %>
     <%= javascript_include_tag "jquery-1.10.2.min" %>
+    <%= javascript_include_tag "bootstrap" %>
+    <%= javascript_include_tag "select2" %>
+
     <%= yield :javascript %>	
-	
+
     <%= csrf_meta_tags %>
 
 	<!--Start of Zopim Live Chat Script-->
@@ -141,6 +145,18 @@ f.parentNode.insertBefore(s,f);};if(w.addEventListener){w.addEventListener("load
 
 </head>
 <body <%= yield :body_class %>>
+
+	<div class="alert alert-danger">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<strong>Oops!</strong>
+					You need to fill in your city. Do it now.
+					<a data-toggle="modal" href="#addCityAndInterests" class="alert-link">Add city and interest</a>
+				</div>
+			</div>
+		</div>
+	</div>
   <div class="wrap">
 
 	<!-- FB start -->
@@ -405,6 +421,32 @@ UserVoice.push(['showTab', 'classic_widget', {
 	    });
 	  </script>
 
+	   <!-- Modal -->
+  <div class="modal fade" id="addCityAndInterests" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Help us serve you better</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+  <div class="form-group">
+    <label for="citySelected">City</label>
+    <input type="city" class="form-control" id="citySelected">
+  </div>
+  	<label for="e23">Select your interests</label>
+  	<input type="hidden" id="e23" style="width:100%" placeholder"Select your interests/>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="submitCityAndInterests">Save changes</button>
+          </form>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
 	  <!-- begin olark code -->
 	  <!--
 <script data-cfasync="false" type='text/javascript'>/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
@@ -428,6 +470,24 @@ olark.identify('1193-533-10-7368');/*]]>*/</script><noscript><a href="https://ww
 -->
 <!-- end olark code -->
 
+<script>
+    $(document).ready(function(){ 
+    		$("#e23").select2({tags:["red", "green", "blue"]});
+    	});
+    
+</script>
+
+<script>
+	$(document).ready(function(){
+		$('#submitCityAndInterests').click(function(){
+			var interests = $('#e23').val();
+			var citySelected = $('#citySelected').val();
+			alert("interests:"+ citySelected);
+		});	
+	});
+</script>
+
 </body>
 </html>
+
 
