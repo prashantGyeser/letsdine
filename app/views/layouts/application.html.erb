@@ -146,17 +146,24 @@ f.parentNode.insertBefore(s,f);};if(w.addEventListener){w.addEventListener("load
 </head>
 <body <%= yield :body_class %>>
 
-	<div class="alert alert-danger">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<strong>Oops!</strong>
-					You need to fill in your city. Do it now.
-					<a data-toggle="modal" href="#addCityAndInterests" class="alert-link">Add city and interest</a>
+	<% if current_user.blank? %>
+	<% else %>
+		<% interests = Interest.where('user_id = ?', current_user.id) %>
+		<% if current_user.city.blank? || interests.blank? %>
+			<div class="alert alert-danger">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<strong>Oops!</strong>
+							You need to fill in your city. Do it now.
+							<a data-toggle="modal" href="#addCityAndInterests" class="alert-link">Add city and interest</a>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div>
-	</div>
+		<% end %>
+	<% end %>
+	
   <div class="wrap">
 
 	<!-- FB start -->
@@ -421,7 +428,11 @@ UserVoice.push(['showTab', 'classic_widget', {
 	    });
 	  </script>
 
-	   <!-- Modal -->
+	  <% if current_user.blank? %>
+	<% else %>
+		<% interests = Interest.where('user_id = ?', current_user.id) %>
+		<% if current_user.city.blank? || interests.blank? %>
+			<!-- Modal -->
   <div class="modal fade" id="addCityAndInterests" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -430,13 +441,14 @@ UserVoice.push(['showTab', 'classic_widget', {
           <h4 class="modal-title">Help us serve you better</h4>
         </div>
         <div class="modal-body">
-          <form role="form">
+          <form role="form" id="cityAndInterestForm">
+          	<input type="hidden" id="user_id" value = "<%= current_user.id %>" > 
   <div class="form-group">
     <label for="citySelected">City</label>
     <input type="city" class="form-control" id="citySelected">
   </div>
   	<label for="e23">Select your interests</label>
-  	<input type="hidden" id="e23" style="width:100%" placeholder"Select your interests/>
+  	<input type="hidden" id="e23" style="width:100%"/>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -446,6 +458,10 @@ UserVoice.push(['showTab', 'classic_widget', {
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
   </div><!-- /.modal -->
+		<% end %>
+	<% end %>
+	  
+	   
 
 	  <!-- begin olark code -->
 	  <!--
@@ -472,17 +488,42 @@ olark.identify('1193-533-10-7368');/*]]>*/</script><noscript><a href="https://ww
 
 <script>
     $(document).ready(function(){ 
-    		$("#e23").select2({tags:["red", "green", "blue"]});
+    		$("#e23").select2({tags:["Entrepreneurship", "Board Games", "Outdoor Activities"]});
     	});
     
 </script>
 
 <script>
 	$(document).ready(function(){
-		$('#submitCityAndInterests').click(function(){
-			var interests = $('#e23').val();
+		$('#submitCityAndInterests').click(function(e){
+			e.preventDefault();
+			$('#submitCityAndInterests').addClass('disabled');
+
+
+			var interestsSelected = $('#e23').val();
 			var citySelected = $('#citySelected').val();
-			alert("interests:"+ citySelected);
+			var user_id = $('#user_id').val();
+
+			var data = {
+				"user_id":user_id,
+				"city":citySelected,
+				"interests":interestsSelected
+			}
+
+			console.log(data);
+
+			$.ajax({
+		        type: "POST",
+		        url: "home/createInterestAndCity",
+		        data: data,
+		        dataType: "json",
+		        success: function(data) {
+		          $('#addCityAndInterests').hide();
+		        }
+		           
+		        });   
+
+
 		});	
 	});
 </script>

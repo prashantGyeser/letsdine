@@ -44,4 +44,38 @@ class HomeController < ApplicationController
     end
   
   end
+
+  def createInterestAndCity
+
+    #@interest = Interest.new
+    
+
+    if params[:city].blank?
+
+    else
+      logger.debug "The value in the params is: #{params[:user_id]}"
+      user = User.find(params[:user_id])
+      logger.debug "The user is : #{user.inspect}"
+      user.city = params[:city]
+      user.save
+    end 
+
+    interests = params[:interests]
+
+    splitInterests = interests.split(/,/)
+
+    splitInterests.each do |interest|    
+      newInterest = Interest.new
+      newInterest.name = interest
+      newInterest.user_id = params[:user_id]
+      newInterest.save
+    end
+
+    respond_to do |format|
+        format.html { redirect_to @interest, notice: 'Group was successfully created.' }
+        format.json { render json: @interest, status: :created, location: @group }
+    end
+
+  end
+
 end
