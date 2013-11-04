@@ -126,7 +126,7 @@ gem 'turbo-sprockets-rails3'
 # Also see https://devcenter.heroku.com/articles/librato for heroku deployment instructions
 gem 'librato-rails'
 
-# Adding a gem to handle markdown formated text. Right now the views only support Textile markup
+# Adding a gem to handle markdown formated text. Right now the templates only support Textile markup
 gem 'bluecloth'
 
 # Gem to remove all the html tags

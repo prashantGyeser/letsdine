@@ -10,10 +10,10 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
+//= require angular
+//= require angular-ui-router.min
+//= require app/app
+//= require_tree ./config
+//= require_tree ./app/controllers
+//= require_self
 
-
-function remove_fields(link)
-{
-	$(link).prev("input[type=hidden]").value = "1";
-	$(link).closest(".field").hide();
-}

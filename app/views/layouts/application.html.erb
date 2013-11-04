@@ -1,534 +1,140 @@
-<!DOCTYPE HTML>
-<html lang="en">
+<!DOCTYPE html>
+<!--[if lt IE 6]> <html class="no-js ie6 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js ie7 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 lt-ie9"> <![endif]-->
+<!--[if IE 9 ]> <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->
+<html lang="en" ng-app="letsdineApp">
 <head>
-	<!-- Begin Inspectlet Embed Code -->
-	<script type="text/javascript" id="inspectletjs">
-		window.__insp = window.__insp || [];
-		__insp.push(['wid', 995495447]);
-		(function() {
-			function __ldinsp(){var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://www.inspectlet.com/inspectlet.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); }
-			if (window.attachEvent){
-				window.attachEvent('onload', __ldinsp);
-			}else{
-				window.addEventListener('load', __ldinsp, false);
-			}
-		})();
-	</script>
-	<!-- End Inspectlet Embed Code -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="../../assets/ico/favicon.png">
 
-	<!-- Begin mixpanel tracking code -->
-	<!-- start Mixpanel --><script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==
-typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);
-b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);
-mixpanel.init("8109b4e39a8360bc43bf067857408e00");</script><!-- end Mixpanel -->
-	<!-- End mixpanel tracking code -->
-
-	<% if session[:city].nil? %>
-		<% session[:city] = "" %>
-	<% end %>
-
-	<% if (yield :title).empty? %>
-		<% if session[:city].empty? %>
-			<title>Things to do and people to meetup up with</title>	
-		<% else %>
-			<title>Things to do in <%= session[:city] %></title>
-		<% end %>	
-	<% else %>
-		<title><%= yield :title %></title>		
-	<% end %>
-	
-
-	
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="LetsDine">
-    <link rel="shortcut icon" href="../../assets/ico/favicon.png">    
-
-    <%= stylesheet_link_tag    "application", :media => "all" %>
-    <!-- Bootstrap core CSS -->
-    <%= stylesheet_link_tag    "bootstrap", :media => "all" %>
-
-    <!-- Font awesome core CSS -->
-    <%= stylesheet_link_tag    "font-awesome", :media => "all" %>
-    <%= stylesheet_link_tag    "font-awesome-ie7", :media => "all" %>
-
-    <!-- Custom styles for this template -->
-    <%= stylesheet_link_tag    "style", :media => "all" %>
-    <%= stylesheet_link_tag    "buttons", :media => "all" %>
-
-    <!-- Select2 css -->
-    <%= stylesheet_link_tag    "select2", :media => "all" %>
-    
-    <!-- Typekit Fonts -->
-    
-    <script type="text/javascript" src="//use.typekit.net/yjy6rjo.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-	
-
-	
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="js/lib/html5shiv.js"></script>
-      <script src="js/lib/respond.min.js"></script>
-    <![endif]-->
-
-    
-    <%= javascript_include_tag "application" %>
-    <%= javascript_include_tag "jquery-1.10.2.min" %>
-    <%= javascript_include_tag "bootstrap" %>
-    <%= javascript_include_tag "select2" %>
-
-    <%= yield :javascript %>	
-
-    <%= csrf_meta_tags %>
-
-	<!--Start of Zopim Live Chat Script-->
-
-	<script type="text/javascript">
-	window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
-	d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
-	_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
-	$.src='//v2.zopim.com/?1LnC95LuebsHsuqgXQ7yrKldLcOpJoOo';z.t=+new Date;$.
-	type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
-	</script>
-
-	<!--End of Zopim Live Chat Script-->
-
-	<!-- Start of Woopra Code -->
-	<script>
-	(function(){
-	    var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
-	})("woopra");
-
-	woopra.config({
-	    domain: 'letsdine.co'
-	});
-	woopra.track();
-	</script>
-	<!-- End of Woopra Code -->
-	<script>
-
-		/* Place this on a template where a customer initially is identified
-		   or after authentication. (Important: Update these values) */
-		   <% if user_signed_in? %>
-			woopra.identify({
-			    email: '<%= current_user.email %>',
-			    name: '<%= current_user.name %>'			    
-			});
-
-			// The identify code should be added before the "track()" function
-			woopra.track();   	
-		   <% end %>
-		
-	</script>
-
-	
-	<!-- Heap code start -->
-	 <script type="text/javascript">
-      var heap=heap||[];heap.load=function(a){window._heapid=a;var b=document.createElement("script");b.type="text/javascript",b.async=!0,b.src=("https:"===document.location.protocol?"https:":"http:")+"//cdn.heapanalytics.com/js/heap.js";var c=document.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c);var d=function(a){return function(){heap.push([a].concat(Array.prototype.slice.call(arguments,0)))}},e=["identify","track"];for(var f=0;f<e.length;f++)heap[e[f]]=d(e[f])};
-      heap.load("3010248086");
-    </script>
-    <!-- Heap code end -->
-
-    <!-- Rollbar js bug tracking start -->
-    <script>
-var _rollbarParams = {"server.environment": "production"};
-_rollbarParams["notifier.snippet_version"] = "2"; var _rollbar=["ee7387e401a84ebca4e766afb3f0496c", _rollbarParams]; var _ratchet=_rollbar;
-(function(w,d){w.onerror=function(e,u,l){_rollbar.push({_t:'uncaught',e:e,u:u,l:l});};var i=function(){var s=d.createElement("script");var 
-f=d.getElementsByTagName("script")[0];s.src="//d37gvrvc0wt4s1.cloudfront.net/js/1/rollbar.min.js";s.async=!0;
-f.parentNode.insertBefore(s,f);};if(w.addEventListener){w.addEventListener("load",i,!1);}else{w.attachEvent("onload",i);}})(window,document);
-</script>
-
-    <!-- Rollbar js bug tracking end -->
+  <title>Things to do today | LetsDine</title>
 
 
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <!-- Bootstrap core CSS -->
+  <%= stylesheet_link_tag    "lib/bootstrap/bootstrap", :media => "all" %>
+
+  <!-- Font awesome core CSS -->
+  <%= stylesheet_link_tag    "font-awesome", :media => "all" %>
+  <%= stylesheet_link_tag    "font-awesome-ie7", :media => "all" %>
+
+  <!-- Custom styles for this template -->
+  <%= stylesheet_link_tag    "style", :media => "all" %>
+  <%= stylesheet_link_tag    "lib/buttons", :media => "all" %>
+
+
+  <!-- Typekit fonts-->
+  <!-- Todo: Change this to the live site link once done -->
+  <!--
+  <script type="text/javascript" src="//use.typekit.net/ehw5qqm.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  -->
+  <!-- Typekit fonts end -->
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="../../assets/js/html5shiv.js"></script>
+  <script src="../../assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <%= csrf_meta_tags %>
 </head>
-<body <%= yield :body_class %>>
 
-	<% if current_user.blank? %>
-	<% else %>
-		<% interests = Interest.where('user_id = ?', current_user.id) %>
-		<% if current_user.city.blank? || interests.blank? %>
-			<div class="alert alert-danger">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<strong>Oops!</strong>
-							You need to fill in your city. Do it now.
-							<a data-toggle="modal" href="#addCityAndInterests" class="alert-link">Add city and interest</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		<% end %>
-	<% end %>
-	
-  <div class="wrap">
-
-	<!-- FB start -->
-	<div id="fb-root"></div>
-	<script>(function(d, s, id) {
-	  var js, fjs = d.getElementsByTagName(s)[0];
-	  if (d.getElementById(id)) return;
-	  js = d.createElement(s); js.id = id;
-	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=229399707199762";
-	  fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>
-	<!-- FB end -->
-
-	<div class="topBar">
-      <div class="container">
-        <div class="row">
-          <% if session[:city].nil? %>
-                <% session[:city] = "" %>
-            <% end %>
-          <div class="col-md-5 logo">
-          	<div class="headerCitySelect">
-          		<% if session[:city].empty? %>
-          			
-          		<% else %>
-          			<span style="color: white; font-weight:bold;">Showing <%= session[:city] %> events</span>
-          		<% end %>
-          		<div id="citySelect">
-          			<% if session[:city].empty? %>
-          				Select your city		
-          			<% else %>
-          				Change city
-          			<% end %>
-                  
-                  <i class="icon-angle-down pull-right"></i>
-                </div>
-                <div id="cityList" class="hidden_div">
-                  <div class="nano">
-                  <div class="content"> 
-                    <ul>
-                      <li>
-                        <strong>India</strong>
-                        <ul>
-                          <li>Ahmedabad</li>
-                          <li>Bangalore</li>
-                          <li>Hyderabad</li>
-                          <li>Pune</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <strong>Malaysia</strong>
-                        <ul>
-                          <li>Kuala Lumpur</li>
-                          <li>Penang</li>
-                          <li>Perak</li>
-                          <li>Selangor</li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                  
-                  </div>
-                </div>
-          	</div>
-          	
-
-          </div>
-
-          <div class="col-md-3">
-            <ul class="topNav">
-
-              <a href="/"><%= image_tag("logo.png")%></a>
-              <!--
-              <li>How it works</li>
-              <li>About Us</li>
-              <li>Contact Us</li>
-				-->
-            </ul>
-
-          </div>
-
-          <div class="col-md-4">
-
-		<% if user_signed_in? %>
-			<div class="userDetails pull-right">
-				<%= current_user.name %> | <%= link_to "Sign out", destroy_user_session_path %>
-			</div>
-			
-		<% else %>
-			<%= link_to "Login/Signup", new_user_session_path, :class => "css3-button css3-button_pink loginButton pull-right", :style=>"padding-bottom:25px", :id => "topBarSignupButton" %> 
-		<% end %>
-		<!--
-            <a href="<%= new_user_session_path %>" class="css3-button css3-button_pink loginButton pull-right" style="padding-bottom:25px">Login/Signup</a>
-          -->
-          </div>
-
-        </div>
-
-        <%= yield :homepageHeader %>
+<body>
+<div ui-view>
+<!-- The top bar contains the logo, search bar and login info. This will be constant throught out the application. This part of the page will not change. -->
+<div class="topBar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2">
+        <%= image_tag 'logo.png', :class => 'img-responsive logo' %>
 
       </div>
+      <div class="col-md-8">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="What are you looking for?">
+          <span class="input-group-addon">Search</span>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="login">
+          <a href="#" class="button is-primary">Sign up</a>
+        </div>
+      </div>
     </div>
-
-
-    <% if @home_page %>
-    	
-    <% else %>
-    	<div class="container">
-			<div class="row-fluid">
-				<div class="span12">
-					<%= render 'layouts/messages' %>
-				</div>
-			</div>
-		</div>	
-    <% end %>
-
-	
-
-
-	<%= yield %>	
-
-	<script>
-      $(document).ready(function () {
-        $('#citySelectList').hide();
-        $('#citySelectList li a').click(function(e){
-          e.preventDefault();
-        });
-
-        // Hiding the city select if a user clicks outside the select area
-        $(document).mouseup(function (e)
-        {
-            var container = $("#citySelectList");
-
-            if (container.has(e.target).length === 0)
-            {
-                container.hide();
-            }
-        });
-        $('#citySelectDropdown').click(function(){
-          $('#citySelectList').show();
-        });
-        $('#citySelectList li').click(function(){
-        	var selected_city = $("a",this).attr('href');
-			var url = window.location.pathname
-			var url_controller = url.substring(url.lastIndexOf('/')+1);
-			
-			if (url_controller == "events")
-			{
-				var url_to_submit_to = '/'+selected_city+'/events';
-				window.location = url_to_submit_to;
-			}
-			else if (url == "/")
-			{
-				var url_to_submit_to = '/'+selected_city;
-				window.location = url_to_submit_to;
-			}
-			else
-			{
-				var url_to_submit_to = '/' + selected_city;
-				window.location = url_to_submit_to;
-			}
-        });
-      })
-    </script>
-
-	<script type="text/javascript">
-
-	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', 'UA-39739783-1']);
-	  _gaq.push(['_trackPageview']);
-
-	  (function() {
-	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	  })();
-
-	</script>
-	<div class="container">
-		<div class="row-fluid">
-			<div class="span12">
-				<div class="fb-like" data-href="http://www.letsdine.co/" data-width="450" data-show-faces="true" data-send="true"></div>
-			</div>
-		</div>
-	</div>
-    <div id="push"></div>
-</div>
-	
-	<div class="userVoice">
-		<!-- UserVoice JavaScript SDK (only needed once on a page) -->
-<script>(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/2kAQ0y6iWR3eFD6OqGzg.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})()</script>
-
-<!-- A tab to launch the Classic Widget -->
-<script>
-UserVoice = window.UserVoice || [];
-UserVoice.push(['showTab', 'classic_widget', {
-  mode: 'full',
-  primary_color: '#cc6d00',
-  link_color: '#007dbf',
-  default_mode: 'support',
-  forum_id: 224534,
-  tab_label: 'Feedback & Support',
-  tab_color: '#dd4024',
-  tab_position: 'middle-right',
-  tab_inverted: false
-}]);
-</script>	
-		
-	</div>
-
-	<div class="footer">
-		<div class="container">
-			<div class="row-">
-				<div class="col-md-12">
-		            All rights reserved Gyeser
-		          </div>
-			</div>
-		</div>
-	</div>
-	<script type="text/javascript">
-		var clicky_site_ids = clicky_site_ids || [];
-		clicky_site_ids.push(100656639);
-		(function() {
-		  var s = document.createElement('script');
-		  s.type = 'text/javascript';
-		  s.async = true;
-		  s.src = '//static.getclicky.com/js';
-		  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
-		})();
-	</script>
-	<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100656639ns.gif" /></p></noscript>
-
-
-	<!-- Custom event tracking -->
-	<!--
-	<script>
-
-	/* Below is an example of a "payment" event that is sent when 
-	   you process a payment for a customer. */
-
-	woopra.track('payment', {
-	    amount: '49.95',
-	    currency: 'USD'
-	});
-	</script>
-	-->
-	
-	
-	<script>
-	    $(document).ready(function(){
-	      $('#topBarSignupButton').click(function(){
-	        mixpanel.track("Topbar signup button click"); 
-	      });
-
-	      $('#topBarSupportButton').click(function(){
-	        mixpanel.track("Topbar support link click"); 
-	      });
-	      
-	      $('#uvTabLabel').click(function(){
-	        mixpanel.track("Uservoice right side tab click"); 
-	      });
-
-	    });
-	  </script>
-
-	  <% if current_user.blank? %>
-	<% else %>
-		<% interests = Interest.where('user_id = ?', current_user.id) %>
-		<% if current_user.city.blank? || interests.blank? %>
-			<!-- Modal -->
-  <div class="modal fade" id="addCityAndInterests" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4 class="modal-title">Help us serve you better</h4>
-        </div>
-        <div class="modal-body">
-          <form role="form" id="cityAndInterestForm">
-          	<input type="hidden" id="user_id" value = "<%= current_user.id %>" > 
-  <div class="form-group">
-    <label for="citySelected">City</label>
-    <input type="city" class="form-control" id="citySelected">
   </div>
-  	<label for="e23">Select your interests</label>
-  	<input type="hidden" id="e23" style="width:100%"/>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" id="submitCityAndInterests">Save changes</button>
-          </form>
-        </div>
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
-		<% end %>
-	<% end %>
-	  
-	   
+</div>
+<!-- Top bar end -->
 
-	  <!-- begin olark code -->
-	  <!--
-<script data-cfasync="false" type='text/javascript'>/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
-f[z]=function(){
-(a.s=a.s||[]).push(arguments)};var a=f[z]._={
-},q=c.methods.length;while(q--){(function(n){f[z][n]=function(){
-f[z]("call",n,arguments)}})(c.methods[q])}a.l=c.loader;a.i=nt;a.p={
-0:+new Date};a.P=function(u){
-a.p[u]=new Date-a.p[0]};function s(){
-a.P(r);f[z](r)}f.addEventListener?f.addEventListener(r,s,false):f.attachEvent("on"+r,s);var ld=function(){function p(hd){
-hd="head";return["<",hd,"></",hd,"><",i,' onl' + 'oad="var d=',g,";d.getElementsByTagName('head')[0].",j,"(d.",h,"('script')).",k,"='",l,"//",a.l,"'",'"',"></",i,">"].join("")}var i="body",m=d[i];if(!m){
-return setTimeout(ld,100)}a.P(1);var j="appendChild",h="createElement",k="src",n=d[h]("div"),v=n[j](d[h](z)),b=d[h]("iframe"),g="document",e="domain",o;n.style.display="none";m.insertBefore(n,m.firstChild).id=z;b.frameBorder="0";b.id=z+"-loader";if(/MSIE[ ]+6/.test(navigator.userAgent)){
-b.src="javascript:false"}b.allowTransparency="true";v[j](b);try{
-b.contentWindow[g].open()}catch(w){
-c[e]=d[e];o="javascript:var d="+g+".open();d.domain='"+d.domain+"';";b[k]=o+"void(0);"}try{
-var t=b.contentWindow[g];t.write(p());t.close()}catch(x){
-b[k]=o+'d.write("'+p().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};ld()};nt()})({
-loader: "static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure","extend","declare","identify"]});
-/* custom configuration goes here (www.olark.com/documentation) */
-olark.identify('1193-533-10-7368');/*]]>*/</script><noscript><a href="https://www.olark.com/site/1193-533-10-7368/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript>
--->
-<!-- end olark code -->
+<!-- Top navigation start -->
+<div class="topNav">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <ul>
+          <li><a href="#">Art</a></li>
+          <li><a href="#">Outdoor</a></li>
+          <li><a href="#">Indoor</a></li>
+          <li><a href="#">Sports</a></li>
+          <li><a href="#">Another filter</a></li>
+          <li><a href="#">One more nav item</a></li>
+          <li><a href="#">One more nav item</a></li>
+          <li><a href="#">One more nav item</a></li>
+          <li><a href="#">One more nav item</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Top navigation end -->
 
-<script>
-    $(document).ready(function(){ 
-    		$("#e23").select2({tags:["Entrepreneurship", "Board Games", "Outdoor Activities"]});
-    	});
-    
-</script>
+<ng-view></ng-view>
 
-<script>
-	$(document).ready(function(){
-		$('#submitCityAndInterests').click(function(e){
-			e.preventDefault();
-			$('#submitCityAndInterests').addClass('disabled');
+<!-- Host sell section start -->
+<div class="sell">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        This is a test
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Host sell part -->
 
+<!-- Footer start -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      Footer
+    </div>
+  </div>
+</div>
+<!-- Footer end -->
 
-			var interestsSelected = $('#e23').val();
-			var citySelected = $('#citySelected').val();
-			var user_id = $('#user_id').val();
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
 
-			var data = {
-				"user_id":user_id,
-				"city":citySelected,
-				"interests":interestsSelected
-			}
-
-			console.log(data);
-
-			$.ajax({
-		        type: "POST",
-		        url: "home/createInterestAndCity",
-		        data: data,
-		        dataType: "json",
-		        success: function(data) {
-		          $('#addCityAndInterests').hide();
-		        }
-		           
-		        });   
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <!--
+  <script src="js/lib/jquery/jquery-1.10.2.min.js"></script>
+  <script src="js/lib/slider/slider.min.js"></script>
+  -->
 
 
-		});	
-	});
-</script>
+<!-- Angularjs includes start -->
+<%= javascript_include_tag "lib/angularjs/angular.min.js" %>
+<%= javascript_include_tag "lib/angularjs/angular-resource.min.js" %>
+<%= javascript_include_tag "app/app.js" %>
+<%= javascript_include_tag "app/controllers/HomeController.js" %>
+<!-- Angularjs includes end -->
 
+</div>
 </body>
 </html>
-
-

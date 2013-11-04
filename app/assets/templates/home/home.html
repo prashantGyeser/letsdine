@@ -1,0 +1,52 @@
+<!-- Slider start -->
+<div class="slider">
+    <div class="full-width">
+        <div>Lorem ipsum dolor sit amet, consectetur. <br>Curabitur molestie elit et ultricies vehicula.</div>
+        <img src="img/sliderFillerImages/download.jpg" width="1020" height="100">
+    </div>
+</div>
+<!-- Slider end -->
+
+
+<!-- Summary start -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="favouriteExperiences">
+                <h2>Some of our most popular experiences</h2>
+                <p>
+                    There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="row" ng-controller="HomeController">
+        <div class="col-md-4" ng-repeat="event in popularEvents">
+
+            <div class="favouriteItem">
+                <img src="img/summaryImageFillers/download%20(3).jpg" alt="" class="img-responsive"/>
+                <img src="img/summaryImageFillers/hostPic-Trimmed.jpg" alt="" class="img-responsive img-circle hostPic"/>
+                <h4><a href="#">{{ event.name }}</a></h4>
+                In <strong>Hyderabad</strong>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Summary end -->
+
+<!-- Host experience highlight section start -->
+<div class="experienceSample">
+    <img src="img/sliderFillerImages/download.jpg" alt=""/>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="keyHostSale">
+                    <img src="img/summaryImageFillers/hostPic-Trimmed.jpg" alt="" class="img-responsive img-circle "/>
+                    <h2>Some talking point from a host</h2>
+                    <h4>Meet <a href="#">Jane Doe from Company name</a></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Host experience highlight section end -->

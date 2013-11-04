@@ -1,5 +1,11 @@
 Letsdine::Application.routes.draw do
 
+  # Passthrough to frontend
+  match '/' => 'home#index'
+  match '/events' => 'home#index'
+  match '/events/*page' => 'home#index'
+
+
   resources :payment_notifications
 
 
