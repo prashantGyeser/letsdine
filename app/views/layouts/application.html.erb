@@ -46,7 +46,6 @@
 </head>
 
 <body>
-<div ui-view>
 <!-- The top bar contains the logo, search bar and login info. This will be constant throught out the application. This part of the page will not change. -->
 <div class="topBar">
   <div class="container">
@@ -133,8 +132,10 @@
 <%= javascript_include_tag "lib/angularjs/angular-resource.min.js" %>
 <%= javascript_include_tag "app/app.js" %>
 <%= javascript_include_tag "app/controllers/HomeController.js" %>
+<%= javascript_include_tag "app/services/users/SessionService" %>
+<%= javascript_include_tag "app/controllers/UsersController.js" %>
+
 <!-- Angularjs includes end -->
 
-</div>
 </body>
 </html>

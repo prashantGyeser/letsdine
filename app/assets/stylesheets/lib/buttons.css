@@ -72,8 +72,8 @@
 }
 .button.is-primary.is-disabled,
 .button.is-primary[disabled] {
-  background-color: #91d2ea;
-  border-color: #91d2ea;
+  background-color: #fbcdb9;
+  border-color: #fbcdb9;
 }
 .button.is-secondary {
   background-color: #967adc;
