@@ -25,11 +25,11 @@ letsdineApp.controller('HomeController',
 
         // Slider code start
         $scope.slides = [
-            {image: 'images/img00.jpg', description: 'Image 00'},
-            {image: 'images/img01.jpg', description: 'Image 01'},
-            {image: 'images/img02.jpg', description: 'Image 02'},
-            {image: 'images/img03.jpg', description: 'Image 03'},
-            {image: 'images/img04.jpg', description: 'Image 04'}
+            {image: '/assets/sliderFillerImages/download.jpg', description: 'Image 00'},
+            {image: 'assets/sliderFillerImages/download (2).jpg', description: 'Image 01'},
+            {image: 'assets/sliderFillerImages/download (3).jpg', description: 'Image 02'},
+            {image: 'assets/sliderFillerImages/download (2).jpg', description: 'Image 03'},
+            {image: 'assets/sliderFillerImages/download.jpg', description: 'Image 04'}
         ];
 
         $scope.direction = 'left';
@@ -89,5 +89,6 @@ letsdineApp.controller('HomeController',
                 }
             }
         };
+
         // Slider code start
     });

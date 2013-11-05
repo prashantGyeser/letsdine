@@ -1,7 +1,6 @@
 <!-- Slider start -->
-<div class="container slider">
-    <img ng-repeat="slide in slides" class="slide slide-animation nonDraggableImage"
-         ng-swipe-right="nextSlide()" ng-swipe-left="prevSlide()"
+<div class="slider">
+    <img ng-repeat="slide in slides" class="slide"
          ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}">
 
     <a class="arrow prev" href="#" ng-click="nextSlide()"></a>
@@ -35,8 +34,8 @@
         <div class="col-md-4" ng-repeat="event in popularEvents">
 
             <div class="favouriteItem">
-                <img src="img/summaryImageFillers/download%20(3).jpg" alt="" class="img-responsive"/>
-                <img src="img/summaryImageFillers/hostPic-Trimmed.jpg" alt="" class="img-responsive img-circle hostPic"/>
+                <img src="/assets/summaryImageFillers/download%20(3).jpg" alt="" class="img-responsive"/>
+                <img src="/assets/summaryImageFillers/hostPic-Trimmed.jpg" alt="" class="img-responsive img-circle hostPic"/>
                 <h4><a href="#">{{ event.name }}</a></h4>
                 In <strong>Hyderabad</strong>
             </div>
@@ -47,12 +46,12 @@
 
 <!-- Host experience highlight section start -->
 <div class="experienceSample">
-    <img src="img/sliderFillerImages/download.jpg" alt=""/>
+    <img src="/assets/sliderFillerImages/download.jpg" alt=""/>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="keyHostSale">
-                    <img src="img/summaryImageFillers/hostPic-Trimmed.jpg" alt="" class="img-responsive img-circle "/>
+                    <img src="/assets/summaryImageFillers/hostPic-Trimmed.jpg" alt="" class="img-responsive img-circle "/>
                     <h2>Some talking point from a host</h2>
                     <h4>Meet <a href="#">Jane Doe from Company name</a></h4>
                 </div>
