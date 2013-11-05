@@ -1,188 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fe9a5bc6-df5f-4785-b10e-735fbf1af015" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/5349283549_40f938f381_o.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/Jennifer-Lawrence-Thumbnail.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/Jennifer-Lawrence.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/alert-overlay.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/allianceLogo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/background.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/checkoutBG.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/cimbLogo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/community-dining.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/contentBG.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/eventDetailPageHeaderImage.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/eventIcon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/eventImage.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/facebookLogo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/foodPlate.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/foodPlateModified.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/foodPlateModified.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons-halflings-white.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons-halflings.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/groupsBG.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/headerBG.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/hongLeongBank.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/hugh-jackman-thumbnail.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/hugh-jackman.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/img/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/img/2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/img/3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/img/arrow-left-black.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/img/arrow-right-black.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/img/preloader.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/joinEvent.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/locationIcon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/logo_shrunk.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/maybank2U.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/mepsCash.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/mepsFPX.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/noProfilePic.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/poloroid.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/select2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/select2x2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/shareEvent.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/signup_image.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/sliderImage1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/timeIcon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/topBarBG.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/waterfall.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/admin/Chart.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/admin/Chart.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/admin/application.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/admin/bootstrap-select.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/admin/dashboard.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/admin/event.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/admin/excanvas.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/admin/highcharts.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/admin/history.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/admin/invites.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/admin/jquery.colorhelpers.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/admin/jquery.flot.canvas.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/admin/jquery.flot.categories.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/admin/jquery.flot.crosshair.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/admin/jquery.flot.errorbars.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/admin/jquery.flot.fillbetween.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/admin/jquery.flot.image.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/admin/jquery.flot.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/admin/jquery.flot.navigate.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/admin/jquery.flot.pie.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/admin/jquery.flot.resize.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/admin/jquery.flot.selection.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/admin/jquery.flot.stack.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/admin/jquery.flot.symbol.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/admin/jquery.flot.threshold.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/admin/jquery.flot.time.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/admin/newEvent.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/admin/payment.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/admin/restaurant.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/admin/restaurants.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/admin/sessions.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/admin/user.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/all_event.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/angular.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/attendees.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/bootstrap-datepicker.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/bootstrap-formhelpers-datepicker.en_US.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/bootstrap-formhelpers-datepicker.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/bootstrap-markdown.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/bootstrap-multiselect.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/bootstrap-timepicker.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/carts.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/cities.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/closed-event-overlay.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/comments.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/cycle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/dashboards.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/discussion.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/event_notify_emails.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/events.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/events.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/experiences.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/groups.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/home.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/jquery-1.10.2.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/jquery-ui-1.10.3.custom.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/jquery.bootstrap.wizard.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/jquery.gallery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/jquery.nanoscroller.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/jquery.slidingGallery-1.2.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/markdown.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/menu_items.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/modernizr.custom.53451.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/new_city_notifications.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/omniauth_callbacks.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/payment_notifications.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/profiles.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/restaurant_picker.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/restaurants.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/select2.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/to-markdown.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/user_invites.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/admin/.sass-cache/a079088de7f8a422fe90b6f2000f1fe24d17e8de/admin.css.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/admin/admin.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/admin/admin.css.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/admin/application.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/admin/buttons.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/admin/dashboard.css.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/admin/event.css.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/admin/payment.css.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/admin/sessions.css.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/admin/simple-sidebar.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/all_event.css.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/attendees.css.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/bootstrap-formhelpers.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/bootstrap-markdown.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/bootstrap-timepicker.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/buttons.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/carts.css.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/cities.css.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/comments.css.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/dashboards.css.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/datepicker.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/discussion.css.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/event_notify_emails.css.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/events.css.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/experiences.css.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/font-awesome-ie7.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/font-awesome.css.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/font-awesome.css.scss.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/groups.css.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/home.css.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/menu_items.css.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/nanoscroller.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/new_city_notifications.css.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/omniauth_callbacks.css.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/payment_notifications.css.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/prettify.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/profiles.css.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/restaurants.css.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/scaffolds.css.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/select2.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/user_invites.css.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/zoomflow.css" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/logo.png" afterPath="$PROJECT_DIR$/app/assets/images/logo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Guardfile" afterPath="$PROJECT_DIR$/Guardfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/devise.rb" afterPath="$PROJECT_DIR$/config/initializers/devise.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/navigation.rb" afterPath="$PROJECT_DIR$/config/navigation.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/style.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/style.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/style.scss" />
-    </list>
+    <list default="true" id="fe9a5bc6-df5f-4785-b10e-735fbf1af015" name="Default" comment="" />
     <ignored path="letsdine.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383585485712" ignored="false" />
+    <file path="/Dummy.txt" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383628856485" ignored="false" />
     <file path="/Gemfile" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383400781558" ignored="false" />
     <file path="/routes.rb" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383583285243" ignored="false" />
     <file path="/devise.rb" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383395833859" ignored="false" />
@@ -212,25 +34,16 @@
       <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="62" selection-start="1173" selection-end="1173" vertical-scroll-proportion="-11.6">
+            <state line="27" column="62" selection-start="1173" selection-end="1173" vertical-scroll-proportion="-0.96666664">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/app/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="35" selection-start="243" selection-end="243" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="development.log" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/log/development.log">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="9" column="26" selection-start="234" selection-end="234" vertical-scroll-proportion="0.35334477">
               <folding />
             </state>
           </provider>
@@ -396,9 +209,9 @@
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/config/routes.js" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-        <option value="$PROJECT_DIR$/log/development.log" />
         <option value="$PROJECT_DIR$/log/production.log" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/app/app.js" />
+        <option value="$PROJECT_DIR$/log/development.log" />
       </list>
     </option>
   </component>
@@ -482,6 +295,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -690,19 +504,18 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="RailsProjectView" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="preferences.pluginManager" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="preferences.pluginManager" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/rails4TestApp" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager" selected="Rails.Development: letsdine">
     <configuration default="true" type="RakeRunConfigurationType" factoryName="Rake">
@@ -982,7 +795,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2640288" sideWeight="0.6704918" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26834533" sideWeight="0.6704918" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295082" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1076,16 +889,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/app/controllers/HomeController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/config/csrf.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="11" selection-start="11" selection-end="11" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="11" selection-start="11" selection-end="11" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/config/push-state.js.coffee">
@@ -1215,21 +1024,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="16" selection-start="144" selection-end="144" vertical-scroll-proportion="0.24871355">
-          <folding />
-        </state>
+        <state line="5" column="16" selection-start="144" selection-end="144" vertical-scroll-proportion="0.24871355" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/application.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="62" selection-start="1173" selection-end="1173" vertical-scroll-proportion="-11.6">
+        <state line="27" column="62" selection-start="1173" selection-end="1173" vertical-scroll-proportion="-0.96666664">
           <folding />
         </state>
       </provider>
@@ -1243,28 +1048,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/log/production.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/log/RAILS_ENV=production.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log/development.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="363" selection-end="363" vertical-scroll-proportion="0.10175438">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/app/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="35" selection-start="243" selection-end="243" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log/development.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="9" column="26" selection-start="234" selection-end="234" vertical-scroll-proportion="0.35334477">
           <folding />
         </state>
       </provider>
