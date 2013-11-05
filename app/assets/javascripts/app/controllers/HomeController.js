@@ -2,6 +2,13 @@
 
 letsdineApp.controller('HomeController',
     function HomeController($scope,$location) {
+        setTimeout(function() {
+            $scope.$apply(function() {
+                $scope.items[0].lateLoader = 'i just loaded';
+            });
+
+
+        }, 1000);
         $scope.popularEvents = [
             {
                 'id': 1,
