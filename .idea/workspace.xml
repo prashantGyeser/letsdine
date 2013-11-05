@@ -2,13 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe9a5bc6-df5f-4785-b10e-735fbf1af015" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/app/controllers/HomeController.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/app/controllers/HomeController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/lib/angularjs/angular-resource.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/lib/angularjs/angular-resource.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/lib/angularjs/angular.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/lib/angularjs/angular.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/app/app.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/app/app.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/lib/angularjs/angular-animate.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/lib/angularjs/angular-animate.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/lib/angularjs/angular-resource.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/lib/angularjs/angular-resource.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/lib/angularjs/angular-route.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/lib/angularjs/angular-route.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/lib/angularjs/angular.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/lib/angularjs/angular.min.js.map" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/templates/home/home.html" afterPath="$PROJECT_DIR$/app/assets/templates/home/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/app/directives/slider.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/app/directives/slider.js" />
     </list>
     <ignored path="letsdine.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,10 +51,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="application.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="132" column="66" selection-start="4167" selection-end="4167" vertical-scroll-proportion="-13.833333">
+            <state line="133" column="60" selection-start="4216" selection-end="4216" vertical-scroll-proportion="0.40458015">
               <folding />
             </state>
           </provider>
@@ -71,10 +73,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/app/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="4" selection-start="102" selection-end="102" vertical-scroll-proportion="-0.14473684">
+            <state line="5" column="4" selection-start="102" selection-end="102" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -110,44 +112,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="angular.min.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/lib/angularjs/angular.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="angular-resource.min.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/lib/angularjs/angular-resource.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="271" selection-start="2401" selection-end="2401" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <marker date="1383644882805" expanded="true" signature="203:3356" placeholder="[...]" />
-                <marker date="1383644882805" expanded="true" signature="241:3355" placeholder="{...}" />
-                <marker date="1383644882805" expanded="true" signature="329:1780" placeholder="{...}" />
-                <marker date="1383644882805" expanded="true" signature="1980:3345" placeholder="{...}" />
-                <marker date="1383644882805" expanded="true" signature="2009:3344" placeholder="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="angular-route.min.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/lib/angularjs/angular-route.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="45" selection-start="4238" selection-end="4238" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -171,7 +135,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/assets/javascripts/app/services/user/UserServices.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/app/controllers/users/UsersController.js" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/style.scss" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/lib/buttons.css" />
@@ -184,9 +147,10 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/lib/angularjs/angular.min.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/lib/angularjs/angular-resource.min.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/lib/angularjs/angular-route.min.js" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/lib/angularjs/angular-animate.min.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/app/app.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/lib/angularjs/angular.js" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
       </list>
     </option>
   </component>
@@ -1146,57 +1110,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/lib/angularjs/angular.min.js">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/lib/angularjs/angular.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/lib/angularjs/angular-resource.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="271" selection-start="2401" selection-end="2401" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <marker date="1383644882805" expanded="true" signature="203:3356" placeholder="[...]" />
-            <marker date="1383644882805" expanded="true" signature="241:3355" placeholder="{...}" />
-            <marker date="1383644882805" expanded="true" signature="329:1780" placeholder="{...}" />
-            <marker date="1383644882805" expanded="true" signature="1980:3345" placeholder="{...}" />
-            <marker date="1383644882805" expanded="true" signature="2009:3344" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/lib/angularjs/angular-route.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="45" selection-start="4238" selection-end="4238" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="132" column="66" selection-start="4167" selection-end="4167" vertical-scroll-proportion="-13.833333">
+        <state line="6" column="0" selection-start="163" selection-end="163" vertical-scroll-proportion="0.31407943">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/lib/angularjs/angular-animate.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="477" selection-start="4148" selection-end="4148" vertical-scroll-proportion="0.4548872">
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/app/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="4" selection-start="102" selection-end="102" vertical-scroll-proportion="-0.14473684">
+        <state line="5" column="4" selection-start="102" selection-end="102" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="133" column="60" selection-start="4216" selection-end="4216" vertical-scroll-proportion="0.40458015">
           <folding />
         </state>
       </provider>
