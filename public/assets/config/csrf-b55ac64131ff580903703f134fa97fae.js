@@ -1,1 +1,0 @@
-(function(){letsdineApp.config(function(n){var t;return t=$('meta[name="csrf-token"]').attr("content"),n.defaults.headers.common["X-CSRF-TOKEN"]=t})}).call(this);

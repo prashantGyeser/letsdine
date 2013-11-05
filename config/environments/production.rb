@@ -68,4 +68,7 @@ Letsdine::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
   config.action_mailer.default_url_options = { :host => 'letsdine.co' }
 
+  # Preventing the name of the variables from getting compressed in the precompile
+  config.assets.js_compressor = Sprockets::LazyCompressor.new { Uglifier.new(:mangle => false) }
+
 end
