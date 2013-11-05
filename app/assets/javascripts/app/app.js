@@ -1,6 +1,10 @@
 'use strict';
 
-var letsdineApp = angular.module('letsdineApp', ['ngResource']);
+var letsdineApp = angular.module('letsdineApp', [
+    'ngRoute',
+    'ngResource',
+    'ngAnimate'
+]);
 
 // Config for signin
 letsdineApp.config(['$httpProvider', function($httpProvider){

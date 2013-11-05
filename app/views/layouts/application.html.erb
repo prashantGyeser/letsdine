@@ -51,7 +51,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-2">
-        <%= image_tag 'logo.png', :class => 'img-responsive logo' %>
+        <a href="/"><%= image_tag 'logo.png', :class => 'img-responsive logo' %></a>
 
       </div>
       <div class="col-md-8">
@@ -130,6 +130,7 @@
 <!-- Angularjs includes start -->
 <%= javascript_include_tag "lib/angularjs/angular.min.js" %>
 <%= javascript_include_tag "lib/angularjs/angular-resource.min.js" %>
+<%= javascript_include_tag "lib/angularjs/angular-route.min.js" %>
 <%= javascript_include_tag "app/app.js" %>
 <%= javascript_include_tag "app/controllers/HomeController.js" %>
 <%= javascript_include_tag "app/services/users/SessionService" %>
