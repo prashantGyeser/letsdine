@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!--[if lt IE 6]> <html class="no-js ie6 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js ie7 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 lt-ie9"> <![endif]-->
+<!--[if IE 9 ]> <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->
+<html lang="en" ng-app="letsdineApp">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+
+    <title>Things to do today | LetsDine</title>
+
+    <link href="/assets/application.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="/assets/lib/bootstrap/bootstrap.css" rel="stylesheet">
+
+    <!-- Font awesome core CSS -->
+    <link href="/assets/font-awesome.css" rel="stylesheet">
+    <link href="/assets/font-awesome-ie7.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/assets/style.css" rel="stylesheet">
+    <link href="/assets/lib/buttons.css" rel="stylesheet">
+
+
+    <!-- Typekit fonts-->
+    <!-- Todo: Change this to the live site link once done -->
+    <!--
+    <script type="text/javascript" src="//use.typekit.net/ehw5qqm.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    -->
+    <!-- Typekit fonts end -->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../../assets/js/html5shiv.js"></script>
+    <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+<!-- The top bar contains the logo, search bar and login info. This will be constant throught out the application. This part of the page will not change. -->
+<div class="topBar">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <a href="/"><img src="/assets/logo.png" alt="" class="img-responsive logo"/></a>
+                
+            </div>
+            <div class="col-md-8">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="What are you looking for?">
+                    <span class="input-group-addon">Search</span>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="login">
+                    <a href="#" class="button is-primary">Sign up</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Top bar end -->
+
+<!-- Top navigation start -->
+<div class="topNav">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ul>
+                    <li><a href="#">Art</a></li>
+                    <li><a href="#">Outdoor</a></li>
+                    <li><a href="#">Indoor</a></li>
+                    <li><a href="#">Sports</a></li>
+                    <li><a href="#">Another filter</a></li>
+                    <li><a href="#">One more nav item</a></li>
+                    <li><a href="#">One more nav item</a></li>
+                    <li><a href="#">One more nav item</a></li>
+                    <li><a href="#">One more nav item</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Top navigation end -->
+
+<ng-view></ng-view>
+
+<!-- Host sell section start -->
+<div class="sell">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                This is a test
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Host sell part -->
+
+<!-- Footer start -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            Footer
+        </div>
+    </div>
+</div>
+<!-- Footer end -->
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<!--
+<script src="js/lib/jquery/jquery-1.10.2.min.js"></script>
+<script src="js/lib/slider/slider.min.js"></script>
+-->
+
+<!-- Angularjs includes start -->
+<script src="/assets/lib/angularjs/angular.js"></script>
+<script src="/assets/lib/angularjs/angular-resource.js"></script>
+<script src="/assets/lib/angularjs/angular-route.js"></script>
+<script src="/assets/lib/angularjs/angular-animate.js"></script>
+<script src="/assets/app/app.js"></script>
+<script src="/assets/app/controllers/HomeController.js"></script>
+<script src="/assets/app/services/users/SessionService.js"></script>
+<script src="/assets/app/controllers/UsersController.js"></script>
+<!-- Angularjs includes end -->
+
+</body>
+</html>
