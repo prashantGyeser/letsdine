@@ -1,0 +1,1 @@
+(function(){letsdineApp.config(function(n){return n.html5Mode(!0)})}).call(this);
