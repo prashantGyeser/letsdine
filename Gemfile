@@ -142,4 +142,4 @@ gem "bugsnag"
 gem 'rollbar'
 
 # Gzipping files gem
-gem 'heroku-deflater'
+gem 'heroku_rails_deflate', :group => :production

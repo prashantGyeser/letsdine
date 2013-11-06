@@ -74,6 +74,7 @@
     <orderEntry type="library" scope="PROVIDED" name="guard-spork (v1.5.1, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="haml (v4.0.2, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="hashie (v2.0.4, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="heroku-deflater (v0.5.1, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="hike (v1.2.2, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="hirb (v0.7.1, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="httparty (v0.11.0, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
