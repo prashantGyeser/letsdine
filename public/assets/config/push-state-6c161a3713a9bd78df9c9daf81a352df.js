@@ -1,0 +1,1 @@
+(function(){letsdineApp.config(function($locationProvider){return $locationProvider.html5Mode(!0)})}).call(this);
