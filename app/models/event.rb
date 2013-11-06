@@ -32,6 +32,10 @@ class Event < ActiveRecord::Base
 
   mount_uploader :event_image, EventImageUploader
 
+  # Code to add this model to elastic search
+  include Tire::Model::Search
+  include Tire::Model::Callbacks
+
   belongs_to :restaurant
   has_one :experience
   has_many :attendee, :dependent => :destroy
