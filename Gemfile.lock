@@ -135,6 +135,8 @@ GEM
     haml (4.0.2)
       tilt
     hashie (2.0.4)
+    heroku-deflater (0.5.1)
+      rack (>= 1.4.5)
     hike (1.2.2)
     hirb (0.7.1)
     httparty (0.11.0)
@@ -403,6 +405,7 @@ DEPENDENCIES
   guard
   guard-rspec
   guard-spork
+  heroku-deflater
   hirb
   intercom-rails
   jquery-rails

@@ -140,3 +140,6 @@ gem 'by_star'
 gem 'appsignal'
 gem "bugsnag"
 gem 'rollbar'
+
+# Gzipping files gem
+gem 'heroku-deflater'
