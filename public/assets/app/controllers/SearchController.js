@@ -1,1 +1,0 @@
-"use strict";letsdineApp.controller("SearchController",function(){});

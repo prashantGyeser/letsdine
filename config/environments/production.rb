@@ -75,4 +75,7 @@ Letsdine::Application.configure do
   # This is set to one year. No need to worry asset pipeline hashes objects so if there is a change to the file it will be sent again and the file will be updated.
   config.static_cache_control = 'public, max-age=31536000'
 
+  # Adding config settings for searchly elastic search
+  ENV['ELASTICSEARCH_URL'] = ENV['SEARCHBOX_URL']
+
 end

@@ -137,9 +137,10 @@ gem 'sanitize'
 gem 'by_star'
 
 # Monitoring gems
-gem 'appsignal'
 gem "bugsnag"
-gem 'rollbar'
 
 # Gzipping files gem
 gem 'heroku_rails_deflate', :group => :production
+
+# Adding a gem to push data to elastic search
+gem 'tire'

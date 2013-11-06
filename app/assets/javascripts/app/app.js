@@ -3,7 +3,8 @@
 var letsdineApp = angular.module('letsdineApp', [
     'ngRoute',
     'ngResource',
-    'ngAnimate'
+    'ngAnimate',
+    'elasticjs.service'
 ]);
 
 
@@ -51,5 +52,9 @@ letsdineApp.config(function($routeProvider){
         when('/users/register', {
             controller: 'users/UsersController',
             templateUrl: '/assets/users/register.html'
+        }).
+        when('/twitter', {
+            controller: 'SearchController',
+            templateUrl: '/assets/search/twitter.html'
         })
 });

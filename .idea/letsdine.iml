@@ -74,7 +74,8 @@
     <orderEntry type="library" scope="PROVIDED" name="guard-spork (v1.5.1, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="haml (v4.0.2, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="hashie (v2.0.4, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="heroku-deflater (v0.5.1, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="hashr (v0.0.22, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="heroku_rails_deflate (v1.0.1, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="hike (v1.2.2, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="hirb (v0.7.1, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="httparty (v0.11.0, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
@@ -140,6 +141,7 @@
     <orderEntry type="library" scope="PROVIDED" name="rdoc (v3.12.2, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="reek (v1.3.1, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="request-log-analyzer (v1.12.8, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rest-client (v1.6.7, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rmagick (v2.13.2, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rollbar (v0.11.2, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rspec (v2.13.0, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
@@ -168,6 +170,7 @@
     <orderEntry type="library" scope="PROVIDED" name="thin (v1.5.1, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="thor (v0.18.1, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tilt (v1.4.1, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="tire (v0.6.1, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="treetop (v1.4.12, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="turbo-sprockets-rails3 (v0.3.10, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="turn (v0.9.6, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
