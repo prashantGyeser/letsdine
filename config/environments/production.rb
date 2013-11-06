@@ -43,7 +43,7 @@ Letsdine::Application.configure do
   # config.cache_store = :mem_cache_store
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server
-  # config.action_controller.asset_host = "http://assets.example.com"
+  config.action_controller.asset_host = "d2fz6rw7y5afzu.cloudfront.net"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # config.assets.precompile += %w( search.js )
@@ -70,5 +70,9 @@ Letsdine::Application.configure do
 
   # Preventing the name of the variables from getting compressed in the precompile
   config.assets.js_compressor = Sprockets::LazyCompressor.new { Uglifier.new(:mangle => false) }
+
+  # Setting the max cache time for the objects sent to cloudfront.
+  # This is set to one year. No need to worry asset pipeline hashes objects so if there is a change to the file it will be sent again and the file will be updated.
+  config.static_cache_control = 'public, max-age=31536000'
 
 end
