@@ -9,7 +9,6 @@ letsdineApp.factory('Session', function($location, $http, $q) {
                 return $http.post('/login', {user: {email: email, password: password} })
                     .then(function(response) {
                         service.currentUser = response.data.user;
-                        console.log(response);
                         if (service.isAuthenticated()) {
                             //$location.path(response.data.redirect);
                             $location.path('/record');
@@ -39,6 +38,8 @@ letsdineApp.factory('Session', function($location, $http, $q) {
                 } else {
                     return $http.get('/current_user').then(function(response) {
                         service.currentUser = response.data.user;
+                        console.log("the current user is:");
+                        console.log(service.currentUser);
                         return service.currentUser;
                     });
                 }
@@ -47,6 +48,9 @@ letsdineApp.factory('Session', function($location, $http, $q) {
             currentUser: null,
 
             isAuthenticated: function(){
+                console.log("It is getting to autenticated method");
+                console.log(!service.currentUser);
+
                 return !!service.currentUser;
             }
         };

@@ -2,6 +2,13 @@
 
 letsdineApp.controller('UsersController',
     function UsersController($scope, Session) {
+
+        // checking if the user is logged in -- start
+        console.log(Session.requestCurrentUser());
+        $scope.loggedIn = Session.requestCurrentUser();
+        console.log($scope.loggedIn);
+        // checking if the user is logged in -- end
+
         $scope.login = function(user) {
             $scope.authError = null;
 

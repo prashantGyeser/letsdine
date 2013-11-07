@@ -1,3 +1,13 @@
+<!-- Debug info -- start -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12" style="background: red;color: white;padding: 10px">
+            logged in: {{ loggedIn.user.email }}
+        </div>
+    </div>
+</div>
+<!-- Debug info -- end -->
+
 <div class="container">
     <div class="row">
         <div class="col-md-4 col-md-offset-4">
@@ -31,5 +41,7 @@
         </div>
     </div>
 </div>
+
+<a class="btn btn-primary" ng-click="logout()">Logout</a>
 
 

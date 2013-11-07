@@ -1,7 +1,14 @@
 'use strict';
 
 letsdineApp.controller('HomeController',
-    function HomeController($scope,Events, Session) {
+    function HomeController($scope,Events,Session) {
+
+        // checking if the user is logged in -- start
+        console.log(Session.requestCurrentUser());
+        $scope.loggedIn = Session.requestCurrentUser();
+        console.log($scope.loggedIn);
+
+        // checking if the user is logged in -- end
 
         $scope.popularEvents = [
             {
@@ -24,7 +31,8 @@ letsdineApp.controller('HomeController',
             }
         ];
 
-
+        $scope.events = Events.query();
+        /*
         $scope.events = Events.query(function(){
                 //Good code goes here
                 //console.log("IT is getting to the good part");
@@ -34,6 +42,7 @@ letsdineApp.controller('HomeController',
                 console.log("the error is:" + response);
             }
         );
+        */
 
         // Slider code start
         $scope.slides = [
@@ -103,10 +112,6 @@ letsdineApp.controller('HomeController',
         };
 
         // Slider code end
-
-        // checking if the user is logged in -- start
-        $scope.loggedIn = isAuthenticated();
-        // checking if the user is logged in -- end
 
 
     });

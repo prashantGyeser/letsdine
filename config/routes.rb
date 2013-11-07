@@ -12,7 +12,7 @@ Letsdine::Application.routes.draw do
     root :to => 'home#index'
   end
   root :to => "home#index"
-  devise_for :users
+  devise_for :users, :controllers => {sessions: 'sessions'}
   devise_scope :user do
     post 'login' => 'sessions#create', :as => 'login'
     post 'logout' => 'sessions#destroy', :as => 'logout'
