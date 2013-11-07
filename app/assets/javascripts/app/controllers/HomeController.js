@@ -1,14 +1,8 @@
 'use strict';
 
 letsdineApp.controller('HomeController',
-    function HomeController($scope,$location) {
-        setTimeout(function() {
-            $scope.$apply(function() {
-                $scope.items[0].lateLoader = 'i just loaded';
-            });
+    function HomeController($scope,Events, Session) {
 
-
-        }, 1000);
         $scope.popularEvents = [
             {
                 'id': 1,
@@ -29,6 +23,17 @@ letsdineApp.controller('HomeController',
                 'hostProfileURL': 'http://localhost:3000/hosts/someone'
             }
         ];
+
+
+        $scope.events = Events.query(function(){
+                //Good code goes here
+                //console.log("IT is getting to the good part");
+            }, function(response){
+                // 404 or bar code goes here
+                console.log("Something went wrong!!!!");
+                console.log("the error is:" + response);
+            }
+        );
 
         // Slider code start
         $scope.slides = [
@@ -97,5 +102,11 @@ letsdineApp.controller('HomeController',
             }
         };
 
-        // Slider code start
+        // Slider code end
+
+        // checking if the user is logged in -- start
+        $scope.loggedIn = isAuthenticated();
+        // checking if the user is logged in -- end
+
+
     });

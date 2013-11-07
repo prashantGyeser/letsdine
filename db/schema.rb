@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131006205844) do
+ActiveRecord::Schema.define(:version => 20131107130428) do
 
   create_table "attendees", :force => true do |t|
     t.integer  "user_id"
@@ -89,6 +89,7 @@ ActiveRecord::Schema.define(:version => 20131006205844) do
     t.string   "reminder"
     t.string   "special"
     t.string   "slug"
+    t.float    "price"
   end
 
   add_index "events", ["slug"], :name => "index_events_on_slug"
@@ -187,6 +188,26 @@ ActiveRecord::Schema.define(:version => 20131006205844) do
     t.decimal  "commission_percentage"
     t.float    "latitude"
     t.float    "longitude"
+  end
+
+  create_table "sudo_event_groups", :force => true do |t|
+    t.integer  "event_id"
+    t.integer  "groups_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "sudo_group_members", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "sudo_group_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  create_table "sudo_groups", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "topics", :force => true do |t|

@@ -5,8 +5,26 @@ $brand_orange: #f47238;
 $brand_blue: #00a9d4;
 $brand_off_white: #ebebe3;
 $brand_blue_toned_down: #cad4d5;
+$contrast_green: #00e23c;
+$contrast_green_toned_down: #e4f3d9;
 /************************************************************************/
-/* Common styles */
+/* Mixins */
+/************************************************************************/
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+@mixin box-shadow{
+  box-shadow: 0 0 2px 0 rgba(0,0,0,.1);
+  -webkit-box-shadow: 0 0 2px 0 rgba(0,0,0,.1);
+  -moz-box-shadow: 0 0 2px 0 rgba(0,0,0,.1);
+}
+//.box { @include border-radius(10px); }
+/************************************************************************/
+/*Common styles */
 /************************************************************************/
 a
 {
@@ -200,14 +218,10 @@ NAV
   background: white;
   padding: 10px;
   border: 1px solid #d6d6c5;
-  border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
+  @include border-radius(3px);
 
   /* Item box shadow */
-  box-shadow: 0 0 2px 0 rgba(0,0,0,.1);
-  -webkit-box-shadow: 0 0 2px 0 rgba(0,0,0,.1);
-  -moz-box-shadow: 0 0 2px 0 rgba(0,0,0,.1);
+  @include box-shadow;
 
   .hostPic
   {
@@ -274,9 +288,42 @@ NAV
   margin: 20px 0;
 }
 /************************************************************************/
-/* Brand colors and styles */
+/* Event Page styles */
 /************************************************************************/
+.eventPage
+{
+  background: white;
+  padding: 10px;
+  border: 1px solid #d6d6c5;
 
+  @include border-radius(3px);
+
+  /* Item box shadow */
+  @include box-shadow;
+
+  margin-bottom: 20px;
+  .mainContent
+  {
+
+    img
+    {
+
+    }
+  }
+  .eventSubDetailsContainer
+  {
+    background: $contrast_green_toned_down;
+    padding: 10px;
+    @include border-radius(3px);
+    .eventSubDetails
+    {
+      background: white;
+      padding: 10px;
+      @include border-radius(3px);
+    }
+  }
+
+}
 /************************************************************************/
 /* Brand colors and styles */
 /************************************************************************/

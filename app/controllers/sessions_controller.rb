@@ -1,5 +1,8 @@
 class SessionsController < Devise::SessionsController
   respond_to :json
+
+  logger.debug "Woohoo! it is getting here"
+
   def create
     resource = warden.authenticate!(:scope => resource_name, :recall => "#{controller_path}#failure")
     render :status => 200,

@@ -77,6 +77,17 @@
 </div>
 <!-- Top bar end -->
 
+<!-- Debug info -- start -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-12" style="background: red;color: white;padding: 10px">
+      logged in: {{}}
+    </div>
+  </div>
+</div>
+<!-- Debug info -- end -->
+
+
 <!-- Top navigation start -->
 <div class="topNav">
   <div class="container">
@@ -130,6 +141,7 @@
 <!-- Placed at the end of the document so the pages load faster -->
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="//documentcloud.github.io/underscore/underscore-min.js"></script>
 <!--
   <script src="js/lib/jquery/jquery-1.10.2.min.js"></script>
   <script src="js/lib/slider/slider.min.js"></script>
@@ -142,11 +154,12 @@
 <%= javascript_include_tag "lib/angularjs/angular-route.js" %>
 <%= javascript_include_tag "lib/angularjs/angular-animate.js" %>
 <%= javascript_include_tag "app/app.js" %>
-<%= javascript_include_tag "app/controllers/HomeController.js" %>
 <%= javascript_include_tag "app/services/users/SessionService" %>
+<%= javascript_include_tag "app/controllers/HomeController.js" %>
 <%= javascript_include_tag "app/controllers/UsersController.js" %>
 <%= javascript_include_tag "app/services/search/AlgoliaSearchService.js" %>
 <%= javascript_include_tag "app/controllers/SearchController.js" %>
+<%= javascript_include_tag "app/filters/SplitIntoColsFilter.js" %>
 <%= javascript_include_tag "app/services/events/EventsService.js" %>
 <%= javascript_include_tag "app/controllers/EventsController.js" %>
 <!-- Angularjs includes end -->

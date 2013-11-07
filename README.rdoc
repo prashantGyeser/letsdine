@@ -1,3 +1,6 @@
+== Angularjs resource example
+http://blog.brunoscopelliti.com/building-a-restful-web-service-with-angularjs-and-php-more-power-with-resource
+
 == Devise AJAX
 TBD
 Taken from 

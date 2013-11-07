@@ -21,10 +21,11 @@
 #  reminder          :string(255)
 #  special           :string(255)
 #  slug              :string(255)
+#  price             :float
 #
 
 class Event < ActiveRecord::Base
-  attr_accessible :event_date, :event_description, :event_name, :event_time, :restaurant_id, :event_image, :invitees, :max_seats, :status, :token, :event_type, :city
+  attr_accessible :event_date, :event_description, :event_name, :event_time, :restaurant_id, :event_image, :invitees, :max_seats, :status, :token, :event_type, :price, :city
 
   #belongs_to :city
 

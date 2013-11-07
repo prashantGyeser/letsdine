@@ -1,10 +1,14 @@
 <div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            {{ events }}
-
-            <h1>Results</h1>
-            {{ results }}
+    <h1>Events</h1>
+    <div class="row" ng-repeat="group in events | group:3" id="events">
+        {{ group }}
+        <h2>Break</h2>
+        <div class="col-md-4" ng-repeat="event in group">
+            <ul>
+                <h2><li>{{event.event_image.event_image.large_scaled.url}}</li></h2>
+            </ul>
         </div>
     </div>
+
+
 </div>

@@ -20,6 +20,7 @@
     <orderEntry type="library" scope="PROVIDED" name="RedCloth (v4.2.9, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="actionmailer (v3.2.13, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="actionpack (v3.2.13, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="active_model_serializers (v0.8.1, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activemodel (v3.2.13, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activerecord (v3.2.13, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activeresource (v3.2.13, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />

@@ -2,7 +2,21 @@ Letsdine::Application.routes.draw do
 
   namespace :api do
     resources :events
+  end
 
+  #devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"} do
+  #  get '/users/sign_out' => 'devise/sessions#destroy'
+  #end
+
+  authenticated :user do
+    root :to => 'home#index'
+  end
+  root :to => "home#index"
+  devise_for :users
+  devise_scope :user do
+    post 'login' => 'sessions#create', :as => 'login'
+    post 'logout' => 'sessions#destroy', :as => 'logout'
+    get 'current_user' => 'sessions#show_current_user', :as => 'show_current_user'
   end
 
   # Passthrough to frontend
@@ -64,17 +78,6 @@ Letsdine::Application.routes.draw do
   resources :event_notify_emails
 
 
-  #devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"} do
-  #  get '/users/sign_out' => 'devise/sessions#destroy'
-  #end
-
-  devise_for :users
-  devise_scope :user do
-    post 'login' => 'sessions#create', :as => 'login'
-    post 'logout' => 'sessions#destroy', :as => 'logout'
-    get 'current_user' => 'sessions#show_current_user', :as => 'show_current_user'
-  end
-
   resources :menu_items
 
 
@@ -98,7 +101,6 @@ Letsdine::Application.routes.draw do
 
   post "home/createInterestAndCity"
 
-  root :to => "home#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -2,7 +2,10 @@
 /* Brand colors and styles */
 /************************************************************************/
 /************************************************************************/
-/* Common styles */
+/* Mixins */
+/************************************************************************/
+/************************************************************************/
+/*Common styles */
 /************************************************************************/
 a {
   color: #00a9d4; }
@@ -164,9 +167,11 @@ NAV
   background: white;
   padding: 10px;
   border: 1px solid #d6d6c5;
-  border-radius: 3px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
   /* Item box shadow */
   box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
@@ -217,8 +222,39 @@ NAV
   margin: 20px 0; }
 
 /************************************************************************/
-/* Brand colors and styles */
+/* Event Page styles */
 /************************************************************************/
+.eventPage {
+  background: white;
+  padding: 10px;
+  border: 1px solid #d6d6c5;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  /* Item box shadow */
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px; }
+  .eventPage .eventSubDetailsContainer {
+    background: #e4f3d9;
+    padding: 10px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px; }
+    .eventPage .eventSubDetailsContainer .eventSubDetails {
+      background: white;
+      padding: 10px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px; }
+
 /************************************************************************/
 /* Brand colors and styles */
 /************************************************************************/

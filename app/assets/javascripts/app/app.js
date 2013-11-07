@@ -59,5 +59,9 @@ letsdineApp.config(function($routeProvider){
         when('/events', {
             controller: 'EventsController',
             templateUrl: '/assets/events/list.html'
+        }).
+        when('/events/:id', {
+            controller: 'EventsController',
+            templateUrl: '/assets/events/show.html'
         })
 });

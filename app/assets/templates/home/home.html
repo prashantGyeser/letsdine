@@ -30,9 +30,21 @@
             </div>
         </div>
     </div>
-    <div class="row" ng-controller="HomeController">
-        <div class="col-md-4" ng-repeat="event in popularEvents">
 
+    <div class="row" ng-repeat="group in events | group:3" id="events">
+        <div class="col-md-4" ng-repeat="event in group">
+            <div class="favouriteItem">
+                <!-- Todo: The url for the image is crazy nested. Unnest it. -->
+                <img src="{{event.event_image.event_image.large_scaled.url}}" alt="" class="img-responsive"/>
+                <h4><a ng-href="/{{'#/events/' + event.id }}">{{ event.event_name }}</a></h4>
+                In <strong>{{event.city}}</strong>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4" ng-repeat="event in popularEvents">
             <div class="favouriteItem">
                 <img src="/assets/summaryImageFillers/download%20(3).jpg" alt="" class="img-responsive"/>
                 <img src="/assets/summaryImageFillers/hostPic-Trimmed.jpg" alt="" class="img-responsive img-circle hostPic"/>

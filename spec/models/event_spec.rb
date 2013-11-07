@@ -21,6 +21,7 @@
 #  reminder          :string(255)
 #  special           :string(255)
 #  slug              :string(255)
+#  price             :float
 #
 
 require 'spec_helper'

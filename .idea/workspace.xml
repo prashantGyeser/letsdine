@@ -2,21 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe9a5bc6-df5f-4785-b10e-735fbf1af015" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/.sass-cache/942729eb822765983ae699052849cfbac7bdccb3/style.scssc" afterPath="$PROJECT_DIR$/app/assets/stylesheets/.sass-cache/942729eb822765983ae699052849cfbac7bdccb3/style.scssc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/app/controllers/EventsController.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/app/controllers/EventsController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/app/services/events/EventsService.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/app/services/events/EventsService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/app/controllers/HomeController.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/app/controllers/HomeController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.rdoc" afterPath="$PROJECT_DIR$/README.rdoc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/app/services/users/SessionService.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/app/services/users/SessionService.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/app/app.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/app/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/event.rb" afterPath="$PROJECT_DIR$/app/models/event.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/event_spec.rb" afterPath="$PROJECT_DIR$/spec/models/event_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/api/events_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/api/events_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/templates/home/home.html" afterPath="$PROJECT_DIR$/app/assets/templates/home/home.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/templates/events/list.html" afterPath="$PROJECT_DIR$/app/assets/templates/events/list.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/style.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/style.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/style.scss" />
     </list>
     <ignored path="letsdine.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383802759731" ignored="false" />
+    <file path="/Dummy.txt" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383846737728" ignored="false" />
     <file path="/Gemfile" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383809159771" ignored="false" />
     <file path="/routes.rb" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383809014271" ignored="false" />
     <file path="/devise.rb" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383395833859" ignored="false" />
     <file path="/homes_spec.rb" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383410931119" ignored="false" />
-    <file path="/application.html.erb" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383804592250" ignored="false" />
+    <file path="/application.html.erb" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383847380699" ignored="false" />
     <file path="/push-state.js.coffee" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383575520115" ignored="false" />
     <file path="/routes.js" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383576702430" ignored="false" />
     <file path="/app.js" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383744883866" ignored="false" />
@@ -25,26 +37,34 @@
     <file path="/UsersController.js" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383640575957" ignored="false" />
     <file path="/login.html" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383638069945" ignored="false" />
     <file path="/a.dummy" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383755185168" ignored="false" />
-    <file path="/dummy.xml" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383807208756" ignored="false" />
-    <file path="/style.scss" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383648114444" ignored="false" />
+    <file path="/dummy.xml" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383847345982" ignored="false" />
+    <file path="/style.scss" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383840244905" ignored="false" />
     <file path="/slider.js" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383643997132" ignored="false" />
-    <file path="/home.html" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383648317194" ignored="false" />
+    <file path="/home.html" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383827911972" ignored="false" />
     <file path="/home_controller.rb" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383654745288" ignored="false" />
     <file path="/index.html" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383651002712" ignored="false" />
     <file path="/application.css" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383655620507" ignored="false" />
     <file path="/production.rb" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383734392881" ignored="false" />
     <file path="/SearchController.js" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383766584920" ignored="false" />
     <file path="/twitter.html" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383732511564" ignored="false" />
-    <file path="/event.rb" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383761215276" ignored="false" />
+    <file path="/event.rb" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383829530505" ignored="false" />
     <file path="/elastic-search-setup-steps.txt" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383743972795" ignored="false" />
     <file path="/search.html" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383765321954" ignored="false" />
     <file path="/elastic-angular-client.js" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383756425895" ignored="false" />
     <file path="/SearchService.js" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383765081743" ignored="false" />
     <file path="/AlgoliaSearchService.js" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383766523849" ignored="false" />
     <file path="/EventsService.js" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383808329453" ignored="false" />
-    <file path="/list.html" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383810518303" ignored="false" />
-    <file path="/EventsController.js" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383811709517" ignored="false" />
-    <file path="/events_controller.rb" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383809885982" ignored="false" />
+    <file path="/list.html" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383827069312" ignored="false" />
+    <file path="/EventsController.js" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383828770944" ignored="false" />
+    <file path="/events_controller.rb" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383833270340" ignored="false" />
+    <file path="/SplitIntoColsFilter.js" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383822096626" ignored="false" />
+    <file path="/show.html" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383846328490" ignored="false" />
+    <file path="/README.rdoc" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383828816137" ignored="false" />
+    <file path="/event_serializer.rb" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383829518577" ignored="false" />
+    <file path="$USER_HOME$/Desktop/RADD/app/assets/javascripts/services/sessionService.js" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383846835268" ignored="false" />
+    <file path="/HomeController.js" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383847525799" ignored="false" />
+    <file path="/SessionService.js" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383848295423" ignored="false" />
+    <file path="/sessions_controller.rb" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383848716858" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,55 +84,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/events/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="147" column="18" selection-start="4678" selection-end="4678" vertical-scroll-proportion="-4.9333334">
+            <state line="84" column="69" selection-start="3019" selection-end="3053" vertical-scroll-proportion="-0.96666664">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="events_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/api/events_controller.rb">
+      <file leaf-file-name="SessionService.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/app/services/users/SessionService.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="11" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0">
+            <state line="11" column="46" selection-start="544" selection-end="544" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Gemfile">
+      <file leaf-file-name="development.log" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/log/development.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="148" column="29" selection-start="2956" selection-end="2980" vertical-scroll-proportion="0.8284734">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EventsController.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/app/controllers/EventsController.js">
+      <file leaf-file-name="application_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="62" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/templates/events/list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="23" selection-start="156" selection-end="156" vertical-scroll-proportion="-5.8">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EventsService.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/app/services/events/EventsService.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="23" selection-start="89" selection-end="89" vertical-scroll-proportion="0.0">
+            <state line="2" column="0" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -121,7 +123,25 @@
       <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/app/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="45" selection-start="1811" selection-end="1811" vertical-scroll-proportion="0.0">
+            <state line="10" column="20" selection-start="141" selection-end="141" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sessions_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/sessions_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="42" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UsersController.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/app/controllers/UsersController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="36" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -150,22 +170,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/assets/javascripts/lib/elastic/elastic-angular-client.js" />
-        <option value="$PROJECT_DIR$/config/initializers/algoliasearch.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/app/services/search/SearchService.js" />
-        <option value="$PROJECT_DIR$/app/models/event.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/app/services/search/AlgoliaSearchService.js" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/app/controllers/SearchController.js" />
-        <option value="$PROJECT_DIR$/app/assets/templates/search/search.html" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/app/app.js" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/config/initializers/active_model_serializers.rb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/api/events_controller.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/app/services/events/EventsService.js" />
-        <option value="$PROJECT_DIR$/app/assets/templates/events/list.html" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/app/controllers/EventsController.js" />
+        <option value="$PROJECT_DIR$/README.rdoc" />
+        <option value="$PROJECT_DIR$/app/serializers/event_serializer.rb" />
+        <option value="$PROJECT_DIR$/app/models/event.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/api/events_controller.rb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/style.scss" />
+        <option value="$PROJECT_DIR$/app/assets/templates/events/show.html" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/app/controllers/HomeController.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/app/services/users/SessionService.js" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/sessions_controller.rb" />
+        <option value="$PROJECT_DIR$/log/development.log" />
+        <option value="$PROJECT_DIR$/log/production.log" />
+        <option value="$PROJECT_DIR$/log/newrelic_agent.log" />
       </list>
     </option>
   </component>
@@ -249,7 +269,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -278,11 +298,35 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="log" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="letsdine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="letsdine" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="letsdine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="letsdine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -300,25 +344,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="letsdine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="letsdine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="serializers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -337,28 +363,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="letsdine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="letsdine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -381,6 +385,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="letsdine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="letsdine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="home" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -425,6 +455,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stylesheets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -505,6 +539,10 @@
               <option name="myItemId" value="services" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="users" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -535,10 +573,6 @@
               <option name="myItemId" value="services" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="events" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -567,12 +601,30 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="letsdine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="letsdine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="RailsProjectView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -871,7 +923,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20719424" sideWeight="0.6721311" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21294963" sideWeight="0.6721311" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295082" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -948,49 +1000,86 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/templates/search/search.html">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/style.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="14" selection-start="118" selection-end="118" vertical-scroll-proportion="0.20976491">
+        <state line="303" column="22" selection-start="6565" selection-end="6565" vertical-scroll-proportion="-11.6">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/app/services/search/AlgoliaSearchService.js">
+    <entry file="file://$PROJECT_DIR$/app/assets/templates/home/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="24" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0">
+        <state line="37" column="76" selection-start="1526" selection-end="1574" vertical-scroll-proportion="0.47197106">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/app/services/users/SessionService.js">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="9" selection-start="224" selection-end="224" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="157" column="65" selection-start="4901" selection-end="4901" vertical-scroll-proportion="-4.9">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/app/controllers/HomeController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="17" selection-start="272" selection-end="272" vertical-scroll-proportion="0.4974271">
+        <state line="107" column="26" selection-start="3837" selection-end="3837" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/app/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="45" selection-start="1811" selection-end="1811" vertical-scroll-proportion="0.0">
+        <state line="10" column="20" selection-start="141" selection-end="141" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/active_model_serializers.rb">
+    <entry file="file://$PROJECT_DIR$/app/assets/templates/events/show.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="3" selection-start="228" selection-end="228" vertical-scroll-proportion="0.31016043">
+        <state line="27" column="32" selection-start="1186" selection-end="1186" vertical-scroll-proportion="0.27683616">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/admin/dashboard_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/events/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="69" selection-start="3019" selection-end="3053" vertical-scroll-proportion="-0.96666664">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/app/controllers/UsersController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="36" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/sessions_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="42" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log/newrelic_agent.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log/production.log">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
@@ -999,63 +1088,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="37" selection-start="215" selection-end="215" vertical-scroll-proportion="0.0">
+        <state line="24" column="26" selection-start="680" selection-end="680" vertical-scroll-proportion="0.8907721">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/admin/application_controller.rb">
+    <entry file="file://$PROJECT_DIR$/log/appsignal.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="81" selection-end="81" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/events_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/app/services/users/SessionService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="32" selection-start="168" selection-end="196" vertical-scroll-proportion="0.0">
+        <state line="11" column="46" selection-start="544" selection-end="544" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/templates/events/list.html">
+    <entry file="file://$PROJECT_DIR$/log/development.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="23" selection-start="156" selection-end="156" vertical-scroll-proportion="-5.8">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="147" column="18" selection-start="4678" selection-end="4678" vertical-scroll-proportion="-4.9333334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/app/services/events/EventsService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="23" selection-start="89" selection-end="89" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/app/controllers/EventsController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="62" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/api/events_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="11" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="148" column="29" selection-start="2956" selection-end="2980" vertical-scroll-proportion="0.8284734">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>

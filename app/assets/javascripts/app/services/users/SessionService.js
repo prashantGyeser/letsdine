@@ -9,6 +9,7 @@ letsdineApp.factory('Session', function($location, $http, $q) {
                 return $http.post('/login', {user: {email: email, password: password} })
                     .then(function(response) {
                         service.currentUser = response.data.user;
+                        console.log(response);
                         if (service.isAuthenticated()) {
                             //$location.path(response.data.redirect);
                             $location.path('/record');
