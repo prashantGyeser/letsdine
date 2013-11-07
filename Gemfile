@@ -144,3 +144,6 @@ gem 'heroku_rails_deflate', :group => :production
 
 # algoliasearch search gem - Refer to algoliasearch.com for more details
 gem "algoliasearch-rails"
+
+# Serializer to generate json data
+gem "active_model_serializers"

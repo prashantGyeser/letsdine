@@ -1,5 +1,10 @@
 Letsdine::Application.routes.draw do
 
+  namespace :api do
+    resources :events
+
+  end
+
   # Passthrough to frontend
   match '/' => 'home#index'
   match '/events' => 'home#index'
