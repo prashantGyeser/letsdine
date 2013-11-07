@@ -1,24 +1,15 @@
-<!-- Debug info -- start -->
-<div class="container">
-    <div class="row">
-        <div class="col-md-12" style="background: red;color: white;padding: 10px">
-            logged in: {{ loggedIn.user.email }}
-        </div>
-    </div>
-</div>
-<!-- Debug info -- end -->
+
+
+
 
 <div class="container">
     <div class="row">
         <div class="col-md-4 col-md-offset-4">
-            <form name="loginForm" class="auth-form" role="form">
+            <form name="loginForm" ng-submit="login(user)" class="auth-form" role="form">
                 <h2 class="auth-form-heading">Please sign in</h2><br/>
 
-                <div class="alert alert-warning" ng-show="authReason">
-                    {{authReason}}
-                </div>
-                <div class="alert alert-danger" ng-show="authError">
-                    {{authError}}
+                <div class="alert alert-danger" ng-show="showMessage(message)">
+                    {{message}}
                 </div>
 
                 <div class="form-group">
@@ -35,13 +26,13 @@
                         <input type="checkbox" value="remember-me"> Remember me
                     </label>
                 </div>
-                <a class="button is-primary" type="submit" ng-click="login(user)" ng-disabled="loginForm.$invalid">Sign in</a>
+                <button type="submit" class="button is-primary" ng-disabled="loginForm.$invalid">Login</button>
                 <a class="btn btn-link" href="#/users/register">Register</a>
+
             </form>
         </div>
     </div>
 </div>
 
-<a class="btn btn-primary" ng-click="logout()">Logout</a>
 
 

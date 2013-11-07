@@ -3,13 +3,6 @@
 letsdineApp.controller('HomeController',
     function HomeController($scope,Events,Session) {
 
-        // checking if the user is logged in -- start
-        console.log(Session.requestCurrentUser());
-        $scope.loggedIn = Session.requestCurrentUser();
-        console.log($scope.loggedIn);
-
-        // checking if the user is logged in -- end
-
         $scope.popularEvents = [
             {
                 'id': 1,

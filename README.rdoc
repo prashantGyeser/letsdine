@@ -1,3 +1,6 @@
+== Angularjs with devise rails example
+https://github.com/sectore/CafeTownsend-Angular-Rails
+
 == Angularjs resource example
 http://blog.brunoscopelliti.com/building-a-restful-web-service-with-angularjs-and-php-more-power-with-resource
 
