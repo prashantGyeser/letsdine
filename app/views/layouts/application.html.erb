@@ -59,10 +59,13 @@
 
       </div>
       <div class="col-md-8">
+        <!--
         <div class="input-group">
+
           <input type="text" class="form-control" placeholder="What are you looking for?">
           <span class="input-group-addon">Search</span>
         </div>
+        -->
       </div>
       <div class="col-md-2">
         <div class="login">
@@ -79,6 +82,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
+        <!--
         <ul>
           <li><a href="#">Art</a></li>
           <li><a href="#">Outdoor</a></li>
@@ -90,6 +94,7 @@
           <li><a href="#">One more nav item</a></li>
           <li><a href="#">One more nav item</a></li>
         </ul>
+        -->
       </div>
     </div>
   </div>
@@ -142,6 +147,8 @@
 <%= javascript_include_tag "app/controllers/UsersController.js" %>
 <%= javascript_include_tag "app/services/search/AlgoliaSearchService.js" %>
 <%= javascript_include_tag "app/controllers/SearchController.js" %>
+<%= javascript_include_tag "app/services/events/EventsService.js" %>
+<%= javascript_include_tag "app/controllers/EventsController.js" %>
 <!-- Angularjs includes end -->
 
 </body>
