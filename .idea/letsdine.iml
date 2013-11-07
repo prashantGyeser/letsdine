@@ -32,8 +32,9 @@
     <orderEntry type="library" scope="PROVIDED" name="annotate (v2.5.0, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ansi (v1.4.3, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="arel (v3.0.2, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="atomic (v1.1.14, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="awesome_print (v1.1.0, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="bcrypt-ruby (v3.0.1, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bcrypt-ruby (v3.1.2, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="better_errors (v0.8.0, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="binding_of_caller (v0.7.1, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bluecloth (v2.2.0, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
@@ -59,7 +60,7 @@
     <orderEntry type="library" scope="PROVIDED" name="debugger (v1.5.0, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="debugger-linecache (v1.2.0, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="debugger-ruby_core_source (v1.2.0, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="devise (v2.2.3, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="devise (v3.2.0, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.2.4, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubis (v2.7.0, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="eventmachine (v1.0.3, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
@@ -78,7 +79,7 @@
     <orderEntry type="library" scope="PROVIDED" name="haml (v4.0.2, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="hashie (v2.0.4, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="heroku_rails_deflate (v1.0.1, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="hike (v1.2.2, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="hike (v1.2.3, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="hirb (v0.7.1, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="httparty (v0.11.0, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="httpauth (v0.2.0, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
@@ -104,7 +105,7 @@
     <orderEntry type="library" scope="PROVIDED" name="method_source (v0.8.1, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mime-types (v1.23, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="minitest (v4.7.4, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.7.3, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.8.2, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="multi_xml (v0.5.5, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="multipart-post (v1.2.0, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="net-scp (v1.1.0, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
@@ -132,7 +133,6 @@
     <orderEntry type="library" scope="PROVIDED" name="rails_best_practices (v1.13.5, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="railties (v3.2.13, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="raindrops (v0.11.0, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rake (v10.0.4, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rb-fsevent (v0.9.3, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rb-inotify (v0.9.0, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rb-kqueue (v0.2.0, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
@@ -165,6 +165,7 @@
     <orderEntry type="library" scope="PROVIDED" name="statsmix (v1.0.0, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="thin (v1.5.1, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="thor (v0.18.1, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="thread_safe (v0.1.3, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tilt (v1.4.1, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="treetop (v1.4.12, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="turbo-sprockets-rails3 (v0.3.10, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
@@ -173,7 +174,7 @@
     <orderEntry type="library" scope="PROVIDED" name="uglifier (v2.0.1, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="unicorn (v4.6.2, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="uniform_notifier (v1.2.0, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="warden (v1.2.1, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="warden (v1.2.3, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="xpath (v2.0.0, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="yard (v0.8.6.1, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="zeus (v0.13.3, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />

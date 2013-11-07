@@ -4,20 +4,9 @@ Letsdine::Application.routes.draw do
     resources :events
   end
 
-  authenticated :user do
-    root :to => 'home#index'
-  end
-  root :to => "home#index"
-  devise_for :users
-  devise_scope :user do
-    #post 'login' => 'sessions#create', :as => 'login'
-    #post 'logout' => 'sessions#destroy', :as => 'logout'
-    #get 'current_user' => 'sessions#show_current_user', :as => 'show_current_user'
-  end
 
-  post 'login' => 'sessions#create', :as => 'login'
-  post 'logout' => 'sessions#destroy', :as => 'logout'
-  get 'current_user' => 'sessions#show_current_user', :as => 'show_current_user'
+  root :to => "home#index"
+
 
   # Passthrough to frontend
   match '/' => 'home#index'
@@ -159,7 +148,9 @@ Letsdine::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
 
-
+  devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"} do
+    get '/users/sign_out' => 'devise/sessions#destroy'
+  end
 
 
 end

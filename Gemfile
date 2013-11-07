@@ -12,7 +12,7 @@ gem 'carrierwave'
 gem 'fog'
 gem 'rmagick'
 #gem "mini_magick"
-gem 'devise'
+gem 'devise', '>= 3.2.0'
 gem 'omniauth-facebook'
 gem 'simple-navigation'
 

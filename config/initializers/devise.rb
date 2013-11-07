@@ -83,7 +83,7 @@ Devise.setup do |config|
 
   # Setup a pepper to generate the encrypted password.
   # config.pepper = "874ce7c0152dad3e993402956fcef088b351b38ce30c0edda4aa7ef8b90e9e524b856a00eb41a2b3c8d4b102c2a13eff6bd6ce9b12462493aa6f16856b44cb7b"
-
+  config.secret_key = 'd733e2546fbcdf8bafb11dac9088cf720136323d2c1a1b672ff68b47e7a29d5b4a838f54e22438afa8b895256dff2f69b8d04b331532bab71c22dbcb32a3f69a'
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
   # confirming his account. For instance, if set to 2.days, the user will be
@@ -241,4 +241,6 @@ Devise.setup do |config|
   # When using omniauth, Devise cannot automatically set Omniauth path,
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = "/my_engine/users/auth"
+
+  config.allow_insecure_token_lookup = true
 end
