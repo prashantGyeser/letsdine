@@ -32,9 +32,11 @@ class Event < ActiveRecord::Base
 
   mount_uploader :event_image, EventImageUploader
 
-  # Code to add this model to elastic search
-  include Tire::Model::Search
-  include Tire::Model::Callbacks
+  # Code for algoliasearch
+  include AlgoliaSearch
+  algoliasearch do
+    attribute :event_name, :event_description, :event_time, :event_date
+  end
 
   belongs_to :restaurant
   has_one :experience

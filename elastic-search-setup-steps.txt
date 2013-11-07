@@ -1,0 +1,7 @@
+// Add the following to the model to be index in the model file
+include Tire::Model::Search
+include Tire::Model::Callbacks
+
+// Run the following command to import an existing model into elasticsearch
+// Replace CLASS=<Event> with the name of the model to be indexed
+heroku run rake environment tire:import CLASS=Event FORCE=true --app letsdinetestapp

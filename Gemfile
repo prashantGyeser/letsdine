@@ -61,9 +61,9 @@ group :test, :development do
 	gem 'pry'
 	gem 'pry-doc'
 	gem 'quiet_assets'
-	gem 'rack-mini-profiler'
-	gem 'railroady'
-	gem 'rails-footnotes', '>= 3.7.9'
+	#gem 'rack-mini-profiler'
+	#gem 'railroady'
+	#gem 'rails-footnotes', '>= 3.7.9'
 	gem 'rails_best_practices'
 	gem 'reek'
 	gem 'request-log-analyzer'
@@ -108,7 +108,7 @@ gem 'geocoder'
 gem "cancan"
 
 # Intercom 
-gem 'intercom-rails'
+#gem 'intercom-rails'
 
 # Updated json gem
 gem 'json', '~> 1.7.7'
@@ -142,5 +142,5 @@ gem "bugsnag"
 # Gzipping files gem
 gem 'heroku_rails_deflate', :group => :production
 
-# Adding a gem to push data to elastic search
-gem 'tire'
+# algoliasearch search gem - Refer to algoliasearch.com for more details
+gem "algoliasearch-rails"
