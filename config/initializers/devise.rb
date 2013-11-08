@@ -244,7 +244,7 @@ Devise.setup do |config|
 
   #config.allow_insecure_token_lookup = true
 
-  config.http_authenticatable_on_xhr = true
-  config.navigational_formats = [:"*/*", "*/*", :html, :json]
+  #config.http_authenticatable_on_xhr = true
+  #config.navigational_formats = [:"*/*", "*/*", :html, :json]
 
 end

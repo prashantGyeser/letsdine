@@ -1,12 +1,12 @@
 class SessionsController < Devise::SessionsController
-  # before_filter :require_no_authentication, :only => [:create ]
   respond_to :json
-  #userHash = { :user => { :email => session[:email], :password => session[:password] } }
 
-  #logger.debug "The user hash is: #{userHash}"
+  prepend_before_filter :require_no_authentication, :only => [:create, :destroy, :failure]
 
   def create
+    logger.debug "It is getting here"
     resource = warden.authenticate!(:scope => resource_name, :recall => "#{controller_path}#failure")
+    warden.custom_failure!
     render :status => 200,
            :json => { :success => true,
                       :info => "Logged in",

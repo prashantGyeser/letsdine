@@ -52,10 +52,19 @@ letsdineApp.factory('Session', function($location, $http, $q) {
             if (service.isAuthenticated()) {
                 return $q.when(service.currentUser);
             } else {
-                return $http.get('/current_user').then(function(response) {
-                    service.currentUser = response.data.user;
-                    return service.currentUser;
+                return $http.get('/current_user')
+                    .success(function(data, status){
+                        service.currentUser = data.user;
+                        console.log(service.currentUser);
+                        return service.currentUser;
+                    });
+                    /*
+                    .then(function(response) {
+                        service.currentUser = response.data.user;
+                        return service.currentUser;
+
                 });
+                     */
             }
         },
 
