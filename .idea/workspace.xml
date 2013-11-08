@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe9a5bc6-df5f-4785-b10e-735fbf1af015" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.rdoc" afterPath="$PROJECT_DIR$/README.rdoc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/app/controllers/UsersController.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/app/controllers/UsersController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/application.rb" afterPath="$PROJECT_DIR$/config/application.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/devise.rb" afterPath="$PROJECT_DIR$/config/initializers/devise.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/templates/users/login.html" afterPath="$PROJECT_DIR$/app/assets/templates/users/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" />
     </list>
     <ignored path="letsdine.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,7 +44,7 @@
     <file path="/events_controller.rb" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383833270340" ignored="false" />
     <file path="/SplitIntoColsFilter.js" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383822096626" ignored="false" />
     <file path="/show.html" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383846328490" ignored="false" />
-    <file path="/README.rdoc" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383854876600" ignored="false" />
+    <file path="/README.rdoc" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383868102266" ignored="false" />
     <file path="/event_serializer.rb" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383829518577" ignored="false" />
     <file path="$USER_HOME$/Desktop/RADD/app/assets/javascripts/services/sessionService.js" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383846835268" ignored="false" />
     <file path="/HomeController.js" changelist="fe9a5bc6-df5f-4785-b10e-735fbf1af015" time="1383850554651" ignored="false" />
@@ -106,55 +100,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UsersController.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="UsersController.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/app/controllers/UsersController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="45" selection-start="191" selection-end="191" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="development.log" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/log/development.log">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="228" column="17" selection-start="14646" selection-end="14646" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="devise.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/initializers/devise.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="244" column="43" selection-start="12087" selection-end="12087" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application_controller.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="25" selection-start="194" selection-end="194" vertical-scroll-proportion="0.46524063">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/application.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="27" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Gemfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="21" selection-start="246" selection-end="246" vertical-scroll-proportion="0.0">
+            <state line="64" column="10" selection-start="2946" selection-end="2946" vertical-scroll-proportion="3.4871354">
               <folding />
             </state>
           </provider>
@@ -163,7 +112,7 @@
       <file leaf-file-name="login.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/templates/users/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="12" selection-start="12" selection-end="12" vertical-scroll-proportion="0.0">
+            <state line="16" column="120" selection-start="647" selection-end="647" vertical-scroll-proportion="-7.733333">
               <folding />
             </state>
           </provider>
@@ -192,22 +141,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/assets/javascripts/app/services/users/viewState.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/app/controllers/HomeController.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/app/services/users/SessionService.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/app/app.js" />
         <option value="$PROJECT_DIR$/app/assets/templates/record/index.html" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/app/controllers/RecordCtrl.js" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/templates/users/login.html" />
         <option value="$PROJECT_DIR$/app/controllers/sessions_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/app/controllers/UsersController.js" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/config/application.rb" />
         <option value="$PROJECT_DIR$/log/development.log" />
         <option value="$PROJECT_DIR$/config/initializers/devise.rb" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/app/controllers/UsersController.js" />
+        <option value="$PROJECT_DIR$/README.rdoc" />
+        <option value="$PROJECT_DIR$/app/assets/templates/users/login.html" />
       </list>
     </option>
   </component>
@@ -1106,11 +1055,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="154" column="57" selection-start="5145" selection-end="5145" vertical-scroll-proportion="0.5877034" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/app/controllers/RecordCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="0" selection-start="218" selection-end="218" vertical-scroll-proportion="0.4974271" />
@@ -1138,13 +1082,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/templates/users/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="12" selection-start="12" selection-end="12" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/sessions_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="52" selection-start="139" selection-end="139" vertical-scroll-proportion="0.0">
@@ -1166,44 +1103,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/app/controllers/UsersController.js">
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="45" selection-start="191" selection-end="191" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/application.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="27" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="21" selection-start="246" selection-end="246" vertical-scroll-proportion="0.0">
+        <state line="9" column="25" selection-start="194" selection-end="194" vertical-scroll-proportion="0.46524063">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/initializers/devise.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="244" column="43" selection-start="12087" selection-end="12087" vertical-scroll-proportion="0.0">
+        <state line="244" column="43" selection-start="12087" selection-end="12087" vertical-scroll-proportion="12.923351">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/log/development.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="228" column="17" selection-start="14646" selection-end="14646" vertical-scroll-proportion="0.0">
+        <state line="255" column="17" selection-start="16157" selection-end="16157" vertical-scroll-proportion="0.87344027">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+    <entry file="file://$PROJECT_DIR$/config/application.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="25" selection-start="194" selection-end="194" vertical-scroll-proportion="0.46524063">
+        <state line="7" column="27" selection-start="240" selection-end="240" vertical-scroll-proportion="0.04974271">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="21" selection-start="246" selection-end="246" vertical-scroll-proportion="0.04974271">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.rdoc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="195" selection-end="195" vertical-scroll-proportion="0.19897084">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/templates/users/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="120" selection-start="647" selection-end="647" vertical-scroll-proportion="-7.733333">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/app/controllers/UsersController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="10" selection-start="2946" selection-end="2946" vertical-scroll-proportion="3.4871354">
           <folding />
         </state>
       </provider>

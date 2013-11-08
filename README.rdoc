@@ -1,5 +1,7 @@
 == Angularjs with devise rails example
 https://github.com/sectore/CafeTownsend-Angular-Rails
+AND
+http://technpol.wordpress.com/2013/09/23/angularjs-and-devise-authentication-with-a-rails-server/
 
 == Angularjs resource example
 http://blog.brunoscopelliti.com/building-a-restful-web-service-with-angularjs-and-php-more-power-with-resource
