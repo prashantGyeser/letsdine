@@ -115,4 +115,6 @@ class User < ActiveRecord::Base
     where("created_at > ? and created_at < ?", Time.now.beginning_of_month.to_date, Time.now.end_of_month.to_date).count
   end
 
+
+
 end

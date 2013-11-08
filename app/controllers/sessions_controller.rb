@@ -1,8 +1,11 @@
 class SessionsController < Devise::SessionsController
+  # before_filter :require_no_authentication, :only => [:create ]
   respond_to :json
+  #userHash = { :user => { :email => session[:email], :password => session[:password] } }
+
+  #logger.debug "The user hash is: #{userHash}"
 
   def create
-    logger.debug "It is getting to the create action"
     resource = warden.authenticate!(:scope => resource_name, :recall => "#{controller_path}#failure")
     render :status => 200,
            :json => { :success => true,
@@ -21,9 +24,12 @@ class SessionsController < Devise::SessionsController
   end
 
   def failure
+    logger.debug "Amd the failure section!@!@!@!@!"
     render :status => 401,
            :json => { :success => false,
-                      :info => "Login Credentials Failed"
+                      :info => "Login Credentials Failed",
+                      :GRR => "Work!!!!",
+                      :resource_name => resource_name
            }
   end
 

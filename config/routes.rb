@@ -4,6 +4,12 @@ Letsdine::Application.routes.draw do
     resources :events
   end
 
+  devise_for :users
+  devise_scope :user do
+    post 'login' => 'sessions#create', :as => 'login'
+    post 'logout' => 'sessions#destroy', :as => 'logout'
+    get 'current_user' => 'sessions#show_current_user', :as => 'show_current_user'
+  end
 
   root :to => "home#index"
 
@@ -148,9 +154,14 @@ Letsdine::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
 
-  devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"} do
-    get '/users/sign_out' => 'devise/sessions#destroy'
-  end
+  #devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"} do
+  #  get '/users/sign_out' => 'devise/sessions#destroy'
+  #end
 
+
+
+  #resources :sessions, :only => [:create, :destroy]
+
+  #devise_for :users, :controllers => {:sessions => 'sessions'}
 
 end

@@ -1,18 +1,27 @@
 'use strict';
 
 letsdineApp.controller('UsersController',
-    function UsersController($scope, $log, $http) {
+    function UsersController($scope, $log, $http, Session) {
 
         $scope.login_user = {email: null, password: null};
         $scope.login_error = {message: null, errors: {}};
 
-        $scope.login = function() {
-            $scope.submit({method: 'POST',
-                url: '../users/sign_in.json',
-                data: {user: {email: $scope.login_user.email, password: $scope.login_user.password}},
-                success_message: "You have been logged in.",
-                error_entity: $scope.login_error});
+
+        $scope.login = function(){
+            Session.login($scope.login_user.email, $scope.login_user.password).then(function(data){
+                    $scope.loginResult = data;
+                },
+                function(data){
+                    $scope.login_error = data;
+                });
+
         };
+
+
+        $scope.loggedIn = function(){
+            $scope.loginResult = Session.isAuthenticated();
+        };
+
 
         $scope.logout = function() {
             $scope.submit({method: 'DELETE',
