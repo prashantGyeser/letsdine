@@ -1,39 +1,70 @@
 'use strict';
 
 letsdineApp.factory('Session', function($location, $http, $q) {
-    var urlBase = '/login';
-    var Session = {};
+    // Redirect to the given url (defaults to '/')
+    function redirect(url) {
+        url = url || '/';
+        $location.path(url);
+    }
+    var service = {
+        login: function(email, password) {
+            return $http.post('/login', {user: {email: email, password: password} })
+                .then(function(response) {
+                    service.currentUser = response.data.user;
+                    if (service.isAuthenticated()) {
+                        //TODO: Send them back to where they came from
+                        //$location.path(response.data.redirect);
+                        $location.path('/record');
+                    }
+                });
 
-    Session.getCustomer = function (id) {
-        return $http.get(urlBase + '/' + id);
-    };
 
-    Session.login = function (email,password) {
-        //return $http.post(urlBase, user);
-        var promise = $http.post(urlBase, {user: {email: email, password: password} }).
-            success(function(data, status, headers, config){
-                //TODO: Send them back to where they came from
-                //$location.path(response.data.redirect);
-            }).
-            error(function(data, status, headers, config){
-                //TODO: Handle this error in some way
 
+                /*
+                .then(function(response) {
+                    service.currentUser = response.data.user;
+                    if (service.isAuthenticated()) {
+                        //TODO: Send them back to where they came from
+                        //$location.path(response.data.redirect);
+                        $location.path('/record');
+                    }
+                });
+                */
+        },
+
+        logout: function(redirectTo) {
+            $http.post('/logout').then(function() {
+                service.currentUser = null;
+                redirect(redirectTo);
             });
-        return promise;
-    };
+        },
 
-    Session.updateCustomer = function (cust) {
-        return $http.put(urlBase + '/' + cust.ID, cust)
-    };
+        register: function(email, password, confirm_password) {
+            return $http.post('/users.json', {user: {email: email, password: password, password_confirmation: confirm_password} })
+                .then(function(response) {
+                    service.currentUser = response.data;
+                    if (service.isAuthenticated()) {
+                        $location.path('/record');
+                    }
+                });
+        },
+        requestCurrentUser: function() {
+            if (service.isAuthenticated()) {
+                return $q.when(service.currentUser);
+            } else {
+                return $http.get('/current_user').then(function(response) {
+                    service.currentUser = response.data.user;
+                    return service.currentUser;
+                });
+            }
+        },
 
-    Session.deleteCustomer = function (id) {
-        return $http.delete(urlBase + '/' + id);
-    };
+        currentUser: null,
 
-    Session.getOrders = function (id) {
-        return $http.get(urlBase + '/' + id + '/orders');
+        isAuthenticated: function(){
+            return !!service.currentUser;
+        }
     };
-
-    return Session;
+    return service;
 
 });
