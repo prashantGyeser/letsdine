@@ -76,13 +76,13 @@
   border-color: #fbcdb9;
 }
 .button.is-secondary {
-  background-color: #967adc;
-  border-color: #967adc;
+  background-color: #00a9d4;
+  border-color: #00a9d4;
 }
 .button.is-secondary:hover,
 .button.is-secondary:focus {
-  background-color: #b6a2e7;
-  border-color: #b6a2e7;
+  background-color: #08cdff;
+  border-color: #08cdff;
 }
 .button.is-secondary.is-active,
 .button.is-secondary:active {
@@ -91,8 +91,8 @@
 }
 .button.is-secondary.is-disabled,
 .button.is-secondary[disabled] {
-  background-color: #d6cbf1;
-  border-color: #d6cbf1;
+  background-color: #3bd7ff;
+  border-color: #3bd7ff;
 }
 .button.is-tertiary {
   background-color: #d770ad;

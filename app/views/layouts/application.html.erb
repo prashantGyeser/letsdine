@@ -31,10 +31,10 @@
 
   <!-- Typekit fonts-->
   <!-- Todo: Change this to the live site link once done -->
-    <!--
+
   <script type="text/javascript" src="//use.typekit.net/ehw5qqm.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-    -->
+
   <!-- Typekit fonts end -->
 
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -144,6 +144,7 @@
 <%= javascript_include_tag "lib/angularjs/angular-route.js" %>
 <%= javascript_include_tag "lib/angularjs/angular-animate.js" %>
 <%= javascript_include_tag "app/app.js" %>
+<%= javascript_include_tag "app/directives/textareaAutoGrow.js" %>
 <%= javascript_include_tag "app/services/users/SessionService" %>
 <%= javascript_include_tag "app/controllers/HomeController.js" %>
 <%= javascript_include_tag "app/controllers/UsersController.js" %>
@@ -153,6 +154,8 @@
 <%= javascript_include_tag "app/services/events/EventsService.js" %>
 <%= javascript_include_tag "app/controllers/EventsController.js" %>
 <%= javascript_include_tag "app/controllers/RecordCtrl.js" %>
+<%= javascript_include_tag "app/services/host/HostService.js" %>
+<%= javascript_include_tag "app/controllers/HostAdminController.js" %>
 <!-- Angularjs includes end -->
 
 </body>

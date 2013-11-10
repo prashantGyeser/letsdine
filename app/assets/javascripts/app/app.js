@@ -4,6 +4,7 @@ var letsdineApp = angular.module('letsdineApp', [
     'ngRoute',
     'ngResource',
     'ngAnimate'
+    //'autoGrow'
 ]);
 
 
@@ -67,6 +68,18 @@ letsdineApp.config(function($routeProvider){
             controller: 'EventsController',
             templateUrl: '/assets/events/show.html'
         }).
-        when('/record', {templateUrl:'/record/index.html', controller:RecordCtrl})
+        when('/events/new', {
+            controller: 'EventsController',
+            templateUrl: '/assets/events/new.html'
+        }).
+        when('/record', {
+            controller:'RecordCtrl',
+            templateUrl:'/record/index.html'
+        }).
+        when('/hosts/:id/manage', {
+            controller:'HostAdminController',
+            templateUrl:'/assets/hosts/manage.html'
+        })
+
 
 });

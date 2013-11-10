@@ -254,13 +254,53 @@ NAV
       -ms-border-radius: 3px;
       -o-border-radius: 3px;
       border-radius: 3px; }
+  .eventPage .eventPrice {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 18px; }
 
 /************************************************************************/
-/* Brand colors and styles */
+/* Host admin page styles */
 /************************************************************************/
+.admin {
+  background: white;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px 0; }
+  .admin ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+    .admin ul li {
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #eee; }
+      .admin ul li .subDetails {
+        margin-top: 5px; }
+
 /************************************************************************/
-/* Brand colors and styles */
+/* New event page styles */
 /************************************************************************/
+.newEvent {
+  background: #fff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px 0; }
+
 /************************************************************************/
 /* Brand colors and styles */
 /************************************************************************/

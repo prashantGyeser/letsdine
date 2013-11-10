@@ -322,16 +322,54 @@ NAV
       @include border-radius(3px);
     }
   }
+  .eventPrice
+  {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 18px;
+  }
 
 }
 /************************************************************************/
-/* Brand colors and styles */
+/* Host admin page styles */
 /************************************************************************/
+.admin
+{
+  background: white;
+  @include border-radius(3px);
+  @include box-shadow;
 
-/************************************************************************/
-/* Brand colors and styles */
-/************************************************************************/
+  padding: 20px;
+  margin: 20px 0;
+  ul
+  {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li
+    {
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #eee;
+      .subDetails
+      {
+        margin-top: 5px;
 
+      }
+    }
+  }
+}
+/************************************************************************/
+/* New event page styles */
+/************************************************************************/
+.newEvent
+{
+  background: #fff;
+  @include border-radius(3px);
+  @include box-shadow;
+  padding: 20px;
+  margin: 20px 0;
+}
 /************************************************************************/
 /* Brand colors and styles */
 /************************************************************************/
