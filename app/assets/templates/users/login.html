@@ -7,7 +7,7 @@
         <div class="col-md-4 col-md-offset-4">
             <a href="/"><img src="/assets/logo.png" alt=""/></a>
             <h1>{{isLoggedIn}}</h1>
-            <h1>{{currentUserFromQuery}}</h1>
+            <h1>{{getCurrentUser()}}</h1>
             <form name="loginForm" ng-submit="login(user)" class="auth-form" role="form" ng-show="isLoggedIn">
 
                 <h2 class="auth-form-heading">Please sign in</h2><br/>

@@ -51,7 +51,10 @@ letsdineApp.config(function($routeProvider){
         }).
         when('/users/login', {
             controller: 'UsersController',
-            templateUrl: '/assets/users/login.html'
+            templateUrl: '/assets/users/login.html',
+            resolve:{
+
+            }
         }).
         when('/users/register', {
             controller: 'users/UsersController',
