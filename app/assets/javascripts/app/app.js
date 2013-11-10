@@ -73,10 +73,6 @@ letsdineApp.config(function($routeProvider){
             controller: 'EventsController',
             templateUrl: '/assets/events/new.html'
         }).
-        when('/record', {
-            controller:'RecordCtrl',
-            templateUrl:'/record/index.html'
-        }).
         when('/hosts/:id/manage', {
             controller:'HostAdminController',
             templateUrl:'/assets/hosts/manage.html'

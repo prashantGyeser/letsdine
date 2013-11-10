@@ -19,7 +19,7 @@ letsdineApp.controller('UsersController',
         };
 
         $scope.logout = function(user) {
-
+            Session.logout();
         };
 
         $scope.register = function(user) {
@@ -37,14 +37,15 @@ letsdineApp.controller('UsersController',
                 });
         };
 
-        $scope.loggedIn = function(){
-            $scope.isLoggedIn = Session.isAuthenticated();
-        };
 
-        $scope.getCurrentUser = function(){
-            $scope.currentUserFromQuery = Session.requestCurrentUser().then(function(response){
-                $scope.currentUserFromQuery = response.data.user;
-            });;
-        };
+        $scope.isLoggedIn = Session.isAuthenticated();
+        console.log($scope.isLoggedIn);
+
+        $scope.currentUserFromQuery = null;
+
+        Session.requestCurrentUser().then(function(response){
+            $scope.currentUserFromQuery = response.data.user;
+        });
+
 
     });

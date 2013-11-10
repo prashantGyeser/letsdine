@@ -14,7 +14,7 @@ letsdineApp.factory('Session', function($location, $http, $q) {
                     if (service.isAuthenticated()) {
                         //TODO: Send them back to where they came from
                         //$location.path(response.data.redirect);
-                        $location.path('/record');
+                        $location.path('/');
                     }
                 });
 
@@ -26,7 +26,7 @@ letsdineApp.factory('Session', function($location, $http, $q) {
                     if (service.isAuthenticated()) {
                         //TODO: Send them back to where they came from
                         //$location.path(response.data.redirect);
-                        $location.path('/record');
+                        $location.path('/');
                     }
                 });
                 */
@@ -44,7 +44,7 @@ letsdineApp.factory('Session', function($location, $http, $q) {
                 .then(function(response) {
                     service.currentUser = response.data;
                     if (service.isAuthenticated()) {
-                        $location.path('/record');
+                        $location.path('/');
                     }
                 });
         },
@@ -55,7 +55,6 @@ letsdineApp.factory('Session', function($location, $http, $q) {
                 return $http.get('/current_user')
                     .success(function(data, status){
                         service.currentUser = data.user;
-                        console.log(service.currentUser);
                         return service.currentUser;
                     });
                     /*
