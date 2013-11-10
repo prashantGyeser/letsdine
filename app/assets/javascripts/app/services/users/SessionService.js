@@ -49,11 +49,13 @@ letsdineApp.factory('Session', function($location, $http, $q) {
                 });
         },
         requestCurrentUser: function() {
+            var deferredUser = $q.defer();
             if (service.isAuthenticated()) {
                 return $q.when(service.currentUser);
             } else {
                 return $http.get('/current_user')
                     .success(function(data, status){
+                        deferredUser.resolve(data);
                         service.currentUser = data.user;
                         return service.currentUser;
                     });

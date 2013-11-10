@@ -40,11 +40,13 @@ letsdineApp.controller('UsersController',
 
         $scope.currentUserFromQuery = null;
 
-        $scope.getCurrentUser = false;
+        //$scope.getCurrentUser = false;
 
-        $scope.getCurrentUser = Session.requestCurrentUser().then(function(response){
-            return response.data.user;
+        Session.requestCurrentUser().then(function(response){
+            //console.log(response.data.user);
+            $scope.getCurrentUser =  response.data.user;
         });
+
 
         /*
         $scope.$watch('currentUserFromQuery', function (currentUserFromQuery) {
