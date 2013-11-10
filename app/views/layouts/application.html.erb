@@ -46,6 +46,10 @@
           -->
   <![endif]-->
 
+  <!-- Socail plugins js code -- start -->
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-527f39d169f8fe25&async=1"></script>
+  <!-- Socail plugins js code -- end -->
+
   <%= csrf_meta_tags %>
 </head>
 
@@ -138,6 +142,8 @@
   -->
 <script src="http://maps.googleapis.com/maps/api/js?sensor=false&language=en"></script>
 
+
+
 <!-- Angularjs includes start -->
 <%= javascript_include_tag "lib/angularjs/angular.js" %>
 <%= javascript_include_tag "lib/angularjs/angular-resource.js" %>
@@ -146,6 +152,7 @@
 <%= javascript_include_tag "lib/googlemaps/angular-google-maps.js" %>
 <%= javascript_include_tag "app/app.js" %>
 <%= javascript_include_tag "app/directives/textareaAutoGrow.js" %>
+<%= javascript_include_tag "app/directives/addthis.js" %>
 <%= javascript_include_tag "app/services/users/SessionService" %>
 <%= javascript_include_tag "app/controllers/HomeController.js" %>
 <%= javascript_include_tag "app/controllers/UsersController.js" %>
