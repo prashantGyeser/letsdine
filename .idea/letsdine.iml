@@ -55,6 +55,7 @@
     <orderEntry type="library" scope="PROVIDED" name="coffee-script-source (v1.6.2, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="colored (v1.2, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="columnize (v0.3.6, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="css_parser (v1.3.5, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="curb (v0.8.5, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="daemons (v1.1.9, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="debug_inspector (v0.0.2, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
@@ -63,6 +64,7 @@
     <orderEntry type="library" scope="PROVIDED" name="debugger-ruby_core_source (v1.2.0, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="devise (v3.2.0, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.2.4, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="em-websocket (v0.5.0, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubis (v2.7.0, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="eventmachine (v1.0.3, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="excon (v0.16.10, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
@@ -75,6 +77,7 @@
     <orderEntry type="library" scope="PROVIDED" name="friendly_id (v4.0.9, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="geocoder (v1.1.8, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="guard (v1.8.0, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="guard-livereload (v1.4.0, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="guard-rspec (v2.6.0, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="guard-spork (v1.5.1, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="haml (v4.0.2, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
@@ -129,6 +132,7 @@
     <orderEntry type="library" scope="PROVIDED" name="rack (v1.4.5, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-cache (v1.2, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-contrib (v1.1.0, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rack-livereload (v0.3.15, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-protection (v1.5.0, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-ssl (v1.3.3, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-test (v0.6.2, RVM: ruby-1.9.3-p448 [letsdine]) [gem]" level="application" />

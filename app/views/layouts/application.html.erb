@@ -28,13 +28,12 @@
   <%= stylesheet_link_tag    "style", :media => "all" %>
   <%= stylesheet_link_tag    "lib/buttons", :media => "all" %>
 
-
   <!-- Typekit fonts-->
   <!-- Todo: Change this to the live site link once done -->
-
+    <!--
   <script type="text/javascript" src="//use.typekit.net/ehw5qqm.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
+    -->
   <!-- Typekit fonts end -->
 
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -54,32 +53,7 @@
 </head>
 
 <body>
-<!-- The top bar contains the logo, search bar and login info. This will be constant throught out the application. This part of the page will not change. -->
-<div class="topBar">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-2">
-        <a href="/"><%= image_tag 'logo.png', :class => 'img-responsive logo' %></a>
 
-      </div>
-      <div class="col-md-8">
-        <!--
-        <div class="input-group">
-
-          <input type="text" class="form-control" placeholder="What are you looking for?">
-          <span class="input-group-addon">Search</span>
-        </div>
-        -->
-      </div>
-      <div class="col-md-2">
-        <div class="login">
-          <a href="#" class="button is-primary">Sign up</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Top bar end -->
 
 
 <!-- Top navigation start -->
@@ -135,6 +109,7 @@
 <!-- Placed at the end of the document so the pages load faster -->
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 <script src="//documentcloud.github.io/underscore/underscore-min.js"></script>
 <!--
   <script src="js/lib/jquery/jquery-1.10.2.min.js"></script>
@@ -142,7 +117,15 @@
   -->
 <script src="http://maps.googleapis.com/maps/api/js?sensor=false&language=en"></script>
 
+<%= javascript_include_tag "lib/tinymce/tinymce.min.js" %>
 
+<script type="text/javascript">
+(function(a){if(window.filepicker){return}var b=a.createElement("script");b.type="text/javascript";b.async=!0;b.src=("https:"===a.location.protocol?"https:":"http:")+"//api.filepicker.io/v1/filepicker.js";var c=a.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c);var d={};d._queue=[];var e="pick,pickMultiple,pickAndStore,read,write,writeUrl,export,convert,store,storeUrl,remove,stat,setKey,constructWidget,makeDropPane".split(",");var f=function(a,b){return function(){b.push([a,arguments])}};for(var g=0;g<e.length;g++){d[e[g]]=f(e[g],d._queue)}window.filepicker=d})(document);
+</script>
+
+<script>
+    filepicker.setKey('Super_Awesome_Key');
+</script>
 
 <!-- Angularjs includes start -->
 <%= javascript_include_tag "lib/angularjs/angular.js" %>
@@ -151,10 +134,13 @@
 <%= javascript_include_tag "lib/angularjs/angular-animate.js" %>
 <%= javascript_include_tag "lib/googlemaps/angular-google-maps.js" %>
 <%= javascript_include_tag "app/app.js" %>
-<%= javascript_include_tag "app/directives/textareaAutoGrow.js" %>
+<!-- <%= javascript_include_tag "app/directives/textareaAutoGrow.js" %> -->
+<%= javascript_include_tag "app/directives/angular-ui/tinymce.js" %>
+<%= javascript_include_tag "app/directives/angular-ui/date.js" %>
 <%= javascript_include_tag "app/directives/addthis.js" %>
 <%= javascript_include_tag "app/services/users/SessionService" %>
 <%= javascript_include_tag "app/controllers/HomeController.js" %>
+<%= javascript_include_tag "app/controllers/AuthenticationController.js" %>
 <%= javascript_include_tag "app/controllers/UsersController.js" %>
 <%= javascript_include_tag "app/services/search/AlgoliaSearchService.js" %>
 <%= javascript_include_tag "app/controllers/SearchController.js" %>
@@ -165,6 +151,8 @@
 <%= javascript_include_tag "app/services/host/HostService.js" %>
 <%= javascript_include_tag "app/controllers/HostAdminController.js" %>
 <!-- Angularjs includes end -->
+
+
 
 </body>
 </html>

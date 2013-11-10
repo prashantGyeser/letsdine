@@ -42,4 +42,8 @@ letsdineApp.controller('EventsController',
             }
         });
         // Google maps call -- end
+
+        $scope.uploadFiles = function(){
+            filepicker.pickAndStore({mimetype:'image/*'},{},function(files){console.log(files)},function(err){console.log(err)});
+        };
 });

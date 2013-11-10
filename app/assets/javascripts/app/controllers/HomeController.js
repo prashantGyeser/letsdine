@@ -24,6 +24,8 @@ letsdineApp.controller('HomeController',
             }
         ];
 
+        $scope.isLoggedIn = Session.requestCurrentUser();
+
         $scope.events = Events.query();
         /*
         $scope.events = Events.query(function(){

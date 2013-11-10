@@ -24,7 +24,7 @@ letsdineApp.config(['$httpProvider', function($httpProvider){
         function error(response) {
             if (response.status == 401) {
                 $rootScope.$broadcast('event:unauthorized');
-                $location.path('/users/login');
+                $location.path('/');
                 return response;
             };
             return $q.reject(response);

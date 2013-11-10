@@ -1,3 +1,35 @@
+<!-- The top bar contains the logo, search bar and login info. This will be constant through out the application. This part of the page will not change. -->
+<div class="topBar">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <a href="/"><img src="/assets/logo.png" alt=""/></a>
+            </div>
+            <div class="col-md-8">
+                <!--
+                <div class="input-group">
+
+                  <input type="text" class="form-control" placeholder="What are you looking for?">
+                  <span class="input-group-addon">Search</span>
+                </div>
+                -->
+            </div>
+            <div class="col-md-2">
+
+                <div class="login pull-right" ng-show="isLoggedIn">
+                    <a href="#/users/login" class="button is-primary">Sign in / Sign up</a>
+                </div>
+
+                <div ng-hide="isLoggedIn" class="pull-right">
+                    <a href="" class="button is-secondary">Manage Experiences</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Top bar end -->
+
 
 <!-- Slider start -->
 <div class="slider">

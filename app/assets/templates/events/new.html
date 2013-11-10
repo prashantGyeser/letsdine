@@ -8,20 +8,32 @@
                         <input type="text" class="form-control" id="eventName" placeholder="Enter the name of the experience">
                     </div>
                     <div class="form-group">
-                        <label for="eventdescription">Experience description</label>
-                        <textarea class="form-control" rows="3", placeholder="Enter the descrption for this experience" id="eventdescription" auto-grow></textarea>
+                        <label for="tinymce">Experience description</label>
+                        <textarea id="tinymce" ui-tinymce class="form-control" rows="3" placeholder="Enter the descrption for this experience" ng-model="tinymce"></textarea>
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputFile">File input</label>
-                        <input type="file" id="exampleInputFile">
-                        <p class="help-block">Example block-level help text here.</p>
+                        <label for="eventPrice">Experience price per seat</label>
+                        <input type="number" class="form-control" ui-date ng-model="aDate" id="eventPrice" placeholder="How much does it cost for one person?">
                     </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox"> Check me out
-                        </label>
+                    <div class="form-group">
+                        <label for="eventDate">Experience date</label>
+                        <input type="text" class="form-control" ui-date ng-model="aDate" id="eventDate" placeholder="Select the date of the experience">
                     </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
+                    <div class="form-group">
+                        <label for="eventTime">Experience time</label>
+                        <div class="control-group input-append">
+                            <input type="text" ng-model="timepicker.time" bs-timepicker>
+                            <button type="button" class="btn" data-toggle="timepicker" id="eventTime"><i class="icon-time"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Upload pictures</label>
+                        <br>
+                        <a class="button is-secondary" ng-click="uploadFiles()">Upload pictures</a>
+                    </div>
+
+                    <button type="submit" class="button is-primary">Submit</button>
                 </form>
             </div>
 
