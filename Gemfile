@@ -72,10 +72,18 @@ group :test, :development do
 	# Unit testing gems
 	gem 'shoulda-matchers'
 
+  gem 'sass'
+  gem 'sass-globbing'
+  gem 'oily_png'
+  gem 'css_parser'
+
 	# Auto running
 	gem 'guard'
 	gem 'guard-spork'
 	gem 'minitest'
+  gem 'guard-livereload', require: false
+  gem 'rack-livereload'
+  gem 'rb-fsevent',       require: false
 end
 
 # To use ActiveModel has_secure_password

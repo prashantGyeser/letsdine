@@ -136,13 +136,14 @@
   <script src="js/lib/jquery/jquery-1.10.2.min.js"></script>
   <script src="js/lib/slider/slider.min.js"></script>
   -->
-
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false&language=en"></script>
 
 <!-- Angularjs includes start -->
 <%= javascript_include_tag "lib/angularjs/angular.js" %>
 <%= javascript_include_tag "lib/angularjs/angular-resource.js" %>
 <%= javascript_include_tag "lib/angularjs/angular-route.js" %>
 <%= javascript_include_tag "lib/angularjs/angular-animate.js" %>
+<%= javascript_include_tag "lib/googlemaps/angular-google-maps.js" %>
 <%= javascript_include_tag "app/app.js" %>
 <%= javascript_include_tag "app/directives/textareaAutoGrow.js" %>
 <%= javascript_include_tag "app/services/users/SessionService" %>

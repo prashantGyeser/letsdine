@@ -3,7 +3,8 @@
 var letsdineApp = angular.module('letsdineApp', [
     'ngRoute',
     'ngResource',
-    'ngAnimate'
+    'ngAnimate',
+    "google-maps"
     //'autoGrow'
 ]);
 

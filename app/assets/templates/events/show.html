@@ -21,14 +21,38 @@
                         <div class="eventSubDetails">
                             <h4>{{event.event_name}}</h4>
                             <p class="eventPrice">Rs {{event.price}}</p>
-                            Event Date: 22 January 2013
-                            Seats
-                            <select name="" id="" class="form-control">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                            </select>
+                            <p class="eventDate">Event Date: <strong>22 January 2013</strong></p>
+                            <div class="form-group">
+                                <label>Seats</label>
+                                <select name="" id="" class="form-control">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <a class="button is-primary ticketPurchase" href="#">Purchase Tickets Now</a>
+
+                    </div>
+
+
+                    <div class="eventGeneralDetailsContainer">
+                        <div class="eventSubDetails">
+                            <div class="google-map"
+                                 center="position.coords"
+                                 zoom="zoomProperty"
+                                 markers="markersProperty"
+                                 latitude="clickedLatitudeProperty"
+                                 longitude="clickedLongitudeProperty"
+                                 mark-click="true"
+                                 draggable="true"
+                                 fit="false"
+                                 events="eventsProperty"
+                                 style="height: 300px; width: 100%">
+                            </div>
                         </div>
                     </div>
 

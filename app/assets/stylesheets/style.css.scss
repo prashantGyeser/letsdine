@@ -328,7 +328,31 @@ NAV
     font-weight: bold;
     font-size: 18px;
   }
+  .eventDate
+  {
 
+  }
+  .ticketPurchase
+  {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+
+}
+
+.eventGeneralDetailsContainer
+{
+  background: $brand_off_white;
+  padding: 10px;
+  @include border-radius(3px);
+  margin-top: 10px;
+  .eventSubDetails
+  {
+    background: white;
+    padding: 10px;
+    @include border-radius(3px);
+  }
 }
 /************************************************************************/
 /* Host admin page styles */

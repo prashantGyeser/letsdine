@@ -258,6 +258,27 @@ NAV
     margin-bottom: 10px;
     font-weight: bold;
     font-size: 18px; }
+  .eventPage .ticketPurchase {
+    width: 100%;
+    margin-top: 10px; }
+
+.eventGeneralDetailsContainer {
+  background: #ebebe3;
+  padding: 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  margin-top: 10px; }
+  .eventGeneralDetailsContainer .eventSubDetails {
+    background: white;
+    padding: 10px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px; }
 
 /************************************************************************/
 /* Host admin page styles */

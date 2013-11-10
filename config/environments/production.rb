@@ -45,7 +45,7 @@ Letsdine::Application.configure do
   # Enable serving of images, stylesheets, and JavaScripts from an asset server
   config.action_controller.asset_host = "d2fz6rw7y5afzu.cloudfront.net"
 
-  # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
+  # Precompile additional assets (application.js, application.css.scss, and all non-JS/CSS are already added)
   # config.assets.precompile += %w( search.js )
   #config.assets.precompile += ['lib/bootstrap/bootstrap.css','lib/buttons.css']
   config.assets.precompile += ['*.js', '*.css']
