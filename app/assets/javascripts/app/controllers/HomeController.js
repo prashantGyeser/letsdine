@@ -1,7 +1,19 @@
 'use strict';
 
 letsdineApp.controller('HomeController',
-    function HomeController($scope,Events,Session) {
+    function HomeController($scope,Events,Session, $rootScope) {
+
+        $scope.currentUser = $rootScope.currentUser;
+        $scope.isLoggedIn = false;
+
+        if($rootScope.isLoggedIn == true){
+            $scope.isLoggedIn = true;
+        }
+
+        $scope.logout = function(){
+            var logoutStatus = Session.logout();
+            console.log("the log out status is" + logoutStatus);
+        }
 
         $scope.popularEvents = [
             {

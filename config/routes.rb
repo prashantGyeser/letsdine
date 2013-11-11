@@ -2,6 +2,8 @@ Letsdine::Application.routes.draw do
 
   namespace :api do
     resources :events
+    resources :hosts
+    get 'host/events' => 'hosts#events'
   end
 
   devise_for :users

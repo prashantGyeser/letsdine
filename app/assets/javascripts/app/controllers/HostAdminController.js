@@ -1,7 +1,8 @@
 'use strict';
 
 letsdineApp.controller('HostAdminController',
-    function($scope){
+    function($scope, HostEvents, $rootScope){
+        /*
         $scope.events = [
             {
                 'id': 1,
@@ -25,6 +26,6 @@ letsdineApp.controller('HostAdminController',
                 'attendees': 10
             }
         ];
-
-
+        */
+        $scope.events = HostEvents.query();
     });

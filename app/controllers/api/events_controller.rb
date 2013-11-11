@@ -13,4 +13,21 @@ class Api::EventsController < ApplicationController
     render json: @event
   end
 
+  def create
+    @event = Event.new(params[:event])
+    logger.debug "The event before adding the user id is: #{@event.inspect}"
+    @event.user_id = current_user.id
+    logger.debug "The event after adding the user id is: #{@event.inspect}"
+
+
+    if @event.save
+      logger.debug @event.inspect
+      logger.debug "The event after saving is: #{@event.inspect}"
+      render json: @event
+    else
+      render json: @event.errors, status: :unprocessable_entity
+    end
+
+  end
+
 end

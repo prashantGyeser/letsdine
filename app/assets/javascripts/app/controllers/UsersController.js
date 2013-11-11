@@ -1,7 +1,9 @@
 'use strict';
 
 letsdineApp.controller('UsersController',
-    function UsersController($scope, $log, $http, Session, $q) {
+    function UsersController($scope, $log, $http, Session, $q, $cookies, $cookieStore) {
+
+        $scope.testCurrentUser = $cookies.currentUser;
 
         $scope.login = function(user) {
             $scope.authError = null;
@@ -38,23 +40,17 @@ letsdineApp.controller('UsersController',
         };
 
 
-        $scope.currentUserFromQuery = null;
-
-        //$scope.getCurrentUser = false;
-
-        Session.requestCurrentUser().then(function(response){
-            //console.log(response.data.user);
-            $scope.getCurrentUser =  response.data.user;
-        });
+        $scope.isLoggedIn = $cookieStore.get("isLoggedin");
+        $scope.currentUser = $cookieStore.get("currentUser");
 
 
-        /*
-        $scope.$watch('currentUserFromQuery', function (currentUserFromQuery) {
-            console.log("It is in the watch");
-            console.log(currentUserFromQuery);
-
-        });
-        */
-
+        if($cookies['isLoggedin']){
+            console.log("Ok the user is already logged in....");
+            $scope.isLoggedIn = true;
+        }
+        else{
+            $scope.isLoggedIn = false;
+            console.log("Grr!");
+        };
 
     });

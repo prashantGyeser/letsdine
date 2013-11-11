@@ -1,13 +1,17 @@
+{{}}
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <a class="button is-secondary" ng->New Event</a>
+            <a href="#/events/new" class="button is-secondary">New Event</a>
             <div class="admin">
                 <ul>
                     <li ng-repeat="event in events">
-                        <strong><a href="#">{{event.name}}</a></strong>
+                        <strong><a href="#">{{event.event_name}}</a></strong>
                         <div class="subDetails">
-                            Attendees:
+                            <ul>
+                                <li>Attendees: 100</li>
+                                <li>Total Revenue: Rs 100000</li>
+                            </ul>
                         </div>
                     </li>
                 </ul>

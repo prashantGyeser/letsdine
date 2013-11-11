@@ -305,6 +305,13 @@ NAV
       border-bottom: 1px solid #eee; }
       .admin ul li .subDetails {
         margin-top: 5px; }
+        .admin ul li .subDetails ul {
+          list-style: none;
+          margin: 0;
+          padding: 0; }
+          .admin ul li .subDetails ul li {
+            display: inline;
+            margin-right: 10px; }
 
 /************************************************************************/
 /* New event page styles */

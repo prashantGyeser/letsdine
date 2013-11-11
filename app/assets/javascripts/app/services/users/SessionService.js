@@ -1,6 +1,6 @@
 'use strict';
 
-letsdineApp.factory('Session', function($location, $http, $q) {
+letsdineApp.factory('Session', function($location, $http, $q, $cookies) {
     // Redirect to the given url (defaults to '/')
     function redirect(url) {
         url = url || '/';
@@ -14,22 +14,12 @@ letsdineApp.factory('Session', function($location, $http, $q) {
                     if (service.isAuthenticated()) {
                         //TODO: Send them back to where they came from
                         //$location.path(response.data.redirect);
+                        $cookies.isLoggedin = true;
+                        $cookies.currentUser = data.user;
                         $location.path('/');
                     }
                 });
 
-
-
-                /*
-                .then(function(response) {
-                    service.currentUser = response.data.user;
-                    if (service.isAuthenticated()) {
-                        //TODO: Send them back to where they came from
-                        //$location.path(response.data.redirect);
-                        $location.path('/');
-                    }
-                });
-                */
         },
 
         logout: function(redirectTo) {
@@ -49,23 +39,13 @@ letsdineApp.factory('Session', function($location, $http, $q) {
                 });
         },
         requestCurrentUser: function() {
-            var deferredUser = $q.defer();
             if (service.isAuthenticated()) {
                 return $q.when(service.currentUser);
             } else {
-                return $http.get('/current_user')
-                    .success(function(data, status){
-                        deferredUser.resolve(data);
-                        service.currentUser = data.user;
-                        return service.currentUser;
-                    });
-                    /*
-                    .then(function(response) {
-                        service.currentUser = response.data.user;
-                        return service.currentUser;
-
+                return $http.get('/current_user').then(function(response) {
+                    service.currentUser = response.data.user;
+                    return service.currentUser;
                 });
-                     */
             }
         },
 

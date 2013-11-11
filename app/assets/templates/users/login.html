@@ -6,10 +6,8 @@
     <div class="row">
         <div class="col-md-4 col-md-offset-4">
             <a href="/"><img src="/assets/logo.png" alt=""/></a>
-            <h1>{{isLoggedIn}}</h1>
-            <h1>{{getCurrentUser}}</h1>
 
-            <form name="loginForm" ng-submit="login(user)" class="auth-form" role="form" ng-show="isLoggedIn">
+            <form name="loginForm" ng-submit="login(user)" class="auth-form" role="form" ng-hide="isLoggedIn">
 
                 <h2 class="auth-form-heading">Please sign in</h2><br/>
 
@@ -38,7 +36,7 @@
                 -->
             </form>
 
-            <div ng-hide=isLoggedIn>
+            <div ng-show=isLoggedIn>
                 <h4>You are already logged in. Want to <a ng-click="logout()">Logout</a>?</h4>
 
             </div>
