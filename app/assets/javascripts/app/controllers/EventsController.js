@@ -1,7 +1,7 @@
 'use strict';
 
 letsdineApp.controller('EventsController',
-    function($scope, Events, $routeParams){
+    function($scope, Events, $routeParams, $sce){
         $scope.event = Events.get({id: $routeParams.id});
 
         // Google maps call -- start
@@ -42,8 +42,4 @@ letsdineApp.controller('EventsController',
             }
         });
         // Google maps call -- end
-
-        $scope.uploadFiles = function(){
-            filepicker.pickMultiple({mimetype:'image/*'},{},function(files){console.log(files)},function(err){console.log(err)});
-        };
 });

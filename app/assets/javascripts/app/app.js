@@ -1,6 +1,6 @@
 'use strict';
 
-var login = angular.module('myLoginCheck', []).
+var login = angular.module('myLoginCheck', ['ui.date']).
     factory('$loginCheck', function($http,$rootScope){
        return function(){
            $http.get('/current_user').
@@ -27,7 +27,8 @@ var letsdineApp = angular.module('letsdineApp', [
     'ngAnimate',
     "google-maps",
     'ngCookies',
-    'myLoginCheck'
+    'myLoginCheck',
+    'ngSanitize'
     //'autoGrow'
 ]);
 

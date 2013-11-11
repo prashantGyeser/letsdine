@@ -17,7 +17,7 @@
                     </div>
                     <div class="form-group">
                         <label for="eventDate">Experience date</label>
-                        <input type="text" class="form-control" ui-date ng-model="aDate" id="eventDate" placeholder="Select the date of the experience" ng-model="eventDate">
+                        <input type="text" class="form-control" ui-date ui-date-format="dd/ mm/yy" ng-model="eventDate" id="eventDate" placeholder="Select the date of the experience" ng-model="eventDate">
                     </div>
                     <div class="form-group">
                         <label for="eventTime">Experience time</label>
@@ -26,6 +26,27 @@
                             <button type="button" class="btn" data-toggle="timepicker" id="eventTime"><i class="icon-time"></i></button>
                         </div>
                     </div>
+
+                    <div class="form-group">
+                        <label for="eventVenue">Experience meeting point</label>
+                        <input type="text" class="form-control" id="eventVenue" ng-model="eventVenue" placeholder="Enter the venue of the experience">
+                        <!--
+                        Todo: Add a google map that dynamically shows the venue shown in the text box above. When a user drags the marker the langitude and lat should be stored for that new point.
+                        <div class="google-map"
+                             center="position.coords"
+                             zoom="zoomProperty"
+                             markers="markersProperty"
+                             latitude="clickedLatitudeProperty"
+                             longitude="clickedLongitudeProperty"
+                             mark-click="true"
+                             draggable="true"
+                             fit="false"
+                             events="eventsProperty"
+                             style="height: 150px; width: 100%;">
+                        </div>
+                        -->
+                    </div>
+
 
                     <div class="form-group">
                         <label>Upload pictures</label>
